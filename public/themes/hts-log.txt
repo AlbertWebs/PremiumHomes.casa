@@ -1,0 +1,49 @@
+HTTrack3.49-2+htsswf+htsjava launched on Mon, 12 Sep 2022 21:34:44 at https://code-theme.com/html/findhouses/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://code-theme.com/html/findhouses/ -O1 "C:\My Web Sites\Sechere" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+21:45:27	Warning: 	Retry after error -5 (error:00000005:lib(0):func(0):DH lib) at link https://code-theme.com/html/findhouses/index-16.html (from https://code-theme.com/html/findhouses/)
+21:50:51	Error: 	"Not Found" (404) at link https://code-theme.com/html/findhouses/properties-details.html (from https://code-theme.com/html/findhouses/)
+21:50:51	Error: 	"Not Found" (404) at link https://code-theme.com/html/findhouses/properties-right-sidebar.html (from https://code-theme.com/html/findhouses/)
+21:50:51	Error: 	"Not Found" (404) at link https://code-theme.com/html/findhouses/properties-full-list.html (from https://code-theme.com/html/findhouses/)
+21:50:51	Error: 	"Not Found" (404) at link https://code-theme.com/html/findhouses/blog.html (from https://code-theme.com/html/findhouses/)
+21:50:51	Warning: 	Retry after error -2 (Receive Time Out) at link https://code-theme.com/html/findhouses/revolution/js/jquery.themepunch.revolution.min.js (from https://code-theme.com/html/findhouses/)
+21:50:52	Warning: 	Retry after error -2 (Receive Time Out) at link https://code-theme.com/html/findhouses/js/script.js (from https://code-theme.com/html/findhouses/)
+21:50:53	Error: 	"Not Found" (404) at link https://code-theme.com/html/findhouses/css/images/ui-icons_444444_256x240.png (from https://code-theme.com/html/findhouses/css/jquery-ui.css)
+21:50:53	Error: 	"Not Found" (404) at link https://code-theme.com/html/findhouses/css/images/ui-icons_555555_256x240.png (from https://code-theme.com/html/findhouses/css/jquery-ui.css)
+21:50:53	Error: 	"Not Found" (404) at link https://code-theme.com/html/findhouses/css/images/ui-icons_ffffff_256x240.png (from https://code-theme.com/html/findhouses/css/jquery-ui.css)
+21:50:53	Error: 	"Not Found" (404) at link https://code-theme.com/html/findhouses/css/images/ui-icons_777620_256x240.png (from https://code-theme.com/html/findhouses/css/jquery-ui.css)
+21:50:53	Error: 	"Not Found" (404) at link https://code-theme.com/html/findhouses/css/images/ui-icons_cc0000_256x240.png (from https://code-theme.com/html/findhouses/css/jquery-ui.css)
+21:50:53	Error: 	"Not Found" (404) at link https://code-theme.com/html/findhouses/css/images/ui-icons_777777_256x240.png (from https://code-theme.com/html/findhouses/css/jquery-ui.css)
+21:50:53	Warning: 	Retry after error -4 (No data (connection closed)) at link https://code-theme.com/html/findhouses/font/flaticon.woff?ab0c18a0c042c76c5b6d9a09748edddc (from https://code-theme.com/html/findhouses/font/flaticon.css)
+21:50:54	Warning: 	Retry after error -4 (No data (connection closed)) at link https://code-theme.com/html/findhouses/font/flaticon.woff2?ab0c18a0c042c76c5b6d9a09748edddc (from https://code-theme.com/html/findhouses/font/flaticon.css)
+21:50:59	Error: 	"Not Found" (404) at link https://code-theme.com/html/findhouses/css/owl.video.play.png (from https://code-theme.com/html/findhouses/css/owl.carousel.min.css)
+21:51:00	Error: 	"Not Found" (404) at link https://code-theme.com/html/findhouses/properties-map.html (from https://code-theme.com/html/findhouses/index-9.html)
+21:51:01	Error: 	"Not Found" (404) at link https://code-theme.com/html/findhouses/sisingle-property-1.html (from https://code-theme.com/html/findhouses/index-5.html)
+21:51:01	Error: 	"Not Found" (404) at link https://code-theme.com/html/findhouses/listing-details.html (from https://code-theme.com/html/findhouses/index-6.html)
+21:51:11	Warning: 	Retry after error -4 (Incorrect length (9224192 Bytes, 34608178 expected)) at link https://code-theme.com/html/findhouses/video/7.mp4 (from https://code-theme.com/html/findhouses/index-7.html)
+21:51:12	Warning: 	Retry after error -4 (Incorrect length (8994516 Bytes, 17670229 expected)) at link https://code-theme.com/html/findhouses/video/5.mp4 (from https://code-theme.com/html/findhouses/index-20.html)
+21:51:21	Error: 	"Not Found" (404) at link https://code-theme.com/html/findhouses/property-detail.html (from https://code-theme.com/html/findhouses/index-11.html)
+21:52:03	Warning: 	Retry after error -4 (No data (connection closed)) at link https://code-theme.com/html/findhouses/images/slider/dummy_2.png (from https://code-theme.com/html/findhouses/index-22.html)
+21:52:04	Warning: 	Retry after error -4 (No data (connection closed)) at link https://code-theme.com/html/findhouses/images/slider/slider-8.jpg (from https://code-theme.com/html/findhouses/index-13.html)
+21:52:04	Warning: 	Retry after error -4 (No data (connection closed)) at link https://code-theme.com/html/findhouses/images/single-property/s-5.jpg (from https://code-theme.com/html/findhouses/properties-full-grid-2.html)
+21:53:31	Warning: 	Retry after error -4 (Incorrect length (4521984 Bytes, 27388082 expected)) at link https://code-theme.com/html/findhouses/video/6.mp4 (from https://code-theme.com/html/findhouses/single-property-5.html)
+21:53:31	Error: 	"Not Found" (404) at link https://code-theme.com/html/findhouses/team-details.html (from https://code-theme.com/html/findhouses/about.html)
+21:53:31	Warning: 	Retry after error -4 (Incorrect length (9715712 Bytes, 34608178 expected)) at link https://code-theme.com/html/findhouses/video/7.mp4 (from https://code-theme.com/html/findhouses/index-7.html)
+21:53:31	Warning: 	Retry after error -4 (Incorrect length (9403600 Bytes, 17670229 expected)) at link https://code-theme.com/html/findhouses/video/5.mp4 (from https://code-theme.com/html/findhouses/index-20.html)
+21:53:31	Warning: 	Retry after error -4 (Incorrect length (1059 Bytes, 411102 expected)) at link https://code-theme.com/html/findhouses/images/slider/slider-2.jpg (from https://code-theme.com/html/findhouses/index-16.html)
+21:54:01	Warning: 	Retry after error -5 (error:00000005:lib(0):func(0):DH lib) at link https://code-theme.com/html/findhouses/images/slider/dummy_2.png (from https://code-theme.com/html/findhouses/index-22.html)
+21:54:15	Warning: 	Retry after error -5 (error:00000005:lib(0):func(0):DH lib) at link https://code-theme.com/html/findhouses/images/slider/slider-8.jpg (from https://code-theme.com/html/findhouses/index-13.html)
+21:54:26	Warning: 	Retry after error -5 (error:00000005:lib(0):func(0):DH lib) at link https://code-theme.com/html/findhouses/images/single-property/s-5.jpg (from https://code-theme.com/html/findhouses/properties-full-grid-2.html)
+21:55:03	Warning: 	Retry after error -5 (error:00000005:lib(0):func(0):DH lib) at link https://code-theme.com/html/findhouses/css/src/datedropper.eot (from https://code-theme.com/html/findhouses/css/datedropper.css)
+22:02:23	Warning: 	Retry after error -2 (Receive Time Out) at link https://code-theme.com/html/findhouses/video/6.mp4 (from https://code-theme.com/html/findhouses/single-property-5.html)
+22:02:23	Error: 	"Receive Time Out" (-2) after 2 retries at link https://code-theme.com/html/findhouses/video/7.mp4 (from https://code-theme.com/html/findhouses/index-7.html)
+22:02:23	Error: 	"Receive Time Out" (-2) after 2 retries at link https://code-theme.com/html/findhouses/video/5.mp4 (from https://code-theme.com/html/findhouses/index-20.html)
+22:02:23	Error: 	"Connect Error" (-4) after 2 retries at link https://code-theme.com/html/findhouses/video/6.mp4 (from https://code-theme.com/html/findhouses/single-property-5.html)
+
+HTTrack Website Copier/3.49-2 mirror complete in 27 minutes 38 seconds : 494 links scanned, 455 files written (38355929 bytes overall) [63219511 bytes received at 38129 bytes/sec], 12762045 bytes transferred using HTTP compression in 236 files, ratio 16%, 3.2 requests per connection
+(19 errors, 19 warnings, 0 messages)
