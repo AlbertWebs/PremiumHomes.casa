@@ -37,7 +37,7 @@
                                                         <span>2 Garages</span>
                                                     </li>
                                                 </ul>
-                                                <a href="single-property-1.html" class="int_btn">View Property <span class="btn_caret"><i class="fas fa-caret-right"></i></span></a>
+                                                <a href="single-property-1#" class="int_btn">View Property <span class="btn_caret"><i class="fas fa-caret-right"></i></span></a>
                                                 <h1>Real</h1>
                                             </div>
                                         </div>
@@ -68,7 +68,7 @@
                                                         <span>2 Garages</span>
                                                     </li>
                                                 </ul>
-                                                <a href="single-property-1.html" class="int_btn">View Property <span class="btn_caret"><i class="fas fa-caret-right"></i></span></a>
+                                                <a href="single-property-1#" class="int_btn">View Property <span class="btn_caret"><i class="fas fa-caret-right"></i></span></a>
                                                 <h1>Real</h1>
                                             </div>
                                         </div>
@@ -129,7 +129,7 @@
             <div class="slick-lancers">
                 <div class="agents-grid">
                     <div class="landscapes listing-item compact thehp-1" data-aos="fade-up" data-aos-delay="150">
-                        <a href="single-property-1.html" class="recent-16">
+                        <a href="single-property-1#" class="recent-16">
                             <div class="recent-img16 img-fluid img-center" style="background-image: url({{asset('theme/images/feature-properties/fp-8.jpg')}});"></div>
                             <div class="recent-content"></div>
                             <div class="listing-badges">
@@ -146,7 +146,7 @@
                 </div>
                 <div class="agents-grid" data-aos="fade-up" data-aos-delay="250">
                     <div class="people listing-item compact thehp-1">
-                        <a href="single-property-1.html" class="recent-16">
+                        <a href="single-property-1#" class="recent-16">
                             <div class="recent-img16 img-center" style="background-image: url({{asset('theme/images/feature-properties/fp-9.jpg')}});"></div>
                             <div class="recent-content"></div>
                             <div class="listing-badges">
@@ -163,7 +163,7 @@
                 </div>
                 <div class="agents-grid" data-aos="fade-up" data-aos-delay="350">
                     <div class="people landscapes no-pb pbp-3 listing-item compact thehp-1">
-                        <a href="single-property-1.html" class="recent-16">
+                        <a href="single-property-1#" class="recent-16">
                             <div class="recent-img16 img-center" style="background-image: url({{asset('theme/images/feature-properties/fp-10.jpg')}});"></div>
                             <div class="recent-content"></div>
                             <div class="listing-badges">
@@ -180,7 +180,7 @@
                 </div>
                 <div class="agents-grid" data-aos="fade-up" data-aos-delay="450">
                     <div class="landscapes listing-item compact thehp-1">
-                        <a href="single-property-1.html" class="recent-16">
+                        <a href="single-property-1#" class="recent-16">
                             <div class="recent-img16 img-center" style="background-image: url({{asset('theme/images/interior/p-4.jpg')}});"></div>
                             <div class="recent-content"></div>
                             <div class="listing-badges">
@@ -197,7 +197,7 @@
                 </div>
                 <div class="agents-grid" data-aos="fade-up" data-aos-delay="550">
                     <div class="people listing-item compact thehp-1">
-                        <a href="single-property-1.html" class="recent-16">
+                        <a href="single-property-1#" class="recent-16">
                             <div class="recent-img16 img-center" style="background-image: url({{asset('theme/images/interior/p-5.jpg')}});"></div>
                             <div class="recent-content"></div>
                             <div class="listing-badges">
@@ -214,7 +214,7 @@
                 </div>
                 <div class="agents-grid" data-aos="fade-up">
                     <div class="people landscapes no-pb pbp-3 listing-item compact thehp-1">
-                        <a href="single-property-1.html" class="recent-16">
+                        <a href="single-property-1#" class="recent-16">
                             <div class="recent-img16 img-center" style="background-image: url({{asset('theme/images/single-property/s-6.jpg')}});"></div>
                             <div class="recent-content"></div>
                             <div class="listing-badges">
@@ -231,7 +231,7 @@
                 </div>
                 <div class="agents-grid" data-aos="fade-up">
                     <div class="people landscapes no-pb pbp-3 listing-item compact thehp-1">
-                        <a href="sisingle-property-1.html" class="recent-16">
+                        <a href="sisingle-property-1#" class="recent-16">
                             <div class="recent-img16 img-center" style="background-image: url({{asset('theme/images/single-property/s-1.jpg')}});"></div>
                             <div class="recent-content"></div>
                             <div class="listing-badges">
@@ -248,7 +248,7 @@
                 </div>
                 <div class="agents-grid" data-aos="fade-up">
                     <div class="people landscapes no-pb pbp-3 listing-item compact thehp-1">
-                        <a href="single-property-1.html" class="recent-16">
+                        <a href="single-property-1#" class="recent-16">
                             <div class="recent-img16 img-center" style="background-image: url({{asset('theme/images/single-property/s-2.jpg')}});"></div>
                             <div class="recent-content"></div>
                             <div class="listing-badges">
@@ -265,7 +265,7 @@
                 </div>
                 <div class="agents-grid" data-aos="fade-up">
                     <div class="people landscapes no-pb pbp-3 listing-item compact thehp-1">
-                        <a href="single-property-1.html" class="recent-16">
+                        <a href="single-property-1#" class="recent-16">
                             <div class="recent-img16 img-center" style="background-image: url({{asset('theme/images/single-property/s-3.jpg')}});"></div>
                             <div class="recent-content"></div>
                             <div class="listing-badges">
@@ -302,7 +302,7 @@
                     <div class="agent-section p-top-35 p-bottom-30 p-right-25 p-left-25">
                         <h4 class="m-bottom-15 text-bold-700">Houses</h4>
                         <p>Nonec pede justo fringilla vel aliquet nec vulputate eget arcu in enim justo rhoncus ut imperdiet venenatis vitae justo.</p>
-                        <a class="text-base text-base-dark-hover text-size-13" href="properties-full-list.html">Read More <i class="fa fa-long-arrow-right ml-2"></i></a>
+                        <a class="text-base text-base-dark-hover text-size-13" href="properties-full-list#">Read More <i class="fa fa-long-arrow-right ml-2"></i></a>
                     </div>
                 </div>
             </div>
@@ -314,7 +314,7 @@
                     <div class="agent-section p-top-35 p-bottom-30 p-right-25 p-left-25">
                         <h4 class="m-bottom-15 text-bold-700">Apartments</h4>
                         <p>Nonec pede justo fringilla vel aliquet nec vulputate eget arcu in enim justo rhoncus ut imperdiet venenatis vitae justo.</p>
-                        <a class="text-base text-base-dark-hover text-size-13" href="properties-full-list.html">Read More <i class="fa fa-long-arrow-right ml-2"></i></a>
+                        <a class="text-base text-base-dark-hover text-size-13" href="properties-full-list#">Read More <i class="fa fa-long-arrow-right ml-2"></i></a>
                     </div>
                 </div>
             </div>
@@ -326,7 +326,7 @@
                     <div class="agent-section p-top-35 p-bottom-30 p-right-25 p-left-25">
                         <h4 class="m-bottom-15 text-bold-700">Commercial</h4>
                         <p>Nonec pede justo fringilla vel aliquet nec vulputate eget arcu in enim justo rhoncus ut imperdiet venenatis vitae justo.</p>
-                        <a class="text-base text-base-dark-hover text-size-13" href="properties-full-list.html">Read More <i class="fa fa-long-arrow-right ml-2"></i></a>
+                        <a class="text-base text-base-dark-hover text-size-13" href="properties-full-list#">Read More <i class="fa fa-long-arrow-right ml-2"></i></a>
                     </div>
                 </div>
             </div>
@@ -338,7 +338,7 @@
                     <div class="agent-section p-top-35 p-bottom-30 p-right-25 p-left-25">
                         <h4 class="m-bottom-15 text-bold-700">Hotels</h4>
                         <p>Nonec pede justo fringilla vel aliquet nec vulputate eget arcu in enim justo rhoncus ut imperdiet venenatis vitae justo.</p>
-                        <a class="text-base text-base-dark-hover text-size-13" href="properties-full-list.html">Read More <i class="fa fa-long-arrow-right ml-2"></i></a>
+                        <a class="text-base text-base-dark-hover text-size-13" href="properties-full-list#">Read More <i class="fa fa-long-arrow-right ml-2"></i></a>
                     </div>
                 </div>
             </div>
@@ -360,7 +360,7 @@
             <div class="slick-lancers">
                 <div class="agents-grid" data-aos="fade-up" data-aos-delay="150">
                     <div class="landscapes listing-item compact thehp-2">
-                        <a href="single-property-1.html" class="recent-16">
+                        <a href="single-property-1#" class="recent-16">
                             <div class="recent-img16 img-fluid img-center" style="background-image: url({{asset('theme/images/interior/p-1.jpg')}});"></div>
                             <div class="recent-content"></div>
                             <div class="listing-badges">
@@ -377,7 +377,7 @@
                 </div>
                 <div class="agents-grid" data-aos="fade-up" data-aos-delay="250">
                     <div class="people listing-item compact thehp-2">
-                        <a href="single-property-1.html" class="recent-16">
+                        <a href="single-property-1#" class="recent-16">
                             <div class="recent-img16 img-center" style="background-image: url({{asset('theme/images/interior/p-2.jpg')}});"></div>
                             <div class="recent-content"></div>
                             <div class="listing-badges">
@@ -394,7 +394,7 @@
                 </div>
                 <div class="agents-grid" data-aos="fade-up" data-aos-delay="350">
                     <div class="people landscapes no-pb pbp-3 listing-item compact thehp-2">
-                        <a href="single-property-1.html" class="recent-16">
+                        <a href="single-property-1#" class="recent-16">
                             <div class="recent-img16 img-center" style="background-image: url({{asset('theme/images/interior/p-3.jpg')}});"></div>
                             <div class="recent-content"></div>
                             <div class="listing-badges">
@@ -411,7 +411,7 @@
                 </div>
                 <div class="agents-grid" data-aos="fade-up" data-aos-delay="450">
                     <div class="landscapes listing-item compact thehp-2">
-                        <a href="single-property-1.html" class="recent-16">
+                        <a href="single-property-1#" class="recent-16">
                             <div class="recent-img16 img-center" style="background-image: url({{asset('theme/images/feature-properties/fp-11.jpg')}});"></div>
                             <div class="recent-content"></div>
                             <div class="listing-badges">
@@ -428,7 +428,7 @@
                 </div>
                 <div class="agents-grid" data-aos="fade-up" data-aos-delay="550">
                     <div class="people listing-item compact thehp-2">
-                        <a href="single-property-1.html" class="recent-16">
+                        <a href="single-property-1#" class="recent-16">
                             <div class="recent-img16 img-center" style="background-image: url({{asset('theme/images/feature-properties/fp-12.jpg')}});"></div>
                             <div class="recent-content"></div>
                             <div class="listing-badges">
@@ -445,7 +445,7 @@
                 </div>
                 <div class="agents-grid" data-aos="fade-up">
                     <div class="people landscapes no-pb pbp-3 listing-item compact thehp-2">
-                        <a href="single-property-1.html" class="recent-16">
+                        <a href="single-property-1#" class="recent-16">
                             <div class="recent-img16 img-center" style="background-image: url({{asset('theme/images/single-property/s-6.jpg')}});"></div>
                             <div class="recent-content"></div>
                             <div class="listing-badges">
@@ -462,7 +462,7 @@
                 </div>
                 <div class="agents-grid" data-aos="fade-up">
                     <div class="people landscapes no-pb pbp-3 listing-item compact thehp-2">
-                        <a href="sisingle-property-1.html" class="recent-16">
+                        <a href="sisingle-property-1#" class="recent-16">
                             <div class="recent-img16 img-center" style="background-image: url({{asset('theme/images/single-property/s-1.jpg')}});"></div>
                             <div class="recent-content"></div>
                             <div class="listing-badges">
@@ -479,7 +479,7 @@
                 </div>
                 <div class="agents-grid" data-aos="fade-up">
                     <div class="people landscapes no-pb pbp-3 listing-item compact thehp-2">
-                        <a href="single-property-1.html" class="recent-16">
+                        <a href="single-property-1#" class="recent-16">
                             <div class="recent-img16 img-center" style="background-image: url({{asset('theme/images/single-property/s-2.jpg')}});"></div>
                             <div class="recent-content"></div>
                             <div class="listing-badges">
@@ -496,7 +496,7 @@
                 </div>
                 <div class="agents-grid" data-aos="fade-up">
                     <div class="people landscapes no-pb pbp-3 listing-item compact thehp-2">
-                        <a href="single-property-1.html" class="recent-16">
+                        <a href="single-property-1#" class="recent-16">
                             <div class="recent-img16 img-center" style="background-image: url({{asset('theme/images/single-property/s-3.jpg')}});"></div>
                             <div class="recent-content"></div>
                             <div class="listing-badges">
@@ -543,7 +543,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <span><a href="agent-details.html">View Profile</a></span>
+                            <span><a href="agent-details#">View Profile</a></span>
                         </div>
                     </div>
                 </div>
@@ -568,19 +568,19 @@
             <div class="row">
                 <div class="col-xl-6 col-md-12 col-xs-12" data-aos="fade-right">
                     <div class="news-item news-item-sm">
-                        <a href="blog-details.html" class="news-img-link">
+                        <a href="blog-details#" class="news-img-link">
                             <div class="news-item-img">
                                 <img class="resp-img" src="{{asset('theme/images/blog/b-1.jpg')}}" alt="blog image">
                             </div>
                         </a>
                         <div class="news-item-text">
-                            <a href="blog-details.html"><h3>The Real Estate News</h3></a>
+                            <a href="blog-details#"><h3>The Real Estate News</h3></a>
                             <span class="date">Jun 23, 2020 &nbsp;/&nbsp; By Admin</span>
                             <div class="news-item-descr">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
                             </div>
                             <div class="news-item-bottom">
-                                <a href="blog-details.html" class="news-link">Read more...</a>
+                                <a href="blog-details#" class="news-link">Read more...</a>
                                 <ul class="action-list">
                                     <li class="action-item"><i class="fa fa-heart"></i> <span>306</span></li>
                                     <li class="action-item"><i class="fa fa-comment"></i> <span>34</span></li>
@@ -590,19 +590,19 @@
                         </div>
                     </div>
                     <div class="news-item news-item-sm min-last">
-                        <a href="blog-details.html" class="news-img-link">
+                        <a href="blog-details#" class="news-img-link">
                             <div class="news-item-img">
                                 <img class="resp-img" src="{{asset('theme/images/blog/b-2.jpg')}}" alt="blog image">
                             </div>
                         </a>
                         <div class="news-item-text">
-                            <a href="blog-details.html"><h3>The Real Estate News</h3></a>
+                            <a href="blog-details#"><h3>The Real Estate News</h3></a>
                             <span class="date">Jun 23, 2020 &nbsp;/&nbsp; By Admin</span>
                             <div class="news-item-descr">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
                             </div>
                             <div class="news-item-bottom">
-                                <a href="blog-details.html" class="news-link">Read more...</a>
+                                <a href="blog-details#" class="news-link">Read more...</a>
                                 <ul class="action-list">
                                     <li class="action-item"><i class="fa fa-heart"></i> <span>306</span></li>
                                     <li class="action-item"><i class="fa fa-comment"></i> <span>34</span></li>
@@ -614,19 +614,19 @@
                 </div>
                 <div class="col-xl-6 col-md-12 col-xs-12" data-aos="fade-left">
                     <div class="news-item news-item-sm">
-                        <a href="blog-details.html" class="news-img-link">
+                        <a href="blog-details#" class="news-img-link">
                             <div class="news-item-img">
                                 <img class="resp-img" src="{{asset('theme/images/blog/b-3.jpg')}}" alt="blog image">
                             </div>
                         </a>
                         <div class="news-item-text">
-                            <a href="blog-details.html"><h3>The Real Estate News</h3></a>
+                            <a href="blog-details#"><h3>The Real Estate News</h3></a>
                             <span class="date">Jun 23, 2020 &nbsp;/&nbsp; By Admin</span>
                             <div class="news-item-descr">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
                             </div>
                             <div class="news-item-bottom">
-                                <a href="blog-details.html" class="news-link">Read more...</a>
+                                <a href="blog-details#" class="news-link">Read more...</a>
                                 <ul class="action-list">
                                     <li class="action-item"><i class="fa fa-heart"></i> <span>306</span></li>
                                     <li class="action-item"><i class="fa fa-comment"></i> <span>34</span></li>
@@ -636,19 +636,19 @@
                         </div>
                     </div>
                     <div class="news-item news-item-sm last">
-                        <a href="blog-details.html" class="news-img-link">
+                        <a href="blog-details#" class="news-img-link">
                             <div class="news-item-img">
                                 <img class="resp-img" src="{{asset('theme/images/blog/b-4.jpg')}}" alt="blog image">
                             </div>
                         </a>
                         <div class="news-item-text">
-                            <a href="blog-details.html"><h3>The Real Estate News</h3></a>
+                            <a href="blog-details#"><h3>The Real Estate News</h3></a>
                             <span class="date">Jun 23, 2020 &nbsp;/&nbsp; By Admin</span>
                             <div class="news-item-descr">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
                             </div>
                             <div class="news-item-bottom">
-                                <a href="blog-details.html" class="news-link">Read more...</a>
+                                <a href="blog-details#" class="news-link">Read more...</a>
                                 <ul class="action-list">
                                     <li class="action-item"><i class="fa fa-heart"></i> <span>306</span></li>
                                     <li class="action-item"><i class="fa fa-comment"></i> <span>34</span></li>
