@@ -1,9 +1,9 @@
-@extends('front.master')
+@extends('front.master-login')
 
 @section('content')
  <!-- START SECTION LOGIN -->
  <div id="login">
-    <div class="login">
+    <div class="login" style="margin-bottom:135px;">
         <form>
             <div class="access_social">
                 <a href="#0" class="social_bt facebook">Login with Facebook</a>
