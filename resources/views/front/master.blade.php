@@ -100,12 +100,12 @@
                         <!-- Main Navigation -->
                         <nav id="navigation" class="style-1 black">
                             <ul id="responsive">
-                                <li><a href="#">For Rent</a> </li>
-                                <li><a href="#">For Sale</a> </li>
-                                <li><a href="#">Property Advice</a> </li>
+                                <li><a onclick="alert('work in progress')" href="#">For Rent</a> </li>
+                                <li><a onclick="alert('work in progress')" href="#">For Sale</a> </li>
+                                <li><a onclick="alert('work in progress')" href="#">Property Advice</a> </li>
                                 {{-- <li><a href="{{route('search-home')}}"><i class="fa fa-search"></i> Search</a> </li> --}}
 
-                                <li><a href="#">Locations</a> </li>
+                                <li><a onclick="alert('work in progress')" href="#">Locations</a> </li>
 
                                 <li class="d-none d-xl-none d-block d-lg-block"><a href="login#">Login</a></li>
                                 <li class="d-none d-xl-none d-block d-lg-block"><a href="register#">Register</a></li>
@@ -302,7 +302,7 @@
                     <div class="soc-log fl-wrap">
                         <p>Login</p>
                         <a href="#" class="facebook-log"><i class="fa fa-facebook-official"></i>Log in with Facebook</a>
-                        <a href="#" class="twitter-log"><i class="fa fa-twitter"></i> Log in with Twitter</a>
+                        <a href="#" class="twitter-log"><i class="fa fa-google"></i> Log in with Gmail</a>
                     </div>
                     <div class="log-separator fl-wrap"><span>Or</span></div>
                     <div id="tabs-container">

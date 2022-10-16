@@ -137,7 +137,7 @@
                             </div>
                             <div class="recent-details">
                                 <div class="recent-title">Luxury House</div>
-                                <div class="recent-price mb-3">$230,000</div>
+                                <div class="recent-price mb-3">$235,720</div>
                                 <div class="house-details thehp-1"><i class="fa fa-bed mr-1" aria-hidden="true"></i> 6 Bed <span>|</span><i class="fa fa-bath mr-1" aria-hidden="true"></i> 3 Bath <span>|</span><i class="fa fa-object-group mr-1" aria-hidden="true"></i> 720 sq ft</div>
                             </div>
                             <div class="view-proper">View Details</div>
@@ -154,7 +154,7 @@
                             </div>
                             <div class="recent-details">
                                 <div class="recent-title">Family Apartment</div>
-                                <div class="recent-price mb-3">$230,000</div>
+                                <div class="recent-price mb-3">$560,000</div>
                                 <div class="house-details thehp-1"><i class="fa fa-bed mr-1" aria-hidden="true"></i> 6 Bed <span>|</span><i class="fa fa-bath mr-1" aria-hidden="true"></i> 3 Bath <span>|</span><i class="fa fa-object-group mr-1" aria-hidden="true"></i> 720 sq ft</div>
                             </div>
                             <div class="view-proper">View Details</div>
@@ -171,7 +171,7 @@
                             </div>
                             <div class="recent-details">
                                 <div class="recent-title">Villa House</div>
-                                <div class="recent-price mb-3">$230,000</div>
+                                <div class="recent-price mb-3">$220,000</div>
                                 <div class="house-details thehp-1"><i class="fa fa-bed mr-1" aria-hidden="true"></i> 6 Bed <span>|</span><i class="fa fa-bath mr-1" aria-hidden="true"></i> 3 Bath <span>|</span><i class="fa fa-object-group mr-1" aria-hidden="true"></i> 720 sq ft</div>
                             </div>
                             <div class="view-proper">View Details</div>
@@ -188,7 +188,7 @@
                             </div>
                             <div class="recent-details">
                                 <div class="recent-title">Luxury Condo</div>
-                                <div class="recent-price mb-3">$230,000</div>
+                                <div class="recent-price mb-3">$190,000</div>
                                 <div class="house-details thehp-1"><i class="fa fa-bed mr-1" aria-hidden="true"></i> 6 Bed <span>|</span><i class="fa fa-bath mr-1" aria-hidden="true"></i> 3 Bath <span>|</span><i class="fa fa-object-group mr-1" aria-hidden="true"></i> 720 sq ft</div>
                             </div>
                             <div class="view-proper">View Details</div>
@@ -205,7 +205,7 @@
                             </div>
                             <div class="recent-details">
                                 <div class="recent-title">Luxury House</div>
-                                <div class="recent-price mb-3">$230,000</div>
+                                <div class="recent-price mb-3">$214,000</div>
                                 <div class="house-details thehp-1"><i class="fa fa-bed mr-1" aria-hidden="true"></i> 6 Bed <span>|</span><i class="fa fa-bath mr-1" aria-hidden="true"></i> 3 Bath <span>|</span><i class="fa fa-object-group mr-1" aria-hidden="true"></i> 720 sq ft</div>
                             </div>
                             <div class="view-proper">View Details</div>
@@ -222,7 +222,7 @@
                             </div>
                             <div class="recent-details">
                                 <div class="recent-title">Luxury House</div>
-                                <div class="recent-price mb-3">$230,000</div>
+                                <div class="recent-price mb-3">$380,000</div>
                                 <div class="house-details thehp-1"><i class="fa fa-bed mr-1" aria-hidden="true"></i> 6 Bed <span>|</span><i class="fa fa-bath mr-1" aria-hidden="true"></i> 3 Bath <span>|</span><i class="fa fa-object-group mr-1" aria-hidden="true"></i> 720 sq ft</div>
                             </div>
                             <div class="view-proper">View Details</div>
@@ -238,8 +238,8 @@
                                 <span>For Sale</span>
                             </div>
                             <div class="recent-details">
-                                <div class="recent-title">Luxury House</div>
-                                <div class="recent-price mb-3">$230,000</div>
+                                <div class="recent-title">Luxury House 1</div>
+                                <div class="recent-price mb-3">$960,000</div>
                                 <div class="house-details thehp-1"><i class="fa fa-bed mr-1" aria-hidden="true"></i> 6 Bed <span>|</span><i class="fa fa-bath mr-1" aria-hidden="true"></i> 3 Bath <span>|</span><i class="fa fa-object-group mr-1" aria-hidden="true"></i> 720 sq ft</div>
                             </div>
                             <div class="view-proper">View Details</div>
@@ -255,8 +255,8 @@
                                 <span>For Sale</span>
                             </div>
                             <div class="recent-details">
-                                <div class="recent-title">Luxury House</div>
-                                <div class="recent-price mb-3">$230,000</div>
+                                <div class="recent-title">Luxury House 3</div>
+                                <div class="recent-price mb-3">$6,500</div>
                                 <div class="house-details thehp-1"><i class="fa fa-bed mr-1" aria-hidden="true"></i> 6 Bed <span>|</span><i class="fa fa-bath mr-1" aria-hidden="true"></i> 3 Bath <span>|</span><i class="fa fa-object-group mr-1" aria-hidden="true"></i> 720 sq ft</div>
                             </div>
                             <div class="view-proper">View Details</div>
@@ -272,8 +272,8 @@
                                 <span>For Sale</span>
                             </div>
                             <div class="recent-details">
-                                <div class="recent-title">Luxury House</div>
-                                <div class="recent-price mb-3">$230,000</div>
+                                <div class="recent-title">Luxury House 4</div>
+                                <div class="recent-price mb-3">$6,500</div>
                                 <div class="house-details thehp-1"><i class="fa fa-bed mr-1" aria-hidden="true"></i> 6 Bed <span>|</span><i class="fa fa-bath mr-1" aria-hidden="true"></i> 3 Bath <span>|</span><i class="fa fa-object-group mr-1" aria-hidden="true"></i> 720 sq ft</div>
                             </div>
                             <div class="view-proper">View Details</div>
@@ -301,7 +301,7 @@
                     </div>
                     <div class="agent-section p-top-35 p-bottom-30 p-right-25 p-left-25">
                         <h4 class="m-bottom-15 text-bold-700">Houses</h4>
-                        <p>Nonec pede justo fringilla vel aliquet nec vulputate eget arcu in enim justo rhoncus ut imperdiet venenatis vitae justo.</p>
+                        <p>Kenya is a country in Africa with coastline on the Indian Ocean. It encompasses savannah, lakelands, the dramatic Great Rift Valley and mountain highlands. It's also home to wildlife like lions, elephants and rhino</p>
                         <a class="text-base text-base-dark-hover text-size-13" href="properties-full-list#">Read More <i class="fa fa-long-arrow-right ml-2"></i></a>
                     </div>
                 </div>
@@ -313,7 +313,7 @@
                     </div>
                     <div class="agent-section p-top-35 p-bottom-30 p-right-25 p-left-25">
                         <h4 class="m-bottom-15 text-bold-700">Apartments</h4>
-                        <p>Nonec pede justo fringilla vel aliquet nec vulputate eget arcu in enim justo rhoncus ut imperdiet venenatis vitae justo.</p>
+                        <p>Kenya is a country in Africa with coastline on the Indian Ocean. It encompasses savannah, lakelands, the dramatic Great Rift Valley and mountain highlands. It's also home to wildlife like lions, elephants and rhino</p>
                         <a class="text-base text-base-dark-hover text-size-13" href="properties-full-list#">Read More <i class="fa fa-long-arrow-right ml-2"></i></a>
                     </div>
                 </div>
@@ -325,7 +325,7 @@
                     </div>
                     <div class="agent-section p-top-35 p-bottom-30 p-right-25 p-left-25">
                         <h4 class="m-bottom-15 text-bold-700">Commercial</h4>
-                        <p>Nonec pede justo fringilla vel aliquet nec vulputate eget arcu in enim justo rhoncus ut imperdiet venenatis vitae justo.</p>
+                        <p>Kenya is a country in Africa with coastline on the Indian Ocean. It encompasses savannah, lakelands, the dramatic Great Rift Valley and mountain highlands. It's also home to wildlife like lions, elephants and rhino</p>
                         <a class="text-base text-base-dark-hover text-size-13" href="properties-full-list#">Read More <i class="fa fa-long-arrow-right ml-2"></i></a>
                     </div>
                 </div>
@@ -337,7 +337,7 @@
                     </div>
                     <div class="agent-section p-top-35 p-bottom-30 p-right-25 p-left-25">
                         <h4 class="m-bottom-15 text-bold-700">Hotels</h4>
-                        <p>Nonec pede justo fringilla vel aliquet nec vulputate eget arcu in enim justo rhoncus ut imperdiet venenatis vitae justo.</p>
+                        <p>Kenya is a country in Africa with coastline on the Indian Ocean. It encompasses savannah, lakelands, the dramatic Great Rift Valley and mountain highlands. It's also home to wildlife like lions, elephants and rhino</p>
                         <a class="text-base text-base-dark-hover text-size-13" href="properties-full-list#">Read More <i class="fa fa-long-arrow-right ml-2"></i></a>
                     </div>
                 </div>
@@ -368,7 +368,7 @@
                             </div>
                             <div class="recent-details">
                                 <div class="recent-title">Luxury House</div>
-                                <div class="recent-price mb-3">$230,000</div>
+                                <div class="recent-price mb-3">$6,500</div>
                                 <div class="house-details thehp-1"><i class="fa fa-bed mr-1" aria-hidden="true"></i> 6 Bed <span>|</span><i class="fa fa-bath mr-1" aria-hidden="true"></i> 3 Bath <span>|</span><i class="fa fa-object-group mr-1" aria-hidden="true"></i> 720 sq ft</div>
                             </div>
                             <div class="view-proper">View Details</div>
@@ -385,7 +385,7 @@
                             </div>
                             <div class="recent-details">
                                 <div class="recent-title">Family Apartment</div>
-                                <div class="recent-price mb-3">$230,000</div>
+                                <div class="recent-price mb-3">$6,500</div>
                                 <div class="house-details thehp-1"><i class="fa fa-bed mr-1" aria-hidden="true"></i> 6 Bed <span>|</span><i class="fa fa-bath mr-1" aria-hidden="true"></i> 3 Bath <span>|</span><i class="fa fa-object-group mr-1" aria-hidden="true"></i> 720 sq ft</div>
                             </div>
                             <div class="view-proper">View Details</div>
@@ -402,7 +402,7 @@
                             </div>
                             <div class="recent-details">
                                 <div class="recent-title">Villa House</div>
-                                <div class="recent-price mb-3">$230,000</div>
+                                <div class="recent-price mb-3">$6,500</div>
                                 <div class="house-details thehp-1"><i class="fa fa-bed mr-1" aria-hidden="true"></i> 6 Bed <span>|</span><i class="fa fa-bath mr-1" aria-hidden="true"></i> 3 Bath <span>|</span><i class="fa fa-object-group mr-1" aria-hidden="true"></i> 720 sq ft</div>
                             </div>
                             <div class="view-proper">View Details</div>
@@ -419,7 +419,7 @@
                             </div>
                             <div class="recent-details">
                                 <div class="recent-title">Luxury Condo</div>
-                                <div class="recent-price mb-3">$230,000</div>
+                                <div class="recent-price mb-3">$6,500</div>
                                 <div class="house-details thehp-1"><i class="fa fa-bed mr-1" aria-hidden="true"></i> 6 Bed <span>|</span><i class="fa fa-bath mr-1" aria-hidden="true"></i> 3 Bath <span>|</span><i class="fa fa-object-group mr-1" aria-hidden="true"></i> 720 sq ft</div>
                             </div>
                             <div class="view-proper">View Details</div>
@@ -436,7 +436,7 @@
                             </div>
                             <div class="recent-details">
                                 <div class="recent-title">Luxury House</div>
-                                <div class="recent-price mb-3">$230,000</div>
+                                <div class="recent-price mb-3">$6,500</div>
                                 <div class="house-details thehp-1"><i class="fa fa-bed mr-1" aria-hidden="true"></i> 6 Bed <span>|</span><i class="fa fa-bath mr-1" aria-hidden="true"></i> 3 Bath <span>|</span><i class="fa fa-object-group mr-1" aria-hidden="true"></i> 720 sq ft</div>
                             </div>
                             <div class="view-proper">View Details</div>
@@ -453,7 +453,7 @@
                             </div>
                             <div class="recent-details">
                                 <div class="recent-title">Luxury House</div>
-                                <div class="recent-price mb-3">$230,000</div>
+                                <div class="recent-price mb-3">$6,500</div>
                                 <div class="house-details thehp-1"><i class="fa fa-bed mr-1" aria-hidden="true"></i> 6 Bed <span>|</span><i class="fa fa-bath mr-1" aria-hidden="true"></i> 3 Bath <span>|</span><i class="fa fa-object-group mr-1" aria-hidden="true"></i> 720 sq ft</div>
                             </div>
                             <div class="view-proper">View Details</div>
@@ -470,7 +470,7 @@
                             </div>
                             <div class="recent-details">
                                 <div class="recent-title">Luxury House</div>
-                                <div class="recent-price mb-3">$230,000</div>
+                                <div class="recent-price mb-3">$6,500</div>
                                 <div class="house-details thehp-1"><i class="fa fa-bed mr-1" aria-hidden="true"></i> 6 Bed <span>|</span><i class="fa fa-bath mr-1" aria-hidden="true"></i> 3 Bath <span>|</span><i class="fa fa-object-group mr-1" aria-hidden="true"></i> 720 sq ft</div>
                             </div>
                             <div class="view-proper">View Details</div>
@@ -487,7 +487,7 @@
                             </div>
                             <div class="recent-details">
                                 <div class="recent-title">Luxury House</div>
-                                <div class="recent-price mb-3">$230,000</div>
+                                <div class="recent-price mb-3">$6,500</div>
                                 <div class="house-details thehp-1"><i class="fa fa-bed mr-1" aria-hidden="true"></i> 6 Bed <span>|</span><i class="fa fa-bath mr-1" aria-hidden="true"></i> 3 Bath <span>|</span><i class="fa fa-object-group mr-1" aria-hidden="true"></i> 720 sq ft</div>
                             </div>
                             <div class="view-proper">View Details</div>
@@ -504,7 +504,7 @@
                             </div>
                             <div class="recent-details">
                                 <div class="recent-title">Luxury House</div>
-                                <div class="recent-price mb-3">$230,000</div>
+                                <div class="recent-price mb-3">$6,500</div>
                                 <div class="house-details thehp-1"><i class="fa fa-bed mr-1" aria-hidden="true"></i> 6 Bed <span>|</span><i class="fa fa-bath mr-1" aria-hidden="true"></i> 3 Bath <span>|</span><i class="fa fa-object-group mr-1" aria-hidden="true"></i> 720 sq ft</div>
                             </div>
                             <div class="view-proper">View Details</div>
@@ -575,7 +575,7 @@
                         </a>
                         <div class="news-item-text">
                             <a href="blog-details#"><h3>The Real Estate News</h3></a>
-                            <span class="date">Jun 23, 2020 &nbsp;/&nbsp; By Admin</span>
+                            <span class="date">Jun 23, 2020 &nbsp;/&nbsp; By Albert</span>
                             <div class="news-item-descr">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
                             </div>
@@ -589,28 +589,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="news-item news-item-sm min-last">
-                        <a href="blog-details#" class="news-img-link">
-                            <div class="news-item-img">
-                                <img class="resp-img" src="{{asset('theme/images/blog/b-2.jpg')}}" alt="blog image">
-                            </div>
-                        </a>
-                        <div class="news-item-text">
-                            <a href="blog-details#"><h3>The Real Estate News</h3></a>
-                            <span class="date">Jun 23, 2020 &nbsp;/&nbsp; By Admin</span>
-                            <div class="news-item-descr">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-                            </div>
-                            <div class="news-item-bottom">
-                                <a href="blog-details#" class="news-link">Read more...</a>
-                                <ul class="action-list">
-                                    <li class="action-item"><i class="fa fa-heart"></i> <span>306</span></li>
-                                    <li class="action-item"><i class="fa fa-comment"></i> <span>34</span></li>
-                                    <li class="action-item"><i class="fa fa-share-alt"></i> <span>122</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
                 <div class="col-xl-6 col-md-12 col-xs-12" data-aos="fade-left">
                     <div class="news-item news-item-sm">
@@ -621,7 +600,7 @@
                         </a>
                         <div class="news-item-text">
                             <a href="blog-details#"><h3>The Real Estate News</h3></a>
-                            <span class="date">Jun 23, 2020 &nbsp;/&nbsp; By Admin</span>
+                            <span class="date">Jun 23, 2020 &nbsp;/&nbsp; By Albert</span>
                             <div class="news-item-descr">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
                             </div>
@@ -635,28 +614,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="news-item news-item-sm last">
-                        <a href="blog-details#" class="news-img-link">
-                            <div class="news-item-img">
-                                <img class="resp-img" src="{{asset('theme/images/blog/b-4.jpg')}}" alt="blog image">
-                            </div>
-                        </a>
-                        <div class="news-item-text">
-                            <a href="blog-details#"><h3>The Real Estate News</h3></a>
-                            <span class="date">Jun 23, 2020 &nbsp;/&nbsp; By Admin</span>
-                            <div class="news-item-descr">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-                            </div>
-                            <div class="news-item-bottom">
-                                <a href="blog-details#" class="news-link">Read more...</a>
-                                <ul class="action-list">
-                                    <li class="action-item"><i class="fa fa-heart"></i> <span>306</span></li>
-                                    <li class="action-item"><i class="fa fa-comment"></i> <span>34</span></li>
-                                    <li class="action-item"><i class="fa fa-share-alt"></i> <span>122</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>

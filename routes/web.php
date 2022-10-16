@@ -19,3 +19,7 @@ Route::get('/search-home', [App\Http\Controllers\HomeController::class, 'search'
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
