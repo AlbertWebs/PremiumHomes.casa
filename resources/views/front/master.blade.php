@@ -110,7 +110,7 @@
                                 <li class="d-none d-xl-none d-block d-lg-block"><a href="login#">Login</a></li>
                                 <li class="d-none d-xl-none d-block d-lg-block"><a href="register#">Register</a></li>
                                 <li class="d-none d-xl-none d-block d-lg-block mt-5 pb-4 ml-5 border-bottom-0">
-                                    <a href="add-property#" class="button border btn-lg btn-block text-center">Add Listing<i class="fas fa-laptop-house ml-2"></i></a>
+                                    <a href="{{url('/')}}/login" class="button border btn-lg btn-block text-center">Add Listing<i class="fas fa-laptop-house ml-2"></i></a>
                                 </li>
                             </ul>
                         </nav>
@@ -122,7 +122,7 @@
                     <div class="right-side d-none d-none d-lg-none d-xl-flex">
                         <!-- Header Widget -->
                         <div class="header-widget">
-                            <a href="add-property#" class="button border">Add Listing<i class="fas fa-laptop-house ml-2"></i></a>
+                            <a href="{{url('/')}}/login" class="button border">Add Listing<i class="fas fa-laptop-house ml-2"></i></a>
                         </div>
                         <!-- Header Widget / End -->
                     </div>
@@ -241,8 +241,8 @@
                                                 <i class="fa fa-twitter" aria-hidden="true"></i>
                                             </div>
                                             <div class="text">
-                                                <h5><a href="#">@premiumhomes</a> all share them with me baby said inspet.</h5>
-                                                <h4>about 5 days ago</h4>
+                                                <h5><a href="#">@premiumhomes</a> high-end homes in Loresho are here, this is just sample content</h5>
+                                                <h4>about 2 days ago</h4>
                                             </div>
                                         </div>
                                         <div class="single-item">
@@ -250,8 +250,8 @@
                                                 <i class="fa fa-twitter" aria-hidden="true"></i>
                                             </div>
                                             <div class="text">
-                                                <h5><a href="#">@premiumhomes</a> all share them with me baby said inspet.</h5>
-                                                <h4>about 5 days ago</h4>
+                                                <h5><a href="#">@premiumhomes</a> some other tweet goes here, not so long but enough</h5>
+                                                <h4>about 6 days ago</h4>
                                             </div>
                                         </div>
                                     </div>

@@ -9,6 +9,7 @@
             <a href="#0" class="social_bt google">Login with Google</a>
             <a href="#0" class="social_bt linkedin">Login with Linkedin</a>
         </div>
+        <div class="divider"><span>Or</span></div>
         <form autocomplete="off">
             <div class="form-group">
                 <label>Your Name</label>
@@ -37,7 +38,7 @@
             </div>
             <div id="pass-info" class="clearfix"></div>
             <a href="#0" class="btn_1 rounded full-width add_top_30">Register Now!</a>
-            <div class="text-center add_top_10">Already have an acccount? <strong><a href="login.html">Sign In</a></strong></div>
+            <div class="text-center add_top_10">Already have an acccount? <strong><a href="{{ route('login') }}">Sign In</a></strong></div>
         </form>
     </div>
 </div>
