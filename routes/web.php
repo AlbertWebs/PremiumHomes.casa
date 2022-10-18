@@ -23,3 +23,14 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+// Users Routes
+Auth::routes();
+Route::group(['prefix'=>'vendor'], function(){
+    // SocialMedia
+    Route::get('/facebook', [LoginController::class, 'facebook']);
+    Route::get('/facebook/redirect', [LoginController::class, 'facebookRedirect']);
+    Route::get('/google', [LoginController::class, 'google']);
+    Route::get('/google/redirect', [LoginController::class, 'googleRedirect']);
+});

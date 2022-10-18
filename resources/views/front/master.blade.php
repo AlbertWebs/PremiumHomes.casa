@@ -146,13 +146,13 @@
                     </div>
                     <!-- Right Side Content / End -->
 
-                    {{-- <div class="right-side d-none d-none d-lg-none d-xl-flex sign ml-0">
+                    <div class="right-side d-none d-none d-lg-none d-xl-flex sign ml-0">
 
                         <div class="header-widget sign-in">
                             <div class="show-reg-form modal-open"><a href="#">Sign In</a></div>
                         </div>
 
-                    </div> --}}
+                    </div>
                     <!-- Right Side Content / End -->
 
                     <!-- lang-wrap-->
