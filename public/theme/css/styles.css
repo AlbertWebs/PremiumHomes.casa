@@ -5565,6 +5565,11 @@ element.style {
   background: #BB001B;
 }
 
+.login-and-register-form .soc-log a.linkedin-log {
+    text-align: center;
+    background: #0e76a8;
+  }
+
 .login-and-register-form .soc-log a i {
   font-size: 20px;
   padding-right: 15px;
@@ -5579,6 +5584,10 @@ element.style {
 .login-and-register-form .soc-log a.twitter-log {
   background: #BB001B;
 }
+
+.login-and-register-form .soc-log a.linkedin-log {
+    background: #0e76a8;
+  }
 
 .login-and-register-form .close-reg:hover, .custom-form .log-submit-btn:hover, .soc-log a:hover {
   background: #2F3B59;

@@ -304,8 +304,9 @@
                     <h3>Welcome to <span>Premium<strong>Homes</strong></span></h3>
                     <div class="soc-log fl-wrap">
                         <p>Login</p>
-                        <a href="#" class="facebook-log"><i class="fa fa-facebook-official"></i>Log in with Facebook</a>
+                        <a href="{{route('facebook-login')}}" class="facebook-log"><i class="fa fa-facebook-official"></i>Log in with Facebook</a>
                         <a href="#" class="twitter-log"><i class="fa fa-google"></i> Log in with Gmail</a>
+                        <a href="#" class="linkedin-log"><i class="fa fa-linkedin"></i> Log in with Linked-In</a>
                     </div>
                     <div class="log-separator fl-wrap"><span>Or</span></div>
                     <div id="tabs-container">
