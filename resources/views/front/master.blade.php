@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="{{asset('theme/css/slick.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/styles.css')}}">
     <link rel="stylesheet" id="color" href="{{asset('theme/css/default.css')}}">
+    @include('tawkto')
 </head>
 
 <body class="int_dark_bg">
@@ -226,7 +227,7 @@
                                         <li><a href="#">Property Details</a></li>
                                     </ul>
                                     <ul class="nav-right">
-                                        <li><a href="{{url('/')}}/contact-us">Contact Us</a></li>
+                                        <li><a target="new" href="https://tawk.to/chat/634ebf66daff0e1306d2a62a/1gflpnajd">Chat Online</a></li>
                                         <li><a href="#">Copyrights</a></li>
                                         <li><a href="#">Privacy Policy</a></li>
                                         <li><a href="#">Sitemaps</a></li>
