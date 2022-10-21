@@ -165,6 +165,7 @@
                     </div>
                     <!-- Right Side Content / End -->
                     @endif
+                    &nbsp; &nbsp;
 
                     <!-- lang-wrap-->
                     <div class="header-user-menu user-menu add d-none d-lg-none d-xl-flex">
@@ -178,7 +179,7 @@
                             </ul>
                         </div>
                     </div>
-
+                    &nbsp; &nbsp;
                     <!-- lang-wrap end-->
 
                 </div>
