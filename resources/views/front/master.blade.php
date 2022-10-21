@@ -151,6 +151,8 @@
 
                     @endif
 
+                    &nbsp; &nbsp;
+
                     @if(Auth::User())
 
                     @else
