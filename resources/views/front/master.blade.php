@@ -156,7 +156,7 @@
 
                     @endif
 
-                    &nbsp; &nbsp;
+
 
                     @if(Auth::User())
 
@@ -164,13 +164,13 @@
                     <div class="right-side d-none d-none d-lg-none d-xl-flex sign ml-0">
 
                         <div class="header-widget sign-in">
-                            <div class="show-reg-form modal-open"><a href="#">Sign In</a></div>
+                            <div class="show-reg-form modal-open"><a href="#"><i class="fa fa-user-plus"></i> Sign In </a></div>
                         </div>
 
                     </div>
                     <!-- Right Side Content / End -->
                     @endif
-                    &nbsp; &nbsp;
+
 
                     <!-- lang-wrap-->
                     {{-- <div class="header-user-menu user-menu add d-none d-lg-none d-xl-flex">
@@ -184,7 +184,7 @@
                             </ul>
                         </div>
                     </div> --}}
-                    &nbsp; &nbsp;
+
                     <!-- lang-wrap end-->
 
                 </div>
