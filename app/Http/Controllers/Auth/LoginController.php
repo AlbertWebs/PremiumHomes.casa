@@ -73,8 +73,8 @@ class LoginController extends Controller
 
 
     public function facebookRedirect(){
-        $user = Socialite::driver('facebook')->user();
-        // $user  = Socialite::driver('facebook')->stateless()->user();
+        // $user = Socialite::driver('facebook')->user();
+        $user  = Socialite::driver('facebook')->stateless()->user();
 
         // Logic
         $user = User::firstOrCreate([
