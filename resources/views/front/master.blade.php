@@ -130,12 +130,13 @@
                     <!-- Right Side Content / End -->
 
                     <!-- Right Side Content / End -->
+                    @if(Auth::User())
                     <div class="header-user-menu user-menu add">
                         <div class="header-user-name">
                             <span>
                                 <img src="{{asset('theme/images/testimonials/199259143_4389625377747506_3043984032264076715_n.jpg')}}" alt="">
                             </span>
-                            Hi, Albro!
+                            Hi, {{Auth::User()->name}}
                         </div>
                         <ul>
                             <li><a href="user-profile#"> Edit profile</a></li>
@@ -146,7 +147,13 @@
                         </ul>
                     </div>
                     <!-- Right Side Content / End -->
+                    @else
 
+                    @endif
+
+                    @if(Auth::User())
+
+                    @else
                     <div class="right-side d-none d-none d-lg-none d-xl-flex sign ml-0">
 
                         <div class="header-widget sign-in">
@@ -155,6 +162,7 @@
 
                     </div>
                     <!-- Right Side Content / End -->
+                    @endif
 
                     <!-- lang-wrap-->
                     <div class="header-user-menu user-menu add d-none d-lg-none d-xl-flex">

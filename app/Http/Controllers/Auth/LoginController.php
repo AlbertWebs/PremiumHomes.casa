@@ -86,7 +86,7 @@ class LoginController extends Controller
         ]);
 
         Auth::login($user, true);
-        return redirect()->to('/vendor');
+        return redirect()->to('/vendors');
     }
 
     public function facebook(){
@@ -109,7 +109,7 @@ class LoginController extends Controller
         ]);
 
         Auth::login($user, true);
-        return redirect()->to('/vendor');
+        return redirect()->to('/vendors');
     }
 
 
@@ -117,7 +117,7 @@ class LoginController extends Controller
     {
         $user = $service->createOrGetUser(Socialite::driver('facebook')->user());
         auth()->login($user);
-        return redirect()->to('/vendor/home');
+        return redirect()->to('/vendors/home');
     }
 
 }
