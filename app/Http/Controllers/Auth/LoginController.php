@@ -97,6 +97,7 @@ class LoginController extends Controller
         return Socialite::driver('google')->redirect();
     }
 
+
     public function googleRedirect(){
         $user = Socialite::driver('google')->user();
         // Logic
@@ -112,6 +113,24 @@ class LoginController extends Controller
         return redirect()->to('/vendors');
     }
 
+    public function linkedin(){
+        return Socialite::driver('linkedin')->redirect();
+    }
+
+    public function linkedinRedirect(){
+        $user = Socialite::driver('linkedin')->user();
+        // Logic
+        $user = User::firstOrCreate([
+            'email' => $user->email
+
+        ],[
+             'name' =>$user->name,
+             'password' => Hash::make(Str::random(24))
+        ]);
+
+        Auth::login($user, true);
+        return redirect()->to('/vendors');
+    }
 
     public function callback(SocialFacebookAccountService $service)
     {

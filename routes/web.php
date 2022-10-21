@@ -40,6 +40,6 @@ Route::group(['prefix'=>'vendors'], function(){
     Route::get('/facebook/redirect', [LoginController::class, 'facebookRedirect']);
     Route::get('/google', [LoginController::class, 'google'])->name('google-login');
     Route::get('/google/redirect', [LoginController::class, 'googleRedirect']);
-    Route::get('/linkedin', [LoginController::class, 'google'])->name('linkedin-login');
+    Route::get('/linkedin', [LoginController::class, 'linkedin'])->name('linkedin-login');
     Route::get('/linkedin/redirect', [LoginController::class, 'linkedinRedirect']);
 });

@@ -128,7 +128,6 @@
                     </div>
                     <!-- Right Side Content / End -->
 
-                    <!-- Right Side Content / End -->
                     @if(Auth::User())
                     <div class="header-user-menu user-menu add">
                         <div class="header-user-name">
@@ -142,9 +141,14 @@
                             <li><a href="add-property#"> Add Property</a></li>
                             <li><a href="payment-method#">  Payments</a></li>
                             <li><a href="change-password#"> Change Password</a></li>
-                            <li><a href="#">Log Out</a></li>
+                            <li><a onclick="event.preventDefault(); document.getElementById('logout-form').submit();" href="{{ route('logout') }}">{{ __('Logout') }}</a></li>
                         </ul>
                     </div>
+
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
                     <!-- Right Side Content / End -->
                     @else
 
