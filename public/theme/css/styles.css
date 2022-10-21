@@ -5506,7 +5506,7 @@ element.style {
 
 .login-and-register-form .close-reg {
   position: absolute;
-  background: #FF385C;
+  background: #bf9d34;
   top: 14px;
   right: 30px;
   border-radius: 100%;
@@ -5773,7 +5773,7 @@ element.style {
 }
 
 .login-and-register-form .main-register h3 span strong {
-  color: #FF385C;
+  color: #bf9d34;
   border: none;
   outline: 0;
   font-weight: inherit;

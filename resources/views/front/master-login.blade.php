@@ -160,7 +160,7 @@
                     <div class="right-side d-none d-none d-lg-none d-xl-flex sign ml-0">
 
                         <div class="header-widget sign-in">
-                            <div class="show-reg-form modal-open"><a href="#">Sign In</a></div>
+                            <div class="show-reg-form modal-open"><a class="button border" href="#"><i class="fa fa-user-plus"></i> Sign In </a></div>
                         </div>
 
                     </div>
@@ -324,17 +324,18 @@
                     <div class="close-reg"><i class="fa fa-times"></i></div>
                     <h3>Welcome to <span>Premium<strong>Homes</strong></span></h3>
                     <div class="soc-log fl-wrap">
-                        <p>Login</p>
-                        <a href="#" class="facebook-log"><i class="fa fa-facebook-official"></i>Log in with Facebook</a>
-                        <a href="#" class="twitter-log"><i class="fa fa-google"></i> Log in with Gmail</a>
+                        <p>Login With</p>
+                        <a href="{{route('facebook-login')}}" class="facebook-log"><i class="fa fa-facebook-official"></i>Log in with Facebook</a>
+                        <a href="{{route('google-login')}}" class="twitter-log"><i class="fa fa-google"></i> Log in with Gmail</a>
+                        <a href="{{route('linkedin-login')}}" class="linkedin-log"><i class="fa fa-linkedin"></i> Log in with Linked-In</a>
                     </div>
                     <div class="log-separator fl-wrap"><span>Or</span></div>
                     <div id="tabs-container">
-                        <ul class="tabs-menu">
-                            <li class="current"><a href="#tab-1">Login</a></li>
-                            <li><a href="#tab-2">Register</a></li>
-                        </ul>
-                        <div class="tab">
+                        <center>
+                            <a class="button border text-center" href="{{ route('login') }}"><i class="fa fa-lock"></i>  Login</a>
+                            <a class="button border text-center" href="{{ route('register') }}"><i class="fa fa-user-plus"></i>  Register</a>
+                        </center>
+                        {{-- <div class="tab">
                             <div id="tab-1" class="tab-contents">
                                 <div class="custom-form">
                                     <form method="post" name="registerform">
@@ -371,7 +372,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
