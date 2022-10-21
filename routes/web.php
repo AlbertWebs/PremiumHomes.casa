@@ -28,7 +28,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 // Users Routes
 Auth::routes();
-Route::group(['prefix'=>'vendor'], function(){
+Route::group(['prefix'=>'vendors'], function(){
     // SocialMedia
     Route::get('/facebook', [LoginController::class, 'facebook'])->name('facebook-login');
     Route::get('/facebook/redirect', [LoginController::class, 'facebookRedirect']);
