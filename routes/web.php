@@ -16,6 +16,12 @@ use App\Http\Controllers\Auth\LoginController;
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/search-home', [App\Http\Controllers\HomeController::class, 'search'])->name('search-home');
+Route::get('/clear-cache', function() {
+    $exitCode = Artisan::call('cache:clear');
+    $exitCode2 = Artisan::call('config:clear');
+    echo "Done";
+});
+
 
 Auth::routes();
 
