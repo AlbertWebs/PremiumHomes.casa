@@ -35,6 +35,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 // Users Routes
 Auth::routes();
 Route::group(['prefix'=>'vendors'], function(){
+    Route::get('/', [App\Http\Controllers\VendorController::class, 'index'])->name('home');
+
     // SocialMedia
     Route::get('/facebook', [LoginController::class, 'facebook'])->name('facebook-login');
     Route::get('/facebook/redirect', [LoginController::class, 'facebookRedirect']);
