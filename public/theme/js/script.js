@@ -381,7 +381,7 @@ jQuery(document).on('ready', function ($) {
         }
     });
     $(".slider_amount").val("Price Range: $" + $(".slider-range").slider("values", 0).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + " - $" + $(".slider-range").slider("values", 1).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
-    
+
     /*----------------------------------
     //------ MODAL ------//
     -----------------------------------*/
@@ -398,7 +398,7 @@ jQuery(document).on('ready', function ($) {
     $('.close-reg').on("click", function () {
         modal.hide();
     });
-    
+
     /*----------------------------------
     //------ TABS ------//
     -----------------------------------*/

@@ -37,7 +37,7 @@
                                                         <span>2 Garages</span>
                                                     </li>
                                                 </ul>
-                                                <a href="single-property-1#" class="int_btn">View Property <span class="btn_caret"><i class="fas fa-caret-right"></i></span></a>
+                                                <a href="{{route('properties-home',['sale'])}}" class="int_btn">View Property <span class="btn_caret"><i class="fas fa-caret-right"></i></span></a>
                                                 <h1>Real</h1>
                                             </div>
                                         </div>

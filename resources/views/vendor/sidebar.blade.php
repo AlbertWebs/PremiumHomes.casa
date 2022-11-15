@@ -42,7 +42,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="invoice#">
+                    <a href="{{route('invoices')}}">
                         <i class="fas fa-paste"></i>Invoices
                     </a>
                 </li>
@@ -52,9 +52,16 @@
                     </a>
                 </li>
                 <li>
-                    <a href="index-2#">
-                        <i class="fas fa-sign-out-alt"></i>Log Out
+
+                    <a class="dropdown-item" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();"> <i class="fas fa-sign-out-alt"></i>
+                        {{ __('Logout') }}
                     </a>
+                    {{--  --}}
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
                 </li>
             </ul>
         </div>

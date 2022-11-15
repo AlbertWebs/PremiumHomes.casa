@@ -2009,7 +2009,7 @@ screen and (max-height:300px) {
 }
 /*---------------------------------------*/
 /*--------- 17. PARALLAX IMAGE ----------*/
-/*---------------------------------------*/ 
+/*---------------------------------------*/
 /* Search Form */
 .search-2 .trip-search {
 	background: #fff;
@@ -2098,7 +2098,7 @@ screen and (max-height:300px) {
     border: none;
     border-radius: 5px;
     width: 100%;
-    height: 50px;	
+    height: 50px;
     padding-left: 20px;
 }
 .search-2 .form-group.location {
@@ -2140,7 +2140,7 @@ screen and (max-height:300px) {
         width: 100%;
 	}
 }
-@media only screen and (max-width: 991px) {	
+@media only screen and (max-width: 991px) {
 	.search-2 .hero-inner {
         margin: 97px 0;
 	}
@@ -2182,13 +2182,13 @@ screen and (max-height:300px) {
     .dark-overlay h1 {
         font-size: 26px;
     }
-    
+
 }
 @media only screen and (max-width: 768px) {
     .dark-overlay .main-search-inner {
         bottom: 360px !important;
     }
-    
+
 }
 @media only screen and (max-width: 450px) {
 	.search-2 .welcome-text p {
@@ -2506,7 +2506,7 @@ section.feature-categories {
     .homepage-9 .m-t-30 {
         margin-top: 30px;
     }
-    .homepage-9.homepage-4 a.button.border, 
+    .homepage-9.homepage-4 a.button.border,
     a.button {
         width: 240px;
     }
@@ -2516,7 +2516,7 @@ section.feature-categories {
 }
 .homepage-9 section.portfolio {
     padding: 5.6rem 0;
-    background: #FF385C;
+    background: #000000;
 }
 .homepage-9 .sec-title.discover h2 span,
 .homepage-9 .sec-title.discover h2,
@@ -2536,7 +2536,7 @@ section.feature-categories {
 .homepage-9 .portfolio .project-single {
     box-shadow: none;
     margin-bottom: 0px;
-    border: 1px solid #e7e7e7;
+    border: 4px solid #bf9d34;
 }
 .homepage-9 .portfolio .footer span {
     margin-top: 12px
@@ -2549,4 +2549,10 @@ section.feature-categories {
 }
 .homepage-9 .portfolio.disc .project-single {
     border: 0px;
+}
+
+@media screen and(max-width: 768px) {
+    .hero-video{
+      display:none !important;
+    }
 }

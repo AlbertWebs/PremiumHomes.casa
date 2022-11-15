@@ -15,4 +15,16 @@ class HomeController extends Controller
     public function search(){
         return view('front.search');
     }
+
+    public function properties($id){
+        return view('front.properties',compact('id'));
+    }
+
+    public function plots($id){
+        return view('front.plots',compact('id'));
+    }
+
+
+
+
 }

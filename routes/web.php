@@ -16,6 +16,10 @@ use App\Http\Controllers\Auth\LoginController;
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/search-home', [App\Http\Controllers\HomeController::class, 'search'])->name('search-home');
+Route::get('/listed-properties/{id}', [App\Http\Controllers\HomeController::class, 'properties'])->name('properties-home');
+Route::get('/plots-for-sale/{id}', [App\Http\Controllers\HomeController::class, 'plots'])->name('plots-home');
+
+
 Route::get('/clear-cache', function() {
     $exitCode = Artisan::call('cache:clear');
     $exitCode2 = Artisan::call('config:clear');
@@ -35,11 +39,13 @@ Route::group(['prefix'=>'admin'], function(){
 Auth::routes();
 Route::group(['prefix'=>'vendors'], function(){
     Route::get('/', [App\Http\Controllers\VendorController::class, 'index'])->name('dashboard');
+    Route::get('/dashboard', [App\Http\Controllers\VendorController::class, 'index'])->name('vendor.home');
     Route::get('/user-profile', [App\Http\Controllers\VendorController::class, 'user_profile'])->name('user-profile');
     Route::get('/my-listings', [App\Http\Controllers\VendorController::class, 'my_listings'])->name('my-listings');
     Route::get('/add-property', [App\Http\Controllers\VendorController::class, 'add_property'])->name('add-property');
     Route::get('/payment-method', [App\Http\Controllers\VendorController::class, 'payment_method'])->name('payment-method');
     Route::get('/invoice', [App\Http\Controllers\VendorController::class, 'invoice'])->name('invoice');
+    Route::get('/invoices', [App\Http\Controllers\VendorController::class, 'invoices'])->name('invoices');
     Route::get('/change-password', [App\Http\Controllers\VendorController::class, 'change_password'])->name('change-password');
     Route::get('/invoice', [App\Http\Controllers\VendorController::class, 'invoice'])->name('invoice');
 
