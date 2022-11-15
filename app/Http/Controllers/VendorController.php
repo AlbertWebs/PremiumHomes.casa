@@ -10,4 +10,11 @@ class VendorController extends Controller
     {
         return view('vendor.index');
     }
+
+    public function user_profile()
+    {
+        return view('vendor.user_profile');
+    }
+
+
 }

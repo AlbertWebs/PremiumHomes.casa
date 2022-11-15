@@ -61,17 +61,14 @@
                             <!-- Main Navigation -->
                             <nav id="navigation" class="style-1">
                                 <ul id="responsive">
-                                <li><a href="#">Home</a>
-                                    <li><a onclick="alert('work in progress')" href="#">For Rent</a> </li>
-                                    <li><a onclick="alert('work in progress')" href="#">For Sale</a> </li>
-                                    <li><a onclick="alert('work in progress')" href="#">Property Advice</a> </li>
-                                    {{-- <li><a href="{{route('search-home')}}"><i class="fa fa-search"></i> Search</a> </li> --}}
-
-                                    <li><a onclick="alert('work in progress')" href="#">Locations</a> </li>
-                                    <li><a target="new" href="https://tawk.to/chat/634ebf66daff0e1306d2a62a/1gflpnajd">Contact Us</a> </li>
-
-
-                            </ul>
+                                        <li><a href="#">Home</a>
+                                        <li><a onclick="alert('work in progress')" href="#">For Rent</a> </li>
+                                        <li><a onclick="alert('work in progress')" href="#">For Sale</a> </li>
+                                        <li><a onclick="alert('work in progress')" href="#">Property Advice</a> </li>
+                                        {{-- <li><a href="{{route('search-home')}}"><i class="fa fa-search"></i> Search</a> </li> --}}
+                                        <li><a onclick="alert('work in progress')" href="#">Locations</a> </li>
+                                        <li><a target="new" href="https://tawk.to/chat/634ebf66daff0e1306d2a62a/1gflpnajd">Contact Us</a> </li>
+                                </ul>
                             </nav>
                             <div class="clearfix"></div>
                             <!-- Main Navigation / End -->
@@ -107,72 +104,7 @@
         <section class="user-page section-padding">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-3 col-md-12 col-xs-12 pl-0 pr-0 user-dash">
-                        <div class="user-profile-box mb-0">
-                            <div class="sidebar-header">
-                                <img src="{{asset('theme/images/preloader.png')}}" alt="header-logo Premium Homes">
-                            </div>
-                            <div class="header clearfix">
-                                <img src="{{asset('theme/images/testimonials/199259143_4389625377747506_3043984032264076715_n.jpg')}}" alt="avatar" class="img-fluid profile-img">
-                            </div>
-                            <div class="active-user">
-                                @if(Auth::User())
-                                <h2>{{Auth::User()->name}}</h2>
-                                @else
-                                <h2>Albert Muhatia</h2>
-                                @endif
-                            </div>
-                            <div class="detail clearfix">
-                                <ul class="mb-0">
-                                    <li>
-                                        <a class="active" href="dashboard#">
-                                            <i class="fa fa-map-marker"></i> Dashboard
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="user-profile#">
-                                            <i class="fa fa-user"></i>Profile
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="my-listings#">
-                                            <i class="fa fa-list" aria-hidden="true"></i>My Properties
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="favorited-listings#">
-                                            <i class="fa fa-heart" aria-hidden="true"></i>Favorited Properties
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="add-property#">
-                                            <i class="fa fa-list" aria-hidden="true"></i>Add Property
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="payment-method#">
-                                            <i class="fas fa-credit-card"></i>Payments
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="invoice#">
-                                            <i class="fas fa-paste"></i>Invoices
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="change-password#">
-                                            <i class="fa fa-lock"></i>Change Password
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="index-2#">
-                                            <i class="fas fa-sign-out-alt"></i>Log Out
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    @include('vendor.sidebar')
                     <div class="col-lg-9 col-md-12 col-xs-12 pl-0 user-dash2">
                        <div class="col-lg-12 mobile-dashbord dashbord">
                             <div class="dashboard_navigationbar dashxl">

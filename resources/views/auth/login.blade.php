@@ -4,7 +4,8 @@
  <!-- START SECTION LOGIN -->
  <div id="login">
     <div class="login" style="margin-bottom:135px;">
-        <form>
+        <form method="POST" action="{{ route('login') }}">
+            @csrf
             <div class="access_social">
                 <a href="{{route('facebook-login')}}" class="social_bt facebook">Login with Facebook</a>
                 <a href="{{route('google-login')}}" class="social_bt google">Login with Google</a>
@@ -30,7 +31,7 @@
                 </div>
                 <div class="float-right mt-1"><a id="forgot" href="javascript:void(0);">Forgot Password?</a></div>
             </div>
-            <a href="#0" class="btn_1 rounded full-width">Login to Premium Homes</a>
+            <button type="submit" class="btn_1 rounded full-width">Login to Premium Homes</button>
             <div class="text-center add_top_10">New to Premium Homes? <strong><a href="{{ route('register') }}">Sign up!</a></strong></div>
         </form>
     </div>
