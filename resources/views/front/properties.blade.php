@@ -165,19 +165,19 @@
                     <source src="{{asset('theme/video/videoplayback.webm')}}" type="video/mp4">
                 </video>
             </div>
-            <div id="hero-area" class="main-search-inner search-2 vid hero-video">
+            <div id="hero-area" class="main-search-inner search-2 vid hero-video" >
                 <div class="container vid hero-video" data-aos="zoom-in">
-                    <div class="row hero-video">
+                    <div class="row hero-video" >
                         <div class="col-md-12 hero-video">
                             <div class="hero-inner2 hero-video">
-                                <!-- Welcome Text -->
-                                <div class="welcome-text hero-video">
+
+                                {{-- <div class="welcome-text hero-video">
                                     <h1 class="h1">Find Your Dream
                                     <br class="d-md-none">
                                     <span class="typed border-bottom"></span>
                                 </h1>
                                     <p class="mt-4">Premium Properties Guaranteed</p>
-                                </div>
+                                </div> --}}
                                 <!--/ End Welcome Text -->
                                 <!-- Search Form -->
                                 <div class="col-12">
