@@ -138,21 +138,6 @@
                     @endif
 
 
-                    <!-- lang-wrap-->
-                    {{-- <div class="header-user-menu user-menu add d-none d-lg-none d-xl-flex">
-                        <div class="lang-wrap">
-                            <div class="show-lang"><span><i class="fas fa-globe-americas"></i><strong>USD</strong></span><i class="fa fa-caret-down arrlan"></i></div>
-                            <ul class="lang-tooltip lang-action no-list-style">
-                                <li><a href="#" onclick="return alert('Currency Swap Is Offline')" class="current-lan" data-lantext="En">KES</a></li>
-                                <li><a href="#" data-lantext="Fr">JPN</a></li>
-                                <li><a href="#" data-lantext="Es">EUR</a></li>
-                                <li><a href="#" data-lantext="De">POUD</a></li>
-                            </ul>
-                        </div>
-                    </div> --}}
-
-                    <!-- lang-wrap end-->
-
                 </div>
             </div>
             <!-- Header / End -->
