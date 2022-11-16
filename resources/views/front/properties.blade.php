@@ -165,7 +165,7 @@
                     <source src="{{asset('theme/video/videoplayback.webm')}}" type="video/mp4">
                 </video>
             </div>
-            <div id="hero-area" class="main-search-inner search-2 vid hero-video" >
+            <div id="hero-area" class="main-search-inner search-2 vid hero-video">
                 <div class="container vid hero-video" data-aos="zoom-in">
                     <div class="row hero-video" >
                         <div class="col-md-12 hero-video">
