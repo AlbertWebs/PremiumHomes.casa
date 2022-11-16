@@ -36,7 +36,7 @@
     @include('tawkto')
 </head>
 
-<body class="int_dark_bg">
+<body class="int_dark_bg inner-pages ui-elements hd-white">
     <!-- Wrapper -->
     <div id="wrapper" class="int_main_wraapper">
         <div class="int_infosidebar">
@@ -380,6 +380,12 @@
                         arrows: false
                     }
                 }]
+            });
+
+        </script>
+         <script>
+            $(".accordion li").click(function() {
+                $(this).closest(".accordion").hasClass("one-open") ? ($(this).closest(".accordion").find("li").removeClass("active"), $(this).addClass("active")) : $(this).toggleClass("active"), "undefined" != typeof window.mr_parallax && setTimeout(mr_parallax.windowLoad, 500)
             });
 
         </script>

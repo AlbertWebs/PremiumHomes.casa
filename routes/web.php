@@ -19,7 +19,9 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 Route::get('/search-home', [App\Http\Controllers\HomeController::class, 'search'])->name('search-home');
 Route::get('/listed-properties/{id}', [App\Http\Controllers\HomeController::class, 'properties'])->name('properties-home');
 Route::get('/plots-for-sale/{id}', [App\Http\Controllers\HomeController::class, 'plots'])->name('plots-home');
-
+Route::get('/privacy-policy', [App\Http\Controllers\HomeController::class, 'privacy'])->name('privacy');
+Route::get('/terms-and-conditions', [App\Http\Controllers\HomeController::class, 'terms'])->name('terms');
+Route::get('/copyright', [App\Http\Controllers\HomeController::class, 'copyright'])->name('copyright');
 
 Route::get('/clear-cache', function() {
     $exitCode = Artisan::call('cache:clear');

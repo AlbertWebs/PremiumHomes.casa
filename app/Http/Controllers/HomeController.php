@@ -24,6 +24,18 @@ class HomeController extends Controller
         return view('front.plots',compact('id'));
     }
 
+    public function privacy(){
+        return view('front.privacy');
+    }
+
+    public function terms(){
+        return view('front.terms');
+    }
+
+    public function copyright(){
+        return view('front.copyright');
+    }
+
 
 
 
