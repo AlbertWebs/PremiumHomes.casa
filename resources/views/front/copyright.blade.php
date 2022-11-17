@@ -17,25 +17,37 @@
 <section class="faq service-details bg-white">
     <div class="container">
 
+
         <div class="row">
-            <div class="col-lg-12 col-md-12">
+            <div class="col-12 align-self-center">
+                <h2 class="featured mt-0 ml-0">Copyright Statement</h2>
+                <p></p>
+                <p>&nbsp;This website and its content is copyright of Premium Homes Limited - ©
+                    Premium Homes Limited  2022. All rights reserved.
 
-                <ul class="accordion accordion-1 one-open">
-                    <li class="active">
-                        <div class="title">
-                            <span>What payment methods are available?</span>
-                        </div>
-                        <div class="content">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            </p>
-                        </div>
-                    </li>
+                    Any redistribution or reproduction of part or all of the contents in
+                    any form is partially prohibited other than the following:
+                    </p><ul><li>
+                    you may print or download to a local hard disk extracts for your
+                    personal and non-commercial use only
+                    </li><li>
+                    you may copy the content to individual third parties for their
+                    personal use, but only if you acknowledge the website as the source
+                    of the material
+                    </li><li>
+                    Free Web themes can be downloaded reused and redistributed but the
+                    footer back-links have to be retained
+                    </li></ul>
 
-                </ul>
-                <!--end of accordion-->
+                    You may not, except with our express written permission, distribute
+                    or commercially exploit the content. Nor may you transmit it or store
+                    it in any other website or other form of electronic retrieval system.
+
+                    <br><p></p>
+
             </div>
         </div>
+
     </div>
 </section>
 <!-- END SECTION FAQ -->
