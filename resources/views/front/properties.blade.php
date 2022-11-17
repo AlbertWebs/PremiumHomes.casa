@@ -211,12 +211,12 @@
                                                         <div class="rld-single-select">
                                                             <select class="select single-select mr-0">
                                                                 <option value="1">Location</option>
-                                                                <option value="2">Los Angeles</option>
-                                                                <option value="3">Chicago</option>
-                                                                <option value="3">Philadelphia</option>
-                                                                <option value="3">San Francisco</option>
-                                                                <option value="3">Miami</option>
-                                                                <option value="3">Houston</option>
+                                                                <option value="2">Loresho</option>
+                                                                <option value="3">Kileleshwa</option>
+                                                                <option value="3">Kilimani</option>
+                                                                <option value="3">Sio Kimau</option>
+                                                                <option value="3">Limuru</option>
+                                                                <option value="3">Runda</option>
                                                             </select>
                                                         </div>
                                                         <div class="dropdown-filter d-none d-none d-lg-none d-xl-block"><span>Advanced Search</span></div>
@@ -357,12 +357,12 @@
                                                         <div class="rld-single-select">
                                                             <select class="select single-select mr-0">
                                                                 <option value="1">Location</option>
-                                                                <option value="2">Los Angeles</option>
-                                                                <option value="3">Chicago</option>
-                                                                <option value="3">Philadelphia</option>
-                                                                <option value="3">San Francisco</option>
-                                                                <option value="3">Miami</option>
-                                                                <option value="3">Houston</option>
+                                                                <option value="2">Loresho</option>
+                                                                <option value="3">Kileleshwa</option>
+                                                                <option value="3">Kilimani</option>
+                                                                <option value="3">Sio Kimau</option>
+                                                                <option value="3">Limuru</option>
+                                                                <option value="3">Runda</option>
                                                             </select>
                                                         </div>
                                                         <div class="dropdown-filter"><span>Advanced Search</span></div>
