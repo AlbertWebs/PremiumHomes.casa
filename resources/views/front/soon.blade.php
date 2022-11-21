@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="{{asset('theme/css/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/styles.css')}}">
+    @include('tawkto')
 </head>
 
 <body>
