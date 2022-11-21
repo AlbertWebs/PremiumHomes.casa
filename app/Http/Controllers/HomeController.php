@@ -35,7 +35,9 @@ class HomeController extends Controller
     public function copyright(){
         return view('front.copyright');
     }
-
+    public function soon(){
+        return view('front.soon');
+    }
 
 
 

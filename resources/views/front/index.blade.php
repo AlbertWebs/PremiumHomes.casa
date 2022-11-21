@@ -333,10 +333,10 @@
             <div class="col-lg-3 col-md-12 m-top-40 m-bottom-40 commercial" data-aos="fade-up" data-aos-delay="450">
                 <div class="service bg-light-2 border-1 border-light box-shadow-1 box-shadow-2-hover">
                     <div class="media">
-                        <i class="fas fa-hotel bg-base text-white rounded-100 box-shadow-1 p-top-5 p-bottom-5 p-right-5 p-left-5"></i>
+                        <i class="fas fa-map-marker bg-base text-white rounded-100 box-shadow-1 p-top-5 p-bottom-5 p-right-5 p-left-5"></i>
                     </div>
                     <div class="agent-section p-top-35 p-bottom-30 p-right-25 p-left-25">
-                        <h4 class="m-bottom-15 text-bold-700">Hotels</h4>
+                        <h4 class="m-bottom-15 text-bold-700">Plots</h4>
                         <p>Kenya is a country in Africa with coastline on the Indian Ocean. It encompasses savannah, lakelands, the dramatic Great Rift Valley and mountain highlands. It's also home to wildlife like lions, elephants and rhino</p>
                         <a class="text-base text-base-dark-hover text-size-13" href="properties-full-list#">Read More <i class="fa fa-long-arrow-right ml-2"></i></a>
                     </div>

@@ -15,7 +15,7 @@ use App\Http\Controllers\AdminsController;
 |
 */
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'soon'])->name('soon');
 Route::get('/home', [App\Http\Controllers\VendorController::class, 'index'])->name('home');
 Route::get('/search-home', [App\Http\Controllers\HomeController::class, 'search'])->name('search-home');
 Route::get('/listed-properties/{id}', [App\Http\Controllers\HomeController::class, 'properties'])->name('properties-home');
