@@ -15,60 +15,29 @@
                                         <div class="swiper_imgbox imgbox1">
                                             <div class="swipper_img">
                                                 <h4>For Sale <span>Estate</span></h4>
-                                                <h2>Luxury Villa House</h2>
-                                                <h3>$ 530,000<span class="banner_span1"></span></h3>
-                                                <p><i class="fa fa-map-marker mr-3"></i>Est St, 77 - Central Park South, Nairobi</p>
+                                                <h2>Rosehill Apartments</h2>
+                                                <h3>$ 77,800<span class="banner_span1"></span></h3>
+                                                <p><i class="fa fa-map-marker mr-3"></i>Rosehill Apartments - Lower Kabete Road, Nairobi</p>
                                                 <!-- homes List -->
                                                 <ul class="homes-list clearfix">
                                                     <li>
                                                         <i class="fa fa-bed" aria-hidden="true"></i>
-                                                        <span>6 Bedrooms</span>
+                                                        <span>3 Bedrooms</span>
                                                     </li>
                                                     <li>
                                                         <i class="fa fa-bath" aria-hidden="true"></i>
-                                                        <span>3 Bathrooms</span>
+                                                        <span>2 Bathrooms</span>
                                                     </li>
                                                     <li>
                                                         <i class="fa fa-object-group" aria-hidden="true"></i>
-                                                        <span>720 sq ft</span>
+                                                        <span>184 sq ft</span>
                                                     </li>
                                                     <li>
                                                         <i class="fas fa-warehouse" aria-hidden="true"></i>
-                                                        <span>2 Garages</span>
+                                                        <span>1 Garages</span>
                                                     </li>
                                                 </ul>
                                                 <a href="{{route('properties-home',['sale'])}}" class="int_btn">View Property <span class="btn_caret"><i class="fas fa-caret-right"></i></span></a>
-                                                <h1>Real</h1>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="swiper_imgbox imgbox2">
-                                            <div class="swipper_img">
-                                                <h4>For Rent <span>Estate</span></h4>
-                                                <h2>Next Villa House</h2>
-                                                <h3>$ 5,600<span class="banner_span1"></span></h3>
-                                                <p><i class="fa fa-map-marker mr-3"></i>Nrth St, 3571 - Riverside Downs, Kiambu</p>
-                                                <!-- homes List -->
-                                                <ul class="homes-list clearfix">
-                                                    <li>
-                                                        <i class="fa fa-bed" aria-hidden="true"></i>
-                                                        <span>6 Bedrooms</span>
-                                                    </li>
-                                                    <li>
-                                                        <i class="fa fa-bath" aria-hidden="true"></i>
-                                                        <span>3 Bathrooms</span>
-                                                    </li>
-                                                    <li>
-                                                        <i class="fa fa-object-group" aria-hidden="true"></i>
-                                                        <span>720 sq ft</span>
-                                                    </li>
-                                                    <li>
-                                                        <i class="fas fa-warehouse" aria-hidden="true"></i>
-                                                        <span>2 Garages</span>
-                                                    </li>
-                                                </ul>
-                                                <a href="single-property-1#" class="int_btn">View Property <span class="btn_caret"><i class="fas fa-caret-right"></i></span></a>
                                                 <h1>Real</h1>
                                             </div>
                                         </div>
