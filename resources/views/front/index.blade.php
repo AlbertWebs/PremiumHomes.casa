@@ -78,11 +78,9 @@
                 </div>
             </div>
         </div>
-
     </div>
     <!--===End Revolution Slider===-->
 </div>
-
 {{-- @include('front.search') --}}
 
 <!-- START SECTION PROPERTIES FOR SALE -->
