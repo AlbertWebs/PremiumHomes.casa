@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <title>Premium Homes - High End Homes in Kenya</title>
     <!-- FAVICON -->
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('theme/images/preloader.png')}}">
     <link rel="stylesheet" href="{{asset('theme/css/jquery-ui.css')}}">
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i%7CMontserrat:600,800" rel="stylesheet">
@@ -153,7 +153,7 @@
     <!-- END SECTION HEADINGS -->
 
     <!-- START SECTION PROPERTIES LISTING -->
-    <section class="single-proper blog details">
+    <section class="single-proper blog details int_dark_bg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-12 blog-pots">
@@ -163,10 +163,10 @@
                                 <div class="pro-wrapper">
                                     <div class="detail-wrapper-body">
                                         <div class="listing-title-bar">
-                                            <h3>Luxury Villa House <span class="mrg-l-5 category-tag">For Sale</span></h3>
+                                            <h3>Rosehill Residence<span class="mrg-l-5 category-tag">For Sale</span></h3>
                                             <div class="mt-0">
-                                                <a href="#listing-location" class="listing-address">
-                                                    <i class="fa fa-map-marker pr-2 ti-location-pin mrg-r-5"></i>77 - Central Park South, NYC
+                                                <a href="https://goo.gl/maps/CNmkJmheKMGWS83X6" class="listing-address">
+                                                    <i class="fa fa-map-marker pr-2 ti-location-pin mrg-r-5"></i>Westfields Apartments - Lower Kabete
                                                 </a>
                                             </div>
                                         </div>
@@ -174,10 +174,10 @@
                                     <div class="single detail-wrapper mr-2">
                                         <div class="detail-wrapper-body">
                                             <div class="listing-title-bar">
-                                                <h4>$ 230,000</h4>
+                                                <h4>$ 77,800</h4>
                                                 <div class="mt-0">
                                                     <a href="#listing-location" class="listing-address">
-                                                        <p>$ 1,200 / sq ft</p>
+                                                        <p>184 sq ft</p>
                                                     </a>
                                                 </div>
                                             </div>
@@ -469,23 +469,183 @@
                             </div>
                         </div>
                     </div>
-                    <div class="property wprt-image-video w50 pro">
-                        <h5>Property Video</h5>
-                        <img alt="image" src="{{asset('theme/images/slider/home-slider-4.jpg')}}">
-                        <a class="icon-wrap popup-video popup-youtube" href="https://www.youtube.com/watch?v=14semTlwyUY">
-                            <i class="fa fa-play"></i>
-                        </a>
-                        <div class="iq-waves">
-                            <div class="waves wave-1"></div>
-                            <div class="waves wave-2"></div>
-                            <div class="waves wave-3"></div>
+                    <div>
+                        <div class="property wprt-image-video w50 pro" style="position: relative">
+                            <h5>Property Video</h5>
+                            <img style="border-radius:10px" alt="image" src="{{asset('theme/images/slider/home-slider-4.jpg')}}">
+                            <div style="position: absolute; top: 50%; left: 50%;">
+                                <a class="icon-wrap popup-video popup-youtube" href="https://www.youtube.com/watch?v=14semTlwyUY">
+                                    <i class="fa fa-play"></i>
+                                </a>
+                                <div class="iq-waves">
+                                    <div class="waves wave-1"></div>
+                                    <div class="waves wave-2"></div>
+                                    <div class="waves wave-3"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="property-location map">
                         <h5>Location</h5>
                         <div class="divider-fade"></div>
-                        <div id="map-contact" class="contact-map"></div>
+                        <div class="contact-map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15955.557192204415!2d36.7201291!3d-1.2364671!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1e2f130aa1a43250!2sRosehill%20residence!5e0!3m2!1sen!2ske!4v1669530628064!5m2!1sen!2ske" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
                     </div>
+                    {{--  --}}
+                    <!-- Star Add Review -->
+                    <!-- Star Reviews -->
+                    {{-- <section class="reviews comments">
+                        <h3 class="mb-5">3 Reviews</h3>
+                        <div class="row mb-5">
+                            <ul class="col-12 commented pl-0">
+                                <li class="comm-inf">
+                                    <div class="col-md-2">
+                                        <img src="images/testimonials/ts-5.jpg" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="col-md-10 comments-info">
+                                        <div class="conra">
+                                            <h5 class="mb-2">Mary Smith</h5>
+                                            <div class="rating-box">
+                                                <div class="detail-list-rating mr-0">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="mb-4">May 30 2020</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam, quam congue dictum luctus, lacus magna congue ante, in finibus dui sapien eu dolor. Integer tincidunt suscipit erat, nec laoreet ipsum vestibulum sed.</p>
+                                        <div class="rest"><img src="images/single-property/s-1.jpg" class="img-fluid" alt=""></div>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="row">
+                            <ul class="col-12 commented pl-0">
+                                <li class="comm-inf">
+                                    <div class="col-md-2">
+                                        <img src="images/testimonials/ts-4.jpg" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="col-md-10 comments-info">
+                                        <div class="conra">
+                                            <h5 class="mb-2">Abraham Tyron</h5>
+                                            <div class="rating-box">
+                                                <div class="detail-list-rating mr-0">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="mb-4">june 1 2020</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam, quam congue dictum luctus, lacus magna congue ante, in finibus dui sapien eu dolor. Integer tincidunt suscipit erat, nec laoreet ipsum vestibulum sed.</p>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="row mt-5">
+                            <ul class="col-12 commented mb-0 pl-0">
+                                <li class="comm-inf">
+                                    <div class="col-md-2">
+                                        <img src="images/testimonials/ts-3.jpg" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="col-md-10 comments-info">
+                                        <div class="conra">
+                                            <h5 class="mb-2">Lisa Williams</h5>
+                                            <div class="rating-box">
+                                                <div class="detail-list-rating mr-0">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="mb-4">jul 12 2020</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam, quam congue dictum luctus, lacus magna congue ante, in finibus dui sapien eu dolor. Integer tincidunt suscipit erat, nec laoreet ipsum vestibulum sed.</p>
+                                        <div class="resti">
+                                            <div class="rest"><img src="images/single-property/s-2.jpg" class="img-fluid" alt=""></div>
+                                            <div class="rest"><img src="images/single-property/s-3.jpg" class="img-fluid" alt=""></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section> --}}
+                    <!-- End Reviews -->
+                    <!-- Star Add Review -->
+                    {{-- <section class="single reviews leve-comments details">
+                        <div id="add-review" class="add-review-box">
+                            <!-- Add Review -->
+                            <h3 class="listing-desc-headline margin-bottom-20 mb-4">Add Review</h3>
+                            <span class="leave-rating-title">Your rating for this listing</span>
+                            <!-- Rating / Upload Button -->
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <!-- Leave Rating -->
+                                    <div class="clearfix"></div>
+                                    <div class="leave-rating margin-bottom-30">
+                                        <input type="radio" name="rating" id="rating-1" value="1" />
+                                        <label for="rating-1" class="fa fa-star"></label>
+                                        <input type="radio" name="rating" id="rating-2" value="2" />
+                                        <label for="rating-2" class="fa fa-star"></label>
+                                        <input type="radio" name="rating" id="rating-3" value="3" />
+                                        <label for="rating-3" class="fa fa-star"></label>
+                                        <input type="radio" name="rating" id="rating-4" value="4" />
+                                        <label for="rating-4" class="fa fa-star"></label>
+                                        <input type="radio" name="rating" id="rating-5" value="5" />
+                                        <label for="rating-5" class="fa fa-star"></label>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="col-md-6">
+                                    <!-- Uplaod Photos -->
+                                    <div class="add-review-photos margin-bottom-30">
+                                        <div class="photoUpload">
+                                            <span><i class="sl sl-icon-arrow-up-circle"></i> Upload Photos</span>
+                                            <input type="file" class="upload" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 data">
+                                    <form action="#">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="text" name="name" class="form-control" placeholder="First Name" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="text" name="name" class="form-control" placeholder="Last Name" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="email" name="email" class="form-control" placeholder="Email" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 form-group">
+                                            <textarea class="form-control" id="exampleTextarea" rows="8" placeholder="Review" required></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary btn-lg mt-2">Submit Review</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </section> --}}
+                    <!-- End Add Review -->
+                    <!-- End Add Review -->
+                    {{--  --}}
 
                 </div>
                 <aside class="col-lg-4 col-md-12 car">
@@ -960,191 +1120,37 @@
     <!-- END SECTION PROPERTIES LISTING -->
 
     <!-- START FOOTER -->
-    <footer class="first-footer">
-        <div class="top-footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="netabout">
-                            <a href="index-2.html" class="logo">
-                                <img src="{{asset('theme/images/logo-footer.svg')}}" alt="netcom">
-                            </a>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum incidunt architecto soluta laboriosam, perspiciatis, aspernatur officiis esse.</p>
-                        </div>
-                        <div class="contactus">
-                            <ul>
-                                <li>
-                                    <div class="info">
-                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                        <p class="in-p">95 South Park Avenue, USA</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="info">
-                                        <i class="fa fa-phone" aria-hidden="true"></i>
-                                        <p class="in-p">+456 875 369 208</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="info">
-                                        <i class="fa fa-envelope" aria-hidden="true"></i>
-                                        <p class="in-p ti">support@findhouses.com</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="navigation">
-                            <h3>Navigation</h3>
-                            <div class="nav-footer">
-                                <ul>
-                                    <li><a href="index-2.html">Home One</a></li>
-                                    <li><a href="properties-right-sidebar.html">Properties Right</a></li>
-                                    <li><a href="properties-full-list.html">Properties List</a></li>
-                                    <li><a href="properties-details.html">Property Details</a></li>
-                                    <li class="no-mgb"><a href="agents-listing-grid.html">Agents Listing</a></li>
-                                </ul>
-                                <ul class="nav-right">
-                                    <li><a href="agent-details.html">Agents Details</a></li>
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="blog.html">Blog Default</a></li>
-                                    <li><a href="blog-details.html">Blog Details</a></li>
-                                    <li class="no-mgb"><a href="contact-us.html">Contact Us</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="widget">
-                            <h3>Twitter Feeds</h3>
-                            <div class="twitter-widget contuct">
-                                <div class="twitter-area">
-                                    <div class="single-item">
-                                        <div class="icon-holder">
-                                            <i class="fa fa-twitter" aria-hidden="true"></i>
-                                        </div>
-                                        <div class="text">
-                                            <h5><a href="#">@findhouses</a> all share them with me baby said inspet.</h5>
-                                            <h4>about 5 days ago</h4>
-                                        </div>
-                                    </div>
-                                    <div class="single-item">
-                                        <div class="icon-holder">
-                                            <i class="fa fa-twitter" aria-hidden="true"></i>
-                                        </div>
-                                        <div class="text">
-                                            <h5><a href="#">@findhouses</a> all share them with me baby said inspet.</h5>
-                                            <h4>about 5 days ago</h4>
-                                        </div>
-                                    </div>
-                                    <div class="single-item">
-                                        <div class="icon-holder">
-                                            <i class="fa fa-twitter" aria-hidden="true"></i>
-                                        </div>
-                                        <div class="text">
-                                            <h5><a href="#">@findhouses</a> all share them with me baby said inspet.</h5>
-                                            <h4>about 5 days ago</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="newsletters">
-                            <h3>Newsletters</h3>
-                            <p>Sign Up for Our Newsletter to get Latest Updates and Offers. Subscribe to receive news in your inbox.</p>
-                        </div>
-                        <form class="bloq-email mailchimp form-inline" method="post">
-                            <label for="subscribeEmail" class="error"></label>
-                            <div class="email">
-                                <input type="email" id="subscribeEmail" name="EMAIL" placeholder="Enter Your Email">
-                                <input type="submit" value="Subscribe">
-                                <p class="subscription-success"></p>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="second-footer">
-            <div class="container">
-                <p>2021 © Copyright - All Rights Reserved.</p>
-                <ul class="netsocials">
-                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+    @include('front.footer')
 
     <a data-scroll href="#wrapper" class="go-up"><i class="fa fa-angle-double-up" aria-hidden="true"></i></a>
     <!-- END FOOTER -->
 
-    <!--register form -->
-    <div class="login-and-register-form modal">
+     <!--register form -->
+     <div class="login-and-register-form modal">
         <div class="main-overlay"></div>
         <div class="main-register-holder">
             <div class="main-register fl-wrap">
                 <div class="close-reg"><i class="fa fa-times"></i></div>
-                <h3>Welcome to <span>Find<strong>Houses</strong></span></h3>
+                <h3>Welcome to <span>Premium<strong>Homes</strong></span></h3>
                 <div class="soc-log fl-wrap">
-                    <p>Login</p>
-                    <a href="#" class="facebook-log"><i class="fa fa-facebook-official"></i>Log in with Facebook</a>
-                    <a href="#" class="twitter-log"><i class="fa fa-twitter"></i> Log in with Twitter</a>
+                    <p>Login With</p>
+                    <a href="{{route('facebook-login')}}" class="facebook-log"><i class="fa fa-facebook-official"></i>Log in with Facebook</a>
+                    <a href="{{route('google-login')}}" class="twitter-log"><i class="fa fa-google"></i> Log in with Gmail</a>
+                    <a href="{{route('linkedin-login')}}" class="linkedin-log"><i class="fa fa-linkedin"></i> Log in with Linked-In</a>
                 </div>
                 <div class="log-separator fl-wrap"><span>Or</span></div>
                 <div id="tabs-container">
-                    <ul class="tabs-menu">
-                        <li class="current"><a href="#tab-1">Login</a></li>
-                        <li><a href="#tab-2">Register</a></li>
-                    </ul>
-                    <div class="tab">
-                        <div id="tab-1" class="tab-contents">
-                            <div class="custom-form">
-                                <form method="post" name="registerform">
-                                    <label>Username or Email Address * </label>
-                                    <input name="email" type="text" onClick="this.select()" value="">
-                                    <label>Password * </label>
-                                    <input name="password" type="password" onClick="this.select()" value="">
-                                    <button type="submit" class="log-submit-btn"><span>Log In</span></button>
-                                    <div class="clearfix"></div>
-                                    <div class="filter-tags">
-                                        <input id="check-a" type="checkbox" name="check">
-                                        <label for="check-a">Remember me</label>
-                                    </div>
-                                </form>
-                                <div class="lost_password">
-                                    <a href="#">Lost Your Password?</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab">
-                            <div id="tab-2" class="tab-contents">
-                                <div class="custom-form">
-                                    <form method="post" name="registerform" class="main-register-form" id="main-register-form2">
-                                        <label>First Name * </label>
-                                        <input name="name" type="text" onClick="this.select()" value="">
-                                        <label>Second Name *</label>
-                                        <input name="name2" type="text" onClick="this.select()" value="">
-                                        <label>Email Address *</label>
-                                        <input name="email" type="text" onClick="this.select()" value="">
-                                        <label>Password *</label>
-                                        <input name="password" type="password" onClick="this.select()" value="">
-                                        <button type="submit" class="log-submit-btn"><span>Register</span></button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <center>
+                        <a class="button border text-center" href="{{ route('login') }}"><i class="fa fa-lock"></i>  Login</a>
+                        <a class="button border text-center" href="{{ route('register') }}"><i class="fa fa-user-plus"></i>  Register</a>
+                    </center>
                 </div>
             </div>
         </div>
     </div>
     <!--register form end -->
+
+
 
     <!-- ARCHIVES JS -->
     <script src="{{asset('theme/js/jquery-3.5.1.min.js')}}"></script>
