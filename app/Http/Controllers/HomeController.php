@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Property;
 
 class HomeController extends Controller
 {
@@ -39,6 +40,10 @@ class HomeController extends Controller
         return view('front.soon');
     }
 
+    public function property($slung){
+        $Property = Property::where('slung',$slung)->get();
+        return view('front.property', compact('Property'));
+    }
 
 
 }
