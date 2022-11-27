@@ -60,15 +60,7 @@
                             </div>
                             <!-- Main Navigation -->
                             <nav id="navigation" class="style-1">
-                                <ul id="responsive">
-                                        <li><a href="#">Home</a>
-                                        <li><a onclick="alert('work in progress')" href="#">For Rent</a> </li>
-                                        <li><a onclick="alert('work in progress')" href="#">For Sale</a> </li>
-                                        <li><a onclick="alert('work in progress')" href="#">Property Advice</a> </li>
-                                        {{-- <li><a href="{{route('search-home')}}"><i class="fa fa-search"></i> Search</a> </li> --}}
-                                        <li><a onclick="alert('work in progress')" href="#">Locations</a> </li>
-                                        <li><a target="new" href="https://tawk.to/chat/634ebf66daff0e1306d2a62a/1gflpnajd">Contact Us</a> </li>
-                                </ul>
+                                @include('vendor.menu')
                             </nav>
                             <div class="clearfix"></div>
                             <!-- Main Navigation / End -->
@@ -329,15 +321,7 @@
                                                  <li>From<strong class="pull-right">10 jan 2019</strong></li>
                                              </ul>
                                          </div>
-                                         <div class="booking-price-detail side-list no-border">
-                                             <h5>Pricing Details</h5>
-                                             <ul>
-                                                 <li>Dining<strong class="pull-right">$150</strong></li>
-                                                 <li>Reservation<strong class="pull-right">$60</strong></li>
-                                                 <li>Tax<strong class="pull-right">$53</strong></li>
-                                                 <li class="red pb-0">Total Cost<strong class="pull-right">$263</strong></li>
-                                             </ul>
-                                         </div>
+
                                      </div>
                                  </div>
                              </div>

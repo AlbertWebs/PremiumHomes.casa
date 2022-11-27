@@ -61,13 +61,13 @@
                             <!-- Main Navigation -->
                             <nav id="navigation" class="style-1">
                                 <ul id="responsive">
-                                        <li><a href="#">Home</a>
-                                        <li><a onclick="alert('work in progress')" href="#">For Rent</a> </li>
-                                        <li><a onclick="alert('work in progress')" href="#">For Sale</a> </li>
-                                        <li><a onclick="alert('work in progress')" href="#">Property Advice</a> </li>
+                                        <li style="border:2px solid #bf9d34"><a style="color:#bf9d34" href="#">Home</a>
+                                        <li style="border:2px solid #bf9d34"><a style="color:#bf9d34"  href="{{route('properties-home',['rent'])}}">For Rent</a> </li>
+                                        <li style="border:2px solid #bf9d34"><a style="color:#bf9d34"  href="{{route('properties-home',['sale'])}}">For Sale</a> </li>
+                                        <li style="border:2px solid #bf9d34"><a style="color:#bf9d34" onclick="alert('work in progress')" href="#">Property Advice</a> </li>
                                         {{-- <li><a href="{{route('search-home')}}"><i class="fa fa-search"></i> Search</a> </li> --}}
-                                        <li><a onclick="alert('work in progress')" href="#">Locations</a> </li>
-                                        <li><a target="new" href="https://tawk.to/chat/634ebf66daff0e1306d2a62a/1gflpnajd">Contact Us</a> </li>
+                                        <li style="border:2px solid #bf9d34"><a style="color:#bf9d34" onclick="alert('work in progress')" href="#">Locations</a> </li>
+                                        <li style="border:2px solid #bf9d34"><a style="color:#bf9d34" target="new" href="https://tawk.to/chat/634ebf66daff0e1306d2a62a/1gflpnajd">Contact Us</a> </li>
                                 </ul>
                             </nav>
                             <div class="clearfix"></div>
@@ -186,8 +186,8 @@
                                             <div class="form-group categories">
                                                 <div class="nice-select form-control wide" tabindex="0"><span class="current">Select status</span>
                                                     <ul class="list">
-                                                        <li data-value="1" class="option">Rent</li>
-                                                        <li data-value="2" class="option">Sale</li>
+                                                        <li data-value="Rent" class="option">Rent</li>
+                                                        <li data-value="Sale" class="option">Sale</li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -196,11 +196,10 @@
                                             <div class="form-group categories">
                                                 <div class="nice-select form-control wide" tabindex="0"><span class="current">Type</span>
                                                     <ul class="list">
-                                                        <li data-value="1" class="option">house</li>
-                                                        <li data-value="2" class="option">commercial</li>
-                                                        <li data-value="3" class="option">apartment</li>
-                                                        <li data-value="4" class="option">lot</li>
-                                                        <li data-value="5" class="option">garage</li>
+                                                        <li data-value="house" class="option">house</li>
+                                                        <li data-value="commercial" class="option">commercial</li>
+                                                        <li data-value="apartment" class="option">apartment</li>
+                                                        <li data-value="home" class="option">home</li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -214,6 +213,11 @@
                                                         <li data-value="3" class="option">3</li>
                                                         <li data-value="4" class="option">4</li>
                                                         <li data-value="5" class="option">5</li>
+                                                        <li data-value="6" class="option">6</li>
+                                                        <li data-value="7" class="option">7</li>
+                                                        <li data-value="8" class="option">8</li>
+                                                        <li data-value="9" class="option">9</li>
+                                                        <li data-value="10" class="option">10</li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -229,7 +233,7 @@
                                         <div class="col-lg-6 col-md-12">
                                             <p class="no-mb last">
                                                 <label for="area">Area</label>
-                                                <input type="text" name="area" placeholder="Sqft" id="area">
+                                                <input type="text" name="sqft" placeholder="Sqft" id="area">
                                             </p>
                                         </div>
                                     </div>
@@ -237,7 +241,7 @@
                             </div>
                         </div>
                         <div class="single-add-property">
-                            <h3>property Media</h3>
+                            <h3>Featured Image</h3>
                             <div class="property-form-group">
                                 <div class="row">
                                     <div class="col-md-12">
@@ -253,7 +257,7 @@
                                     <div class="col-lg-6 col-md-12">
                                         <p>
                                             <label for="address">Address</label>
-                                            <input type="text" name="address" placeholder="Enter Your Address" id="address">
+                                            <input type="text" name="address" placeholder="e.g 3571 Riverside Downs" id="address">
                                         </p>
                                     </div>
                                     <div class="col-lg-6 col-md-12">
@@ -288,6 +292,14 @@
                                         <p class="no-mb last">
                                             <label for="longitude">Google Maps longitude</label>
                                             <input type="text" name="longitude" placeholder="Google Maps longitude" id="longitude">
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p>
+                                            <label for="description">iframe</label>
+                                            <textarea id="description" name="property_description" placeholder="Property Iframe"></textarea>
                                         </p>
                                     </div>
                                 </div>
@@ -441,13 +453,13 @@
                                     <div class="col-lg-6 col-md-12">
                                         <p>
                                             <label for="con-name">Name</label>
-                                            <input type="text" placeholder="Enter Your Name" id="con-name" name="con-name">
+                                            <input type="text" value="{{Auth::User()->name}}" placeholder="Enter Your Name" id="con-name" name="con-name">
                                         </p>
                                     </div>
                                     <div class="col-lg-6 col-md-12">
                                         <p>
                                             <label for="con-user">Username</label>
-                                            <input type="text" placeholder="Enter Your Username" id="con-user" name="con-user">
+                                            <input type="text" value="{{Auth::User()->email}}" placeholder="Enter Your Username" id="con-user" name="con-user">
                                         </p>
                                     </div>
                                 </div>
@@ -455,13 +467,13 @@
                                     <div class="col-lg-6 col-md-12">
                                         <p class="no-mb first">
                                             <label for="con-email">Email</label>
-                                            <input type="email" placeholder="Enter Your Email" id="con-email" name="con-email">
+                                            <input type="email" placeholder="Enter Your Email" value="{{Auth::User()->email}}" id="con-email" name="con-email">
                                         </p>
                                     </div>
                                     <div class="col-lg-6 col-md-12">
                                         <p class="no-mb last">
                                             <label for="con-phn">Phone</label>
-                                            <input type="text" placeholder="Enter Your Phone Number" id="con-phn" name="con-phn">
+                                            <input type="text" value="{{Auth::User()->mobile}}" placeholder="Enter Your Phone Number" id="con-phn" name="con-phn">
                                         </p>
                                     </div>
                                 </div>

@@ -19,10 +19,11 @@ return new class extends Migration
             $table->string('property_description');
             $table->string('slung');
             $table->string('property_id');
-            $table->string('units')->nullable();
+            $table->string('sqft');
+            $table->string('price');
+
             $table->string('type');
             $table->string('status')->default('0');
-            $table->string('price');
             $table->string('Bath');
             $table->string('garages');
             $table->string('bedrooms');
@@ -30,6 +31,8 @@ return new class extends Migration
             $table->string('rooms');
             // Amenities
             $table->string('ac');
+            $table->string('gym');
+            $table->string('alarm');
             $table->string('balcony');
             $table->string('internet');
             $table->string('cable');
