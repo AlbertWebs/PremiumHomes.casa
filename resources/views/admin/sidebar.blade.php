@@ -74,7 +74,7 @@
 
              {{--  --}}
              <li><a href="{{url('/')}}/admin/enroll-users" class="collapsible-header"><i class="fa fa-registered " aria-hidden="true"></i> Enroll Users </a>
-                
+
             </li>
             {{--  --}}
 
@@ -107,7 +107,7 @@
                         </div>
                     </li>
                     {{--  --}}
-            
+
 
             {{--  --}}
             <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-ticket" aria-hidden="true"></i> Payments</a>
@@ -138,14 +138,14 @@
                         <li>
                             <a style="color:#000000 !important; font-weight:600" href="{{url('/')}}" class="collapsible-header"><i class="fa fa-paypal" aria-hidden="true"></i>Paypal Payments</a>
                             <div class="left-sub-menu">
-                            
+
                             </div>
                         </li>
 
                         <li>
                             <a style="color:#000000 !important; font-weight:600" href="{{url('/')}}" class="collapsible-header"><i class="fa fa-btc" aria-hidden="true"></i>Crypto Payments</a>
                             <div class="left-sub-menu">
-                            
+
                             </div>
                         </li>
                     </ul>
@@ -161,7 +161,7 @@
                         </li>
                         <li><a href="{{url('/')}}/admin/admins">Manage Admins</a>
                         </li>
-                  
+
                     </ul>
                 </div>
             </li>
@@ -173,8 +173,8 @@
                         </li>
                         <li><a href="{{url('/')}}/admin/how">How It Works</a>
                         </li>
-                       
-                  
+
+
                     </ul>
                 </div>
             </li>
@@ -191,7 +191,7 @@
                         </li>
                         <li><a href="{{url('/')}}/admin/editCopyright"> Copyright Statement</a>
                         </li>
-                  
+
                     </ul>
                 </div>
             </li>
@@ -224,11 +224,22 @@
             </li>
             <li><a href="{{url('/')}}/admin/SocialMediaSettings"><i class="fa fa-plus-square-o" aria-hidden="true"></i> Social Media</a>
             </li>
-            <li><a href="{{url('/')}}/logout" target="_blank"><i class="fa fa-sign-in" aria-hidden="true"></i> Logout </a>
+            <li>
+                <a hhref="{{ route('logout') }}" target="_blank" onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();"><i class="fa fa-sign-in" aria-hidden="true"></i> {{ __('Logout') }}
+                </a>
+                {{-- <a class="dropdown-item" href="{{ route('logout') }}"
+                    onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();"> <i class="fas fa-sign-out-alt"></i>
+                    {{ __('Logout') }}
+                </a> --}}
             </li>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                @csrf
+            </form>
 
-        
-       
+
+
         </ul>
     </div>
 </div>

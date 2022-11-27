@@ -169,7 +169,7 @@
                                         <div class="col-md-12">
                                             <p>
                                                 <label for="title">Property Title</label>
-                                                <input type="text" name="title" id="title" placeholder="Enter your property title">
+                                                <input name="property_name" type="text" name="title" id="title" placeholder="Enter your property title">
                                             </p>
                                         </div>
                                     </div>
@@ -177,7 +177,7 @@
                                         <div class="col-md-12">
                                             <p>
                                                 <label for="description">Property Description</label>
-                                                <textarea id="description" name="pro-dexc" placeholder="Describe about your property"></textarea>
+                                                <textarea id="description" name="property_description" placeholder="Describe about your property"></textarea>
                                             </p>
                                         </div>
                                     </div>

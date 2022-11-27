@@ -19,9 +19,9 @@ return new class extends Migration
             $table->string('property_description');
             $table->string('slung');
             $table->string('property_id');
-            $table->string('units');
+            $table->string('units')->nullable();
             $table->string('type');
-            $table->string('status');
+            $table->string('status')->default('0');
             $table->string('price');
             $table->string('Bath');
             $table->string('garages');
