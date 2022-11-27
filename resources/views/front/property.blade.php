@@ -474,7 +474,7 @@
                             <h5>Property Video</h5>
                             <img style="border-radius:10px" alt="image" src="{{asset('theme/images/slider/home-slider-4.jpg')}}">
                             <div style="position: absolute; top: 50%; left: 50%;">
-                                <a class="icon-wrap popup-video popup-youtube" href="https://www.youtube.com/watch?v=14semTlwyUY">
+                                <a class="icon-wrap popup-video popup-youtube" href="https://www.youtube.com/watch?v=eDp8jLl4LVs">
                                     <i class="fa fa-play"></i>
                                 </a>
                                 <div class="iq-waves">
@@ -665,8 +665,8 @@
                                     </div>
                                 </div>
                                 <div class="row mrg-top-15 mb-3">
-                                    <div class="col-lg-6 col-md-12 mt-4">
-                                        <label class="mb-4">Adult</label>
+                                    <div class="col-lg-12 col-md-12 mt-4">
+                                        <label class="mb-4">Number of People</label>
                                         <div class="input-group">
                                             <span class="input-group-btn">
                                      <button type="button" class="btn counter-btn theme-cl btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
@@ -681,7 +681,7 @@
                                         </span>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 col-md-12 mt-4">
+                                    {{-- <div class="col-lg-6 col-md-12 mt-4">
                                         <label class="mb-4">Children</label>
                                         <div class="input-group">
                                             <span class="input-group-btn">
@@ -696,7 +696,12 @@
                                          </button>
                                         </span>
                                         </div>
-                                    </div>
+                                    </div> --}}
+                                </div>
+                                <div class="agent-contact-form-sidebar">
+                                <input type="text" id="fname" name="full_name" placeholder="Full Name" required />
+                                <input type="email" id="fname" name="email_address" placeholder="Email " required />
+                                <input type="text" id="phone" name="phone_number" placeholder="Phone " required />
                                 </div>
                                 <a href="payment-method.html" class="btn reservation btn-radius theme-btn full-width mrg-top-10">Submit Request</a>
                             </div>
@@ -711,14 +716,14 @@
                                 <div class="widget-boxed-body">
                                     <div class="sidebar-widget author-widget2">
                                         <div class="author-box clearfix">
-                                            <img src="{{asset('theme/images/testimonials/ts-1.jpg')}}" alt="author-image" class="author__img">
-                                            <h4 class="author__title">Lisa Clark</h4>
+                                            <img src="{{asset('theme/images/testimonials/199259143_4389625377747506_3043984032264076715_n.jpg')}}" alt="author-image" class="author__img">
+                                            <h4 class="author__title">Albert Muhatia</h4>
                                             <p class="author__meta">Agent of Property</p>
                                         </div>
                                         <ul class="author__contact">
-                                            <li><span class="la la-map-marker"><i class="fa fa-map-marker"></i></span>302 Av Park, New York</li>
-                                            <li><span class="la la-phone"><i class="fa fa-phone" aria-hidden="true"></i></span><a href="#">(234) 0200 17813</a></li>
-                                            <li><span class="la la-envelope-o"><i class="fa fa-envelope" aria-hidden="true"></i></span><a href="#">lisa@gmail.com</a></li>
+                                            <li><span class="la la-map-marker"><i class="fa fa-map-marker"></i></span>3571 Riverside Downs</li>
+                                            <li><span class="la la-phone"><i class="fa fa-phone" aria-hidden="true"></i></span><a href="tel:(+254) 72 301 4032">(+254) 72 301 4032 </a></li>
+                                            <li><span class="la la-envelope-o"><i class="fa fa-envelope" aria-hidden="true"></i></span><a href="#">albertmuhatia@gmail.com</a></li>
                                         </ul>
                                         <div class="agent-contact-form-sidebar">
                                             <h4>Request Inquiry</h4>
@@ -895,45 +900,6 @@
                                                         <img src="{{asset('theme/images/feature-properties/fp-6.jpg')}}" alt="">
                                                     </a>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Start: Specials offer -->
-                                <div class="widget-boxed popular mt-5">
-                                    <div class="widget-boxed-header">
-                                        <h4>Specials of the day</h4>
-                                    </div>
-                                    <div class="widget-boxed-body">
-                                        <div class="banner"><img src="{{asset('theme/images/single-property/banner.jpg')}}" alt=""></div>
-                                    </div>
-                                </div>
-                                <!-- End: Specials offer -->
-                                <div class="widget-boxed popular mt-5">
-                                    <div class="widget-boxed-header">
-                                        <h4>Popular Tags</h4>
-                                    </div>
-                                    <div class="widget-boxed-body">
-                                        <div class="recent-post">
-                                            <div class="tags">
-                                                <span><a href="#" class="btn btn-outline-primary">Houses</a></span>
-                                                <span><a href="#" class="btn btn-outline-primary">Real Home</a></span>
-                                            </div>
-                                            <div class="tags">
-                                                <span><a href="#" class="btn btn-outline-primary">Baths</a></span>
-                                                <span><a href="#" class="btn btn-outline-primary">Beds</a></span>
-                                            </div>
-                                            <div class="tags">
-                                                <span><a href="#" class="btn btn-outline-primary">Garages</a></span>
-                                                <span><a href="#" class="btn btn-outline-primary">Family</a></span>
-                                            </div>
-                                            <div class="tags">
-                                                <span><a href="#" class="btn btn-outline-primary">Real Estates</a></span>
-                                                <span><a href="#" class="btn btn-outline-primary">Properties</a></span>
-                                            </div>
-                                            <div class="tags no-mb">
-                                                <span><a href="#" class="btn btn-outline-primary">Location</a></span>
-                                                <span><a href="#" class="btn btn-outline-primary">Price</a></span>
                                             </div>
                                         </div>
                                     </div>
