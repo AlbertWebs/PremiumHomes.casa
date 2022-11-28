@@ -783,7 +783,7 @@
                                     <h3><a href="single-property-1.html">Real House Luxury Villa</a></h3>
                                     <p class="homes-address mb-3">
                                         <a href="single-property-1.html">
-                                            <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
+                                            <i class="fa fa-map-marker"></i><span>Karuna Close, Westlands, Nairobi</span>
                                         </a>
                                     </p>
                                     <!-- homes List -->
@@ -837,7 +837,7 @@
                                     <h3><a href="single-property-1.html">Real House Luxury Villa</a></h3>
                                     <p class="homes-address mb-3">
                                         <a href="single-property-1.html">
-                                            <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
+                                            <i class="fa fa-map-marker"></i><span>Karuna Close, Westlands, Nairobi</span>
                                         </a>
                                     </p>
                                     <!-- homes List -->
@@ -891,7 +891,7 @@
                                     <h3><a href="single-property-1.html">Real House Luxury Villa</a></h3>
                                     <p class="homes-address mb-3">
                                         <a href="single-property-1.html">
-                                            <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
+                                            <i class="fa fa-map-marker"></i><span>Karuna Close, Westlands, Nairobi</span>
                                         </a>
                                     </p>
                                     <!-- homes List -->
