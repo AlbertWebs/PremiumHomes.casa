@@ -265,7 +265,7 @@
                             </li>
                             <li>
                                 <span class="font-weight-bold mr-1">Property Price:</span>
-                                <span class="det">$230,000</span>
+                                <span class="det">$212,000</span>
                             </li>
                             <li>
                                 <span class="font-weight-bold mr-1">Rooms:</span>
@@ -596,7 +596,7 @@
                                                 </div>
                                                 <div class="info-img">
                                                     <a href="blog-details.html"><h6>Family Home</h6></a>
-                                                    <p>$230,000</p>
+                                                    <p>$640,000</p>
                                                 </div>
                                             </div>
                                             <div class="recent-main my-4">
@@ -605,7 +605,7 @@
                                                 </div>
                                                 <div class="info-img">
                                                     <a href="blog-details.html"><h6>Family Home</h6></a>
-                                                    <p>$230,000</p>
+                                                    <p>$330,000</p>
                                                 </div>
                                             </div>
                                             <div class="recent-main">
@@ -614,7 +614,7 @@
                                                 </div>
                                                 <div class="info-img">
                                                     <a href="blog-details.html"><h6>Family Home</h6></a>
-                                                    <p>$230,000</p>
+                                                    <p>$198,000</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -630,11 +630,11 @@
                                                 <div class="listing-item compact">
                                                     <a href="properties-details.html" class="listing-img-container">
                                                         <div class="listing-badges">
-                                                            <span class="featured">$ 230,000</span>
+                                                            <span class="featured">$ 200,000</span>
                                                             <span>For Sale</span>
                                                         </div>
                                                         <div class="listing-img-content">
-                                                            <span class="listing-compact-title">House Luxury <i>New York</i></span>
+                                                            <span class="listing-compact-title">House Luxury <i>Lavington</i></span>
                                                             <ul class="listing-hidden-content">
                                                                 <li>Area <span>720 sq ft</span></li>
                                                                 <li>Rooms <span>6</span></li>
@@ -654,7 +654,7 @@
                                                             <span class="rent">For Rent</span>
                                                         </div>
                                                         <div class="listing-img-content">
-                                                            <span class="listing-compact-title">House Luxury <i>Los Angles</i></span>
+                                                            <span class="listing-compact-title">House Luxury <i>Runda</i></span>
                                                             <ul class="listing-hidden-content">
                                                                 <li>Area <span>720 sq ft</span></li>
                                                                 <li>Rooms <span>6</span></li>
@@ -670,11 +670,11 @@
                                                 <div class="listing-item compact">
                                                     <a href="properties-details.html" class="listing-img-container">
                                                         <div class="listing-badges">
-                                                            <span class="featured">$ 230,000</span>
+                                                            <span class="featured">$ 235,000</span>
                                                             <span>For Sale</span>
                                                         </div>
                                                         <div class="listing-img-content">
-                                                            <span class="listing-compact-title">House Luxury <i>San Francisco</i></span>
+                                                            <span class="listing-compact-title">House Luxury <i>Langata</i></span>
                                                             <ul class="listing-hidden-content">
                                                                 <li>Area <span>720 sq ft</span></li>
                                                                 <li>Rooms <span>6</span></li>
@@ -694,7 +694,7 @@
                                                             <span class="rent">For Rent</span>
                                                         </div>
                                                         <div class="listing-img-content">
-                                                            <span class="listing-compact-title">House Luxury <i>Miami FL</i></span>
+                                                            <span class="listing-compact-title">House Luxury <i>Upper Hill</i></span>
                                                             <ul class="listing-hidden-content">
                                                                 <li>Area <span>720 sq ft</span></li>
                                                                 <li>Rooms <span>6</span></li>
@@ -714,7 +714,7 @@
                                                             <span>For Sale</span>
                                                         </div>
                                                         <div class="listing-img-content">
-                                                            <span class="listing-compact-title">House Luxury <i>Chicago IL</i></span>
+                                                            <span class="listing-compact-title">House Luxury <i>Loresho</i></span>
                                                             <ul class="listing-hidden-content">
                                                                 <li>Area <span>720 sq ft</span></li>
                                                                 <li>Rooms <span>6</span></li>
@@ -734,7 +734,7 @@
                                                             <span class="rent">For Rent</span>
                                                         </div>
                                                         <div class="listing-img-content">
-                                                            <span class="listing-compact-title">House Luxury <i>Toronto CA</i></span>
+                                                            <span class="listing-compact-title">House Luxury <i>Kilimani</i></span>
                                                             <ul class="listing-hidden-content">
                                                                 <li>Area <span>720 sq ft</span></li>
                                                                 <li>Rooms <span>6</span></li>
@@ -767,14 +767,14 @@
                                         <a href="single-property-1.html" class="homes-img">
                                             <div class="homes-tag button alt featured">Featured</div>
                                             <div class="homes-tag button alt sale">For Sale</div>
-                                            <div class="homes-price">$9,000/mo</div>
+                                            <div class="homes-price">$900,000</div>
                                             <img src="{{asset('theme/images/blog/b-11.jpg')}}" alt="home-1" class="img-responsive">
                                         </a>
                                     </div>
                                     <div class="button-effect">
                                         <a href="single-property-1.html" class="btn"><i class="fa fa-link"></i></a>
                                         <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                        <a href="single-property-2.html" class="img-poppu btn"><i class="fa fa-photo"></i></a>
+                                        <a href="{{url('/')}}/properties/slung" class="img-poppu btn"><i class="fa fa-photo"></i></a>
                                     </div>
                                 </div>
                                 <!-- homes content -->
@@ -807,7 +807,7 @@
                                     </ul>
                                     <div class="footer">
                                         <a href="agent-details.html">
-                                            <img src="{{asset('theme/images/testimonials/ts-1.jpg')}}" alt="" class="mr-2"> Lisa Jhonson
+                                            <img src="{{asset('theme/images/testimonials/199259143_4389625377747506_3043984032264076715_n.jpg')}}" alt="" class="mr-2"> Beatrice Mwangi
                                         </a>
                                         <span>2 months ago</span>
                                     </div>
@@ -828,7 +828,7 @@
                                     <div class="button-effect">
                                         <a href="single-property-1.html" class="btn"><i class="fa fa-link"></i></a>
                                         <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                        <a href="single-property-2.html" class="img-poppu btn"><i class="fa fa-photo"></i></a>
+                                        <a href="{{url('/')}}/properties/slung" class="img-poppu btn"><i class="fa fa-photo"></i></a>
                                     </div>
                                 </div>
                                 <!-- homes content -->
@@ -861,7 +861,7 @@
                                     </ul>
                                     <div class="footer">
                                         <a href="agent-details.html">
-                                            <img src="{{asset('theme/images/testimonials/ts-2.jpg')}}" alt="" class="mr-2"> Karl Smith
+                                            <img src="{{asset('theme/images/testimonials/199259143_4389625377747506_3043984032264076715_n.jpg')}}" alt="" class="mr-2"> Albert Muhatia
                                         </a>
                                         <span>2 months ago</span>
                                     </div>
@@ -882,7 +882,7 @@
                                     <div class="button-effect">
                                         <a href="single-property-1.html" class="btn"><i class="fa fa-link"></i></a>
                                         <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                        <a href="single-property-2.html" class="img-poppu btn"><i class="fa fa-photo"></i></a>
+                                        <a href="{{url('/')}}/properties/slung" class="img-poppu btn"><i class="fa fa-photo"></i></a>
                                     </div>
                                 </div>
                                 <!-- homes content -->
@@ -915,7 +915,7 @@
                                     </ul>
                                     <div class="footer">
                                         <a href="agent-details.html">
-                                            <img src="{{asset('theme/images/testimonials/ts-3.jpg')}}" alt="" class="mr-2"> katy Teddy
+                                            <img src="{{asset('theme/images/testimonials/199259143_4389625377747506_3043984032264076715_n.jpg')}}" alt="" class="mr-2"> Terry Waweru
                                         </a>
                                         <span>2 months ago</span>
                                     </div>

@@ -15,7 +15,7 @@
                          <li>
                              <div class="info">
                                  <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                 <p class="in-p">95 South Park Avenue, Westands</p>
+                                 <p class="in-p">95 Karuna Close, Westlands, Nairobi</p>
                              </div>
                          </li>
                          <li>
