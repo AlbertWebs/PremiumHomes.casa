@@ -3,7 +3,7 @@
         'name' => 'laravel/laravel',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '0dcde6d3c37f18387706fe418f4fc6f44b2c70e3',
+        'reference' => '4dc72b98d8dabe05a04b67eaa19b02753564de1e',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -349,6 +349,15 @@
                 0 => 'v9.40.1',
             ),
         ),
+        'knox/pesapal' => array(
+            'pretty_version' => '1.0.0',
+            'version' => '1.0.0.0',
+            'reference' => 'e486db0bec95c9c436fafce9ad112ad99bad3070',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../knox/pesapal',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'kodova/hamcrest-php' => array(
             'dev_requirement' => true,
             'replaced' => array(
@@ -367,7 +376,7 @@
         'laravel/laravel' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '0dcde6d3c37f18387706fe418f4fc6f44b2c70e3',
+            'reference' => '4dc72b98d8dabe05a04b67eaa19b02753564de1e',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use Pesapal;
 use Illuminate\Http\Request;
+use App\Http\Requests;
+use Illuminate\Support\Facades\Auth;
+
 
 class VendorController extends Controller
 {

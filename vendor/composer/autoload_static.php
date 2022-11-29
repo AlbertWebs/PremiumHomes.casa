@@ -128,6 +128,10 @@ class ComposerStaticInitc4197389d2da37cafcedd5c03b5d9663
             'Laravel\\Sanctum\\' => 16,
             'Laravel\\Sail\\' => 13,
         ),
+        'K' => 
+        array (
+            'Knox\\Pesapal\\' => 13,
+        ),
         'I' => 
         array (
             'Illuminate\\Support\\' => 19,
@@ -430,6 +434,10 @@ class ComposerStaticInitc4197389d2da37cafcedd5c03b5d9663
         array (
             0 => __DIR__ . '/..' . '/laravel/sail/src',
         ),
+        'Knox\\Pesapal\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/knox/pesapal/src',
+        ),
         'Illuminate\\Support\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Macroable',
@@ -547,6 +555,7 @@ class ComposerStaticInitc4197389d2da37cafcedd5c03b5d9663
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+        'App\\Http\\Controllers\\PropertyController' => __DIR__ . '/../..' . '/app/Http/Controllers/PropertyController.php',
         'App\\Http\\Controllers\\VendorController' => __DIR__ . '/../..' . '/app/Http/Controllers/VendorController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
@@ -559,6 +568,8 @@ class ComposerStaticInitc4197389d2da37cafcedd5c03b5d9663
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\ValidateSignature' => __DIR__ . '/../..' . '/app/Http/Middleware/ValidateSignature.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Http\\Requests\\StorePropertyRequest' => __DIR__ . '/../..' . '/app/Http/Requests/StorePropertyRequest.php',
+        'App\\Http\\Requests\\UpdatePropertyRequest' => __DIR__ . '/../..' . '/app/Http/Requests/UpdatePropertyRequest.php',
         'App\\Models\\About' => __DIR__ . '/../..' . '/app/Models/About.php',
         'App\\Models\\Banner' => __DIR__ . '/../..' . '/app/Models/Banner.php',
         'App\\Models\\Blog' => __DIR__ . '/../..' . '/app/Models/Blog.php',
@@ -593,6 +604,7 @@ class ComposerStaticInitc4197389d2da37cafcedd5c03b5d9663
         'App\\Models\\Thread' => __DIR__ . '/../..' . '/app/Models/Thread.php',
         'App\\Models\\Topic' => __DIR__ . '/../..' . '/app/Models/Topic.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
+        'App\\Policies\\PropertyPolicy' => __DIR__ . '/../..' . '/app/Policies/PropertyPolicy.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
@@ -709,6 +721,7 @@ class ComposerStaticInitc4197389d2da37cafcedd5c03b5d9663
         'Database\\Factories\\UserFactory' => __DIR__ . '/../..' . '/database/factories/UserFactory.php',
         'Database\\Seeders\\CreateUsersSeeder' => __DIR__ . '/../..' . '/database/seeders/CreateUsersSeeder.php',
         'Database\\Seeders\\DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeders/DatabaseSeeder.php',
+        'Database\\Seeders\\PropertySeeder' => __DIR__ . '/../..' . '/database/seeders/PropertySeeder.php',
         'DeepCopy\\DeepCopy' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',
         'DeepCopy\\Exception\\CloneException' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Exception/CloneException.php',
         'DeepCopy\\Exception\\PropertyException' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Exception/PropertyException.php',
@@ -2727,6 +2740,10 @@ class ComposerStaticInitc4197389d2da37cafcedd5c03b5d9663
         'Illuminate\\View\\ViewFinderInterface' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewFinderInterface.php',
         'Illuminate\\View\\ViewName' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewName.php',
         'Illuminate\\View\\ViewServiceProvider' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewServiceProvider.php',
+        'Knox\\Pesapal\\Facades\\Pesapal' => __DIR__ . '/..' . '/knox/pesapal/src/Facades/Pesapal.php',
+        'Knox\\Pesapal\\Pesapal' => __DIR__ . '/..' . '/knox/pesapal/src/Pesapal.php',
+        'Knox\\Pesapal\\PesapalAPIController' => __DIR__ . '/..' . '/knox/pesapal/src/PesapalAPIController.php',
+        'Knox\\Pesapal\\PesapalServiceProvider' => __DIR__ . '/..' . '/knox/pesapal/src/PesapalServiceProvider.php',
         'Laravel\\Sail\\Console\\InstallCommand' => __DIR__ . '/..' . '/laravel/sail/src/Console/InstallCommand.php',
         'Laravel\\Sail\\Console\\PublishCommand' => __DIR__ . '/..' . '/laravel/sail/src/Console/PublishCommand.php',
         'Laravel\\Sail\\SailServiceProvider' => __DIR__ . '/..' . '/laravel/sail/src/SailServiceProvider.php',
