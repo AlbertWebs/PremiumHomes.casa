@@ -177,7 +177,7 @@
                                                 <h4>$ 77,800</h4>
                                                 <div class="mt-0">
                                                     <a href="#listing-location" class="listing-address">
-                                                        <p>184 sq ft</p>
+                                                        <p>187 sq ft</p>
                                                     </a>
                                                 </div>
                                             </div>
@@ -273,11 +273,11 @@
                             </li>
                             <li>
                                 <span class="font-weight-bold mr-1">Bedrooms:</span>
-                                <span class="det">7</span>
+                                <span class="det">3</span>
                             </li>
                             <li>
                                 <span class="font-weight-bold mr-1">Bath:</span>
-                                <span class="det">4</span>
+                                <span class="det">3</span>
                             </li>
                             <li>
                                 <span class="font-weight-bold mr-1">Garages:</span>
@@ -285,7 +285,7 @@
                             </li>
                             <li>
                                 <span class="font-weight-bold mr-1">Year Built:</span>
-                                <span class="det">10/6/2020</span>
+                                <span class="det">10/6/2022</span>
                             </li>
                         </ul>
                         <!-- title -->
@@ -346,7 +346,7 @@
                                         <div class="nearby-list">
                                             <ul class="property-list list-unstyled mb-0">
                                                 <li class="d-flex">
-                                                    <h6 class="mb-3 mr-2">Education Mandarin</h6>
+                                                    <h6 class="mb-3 mr-2">Peponi School</h6>
                                                     <span>(15.61 miles)</span>
                                                     <ul class="list-unstyled list-inline ml-auto">
                                                         <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
@@ -357,25 +357,25 @@
                                                     </ul>
                                                 </li>
                                                 <li class="d-flex">
-                                                    <h6 class="mb-3 mr-2">Marry's Education</h6>
+                                                    <h6 class="mb-3 mr-2">Internatonal Schools</h6>
                                                     <span>(15.23 miles)</span>
                                                     <ul class="list-unstyled list-inline ml-auto">
                                                         <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
                                                         <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
                                                         <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star-half fa-xs"></i></li>
+                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
                                                         <li class="list-inline-item m-0 text-warning"><i class="far fa-star fa-xs"></i></li>
                                                     </ul>
                                                 </li>
                                                 <li class="d-flex">
-                                                    <h6 class="mb-3 mr-2">The Kaplan</h6>
+                                                    <h6 class="mb-3 mr-2">University of Nairobi</h6>
                                                     <span>(15.16 miles)</span>
                                                     <ul class="list-unstyled list-inline ml-auto">
                                                         <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
                                                         <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star-half fa-xs"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="far fa-star fa-xs"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="far fa-star fa-xs"></i></li>
+                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
+                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
+                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
                                                     </ul>
                                                 </li>
                                             </ul>
@@ -388,7 +388,7 @@
                                         <div class="nearby-list">
                                             <ul class="property-list list-unstyled mb-0">
                                                 <li class="d-flex">
-                                                    <h6 class="mb-3 mr-2">Natural Market</h6>
+                                                    <h6 class="mb-3 mr-2">Mp Sha Market</h6>
                                                     <span>(13.20 miles)</span>
                                                     <ul class="list-unstyled list-inline ml-auto">
                                                         <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
@@ -399,7 +399,7 @@
                                                     </ul>
                                                 </li>
                                                 <li class="d-flex">
-                                                    <h6 class="mb-3 mr-2">Food For Health</h6>
+                                                    <h6 class="mb-3 mr-2">St. Ann's Hospital</h6>
                                                     <span>(13.22 miles)</span>
                                                     <ul class="list-unstyled list-inline ml-auto">
                                                         <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
@@ -409,17 +409,7 @@
                                                         <li class="list-inline-item m-0 text-warning"><i class="far fa-star fa-xs"></i></li>
                                                     </ul>
                                                 </li>
-                                                <li class="d-flex">
-                                                    <h6 class="mb-3 mr-2">A Matter of Health</h6>
-                                                    <span>(13.34 miles)</span>
-                                                    <ul class="list-unstyled list-inline ml-auto">
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star-half fa-xs"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="far fa-star fa-xs"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="far fa-star fa-xs"></i></li>
-                                                    </ul>
-                                                </li>
+
                                             </ul>
                                         </div>
                                     </div>
@@ -430,7 +420,7 @@
                                         <div class="nearby-list">
                                             <ul class="property-list list-unstyled mb-0">
                                                 <li class="d-flex">
-                                                    <h6 class="mb-3 mr-2">Airport Transportation</h6>
+                                                    <h6 class="mb-3 mr-2">Nairobi Express Way</h6>
                                                     <span>(11.36 miles)</span>
                                                     <ul class="list-unstyled list-inline ml-auto">
                                                         <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
@@ -452,14 +442,14 @@
                                                     </ul>
                                                 </li>
                                                 <li class="d-flex">
-                                                    <h6 class="mb-3 mr-2">Empire Limousine</h6>
-                                                    <span>(11.52 miles)</span>
+                                                    <h6 class="mb-3 mr-2">Uber, Bolt & PTG</h6>
+                                                    <span>(0 miles)</span>
                                                     <ul class="list-unstyled list-inline ml-auto">
                                                         <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
                                                         <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star-half fa-xs"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="far fa-star fa-xs"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="far fa-star fa-xs"></i></li>
+                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star-half"></i></li>
+                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
+                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
                                                     </ul>
                                                 </li>
                                             </ul>

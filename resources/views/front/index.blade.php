@@ -15,9 +15,9 @@
                                         <div class="swiper_imgbox imgbox1">
                                             <div class="swipper_img">
                                                 <h4>For Sale <span>Estate</span></h4>
-                                                <h2>Rosehill Apartments</h2>
+                                                <h2>Rosehill Residence</h2>
                                                 <h3>$ 77,800<span class="banner_span1"></span></h3>
-                                                <p><i class="fa fa-map-marker mr-3"></i>Rosehill Apartments - Lower Kabete Road, Nairobi</p>
+                                                <p><i class="fa fa-map-marker mr-3"></i>Rosehill Residence - Lower Kabete Road, Nairobi</p>
                                                 <!-- homes List -->
                                                 <ul class="homes-list clearfix">
                                                     <li>
@@ -26,18 +26,18 @@
                                                     </li>
                                                     <li>
                                                         <i class="fa fa-bath" aria-hidden="true"></i>
-                                                        <span>2 Bathrooms</span>
+                                                        <span>3 Bathrooms</span>
                                                     </li>
                                                     <li>
                                                         <i class="fa fa-object-group" aria-hidden="true"></i>
-                                                        <span>184 sq ft</span>
+                                                        <span>187 sq ft</span>
                                                     </li>
                                                     <li>
                                                         <i class="fas fa-warehouse" aria-hidden="true"></i>
                                                         <span>1 Garages</span>
                                                     </li>
                                                 </ul>
-                                                <a href="{{route('property-single',['slung'])}}" class="int_btn">View Property <span class="btn_caret"><i class="fas fa-caret-right"></i></span></a>
+                                                <a href="{{route('property-single',['rosehill-residence'])}}" class="int_btn">View Property <span class="btn_caret"><i class="fas fa-caret-right"></i></span></a>
                                                 <h1>Real</h1>
                                             </div>
                                         </div>
@@ -63,6 +63,27 @@
                                         <div class="swiper_contbox">
                                             <div class="swipper_conntent">
                                                 <img src="{{asset('theme/images/slider/slider-9.jpg')}}" class="img-fluid" alt="images" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="swiper_contbox">
+                                            <div class="swipper_conntent">
+                                                <img src="{{asset('theme/images/slider/slider-1.jpg')}}" class="img-fluid" alt="images" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="swiper_contbox">
+                                            <div class="swipper_conntent">
+                                                <img src="{{asset('theme/images/slider/slider-2.jpg')}}" class="img-fluid" alt="images" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="swiper_contbox">
+                                            <div class="swipper_conntent">
+                                                <img src="{{asset('theme/images/slider/slider-7.jpg')}}" class="img-fluid" alt="images" />
                                             </div>
                                         </div>
                                     </div>
@@ -279,7 +300,7 @@
                         <i class="fas fa-building bg-base text-white rounded-100 box-shadow-1 p-top-5 p-bottom-5 p-right-5 p-left-5"></i>
                     </div>
                     <div class="agent-section p-top-35 p-bottom-30 p-right-25 p-left-25">
-                        <h4 class="m-bottom-15 text-bold-700">Apartments</h4>
+                        <h4 class="m-bottom-15 text-bold-700">Residence</h4>
                         <p>Kenya is a country in Africa with coastline on the Indian Ocean. It encompasses savannah, lakelands, the dramatic Great Rift Valley and mountain highlands. It's also home to wildlife like lions, elephants and rhino</p>
                         <a class="text-base text-base-dark-hover text-size-13" href="properties-full-list#">Read More <i class="fa fa-long-arrow-right ml-2"></i></a>
                     </div>
