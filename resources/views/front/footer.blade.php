@@ -15,13 +15,13 @@
                          <li>
                              <div class="info">
                                  <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                 <p class="in-p">95 Karuna Close, Westlands, Nairobi</p>
+                                 <p class="in-p">Nelson's Court, Ring Road, Westlands, Nairobi</p>
                              </div>
                          </li>
                          <li>
                              <div class="info">
                                  <i class="fa fa-phone" aria-hidden="true"></i>
-                                 <p class="in-p">+254 723 014 032</p>
+                                 <p class="in-p">+254 707 190 188</p>
                              </div>
                          </li>
                          <li>
