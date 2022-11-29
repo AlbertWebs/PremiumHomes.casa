@@ -55,35 +55,35 @@
                                     <div class="swiper-slide">
                                         <div class="swiper_contbox">
                                             <div class="swipper_conntent">
-                                                <img src="{{asset('theme/images/slider/slider-8.jpg')}}" class="img-fluid " alt="images" />
+                                                <img src="{{asset('uploads/properties/rosehill-3.jpg')}}" class="img-fluid " alt="images" />
                                             </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="swiper_contbox">
                                             <div class="swipper_conntent">
-                                                <img src="{{asset('theme/images/slider/slider-9.jpg')}}" class="img-fluid" alt="images" />
+                                                <img src="{{asset('uploads/properties/rosehill-2.jpg')}}" class="img-fluid" alt="images" />
                                             </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="swiper_contbox">
                                             <div class="swipper_conntent">
-                                                <img src="{{asset('theme/images/slider/slider-1.jpg')}}" class="img-fluid" alt="images" />
+                                                <img src="{{asset('uploads/properties/rosehill-1.jpg')}}" class="img-fluid" alt="images" />
                                             </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="swiper_contbox">
                                             <div class="swipper_conntent">
-                                                <img src="{{asset('theme/images/slider/slider-2.jpg')}}" class="img-fluid" alt="images" />
+                                                <img src="{{asset('uploads/properties/rosehill-4.jpg')}}" class="img-fluid" alt="images" />
                                             </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="swiper_contbox">
                                             <div class="swipper_conntent">
-                                                <img src="{{asset('theme/images/slider/slider-7.jpg')}}" class="img-fluid" alt="images" />
+                                                <img src="{{asset('uploads/properties/rosehill-5.jpg')}}" class="img-fluid" alt="images" />
                                             </div>
                                         </div>
                                     </div>
