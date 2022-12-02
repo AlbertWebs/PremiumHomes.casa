@@ -34,7 +34,7 @@ class PaymentsController extends Controller
 
         return view('payments.business.pesapal', compact('iframe'));
     }
-    public function paymentsuccess(Request $request)//just tells u payment has gone thru..but not confirmed
+    public function paymentsuccess(Request $request)
     {
         $trackingid = $request->input('tracking_id');
         $ref = $request->input('merchant_reference');
@@ -43,27 +43,22 @@ class PaymentsController extends Controller
         $payments -> trackingid = $trackingid;
         $payments -> status = 'PENDING';
         $payments -> save();
-        //go back home
         $payments=Payment::all();
         return view('payments.business.home', compact('payments'));
     }
-    //This method just tells u that there is a change in pesapal for your transaction..
-    //u need to now query status..retrieve the change...CANCELLED? CONFIRMED?
     public function paymentconfirmation(Request $request)
     {
         $trackingid = $request->input('pesapal_transaction_tracking_id');
         $merchant_reference = $request->input('pesapal_merchant_reference');
         $pesapal_notification_type= $request->input('pesapal_notification_type');
-
-        //use the above to retrieve payment status now..
         $this->checkpaymentstatus($trackingid,$merchant_reference,$pesapal_notification_type);
     }
-    //Confirm status of transaction and update the DB
+
     public function checkpaymentstatus($trackingid,$merchant_reference,$pesapal_notification_type){
         $status=Pesapal::getMerchantStatus($merchant_reference);
         $payments = Payment::where('trackingid',$trackingid)->first();
         $payments -> status = $status;
-        $payments -> payment_method = "PESAPAL";//use the actual method though...
+        $payments -> payment_method = "PESAPAL";
         $payments -> save();
         return "success";
     }

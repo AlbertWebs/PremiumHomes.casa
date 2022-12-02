@@ -237,6 +237,8 @@ Route::group(['prefix'=>'vendors'], function(){
     Route::get('/change-password', [App\Http\Controllers\VendorController::class, 'change_password'])->name('change-password');
     Route::get('/invoice', [App\Http\Controllers\VendorController::class, 'invoice'])->name('invoice');
 
+    // Post
+    Route::post('/add-property', [App\Http\Controllers\VendorController::class, 'add_properties'])->name('add-property-post');
 
     // SocialMedia
     Route::get('/facebook', [LoginController::class, 'facebook'])->name('facebook-login');

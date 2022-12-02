@@ -45,6 +45,16 @@ class VendorController extends Controller
         return view('vendor.change_password');
     }
 
+    public function add_properties(Request $request){
+        $data = $request->all();
+        dd($data);
+        $Property = new Property;
+        $title = $request->title;
+        $property_description = $request->property_description;
+
+
+    }
+
 
 
 }

@@ -66,7 +66,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="swiper-slide">
+                                    {{-- <div class="swiper-slide">
                                         <div class="swiper_contbox">
                                             <div class="swipper_conntent">
                                                 <img src="{{asset('uploads/properties/rosehill-3.jpg')}}" class="img-fluid" alt="images" />
@@ -86,7 +86,7 @@
                                                 <img src="{{asset('uploads/properties/rosehill-5.jpg')}}" class="img-fluid" alt="images" />
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                         </div>
