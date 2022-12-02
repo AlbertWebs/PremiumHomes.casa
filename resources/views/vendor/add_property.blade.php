@@ -179,7 +179,7 @@
                                                 <p>
                                                     <label for="description">Property Description</label>
                                                     {{-- <textarea id="description" name="property_description" placeholder="Describe about your property"></textarea> --}}
-                                                    <textarea name="property_description" id="article_ckeditor" rows="10" cols="80"></textarea>
+                                                    <textarea name="property_description" id="article_ckeditor" rows="10" cols="80" required></textarea>
 
                                                     <script src="https://amanivehiclesounds.co.ke/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
                                                     <script>
@@ -192,8 +192,9 @@
                                             {{--  --}}
                                             <div class="col-lg-4 col-md-12 dropdown faq-drop">
                                                 <div class="form-group categories">
-                                                    <select name="status" class="nice-select form-control wide">
-                                                        <option selected="" value="Default">Select status</option>
+                                                    <label for="price">Rent/Sale</label>
+                                                    <select name="status" class="nice-select form-control wide" required>
+                                                        {{-- <option selected="" value="Default">Select status</option> --}}
                                                         <option value="Small">Rent</option>
                                                         <option value="Medium">Sale</option>
                                                     </select>
@@ -202,8 +203,9 @@
                                             {{--  --}}
                                             <div class="col-lg-4 col-md-12 dropdown faq-drop">
                                                 <div class="form-group categories">
-                                                    <select name="type" class="nice-select form-control wide">
-                                                        <option selected="" value="Default">Type</option>
+                                                    <label for="price">Type</label>
+                                                    <select name="type" class="nice-select form-control wide" required>
+                                                        {{-- <option selected="" value="Default">Type</option> --}}
                                                         <option value="commercial">commercial</option>
                                                         <option value="apartment">apartment</option>
                                                         <option value="home">home</option>
@@ -213,8 +215,9 @@
                                             {{--  --}}
                                             <div class="col-lg-4 col-md-12 dropdown faq-drop">
                                                 <div class="form-group categories">
-                                                    <select name="rooms" class="nice-select form-control wide">
-                                                        <option selected="" value="Default">Rooms</option>
+                                                    <label for="price">Rooms</label>
+                                                    <select name="rooms" class="nice-select form-control wide" required>
+                                                        {{-- <option selected="" value="Default">Rooms</option> --}}
                                                         <option value="1">1</option>
                                                         <option value="2">2</option>
                                                         <option value="3">3</option>
@@ -239,13 +242,13 @@
                                             <div class="col-lg-6 col-md-12">
                                                 <p class="no-mb">
                                                     <label for="price">Price</label>
-                                                    <input type="text" name="price" placeholder="USD" id="price">
+                                                    <input type="text" name="price" placeholder="USD" id="price" required>
                                                 </p>
                                             </div>
                                             <div class="col-lg-6 col-md-12">
                                                 <p class="no-mb last">
                                                     <label for="area">Area</label>
-                                                    <input type="text" name="sqft" placeholder="Sqft" id="area">
+                                                    <input type="text" name="sqft" placeholder="Sqft" id="area" required>
                                                 </p>
                                             </div>
                                         </div>
@@ -268,13 +271,13 @@
                                         <div class="col-lg-6 col-md-12">
                                             <p>
                                                 <label for="address">Address</label>
-                                                <input type="text" name="address" placeholder="e.g 3571 Riverside Downs" id="address">
+                                                <input type="text" name="address" placeholder="e.g 3571 Riverside Downs" id="address" required>
                                             </p>
                                         </div>
                                         <div class="col-lg-6 col-md-12">
                                             <p>
                                                 <label for="city">City</label>
-                                                <input type="text" name="city" placeholder="Enter Your City" id="city">
+                                                <input type="text" name="city" placeholder="Enter Your City" id="city" required>
                                             </p>
                                         </div>
                                     </div>
@@ -282,13 +285,13 @@
                                         <div class="col-lg-6 col-md-12">
                                             <p>
                                                 <label for="state">State</label>
-                                                <input type="text" name="state" placeholder="Enter Your State" id="state">
+                                                <input type="text" name="state" placeholder="Enter Your State" id="state" required>
                                             </p>
                                         </div>
                                         <div class="col-lg-6 col-md-12">
                                             <p>
                                                 <label for="country">Country</label>
-                                                <input type="text" name="country" placeholder="Enter Your Country" id="country">
+                                                <input type="text" name="country" placeholder="Enter Your Country" id="country" required>
                                             </p>
                                         </div>
                                     </div>
@@ -296,7 +299,7 @@
                                         <div class="col-lg-6 col-md-12">
                                             <p class="no-mb first">
                                                 <label for="latitude">Google Maps latitude</label>
-                                                <input type="text" name="latitude" placeholder="Google Maps latitude" id="latitude">
+                                                <input type="text" name="latitude" placeholder="Google Maps latitude" id="latitude" >
                                             </p>
                                         </div>
                                         <div class="col-lg-6 col-md-12">
@@ -323,7 +326,7 @@
                                         <div class="col-lg-4 col-md-12">
                                             <p class="no-mb">
                                                 <label for="price">Year of Make</label>
-                                                <input type="text" name="yom" placeholder="{{date('y')}}" id="price">
+                                                <input type="text" name="yom" placeholder="{{date('Y')}}" id="price" required>
                                             </p>
                                         </div>
 
@@ -428,13 +431,13 @@
                                         <div class="col-lg-6 col-md-12">
                                             <p>
                                                 <label for="con-name">Name</label>
-                                                <input type="text" value="{{Auth::User()->name}}" placeholder="Enter Your Name" id="con-name" name="con-name">
+                                                <input type="text" value="{{Auth::User()->name}}" placeholder="Enter Your Name" id="con-name" name="con_name" required>
                                             </p>
                                         </div>
                                         <div class="col-lg-6 col-md-12">
                                             <p>
                                                 <label for="con-user">Username</label>
-                                                <input type="text" value="{{Auth::User()->email}}" placeholder="Enter Your Username" id="con-user" name="con-user">
+                                                <input type="text" value="{{Auth::User()->email}}" placeholder="Enter Your Username" id="con-user" name="con_user" required>
                                             </p>
                                         </div>
                                     </div>
@@ -442,13 +445,13 @@
                                         <div class="col-lg-6 col-md-12">
                                             <p class="no-mb first">
                                                 <label for="con-email">Email</label>
-                                                <input type="email" placeholder="Enter Your Email" value="{{Auth::User()->email}}" id="con-email" name="con-email">
+                                                <input type="email" placeholder="Enter Your Email" value="{{Auth::User()->email}}" id="con-email" name="con_email" required>
                                             </p>
                                         </div>
                                         <div class="col-lg-6 col-md-12">
                                             <p class="no-mb last">
                                                 <label for="con-phn">Phone</label>
-                                                <input type="text" value="{{Auth::User()->mobile}}" placeholder="Enter Your Phone Number" id="con-phn" name="con-phn">
+                                                <input type="text" value="{{Auth::User()->mobile}}" placeholder="Enter Your Phone Number" id="con-phn" name="con_phn" required>
                                             </p>
                                         </div>
                                     </div>
