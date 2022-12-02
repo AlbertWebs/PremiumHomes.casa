@@ -190,19 +190,22 @@
                                 <h5 class="mb-4">Gallery</h5>
                                 <div class="carousel-inner">
                                     <div class="active item carousel-item" data-slide-number="0">
-                                        <img src="{{asset('theme/images/single-property/s-1.jpg')}}" class="img-fluid" alt="slider-listing">
+                                        <img src="{{asset('uploads/properties/rosehill-render.jpg')}}" class="img-fluid" alt="slider-listing">
                                     </div>
                                     <div class="item carousel-item" data-slide-number="1">
-                                        <img src="{{asset('theme/images/single-property/s-2.jpg')}}" class="img-fluid" alt="slider-listing">
+                                        <img src="{{asset('uploads/properties/rosehill-1.jpg')}}" class="img-fluid" alt="slider-listing">
                                     </div>
                                     <div class="item carousel-item" data-slide-number="2">
-                                        <img src="{{asset('theme/images/single-property/s-3.jpg')}}" class="img-fluid" alt="slider-listing">
+                                        <img src="{{asset('uploads/properties/rosehill-2.jpg')}}" class="img-fluid" alt="slider-listing">
                                     </div>
                                     <div class="item carousel-item" data-slide-number="4">
-                                        <img src="{{asset('theme/images/single-property/s-4.jpg')}}" class="img-fluid" alt="slider-listing">
+                                        <img src="{{asset('uploads/properties/rosehill-3.jpg')}}" class="img-fluid" alt="slider-listing">
                                     </div>
                                     <div class="item carousel-item" data-slide-number="5">
-                                        <img src="{{asset('theme/images/single-property/s-5.jpg')}}" class="img-fluid" alt="slider-listing">
+                                        <img src="{{asset('uploads/properties/rosehill-4.jpg')}}" class="img-fluid" alt="slider-listing">
+                                    </div>
+                                    <div class="item carousel-item" data-slide-number="6">
+                                        <img src="{{asset('uploads/properties/rosehill-5.jpg')}}" class="img-fluid" alt="slider-listing">
                                     </div>
 
                                     <a class="carousel-control left" href="#listingDetailsSlider" data-slide="prev"><i class="fa fa-angle-left"></i></a>
@@ -213,35 +216,51 @@
                                 <ul class="carousel-indicators smail-listing list-inline">
                                     <li class="list-inline-item active">
                                         <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#listingDetailsSlider">
-                                            <img src="{{asset('theme/images/single-property/s-1.jpg')}}" class="img-fluid" alt="listing-small">
+                                            <img style="min-height:85px" src="{{asset('uploads/properties/rosehill-render.jpg')}}" class="img-fluid" alt="listing-small">
                                         </a>
                                     </li>
                                     <li class="list-inline-item">
                                         <a id="carousel-selector-1" data-slide-to="1" data-target="#listingDetailsSlider">
-                                            <img src="{{asset('theme/images/single-property/s-2.jpg')}}" class="img-fluid" alt="listing-small">
+                                            <img src="{{asset('uploads/properties/rosehill-1.jpg')}}" class="img-fluid" alt="listing-small">
                                         </a>
                                     </li>
                                     <li class="list-inline-item">
                                         <a id="carousel-selector-2" data-slide-to="2" data-target="#listingDetailsSlider">
-                                            <img src="{{asset('theme/images/single-property/s-3.jpg')}}" class="img-fluid" alt="listing-small">
+                                            <img src="{{asset('uploads/properties/rosehill-2.jpg')}}" class="img-fluid" alt="listing-small">
                                         </a>
                                     </li>
                                     <li class="list-inline-item">
                                         <a id="carousel-selector-3" data-slide-to="3" data-target="#listingDetailsSlider">
-                                            <img src="{{asset('theme/images/single-property/s-4.jpg')}}" class="img-fluid" alt="listing-small">
+                                            <img src="{{asset('uploads/properties/rosehill-3.jpg')}}" class="img-fluid" alt="listing-small">
                                         </a>
                                     </li>
                                     <li class="list-inline-item">
                                         <a id="carousel-selector-4" data-slide-to="4" data-target="#listingDetailsSlider">
-                                            <img src="{{asset('theme/images/single-property/s-5.jpg')}}" class="img-fluid" alt="listing-small">
+                                            <img src="{{asset('uploads/properties/rosehill-4.jpg')}}" class="img-fluid" alt="listing-small">
                                         </a>
                                     </li>
+
                                 </ul>
                                 <!-- main slider carousel items -->
                             </div>
                             <div class="blog-info details mb-30">
                                 <h5 class="mb-4">Description</h5>
-                                <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum rerum beatae consequatur, totam fugit, alias fuga aliquam quod tempora a nisi esse magnam nulla quas! Error praesentium, vero dolorum laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum rerum beatae consequatur, totam fugit.</p>
+                                <p class="mb-3">
+                                    Modern living having incorporated good quality finishes and
+                                    good use of space.3 and 2 bedrooms.
+                                    journey for good and steady returns starting from only KES
+                                    9.5 million.
+                                    <br>
+                                    Main features include:<br>
+                                    Gym & fitness center<br>
+                                    High speed lift <br>
+                                    127sqm plinth area.<br>
+                                    Solar power <br>
+                                    Back up genset <br>
+                                    On-site borehole <br>
+                                    Ample parking <br>
+                                    Rooftop terrace<br>
+                                </p>
                                 <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum rerum beatae consequatur, totam fugit, alias fuga aliquam quod tempora a nisi esse magnam nulla quas! Error praesentium, vero dolorum laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum rerum beatae consequatur, totam fugit.</p>
                                 <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum rerum beatae consequatur, totam fugit, alias fuga aliquam quod tempora a nisi esse magnam nulla quas! Error praesentium, vero dolorum laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum rerum beatae consequatur, totam fugit.</p>
                             </div>
