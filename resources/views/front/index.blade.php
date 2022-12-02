@@ -560,10 +560,12 @@ Premium Homes offers local real estate agents in major cities offering a wide ra
                             </div>
                         </a>
                         <div class="news-item-text">
-                            <a href="blog-details#"><h3>The Real Estate News</h3></a>
-                            <span class="date">Jun 23, 2020 &nbsp;/&nbsp; By Albert</span>
+                            <a href="blog-details#"><h3>How Long Does It Really Take to Buy a House?</h3></a>
+                            <span class="date">Jun 23, 2022 &nbsp;/&nbsp; By Albert</span>
                             <div class="news-item-descr">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                                <p>
+                                    It is super important for any real estate investor to be familiar with the process of closing the sale of a property.
+                                </p>
                             </div>
                             <div class="news-item-bottom">
                                 <a href="blog-details#" class="news-link">Read more...</a>
@@ -585,10 +587,12 @@ Premium Homes offers local real estate agents in major cities offering a wide ra
                             </div>
                         </a>
                         <div class="news-item-text">
-                            <a href="blog-details#"><h3>The Real Estate News</h3></a>
-                            <span class="date">Jun 23, 2020 &nbsp;/&nbsp; By Albert</span>
+                            <a href="blog-details#"><h3>Avoid Paying Unnecessary Fees by Lowering Your Closing Costs—Here’s How</h3></a>
+                            <span class="date">Oct 22, 2022 &nbsp;/&nbsp; By Albert</span>
                             <div class="news-item-descr">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                                <p>
+                                    The hardest part’s over because you’ve found the perfect house. Now you have to go through negotiations to buy the house and determine your closing costs.
+                                </p>
                             </div>
                             <div class="news-item-bottom">
                                 <a href="blog-details#" class="news-link">Read more...</a>
