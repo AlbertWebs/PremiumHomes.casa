@@ -162,16 +162,15 @@
                             </div>
                         </div>
                         <form {{route('add-property-post')}} method="POST">
+                            @csrf
                             <div class="single-add-property">
                                 <h3>Property description and price</h3>
                                 <div class="property-form-group">
-
-                                        @csrf
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <p>
                                                     <label for="title">Property Title</label>
-                                                    <input name="property_name" type="text" name="title" id="title" placeholder="Enter your property title">
+                                                    <input required name="property_name" type="text" name="title" id="title" placeholder="Enter your property title">
                                                 </p>
                                             </div>
                                         </div>
@@ -190,46 +189,51 @@
                                             </div>
                                         </div>
                                         <div class="row">
+                                            {{--  --}}
                                             <div class="col-lg-4 col-md-12 dropdown faq-drop">
                                                 <div class="form-group categories">
-                                                    <div class="nice-select form-control wide" tabindex="0"><span class="current">Select status</span>
-                                                        <ul class="list">
-                                                            <li data-value="Rent" class="option">Rent</li>
-                                                            <li data-value="Sale" class="option">Sale</li>
-                                                        </ul>
-                                                    </div>
+                                                    <select name="status" class="nice-select form-control wide">
+                                                        <option selected="" value="Default">Select status</option>
+                                                        <option value="Small">Rent</option>
+                                                        <option value="Medium">Sale</option>
+                                                    </select>
                                                 </div>
                                             </div>
+                                            {{--  --}}
                                             <div class="col-lg-4 col-md-12 dropdown faq-drop">
                                                 <div class="form-group categories">
-                                                    <div class="nice-select form-control wide" tabindex="0"><span class="current">Type</span>
-                                                        <ul class="list">
-                                                            <li data-value="house" class="option">house</li>
-                                                            <li data-value="commercial" class="option">commercial</li>
-                                                            <li data-value="apartment" class="option">apartment</li>
-                                                            <li data-value="home" class="option">home</li>
-                                                        </ul>
-                                                    </div>
+                                                    <select name="type" class="nice-select form-control wide">
+                                                        <option selected="" value="Default">Type</option>
+                                                        <option value="commercial">commercial</option>
+                                                        <option value="apartment">apartment</option>
+                                                        <option value="home">home</option>
+                                                    </select>
                                                 </div>
                                             </div>
+                                            {{--  --}}
                                             <div class="col-lg-4 col-md-12 dropdown faq-drop">
                                                 <div class="form-group categories">
-                                                    <div class="nice-select form-control wide" tabindex="0"><span class="current">Rooms</span>
-                                                        <ul class="list">
-                                                            <li data-value="1" class="option">1</li>
-                                                            <li data-value="2" class="option">2</li>
-                                                            <li data-value="3" class="option">3</li>
-                                                            <li data-value="4" class="option">4</li>
-                                                            <li data-value="5" class="option">5</li>
-                                                            <li data-value="6" class="option">6</li>
-                                                            <li data-value="7" class="option">7</li>
-                                                            <li data-value="8" class="option">8</li>
-                                                            <li data-value="9" class="option">9</li>
-                                                            <li data-value="10" class="option">10</li>
-                                                        </ul>
-                                                    </div>
+                                                    <select name="rooms" class="nice-select form-control wide">
+                                                        <option selected="" value="Default">Rooms</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="10">10</option>
+                                                        <option value="11">11</option>
+                                                        <option value="12">12</option>
+                                                        <option value="13">13</option>
+                                                        <option value="14">14</option>
+                                                        <option value="15">15</option>
+                                                    </select>
                                                 </div>
                                             </div>
+                                            {{--  --}}
                                         </div>
                                         <div class="row">
                                             <div class="col-lg-6 col-md-12">
@@ -316,49 +320,13 @@
                                 <h3>Extra Information</h3>
                                 <div class="property-form-group">
                                     <div class="row">
-                                        <div class="col-lg-4 col-md-12 dropdown faq-drop">
-                                            <div class="form-group categories">
-                                                <div class="nice-select form-control wide" tabindex="0"><span class="current">Select Age</span>
-                                                    <ul class="list">
-                                                        <li data-value="1" class="option">0-1 years</li>
-                                                        <li data-value="2" class="option">0-5 years</li>
-                                                        <li data-value="1" class="option">0-10 years</li>
-                                                        <li data-value="2" class="option">0-15 years</li>
-                                                        <li data-value="1" class="option">0-20 years</li>
-                                                        <li data-value="2" class="option">0-50 years</li>
-                                                        <li data-value="1" class="option">50+ years</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
+                                        <div class="col-lg-4 col-md-12">
+                                            <p class="no-mb">
+                                                <label for="price">Year of Make</label>
+                                                <input type="text" name="yom" placeholder="{{date('y')}}" id="price">
+                                            </p>
                                         </div>
-                                        <div class="col-lg-4 col-md-12 dropdown faq-drop">
-                                            <div class="form-group categories">
-                                                <div class="nice-select form-control wide" tabindex="0"><span class="current">Select Rooms</span>
-                                                    <ul class="list">
-                                                        <li data-value="1" class="option">1</li>
-                                                        <li data-value="2" class="option">2</li>
-                                                        <li data-value="1" class="option">3</li>
-                                                        <li data-value="2" class="option">4</li>
-                                                        <li data-value="1" class="option">5</li>
-                                                        <li data-value="2" class="option">6</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-12 dropdown faq-drop">
-                                            <div class="form-group categories">
-                                                <div class="nice-select form-control wide" tabindex="0"><span class="current">Select Bathrooms</span>
-                                                    <ul class="list">
-                                                        <li data-value="1" class="option">1</li>
-                                                        <li data-value="2" class="option">2</li>
-                                                        <li data-value="1" class="option">3</li>
-                                                        <li data-value="2" class="option">4</li>
-                                                        <li data-value="1" class="option">5</li>
-                                                        <li data-value="2" class="option">6</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -371,7 +339,7 @@
                                                 <li class="fl-wrap filter-tags clearfix">
                                                     <div class="checkboxes float-left">
                                                         <div class="filter-tags-wrap">
-                                                            <input id="check-a" type="checkbox" name="check">
+                                                            <input id="check-a" type="checkbox" name="ac">
                                                             <label for="check-a">Air Conditioning</label>
                                                         </div>
                                                     </div>
@@ -379,7 +347,7 @@
                                                 <li class="fl-wrap filter-tags clearfix">
                                                     <div class="checkboxes float-left">
                                                         <div class="filter-tags-wrap">
-                                                            <input id="check-b" type="checkbox" name="check">
+                                                            <input id="check-b" type="checkbox" name="swimming">
                                                             <label for="check-b">Swimming Pool</label>
                                                         </div>
                                                     </div>
@@ -387,15 +355,15 @@
                                                 <li class="fl-wrap filter-tags clearfix">
                                                     <div class="checkboxes float-left">
                                                         <div class="filter-tags-wrap">
-                                                            <input id="check-c" type="checkbox" name="check">
-                                                            <label for="check-c">Central Heating</label>
+                                                            <input id="check-c" type="checkbox" name="heater">
+                                                            <label for="check-c">Solar Heater</label>
                                                         </div>
                                                     </div>
                                                 </li>
                                                 <li class="fl-wrap filter-tags clearfix">
                                                     <div class="checkboxes float-left">
                                                         <div class="filter-tags-wrap">
-                                                            <input id="check-d" type="checkbox" name="check">
+                                                            <input id="check-d" type="checkbox" name="laundry">
                                                             <label for="check-d">Laundry Room</label>
                                                         </div>
                                                     </div>
@@ -403,7 +371,7 @@
                                                 <li class="fl-wrap filter-tags clearfix">
                                                     <div class="checkboxes float-left">
                                                         <div class="filter-tags-wrap">
-                                                            <input id="check-e" type="checkbox" name="check">
+                                                            <input id="check-e" type="checkbox" name="gym">
                                                             <label for="check-e">Gym</label>
                                                         </div>
                                                     </div>
@@ -411,7 +379,7 @@
                                                 <li class="fl-wrap filter-tags clearfix">
                                                     <div class="checkboxes float-left">
                                                         <div class="filter-tags-wrap">
-                                                            <input id="check-g" type="checkbox" name="check">
+                                                            <input id="check-g" type="checkbox" name="alarm">
                                                             <label for="check-g">Alarm</label>
                                                         </div>
                                                     </div>
@@ -419,7 +387,7 @@
                                                 <li class="fl-wrap filter-tags clearfix">
                                                     <div class="checkboxes float-left">
                                                         <div class="filter-tags-wrap">
-                                                            <input id="check-h" type="checkbox" name="check">
+                                                            <input id="check-h" type="checkbox" name="window_covering">
                                                             <label for="check-h">Window Covering</label>
                                                         </div>
                                                     </div>
@@ -427,7 +395,7 @@
                                                 <li class="fl-wrap filter-tags clearfix">
                                                     <div class="checkboxes float-left">
                                                         <div class="filter-tags-wrap">
-                                                            <input id="check-i" type="checkbox" name="check">
+                                                            <input id="check-i" type="checkbox" name="refrigerator">
                                                             <label for="check-i">Refrigerator</label>
                                                         </div>
                                                     </div>
@@ -435,7 +403,7 @@
                                                 <li class="fl-wrap filter-tags clearfix">
                                                     <div class="checkboxes float-left">
                                                         <div class="filter-tags-wrap">
-                                                            <input id="check-j" type="checkbox" name="check">
+                                                            <input id="check-j" type="checkbox" name="cable">
                                                             <label for="check-j">TV Cable & WIFI</label>
                                                         </div>
                                                     </div>
@@ -443,7 +411,7 @@
                                                 <li class="fl-wrap filter-tags clearfix">
                                                     <div class="checkboxes float-left">
                                                         <div class="filter-tags-wrap">
-                                                            <input id="check-k" type="checkbox" name="check">
+                                                            <input id="check-k" type="checkbox" name="microwave">
                                                             <label for="check-k">Microwave</label>
                                                         </div>
                                                     </div>
