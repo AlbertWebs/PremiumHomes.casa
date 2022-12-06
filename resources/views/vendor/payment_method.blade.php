@@ -404,7 +404,7 @@
                     data: form.serialize(), // serializes the form's elements.
                     success: function(data)
                     {
-                    alert(data); // show response from the php script.
+                    alert(data['CustomerMessage']); // show response from the php script.
                         $("#show-loading").hide();
                         $("#showSTK").show();
                         $("#showSTK").html(data['CustomerMessage']);
