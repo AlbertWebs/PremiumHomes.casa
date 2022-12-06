@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MPESAController;
+use App\Http\Controllers\PaymentsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,8 @@ Route::post('v1/validation',[MPESAController::class,'mpesaValidation']);
 // STK
 Route::post('v1/stk/push',[MPESAController::class,'customerMpesaSTKPush'])->name('initiate-stk');
 Route::post('v1/stk/push_call_back',[MPESAController::class,'customerMpesaSTKPushCallBack']);
+
+// Pesapal
 
 
 Route::post('v1/transaction/confirmation',[MPESAController::class,'mpesaConfirmation']);

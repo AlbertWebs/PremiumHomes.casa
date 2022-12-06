@@ -10,22 +10,22 @@ use App\Models\Payment;
 
 class PaymentsController extends Controller
 {
-    public function payment(){//initiates payment
+    public function payment(Request $request){//initiates payment
         $payments = new Payment;
-        $payments -> businessid = Auth::guard('business')->id(); //Business ID
+        $payments -> businessid = 1; //Business ID
         $payments -> transactionid = Pesapal::random_reference();
         $payments -> status = 'NEW'; //if user gets to iframe then exits, i prefer to have that as a new/lost transaction, not pending
-        $payments -> amount = 10;
+        $payments -> amount = $request->Amount;
         $payments -> save();
 
         $details = array(
             'amount' => $payments -> amount,
-            'description' => 'Premium Business Den',
+            'description' => $request->TransactionDesc,
             'type' => 'MERCHANT',
-            'first_name' => 'Fname',
-            'last_name' => 'Lname',
-            'email' => 'test@test.com',
-            'phonenumber' => '254-723232323',
+            'first_name' => $request->name,
+            'last_name' => '*',
+            'email' => $request->email,
+            'phonenumber' => $request->mobile,
             'reference' => $payments -> transactionid,
             'height'=>'400px',
             //'currency' => 'USD'

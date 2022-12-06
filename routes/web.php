@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\AdminsController;
+use App\Http\Controllers\PaymentsController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -247,4 +249,13 @@ Route::group(['prefix'=>'vendors'], function(){
     Route::get('/google/redirect', [LoginController::class, 'googleRedirect']);
     Route::get('/linkedin', [LoginController::class, 'linkedin'])->name('linkedin-login');
     Route::get('/linkedin/redirect', [LoginController::class, 'linkedinRedirect']);
+});
+
+
+
+Route::post('make-payment', [App\Http\Controllers\PaymentsController::class, 'payment'])->name('make-payment');
+Route::group(['prefix' => '/webhooks'], function () {
+    //PESAPAL
+    Route::get('donepayment', [App\Http\Controllers\PaymentsController::class, 'paymentsuccess'])->name('paymentsuccess');
+    Route::get('paymentconfirmation', [App\Http\Controllers\PaymentsController::class, 'paymentconfirmation']);
 });

@@ -49,7 +49,7 @@ class Pesapal
         Session::put('pesapal_is_live', $params['live']);
 
         unset($params['callback_route']);
- 
+
         $token  = NULL;
 
         $consumer_key = config('pesapal.consumer_key');
@@ -57,26 +57,26 @@ class Pesapal
         $consumer_secret = config('pesapal.consumer_secret');
 
         $signature_method = new OAuthSignatureMethod_HMAC_SHA1();
-        
+
         $iframelink = $params['live'] ? 'https://www.pesapal.com/API/PostPesapalDirectOrderV4' : 'http://demo.pesapal.com/api/PostPesapalDirectOrderV4';
 
-        $callback_url = url() . '/pesapal-callback'; //redirect url, the page that will handle the response from pesapal.
-       
+        $callback_url = url('/') . '/pesapal-callback'; //redirect url, the page that will handle the response from pesapal.
+
         $post_xml = "<?xml version=\"1.0\" encoding=\"utf-8\"?>
-                        <PesapalDirectOrderInfo 
-                            xmlns:xsi=\"http://www.w3.org/2001/XMLSchemainstance\" 
-                            xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" 
-                            Amount=\"".$params['amount']."\" 
-                            Description=\"".$params['description']."\" 
-                            Type=\"".$params['type']."\" 
-                            Reference=\"".$params['reference']."\" 
-                            FirstName=\"".$params['first_name']."\" 
-                            LastName=\"".$params['last_name']."\" 
-                            Currency=\"".$params['currency']."\" 
-                            Email=\"".$params['email']."\" 
-                            PhoneNumber=\"".$params['phonenumber']."\" 
+                        <PesapalDirectOrderInfo
+                            xmlns:xsi=\"http://www.w3.org/2001/XMLSchemainstance\"
+                            xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"
+                            Amount=\"".$params['amount']."\"
+                            Description=\"".$params['description']."\"
+                            Type=\"".$params['type']."\"
+                            Reference=\"".$params['reference']."\"
+                            FirstName=\"".$params['first_name']."\"
+                            LastName=\"".$params['last_name']."\"
+                            Currency=\"".$params['currency']."\"
+                            Email=\"".$params['email']."\"
+                            PhoneNumber=\"".$params['phonenumber']."\"
                             xmlns=\"http://www.pesapal.com\" />";
-        
+
         $post_xml = htmlentities($post_xml);
 
         $consumer = new OAuthConsumer($consumer_key, $consumer_secret);
@@ -89,7 +89,7 @@ class Pesapal
 
         $iframe_src->sign_request($signature_method, $consumer, $token);
 
-        echo '<iframe src="'.$iframe_src.'" width="100%" height="720px" scrolling="auto" frameBorder="0"> <p>Unable to load the payment page</p> </iframe>';
+        return '<iframe src="'.$iframe_src.'" width="100%" height="720px" scrolling="auto" frameBorder="0"> <p>Unable to load the payment page</p> </iframe>';
     }
 
     function redirectToIPN($pesapalNotification,$pesapal_merchant_reference,$pesapalTrackingId){
@@ -137,7 +137,7 @@ class Pesapal
            $status = $elements[1];
 
            curl_close ($ch);
-           
+
            //UPDATE YOUR DB TABLE WITH NEW STATUS FOR TRANSACTION WITH pesapal_transaction_tracking_id $pesapalTrackingId
            $separator = explode('@', Session::get('pesapal_success_controller_method'));
            $controller = $separator[0];

@@ -217,30 +217,39 @@
                                                      </div>
                                                  </header>
                                                  <div class="collapse" id="paypal" role="tablist" aria-expanded="false">
-                                                     <div class="payment-card-body">
-                                                         <div class="row mrg-bot-20">
-                                                             <div class="col-sm-6">
-                                                                 <span class="custom-checkbox d-block font-12 mb-2">
-                                                                 <input type="checkbox" id="promo1">
-                                                                 <label for="promo1"></label>
-                                                                 Have a promo code?
-                                                                 </span>
-                                                                 <input type="text" class="form-control">
-                                                             </div>
-                                                             <div class="col-sm-6 padd-top-10 text-right">
-                                                                 <label>Total Order</label>
-                                                                 <h2 class="mrg-0"><span class="theme-cl">$</span>950</h2>
-                                                             </div>
-                                                             <div class="col-sm-12 bt-1 padd-top-15 pt-3">
-                                                                 <span class="custom-checkbox d-block font-12 mb-3">
-                                                                 <input type="checkbox" id="privacy">
-                                                                 <label for="privacy"></label>
-                                                                 By ordering you are agreeing to our <a href="{{url('/')}}/privacy-policy" class="theme-cl">Privacy policy</a>.
-                                                                 </span>
-                                                                 <button type="submit" class="btn btn-m btn-success">Pay Now</button>
-                                                             </div>
-                                                         </div>
-                                                     </div>
+                                                    <form method="post" action="{{route('make-payment')}}">
+                                                        @csrf
+                                                        <div class="payment-card-body">
+                                                            <div class="row mrg-bot-20">
+                                                                <div class="col-sm-6">
+                                                                    <span class="custom-checkbox d-block font-12 mb-2">
+                                                                    <input type="checkbox" id="promo1">
+                                                                    <label for="promo1"></label>
+                                                                    Have a promo code?
+                                                                    </span>
+                                                                    <input type="text" class="form-control">
+                                                                </div>
+                                                                <div class="col-sm-6 padd-top-10 text-right">
+                                                                    <label>Total Order</label>
+                                                                    <h2 class="mrg-0"><span class="theme-cl">$</span>950</h2>
+                                                                </div>
+                                                                <div class="col-sm-12 bt-1 padd-top-15 pt-3">
+                                                                    <span class="custom-checkbox d-block font-12 mb-3">
+                                                                    <input type="checkbox" id="privacy">
+                                                                    <label for="privacy"></label>
+                                                                    By ordering you are agreeing to our <a href="{{url('/')}}/privacy-policy" class="theme-cl">Privacy policy</a>.
+                                                                    </span>
+                                                                    <input type="hidden" name="TransactionDesc" value="Premium Business Den - Home Listing Subscription">
+                                                                    <input type="hidden" name="AccountReference" value="Premium Homes">
+                                                                    <input type="hidden" name="Amount" value="1">
+                                                                    <input type="hidden" name="name" value="{{Auth::User()->name}}">
+                                                                    <input type="hidden" name="email" value="{{Auth::User()->email}}">
+                                                                    <input type="hidden" name="mobile" value="{{Auth::User()->mobile}}">
+                                                                    <button type="submit" class="btn btn-m btn-success">Pay Now</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
                                                  </div>
                                              </div>
                                              <!-- Debit card option -->
