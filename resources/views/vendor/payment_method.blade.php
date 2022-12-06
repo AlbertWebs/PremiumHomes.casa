@@ -406,6 +406,7 @@
                     {
                     alert(data); // show response from the php script.
                         $("#show-loading").hide();
+                        $("#showSTK").show();
                         $("#showSTK").html(data['CustomerMessage']);
                     }
                 });
