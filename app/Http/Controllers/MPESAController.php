@@ -132,6 +132,7 @@ class MPESAController extends Controller
         curl_setopt($curl, CURLOPT_POSTFIELDS, $data_string);
         $curl_response = curl_exec($curl);
 
+        dd($curl_response);
 
         // Insert MerchantRequestID
         $curl_content=json_decode($curl_response);
