@@ -293,6 +293,7 @@
                                                                     </span>
                                                                     <button type="submit" class="btn btn-m btn-success">Pay Now <span class="fa fa-spinner fa-spin" id="show-loading"></span></button>
                                                                     <p class="text-success" id="showSTK">Check Your Phone.....</p>
+                                                                    <p class="text-success" id="sucessSTK">Your Payment Has Been Received</p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -404,10 +405,11 @@
                     data: form.serialize(), // serializes the form's elements.
                     success: function(data)
                     {
-                    alert(data['CustomerMessage']); // show response from the php script.
+                        // alert(data);
+                    // show response from the php script.
                         $("#show-loading").hide();
-                        $("#showSTK").show();
-                        $("#showSTK").html(data['CustomerMessage']);
+                        $("#sucessSTK").show();
+                        // $("#showSTK").html(data['CustomerMessage']);
                     }
                 });
 
