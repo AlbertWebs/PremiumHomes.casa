@@ -106,6 +106,8 @@ class MPESAController extends Controller
     {
         $phoneNumber = $request->phone_number;
         $AmountSTK = $request->Amount;
+        $AccountReference = $request->AccountReference;
+        $TransactionDesc = $request->TransactionDesc;
         $url = 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_URL, $url);

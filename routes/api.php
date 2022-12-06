@@ -22,7 +22,7 @@ Route::get('v1/register/url',[MPESAController::class,'mpesaRegisterUrls']);
 Route::post('v1/validation',[MPESAController::class,'mpesaValidation']);
 
 // STK
-Route::post('v1/stk/push',[MPESAController::class,'customerMpesaSTKPush']);
+Route::post('v1/stk/push',[MPESAController::class,'customerMpesaSTKPush'])->name('initiate-stk');
 Route::post('v1/stk/push_call_back',[MPESAController::class,'customerMpesaSTKPushCallBack']);
 
 

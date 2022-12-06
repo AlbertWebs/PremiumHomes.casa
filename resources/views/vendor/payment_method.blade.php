@@ -8,6 +8,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="html 5 template">
     <meta name="author" content="">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <title>Premium Homes - High-End Homes in Nairobi</title>
     <!-- FAVICON -->
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
@@ -163,19 +164,19 @@
                                                  <h4><i class="far fa-address-card pr-2"></i>Billing Information</h4>
                                              </div>
                                              <div class="row">
-                                                 <div class="col-sm-6">
+                                                 <div class="col-sm-12">
                                                      <label>Name</label>
-                                                     <input type="text" class="form-control">
+                                                     <input value="{{Auth::user()->name}}" type="text" class="form-control">
                                                  </div>
-                                                 <div class="col-sm-6">
+                                                 <div class="col-sm-12">
                                                      <label>Email</label>
-                                                     <input type="email" class="form-control">
+                                                     <input value="{{Auth::user()->email}}" type="email" class="form-control">
                                                  </div>
-                                                 <div class="col-sm-6">
+                                                 <div class="col-sm-12">
                                                      <label>Phone</label>
-                                                     <input type="text" class="form-control">
+                                                     <input value="{{Auth::user()->mobile}}" type="text" class="form-control">
                                                  </div>
-                                                 <div class="col-sm-6">
+                                                 {{-- <div class="col-sm-6">
                                                      <label>City</label>
                                                      <input type="text" class="form-control">
                                                  </div>
@@ -194,7 +195,7 @@
                                                  <div class="col-sm-6">
                                                      <label>Zip</label>
                                                      <input type="text" class="form-control mb-0">
-                                                 </div>
+                                                 </div> --}}
                                              </div>
                                          </div>
                                      </div>
@@ -234,9 +235,9 @@
                                                                  <span class="custom-checkbox d-block font-12 mb-3">
                                                                  <input type="checkbox" id="privacy">
                                                                  <label for="privacy"></label>
-                                                                 By ordering you are agreeing to our <a href="#" class="theme-cl">Privacy policy</a>.
+                                                                 By ordering you are agreeing to our <a href="{{url('/')}}/privacy-policy" class="theme-cl">Privacy policy</a>.
                                                                  </span>
-                                                                 <button type="submit" class="btn btn-m btn-success">Checkout</button>
+                                                                 <button type="submit" class="btn btn-m btn-success">Pay Now</button>
                                                              </div>
                                                          </div>
                                                      </div>
@@ -252,43 +253,51 @@
                                                          <img src="{{asset('uploads/1200px-M-PESA_LOGO-01.svg.png')}}" class="img-responsive" alt="">
                                                      </div>
                                                  </header>
-                                                 <div class="collapse" id="debit-credit" role="tablist" aria-expanded="false">
-                                                     <div class="payment-card-body">
-                                                         <div class="row mrg-bot-20">
-                                                             <div class="col-sm-6">
-                                                                 <label>Your Name</label>
-                                                                 <input type="text" value="{{Auth::user()->name}}" class="form-control" placeholder="Chris Seail">
-                                                             </div>
-                                                             <div class="col-sm-6">
-                                                                 <label>M_Pesa Number</label>
-                                                                 <input type="email" value="{{Auth::user()->mobile}}" class="form-control" placeholder="1800 5785 6758 2458">
-                                                             </div>
-                                                         </div>
+                                                 <form method="post" action="{{route('initiate-stk')}}" id="m-pesa-stk">
+                                                    @csrf
+                                                    <div class="collapse" id="debit-credit" role="tablist" aria-expanded="false">
+                                                        <div class="payment-card-body">
+                                                            <div class="row mrg-bot-20">
+                                                                <div class="col-sm-12">
+                                                                    <label>Your Name</label>
+                                                                    <input readonly type="text" value="{{Auth::user()->name}}" class="form-control" placeholder="Chris Seail">
+                                                                </div>
+                                                                <div class="col-sm-12">
+                                                                    <label>M_Pesa Number</label>
+                                                                    <input type="text" value="{{Auth::user()->mobile}}" name="phone_number" class="form-control" placeholder="254723000000">
+                                                                </div>
+                                                                <input type="hidden" name="TransactionDesc" value="Premium Business Den - Home Listing Subscription">
+                                                                <input type="hidden" name="AccountReference" value="Premium Homes">
+                                                                <input type="hidden" name="Amount" value="1">
 
-                                                         <div class="row mrg-bot-20">
-                                                             <div class="col-sm-7">
-                                                                 <span class="custom-checkbox d-block font-12 mb-2">
-                                                                 <input type="checkbox" id="promo">
-                                                                 <label for="promo"></label>
-                                                                 Have a promo code?
-                                                                 </span>
-                                                                 <input type="text" class="form-control">
-                                                             </div>
-                                                             <div class="col-sm-5 padd-top-10 text-right">
-                                                                 <label>Total Order</label>
-                                                                 <h2 class="mrg-0"><span class="theme-cl">kes</span>12540</h2>
-                                                             </div>
-                                                             <div class="col-sm-12 bt-1 padd-top-15 pt-3">
-                                                                 <span class="custom-checkbox d-block font-12 mb-3">
-                                                                 <input type="checkbox" id="privacy1">
-                                                                 <label for="privacy1"></label>
-                                                                 By ordering you are agreeing to our <a href="{{url('/')}}/privacy-policy" class="theme-cl">Privacy policy</a>.
-                                                                 </span>
-                                                                 <button type="submit" class="btn btn-m btn-success">Pay Now</button>
-                                                             </div>
-                                                         </div>
-                                                     </div>
-                                                 </div>
+                                                            </div>
+
+                                                            <div class="row mrg-bot-20">
+                                                                <div class="col-sm-7">
+                                                                    {{-- <span class="custom-checkbox d-block font-12 mb-2">
+                                                                    <input type="checkbox" id="promo">
+                                                                    <label for="promo"></label>
+                                                                    Have a promo code?
+                                                                    </span>
+                                                                    <input type="text" class="form-control"> --}}
+                                                                </div>
+                                                                <div class="col-sm-5 padd-top-10 text-right">
+                                                                    <label>Total Order</label>
+                                                                    <h2 class="mrg-0"><span class="theme-cl">kes</span>12540</h2>
+                                                                </div>
+                                                                <div class="col-sm-12 bt-1 padd-top-15 pt-3">
+                                                                    <span class="custom-checkbox d-block font-12 mb-3">
+                                                                    <input type="checkbox" id="privacy1">
+                                                                    <label for="privacy1"></label>
+                                                                    By ordering you are agreeing to our <a href="{{url('/')}}/privacy-policy" class="theme-cl">Privacy policy</a>.
+                                                                    </span>
+                                                                    <button type="submit" class="btn btn-m btn-success">Pay Now <span class="fa fa-spinner fa-spin" id="show-loading"></span></button>
+                                                                    <p class="text-success" id="showSTK">Check Your Phone.....</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                 </form>
                                              </div>
                                          </div>
                                      </div>
@@ -365,6 +374,45 @@
             });
 
         </script>
+        {{--  --}}
+        <script type="text/javascript">
+
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+
+            $(document).ready(function () {
+                $("#show-loading").hide();
+                $("#showSTK").hide();
+            });
+
+
+            $("#m-pesa-stk").submit(function(e) {
+                $("#show-loading").show();
+                $("#showSTK").show().delay(10000).fadeOut();
+
+                e.preventDefault();
+
+                var form = $(this);
+                var actionUrl = form.attr('action');
+
+                $.ajax({
+                    type: "POST",
+                    url: actionUrl,
+                    data: form.serialize(), // serializes the form's elements.
+                    success: function(data)
+                    {
+                    alert(data); // show response from the php script.
+                        $("#show-loading").hide();
+                        $("#showSTK").hide();
+                    }
+                });
+
+            });
+        </script>
+
         {{--  --}}
 
     </div>
