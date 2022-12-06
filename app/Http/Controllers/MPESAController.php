@@ -51,7 +51,7 @@ class MPESAController extends Controller
             'ShortCode' => "600982",
             'ResponseType' => 'Completed',
             'ConfirmationURL' => "https://premiumhomes.casa/api/v1/transaction/confirmation",
-            'ValidationURL' => "https://dinenstayapi.amosbilly.co.ke/api/v1/validation"
+            'ValidationURL' => "https://premiumhomes.casa/api/v1/validation"
         )));
         $curl_response = curl_exec($curl);
         echo $curl_response;
