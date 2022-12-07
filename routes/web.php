@@ -253,6 +253,9 @@ Route::group(['prefix'=>'vendors'], function(){
     Route::get('/linkedin/redirect', [LoginController::class, 'linkedinRedirect']);
 });
 
+Route::get('/image/upload', [App\Http\Controllers\ImageUploadController::class, 'fileCreate'])->name('fileCreate');
+Route::post('/image/upload/store', [App\Http\Controllers\ImageUploadController::class, 'fileStore'])->name('fileStore');
+Route::get('/image/delete', [App\Http\Controllers\ImageUploadController::class, 'fileDestroy'])->name('fileDestroy');
 
 
 Route::post('make-payment', [App\Http\Controllers\PaymentsController::class, 'payment'])->name('make-payment');

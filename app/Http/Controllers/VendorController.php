@@ -55,8 +55,6 @@ class VendorController extends Controller
 
     public function add_properties(Request $request){
         $data = $request->all();
-        // dd($data);
-        // Generate property_id
         if (!empty($request->featured_image)) {
             $file =$request->file('featured_image');
             $extension = $file->getClientOriginalExtension();
@@ -64,8 +62,6 @@ class VendorController extends Controller
             $file->move(public_path('uploads/properties/'), $filename);
             $data['image']= 'public/uploads/'.$filename;
         }
-        $filename = $request->featured_image;
-
         $Property = new Property;
         $Property->property_name = $request->property_name;
         $Property->property_id = Str::random(40);
@@ -73,6 +69,7 @@ class VendorController extends Controller
         $Property->property_description = $request->property_description;
         $Property->status = $request->status;
         $Property->featured_image = $filename;
+        $Property->user_id = Auth::User()->id;
         $Property->type = $request->type;
         $Property->rooms = $request->rooms;
         $Property->price = $request->price;
@@ -104,11 +101,7 @@ class VendorController extends Controller
         $Property->save();
         //Get Latest
         $Latest = Property::orderBy('created_at','DESC')->first();
-
-        //Redirect To Add Gallery
-        // return redirect()->action([VendorController::class, 'add_gallery', compact('Latest')]);
         return redirect()->route('add_gallery', [$Latest->id]);
-
     }
 
 

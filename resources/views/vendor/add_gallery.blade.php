@@ -163,19 +163,50 @@
                         </div>
                         {{--  --}}
                         <br><br>
-
+                        {{--  --}}
+                        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.4.0/min/dropzone.min.css">
+                        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.4.0/dropzone.js"></script>
+                        {{--  --}}
                             @foreach ($Latest as $latest)
                             <div class="single-add-property">
                                 <h3>property Media - {{$latest->property_name}}</h3>
                                 <div class="property-form-group">
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <form action="https://code-theme.com/file-upload" class="dropzone"></form>
+                                            <form action="{{url('image/upload/store')}}" enctype="multipart/form-data" class="dropzone">
+                                               @csrf
+                                                <input type="hidden" name="property_id" value="{{$latest->id}}">
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             @endforeach
+
+                            <script type="text/javascript">
+                                Dropzone.options.dropzone =
+                                 {
+                                        maxFilesize: 12,
+                                        renameFile: function(file) {
+                                            var dt = new Date();
+                                            var time = dt.getTime();
+                                        return time+file.name;
+                                        },
+                                        acceptedFiles: ".jpeg,.jpg,.png,.gif",
+                                        addRemoveLinks: true,
+                                        timeout: 5000,
+                                        success: function(file, response)
+                                        {
+                                            console.log(response);
+                                        },
+                                        error: function(file, response)
+                                        {
+                                          return false;
+                                        }
+                                };
+                                </script>
 
                         {{--  --}}
 
