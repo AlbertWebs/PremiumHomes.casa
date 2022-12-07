@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Models\Property;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
+use DB;
 
 
 class VendorController extends Controller
@@ -24,7 +25,8 @@ class VendorController extends Controller
 
     public function my_listings()
     {
-        return view('vendor.my_listings');
+        $MyListings = DB::table('properties')->where('user_id',Auth::user()->id)->get();
+        return view('vendor.my_listings', compact('MyListings'));
     }
 
     public function add_property(){
