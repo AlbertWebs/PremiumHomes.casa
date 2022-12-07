@@ -161,7 +161,7 @@
                                 </div>
                             </div>
                         </div>
-                        <form {{route('add-property-post')}} method="POST">
+                        <form {{route('add-property-post')}} method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="single-add-property">
                                 <h3>Property description and price</h3>
@@ -256,14 +256,34 @@
                             </div>
                             <div class="single-add-property">
                                 <h3>Featured Image</h3>
+                                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
                                 <div class="property-form-group">
                                     <div class="row">
-                                        <div class="col-md-12">
-                                            {{-- <form action="https://code-theme.com/file-upload" class="dropzone"></form> --}}
+                                        {{-- <div class="col-md-12">
+                                            <form action="https://code-theme.com/file-upload" class="dropzone"></form>
+                                        </div> --}}
+                                        <div class="container col-md-6">
+                                            <div class="mb-5">
+                                                {{-- <label for="Image" class="form-label">Bootstrap 5 image Upload with Preview</label> --}}
+                                                <input name="featured_image" class="form-control" type="file" id="formFile" onchange="preview()">
+                                                {{-- <button onclick="clearImage()" class="btn btn-primary mt-3">Click me</button> --}}
+                                            </div>
+                                            <img id="frame" src="" class="img-fluid" />
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            {{--  --}}
+                            <script>
+                                function preview() {
+                                    frame.src = URL.createObjectURL(event.target.files[0]);
+                                }
+                                function clearImage() {
+                                    document.getElementById('formFile').value = null;
+                                    frame.src = "";
+                                }
+                            </script>
+                            {{--  --}}
                             <div class="single-add-property">
                                 <h3>property Location</h3>
                                 <div class="property-form-group">
@@ -313,7 +333,7 @@
                                         <div class="col-md-12">
                                             <p>
                                                 <label for="description">iframe</label>
-                                                <textarea id="description" name="property_description" placeholder="Property Iframe"></textarea>
+                                                <textarea id="description" name="iframe" placeholder="Property Iframe"></textarea>
                                             </p>
                                         </div>
                                     </div>
@@ -323,10 +343,16 @@
                                 <h3>Extra Information</h3>
                                 <div class="property-form-group">
                                     <div class="row">
-                                        <div class="col-lg-4 col-md-12">
+                                        <div class="col-lg-6 col-md-12">
                                             <p class="no-mb">
                                                 <label for="price">Year of Make</label>
                                                 <input type="text" name="yom" placeholder="{{date('Y')}}" id="price" required>
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-6 col-md-12">
+                                            <p class="no-mb">
+                                                <label for="price">Video</label>
+                                                <input type="text" name="video" placeholder="https://www.youtube.com/watch?v=hGiTSuJl1U8" id="price" required>
                                             </p>
                                         </div>
 
@@ -371,6 +397,39 @@
                                                         </div>
                                                     </div>
                                                 </li>
+                                                <li class="fl-wrap filter-tags clearfix">
+                                                    <div class="checkboxes float-left">
+                                                        <div class="filter-tags-wrap">
+                                                            <input id="check-da" type="checkbox" name="parking">
+                                                            <label for="check-d">Parking</label>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="fl-wrap filter-tags clearfix">
+                                                    <div class="checkboxes float-left">
+                                                        <div class="filter-tags-wrap">
+                                                            <input id="check-db" type="checkbox" name="dishwasher">
+                                                            <label for="check-d">Dishwasher</label>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="fl-wrap filter-tags clearfix">
+                                                    <div class="checkboxes float-left">
+                                                        <div class="filter-tags-wrap">
+                                                            <input id="check-dc" type="checkbox" name="balcony">
+                                                            <label for="check-d">Balcony</label>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="fl-wrap filter-tags clearfix">
+                                                    <div class="checkboxes float-left">
+                                                        <div class="filter-tags-wrap">
+                                                            <input id="check-dd" type="checkbox" name="internet">
+                                                            <label for="check-d">Internet</label>
+                                                        </div>
+                                                    </div>
+                                                </li>
+
                                                 <li class="fl-wrap filter-tags clearfix">
                                                     <div class="checkboxes float-left">
                                                         <div class="filter-tags-wrap">

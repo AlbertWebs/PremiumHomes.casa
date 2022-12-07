@@ -47,17 +47,32 @@ class VendorController extends Controller
         return view('vendor.change_password');
     }
 
-    public function add_properties(Request $request){
-        // Generate property_id
+    public function add_gallery($id){
+        $Latest = Property::where('id',$id)->get();
+        return view('vendor.add_gallery',compact('Latest'));
+    }
 
+
+    public function add_properties(Request $request){
         $data = $request->all();
         // dd($data);
+        // Generate property_id
+        if (!empty($request->featured_image)) {
+            $file =$request->file('featured_image');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time().'.' . $extension;
+            $file->move(public_path('uploads/properties/'), $filename);
+            $data['image']= 'public/uploads/'.$filename;
+        }
+        $filename = $request->featured_image;
+
         $Property = new Property;
         $Property->property_name = $request->property_name;
         $Property->property_id = Str::random(40);
         $Property->slung = Str::slug($request->property_name);
         $Property->property_description = $request->property_description;
         $Property->status = $request->status;
+        $Property->featured_image = $filename;
         $Property->type = $request->type;
         $Property->rooms = $request->rooms;
         $Property->price = $request->price;
@@ -71,7 +86,7 @@ class VendorController extends Controller
         $Property->longitude = $request->longitude;
         $Property->yom = $request->yom;
         $Property->ac = $request->ac;
-        $Property->pool = $request->swimming;
+        $Property->swimming = $request->swimming;
         $Property->heater = $request->heater;
         $Property->laundry = $request->laundry;
         $Property->gym = $request->gym;
@@ -80,7 +95,20 @@ class VendorController extends Controller
         $Property->refrigerator = $request->refrigerator;
         $Property->cable = $request->cable;
         $Property->microwave = $request->microwave;
+        $Property->parking = $request->parking;
+        $Property->dishwasher = $request->dishwasher;
+        $Property->balcony = $request->balcony;
+        $Property->internet = $request->internet;
+        $Property->iframe = $request->iframe;
+        $Property->video = $request->video;
         $Property->save();
+        //Get Latest
+        $Latest = Property::orderBy('created_at','DESC')->first();
+
+        //Redirect To Add Gallery
+        // return redirect()->action([VendorController::class, 'add_gallery', compact('Latest')]);
+        return redirect()->route('add_gallery', [$Latest->id]);
+
     }
 
 

@@ -238,6 +238,8 @@ Route::group(['prefix'=>'vendors'], function(){
     Route::get('/invoices', [App\Http\Controllers\VendorController::class, 'invoices'])->name('invoices');
     Route::get('/change-password', [App\Http\Controllers\VendorController::class, 'change_password'])->name('change-password');
     Route::get('/invoice', [App\Http\Controllers\VendorController::class, 'invoice'])->name('invoice');
+    Route::get('/add-gallery/{id}', [App\Http\Controllers\VendorController::class, 'add_gallery'])->name('add_gallery');
+
 
     // Post
     Route::post('/add-property', [App\Http\Controllers\VendorController::class, 'add_properties'])->name('add-property-post');
