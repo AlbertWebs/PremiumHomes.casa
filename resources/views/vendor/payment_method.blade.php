@@ -155,58 +155,105 @@
                              </div>
                          </div>
                          <!-- START SECTION PAYMENT-METHOD -->
+                         <br><br>
                          <section class="payment-method notfound">
                              <div class="row">
-                                 <div class="col-md-12 col-lg-6">
+                                 <div class="col-md-12 col-lg-7">
                                      <div class="tr-single-box">
                                          <div class="tr-single-body">
                                              <div class="tr-single-header">
                                                  <h4><i class="far fa-address-card pr-2"></i>Billing Information</h4>
                                              </div>
                                              <div class="row">
-                                                 <div class="col-sm-12">
-                                                     <label>Name</label>
-                                                     <input value="{{Auth::user()->name}}" type="text" class="form-control">
-                                                 </div>
-                                                 <div class="col-sm-12">
-                                                     <label>Email</label>
-                                                     <input value="{{Auth::user()->email}}" type="email" class="form-control">
-                                                 </div>
-                                                 <div class="col-sm-12">
-                                                     <label>Phone</label>
-                                                     <input value="{{Auth::user()->mobile}}" type="text" class="form-control">
-                                                 </div>
-                                                 {{-- <div class="col-sm-6">
-                                                     <label>City</label>
-                                                     <input type="text" class="form-control">
-                                                 </div>
-                                                 <div class="col-sm-6">
-                                                     <label>State</label>
-                                                     <input type="text" class="form-control">
-                                                 </div>
-                                                 <div class="col-sm-6">
-                                                     <label>Country</label>
-                                                     <input type="text" class="form-control">
-                                                 </div>
-                                                 <div class="col-sm-6">
-                                                     <label>Address</label>
-                                                     <input type="text" class="form-control address mb-0">
-                                                 </div>
-                                                 <div class="col-sm-6">
-                                                     <label>Zip</label>
-                                                     <input type="text" class="form-control mb-0">
-                                                 </div> --}}
+                                                 {{--  --}}
+                                                    <div class="invoice mb-0">
+                                                        <div class="card border-0">
+                                                            <div class="card-body p-0">
+                                                                <div class="row p-5 the-five">
+                                                                    <div class="col-md-6">
+                                                                        <img src="{{asset('theme/images/preloader.png')}}" width="80" alt="Logo">
+                                                                    </div>
+
+                                                                    <div class="col-md-6 text-right">
+                                                                        <p class="font-weight-bold mb-1">Invoice #550</p>
+                                                                        <p class="text-muted">Due to: 4 Jan, 2020</p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <hr class="my-5">
+
+                                                                <div class="row pb-5 p-5 the-five">
+                                                                    <div class="col-md-6">
+                                                                        <h3 class="font-weight-bold mb-4">Invoice To</h3>
+                                                                        <p class="mb-0 font-weight-bold">Carls Jhons</p>
+                                                                        <p class="mb-0">Acme Inc</p>
+                                                                        <p class="mb-0">Est St, 77 - Central Park, NYC</p>
+                                                                        <p class="mb-0">6781 45P</p>
+                                                                    </div>
+
+                                                                    <div class="col-md-6 text-right">
+                                                                        <h3 class="font-weight-bold mb-4">Payment Details</h3>
+                                                                        <p class="mb-1"><span class="text-muted">VAT: </span> 1425782</p>
+                                                                        <p class="mb-1"><span class="text-muted">VAT ID: </span> 10253642</p>
+                                                                        <p class="mb-1"><span class="text-muted">Payment Type: </span> Root</p>
+                                                                        <p class="mb-1"><span class="text-muted">Name: </span> John Doe</p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="row p-5 the-five">
+                                                                    <div class="col-md-12">
+                                                                        <table class="table">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th class="border-0 text-uppercase small font-weight-bold">Description</th>
+                                                                                    <th class="border-0 text-uppercase small font-weight-bold">Price</th>
+                                                                                    <th class="border-0 text-uppercase small font-weight-bold">VAT (10%)</th>
+                                                                                    <th class="border-0 text-uppercase small font-weight-bold">Total</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>Standard Plan</td>
+                                                                                    <td>$40</td>
+                                                                                    <td>$7.55</td>
+                                                                                    <td>$47.55</td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="d-flex flex-row-reverse bg-dark text-white p-4">
+                                                                    <div class="py-3 px-5 text-left">
+                                                                        <div class="mb-2">Grand Total</div>
+                                                                        <div class="h2 font-weight-light">$42.79</div>
+                                                                    </div>
+
+                                                                    <div class="py-3 px-5 text-right">
+                                                                        <div class="mb-2">Discount</div>
+                                                                        <div class="h2 font-weight-light">10%</div>
+                                                                    </div>
+
+                                                                    <div class="py-3 px-5 text-left">
+                                                                        <div class="mb-2">Sub - Total</div>
+                                                                        <div class="h2 font-weight-light">$47.55</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                 {{--  --}}
                                              </div>
                                          </div>
                                      </div>
                                  </div>
-                                 <div class="col-md-12 col-lg-6">
+                                 <div class="col-md-12 col-lg-5">
                                      <div class="tr-single-box">
                                          <div class="tr-single-body">
                                              <div class="tr-single-header">
                                                  <h4><i class="far fa-credit-card pr-2"></i>Payment Method</h4>
                                              </div>
-                                             <!-- Paypal Option -->
+                                             <!-- Pesapal Option -->
                                              <div class="payment-card">
                                                  <header class="payment-card-header cursor-pointer" data-toggle="collapse" data-target="#paypal" aria-expanded="true">
                                                      <div class="payment-card-title flexbox">
@@ -222,23 +269,15 @@
                                                         <div class="payment-card-body">
                                                             <div class="row mrg-bot-20">
                                                                 <div class="col-sm-6">
-                                                                    <span class="custom-checkbox d-block font-12 mb-2">
-                                                                    <input type="checkbox" id="promo1">
-                                                                    <label for="promo1"></label>
-                                                                    Have a promo code?
-                                                                    </span>
-                                                                    <input type="text" class="form-control">
+
+
                                                                 </div>
                                                                 <div class="col-sm-6 padd-top-10 text-right">
                                                                     <label>Total Order</label>
                                                                     <h2 class="mrg-0"><span class="theme-cl">$</span>950</h2>
                                                                 </div>
                                                                 <div class="col-sm-12 bt-1 padd-top-15 pt-3">
-                                                                    <span class="custom-checkbox d-block font-12 mb-3">
-                                                                    <input type="checkbox" id="privacy">
-                                                                    <label for="privacy"></label>
-                                                                    By ordering you are agreeing to our <a href="{{url('/')}}/privacy-policy" class="theme-cl">Privacy policy</a>.
-                                                                    </span>
+
                                                                     <input type="hidden" name="TransactionDesc" value="Premium Business Den - Home Listing Subscription">
                                                                     <input type="hidden" name="AccountReference" value="Premium Homes">
                                                                     <input type="hidden" name="Amount" value="1">
@@ -252,7 +291,7 @@
                                                     </form>
                                                  </div>
                                              </div>
-                                             <!-- Debit card option -->
+                                             <!-- M-PESA Express -->
                                              <div class="payment-card mb-0">
                                                  <header class="payment-card-header cursor-pointer" data-toggle="collapse" data-target="#debit-credit" aria-expanded="true">
                                                      <div class="payment-card-title flexbox">
@@ -267,10 +306,7 @@
                                                     <div class="collapse" id="debit-credit" role="tablist" aria-expanded="false">
                                                         <div class="payment-card-body">
                                                             <div class="row mrg-bot-20">
-                                                                <div class="col-sm-12">
-                                                                    <label>Your Name</label>
-                                                                    <input readonly type="text" value="{{Auth::user()->name}}" class="form-control" placeholder="Chris Seail">
-                                                                </div>
+
                                                                 <div class="col-sm-12">
                                                                     <label>M_Pesa Number</label>
                                                                     <input type="text" value="{{Auth::user()->mobile}}" name="phone_number" class="form-control" placeholder="254723000000">
@@ -295,11 +331,7 @@
                                                                     <h2 class="mrg-0"><span class="theme-cl">kes</span>12540</h2>
                                                                 </div>
                                                                 <div class="col-sm-12 bt-1 padd-top-15 pt-3">
-                                                                    <span class="custom-checkbox d-block font-12 mb-3">
-                                                                    <input type="checkbox" id="privacy1">
-                                                                    <label for="privacy1"></label>
-                                                                    By ordering you are agreeing to our <a href="{{url('/')}}/privacy-policy" class="theme-cl">Privacy policy</a>.
-                                                                    </span>
+
                                                                     <button type="submit" class="btn btn-m btn-success">Pay Now <span class="fa fa-spinner fa-spin" id="show-loading"></span></button>
                                                                     <p class="text-success" id="showSTK">Check Your Phone.....</p>
                                                                     <p class="text-success" id="sucessSTK">Your Payment Has Been Received</p>
@@ -309,6 +341,44 @@
                                                     </div>
                                                  </form>
                                              </div>
+                                             <!-- C2B -->
+                                             <br>
+                                             <div class="payment-card">
+                                                <header class="payment-card-header cursor-pointer" data-toggle="collapse" data-target="#c2b" aria-expanded="true">
+                                                    <div class="payment-card-title flexbox">
+                                                        <h4>M-PESA PayBill</h4>
+                                                    </div>
+                                                    <div class="pull-right">
+                                                        <img src="{{asset('uploads/1200px-M-PESA_LOGO-01.svg.png')}}" class="img-responsive" alt="">
+                                                    </div>
+                                                </header>
+                                                <div class="collapse" id="c2b" role="tablist" aria-expanded="false">
+                                                   <form method="post" action="{{route('make-payment')}}">
+                                                       @csrf
+                                                       <div class="payment-card-body">
+                                                           <div class="row mrg-bot-20">
+                                                               <div class="col-sm-6">
+                                                                   <label>M-PESA Code</label>
+                                                                   <input placeholder="QL95R86QYJ" type="text" class="form-control">
+                                                               </div>
+                                                               <div class="col-sm-6 padd-top-10 text-right">
+                                                                   <label>Total Order</label>
+                                                                   <h2 class="mrg-0"><span class="theme-cl">$</span>950</h2>
+                                                               </div>
+                                                               <div class="col-sm-12 bt-1 padd-top-15 pt-3">
+                                                                   <span class="custom-checkbox d-block font-12 mb-3">
+                                                                   <input type="checkbox" id="privacy">
+                                                                   <label for="privacy"></label>
+                                                                   By ordering you are agreeing to our <a href="{{url('/')}}/privacy-policy" class="theme-cl">Privacy policy</a>.
+                                                                   </span>
+                                                                   <button type="submit" class="btn btn-m btn-success">Veryfy</button>
+                                                               </div>
+                                                           </div>
+                                                       </div>
+                                                   </form>
+                                                </div>
+                                            </div>
+
                                          </div>
                                      </div>
                                  </div>
@@ -396,6 +466,7 @@
             $(document).ready(function () {
                 $("#show-loading").hide();
                 $("#showSTK").hide();
+                $("#sucessSTK").hide();
             });
 
 

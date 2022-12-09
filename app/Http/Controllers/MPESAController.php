@@ -36,26 +36,26 @@ class MPESAController extends Controller
 
         $curl_response = curl_exec($curl);
         $access_token=json_decode($curl_response);
-
         return $access_token->access_token;
     }
 
     public function mpesaRegisterUrls()
     {
+        $url = "https://api.safaricom.co.ke/mpesa/c2b/v1/registerurl";
+        $credentials = $this->generateAccessToken();
         $curl = curl_init();
-        curl_setopt($curl, CURLOPT_URL, 'https://api.safaricom.co.ke/mpesa/c2b/v1/registerurl');
-        curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type:application/json','Authorization: Bearer '. $this->generateAccessToken()));
-
+        curl_setopt($curl, CURLOPT_URL, $url);
+        curl_setopt($curl, CURLOPT_HTTPHEADER, array("Content-Type:application/json","Authorization:Bearer ".$credentials));
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($curl, CURLOPT_POST, true);
         curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode(array(
-            'ShortCode' => "4101843",
-            'ResponseType' => 'Completed',
-            'ConfirmationURL' => "https://premiumhomes.casa/api/v1/transaction/confirmation",
-            'ValidationURL' => "https://premiumhomes.casa/api/v1/validation"
+            "ShortCode" => "4101843",
+            "ResponseType" => "Completed",
+            "ConfirmationURL" => "https://premiumhomes.casa/api/v1/transaction/confirmation",
+            "ValidationURL" => "https://premiumhomes.casa/api/v1/validation"
         )));
         $curl_response = curl_exec($curl);
-        echo $curl_response;
+        dd($curl_response);
     }
 
     public function mpesaConfirmation(Request $request)
