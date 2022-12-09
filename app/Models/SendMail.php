@@ -18,7 +18,6 @@ class SendMail extends Model
               'subject'=>$Invoice->invoice_number,
               'Invoice'=>$Invoice
               );
-
               $FromVariable = "hello@premiumhomes.casa";
               $FromVariableName = "Premium Homes";
 
