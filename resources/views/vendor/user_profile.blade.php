@@ -158,14 +158,14 @@
                          </div>
                          <div class="sidebar-widget author-widget2">
                              <div class="author-box clearfix">
-                                 <img src="{{asset('theme/images/testimonials/ts-1.jpg')}}" alt="author-image" class="author__img">
-                                 <h4 class="author__title">Lisa Clark</h4>
+                                 <img src="{{url('/')}}/theme/images/testimonials/{{Auth::user()->image}}" alt="author-image" class="author__img">
+                                 <h4 class="author__title">{{Auth::User()->name}}</h4>
                                  <p class="author__meta">Agent of Property</p>
                              </div>
                              <ul class="author__contact">
-                                 <li><span class="la la-map-marker"><i class="fa fa-map-marker"></i></span>302 Av Park, New York</li>
-                                 <li><span class="la la-phone"><i class="fa fa-phone" aria-hidden="true"></i></span><a href="#">(234) 0200 17813</a></li>
-                                 <li><span class="la la-envelope-o"><i class="fa fa-envelope" aria-hidden="true"></i></span><a href="#">lisa@gmail.com</a></li>
+                                 <li><span class="la la-map-marker"><i class="fa fa-map-marker"></i></span>Nairobi, Kenya</li>
+                                 <li><span class="la la-phone"><i class="fa fa-phone" aria-hidden="true"></i></span><a href="#">{{Auth::User()->mobile}}</a></li>
+                                 <li><span class="la la-envelope-o"><i class="fa fa-envelope" aria-hidden="true"></i></span><a href="#">{{Auth::User()->email}}</a></li>
                              </ul>
                              <div class="agent-contact-form-sidebar">
                                  <h4>Request Inquiry</h4>

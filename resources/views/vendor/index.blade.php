@@ -115,7 +115,7 @@
                                                 <i class="fa fa-list" aria-hidden="true"></i>
                                             </div>
                                             <div class="info">
-                                                <h6 class="number">345</h6>
+                                                <h6 class="number">{{count($MyListings)}}</h6>
                                                 <p class="type ml-1">Published Property</p>
                                             </div>
                                         </div>
@@ -137,7 +137,7 @@
                                                 <i class="fas fa-comments"></i>
                                             </div>
                                             <div class="info">
-                                                <h6 class="number">223</h6>
+                                                <h6 class="number">23</h6>
                                                 <p class="type ml-1">Messages</p>
                                             </div>
                                         </div>
@@ -171,34 +171,15 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            @foreach($MyListings as $mylisting)
                                             <tr>
-                                                <td>Luxury Restaurant</td>
-                                                <td>23 Jan 2020</td>
+                                                <td>{{$mylisting->property_name}}</td>
+                                                <td>{{date('d.m.Y',strtotime($mylisting->created_at))}}</td>
                                                 <td class="rating"><span>5.0</span></td>
                                                 <td class="status"><span class=" active">Active</span></td>
                                                 <td class="edit"><a href="#"><i class="fa fa-pencil"></i></a></td>
                                             </tr>
-                                            <tr>
-                                                <td>Gym in Town</td>
-                                                <td>11 Feb 2020</td>
-                                                <td class="rating"><span>4.5</span></td>
-                                                <td class="status"><span class="active">Active</span></td>
-                                                <td class="edit"><a href="#"><i class="fa fa-pencil"></i></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Cafe in Kitengela</td>
-                                                <td>09 Jan 2020</td>
-                                                <td class="rating"><span>5.0</span></td>
-                                                <td class="status"><span class="non-active">Non-Active</span></td>
-                                                <td class="edit"><a href="#"><i class="fa fa-pencil"></i></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="pb-0">Car Dealer in Nairobi</td>
-                                                <td class="pb-0">24 Feb 2018</td>
-                                                <td class="rating pb-0"><span>4.5</span></td>
-                                                <td class="status pb-0"><span class="active">Active</span></td>
-                                                <td class="edit pb-0"><a href="#"><i class="fa fa-pencil"></i></a></td>
-                                            </tr>
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>
@@ -358,36 +339,26 @@
                             <div class="section-inforamation">
                                 <form>
                                     <div class="row">
-                                        <div class="col-sm-6">
+                                        <div class="col-sm-12">
                                             <div class="form-group">
                                                 <label>First Name</label>
-                                                <input type="text" class="form-control" placeholder="Enter your First name">
+                                                <input type="text" value="{{Auth::User()->name}}" class="form-control" placeholder="Enter your First name">
                                             </div>
                                         </div>
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label>Last Name</label>
-                                                <input type="text" class="form-control" placeholder="Enter your Last name">
-                                            </div>
-                                        </div>
+
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>Email Address</label>
-                                                <input type="text" class="form-control" placeholder="Ex: example@domain.com">
+                                                <input type="text" value="{{Auth::User()->email}}" class="form-control" placeholder="Ex: example@domain.com">
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>Phone Number</label>
-                                                <input type="text" class="form-control" placeholder="Ex: +1-800-7700-00">
+                                                <input type="text" value="{{Auth::User()->mobile}}" class="form-control" placeholder="Ex: +1-800-7700-00">
                                             </div>
                                         </div>
-                                        <div class="col-lg-12">
-                                            <div class="form-group">
-                                                <label>Address</label>
-                                                <textarea name="address" class="form-control" placeholder="Write your address here"></textarea>
-                                            </div>
-                                        </div>
+
                                         <div class="col-lg-12">
                                             <div class="form-group">
                                                 <label>About Yourself</label>

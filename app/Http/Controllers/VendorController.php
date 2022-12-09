@@ -15,7 +15,8 @@ class VendorController extends Controller
 {
     public function index()
     {
-        return view('vendor.index');
+        $MyListings = DB::table('properties')->where('user_id',Auth::user()->id)->get();
+        return view('vendor.index',compact('MyListings'));
     }
 
     public function user_profile()
