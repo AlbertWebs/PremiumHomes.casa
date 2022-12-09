@@ -41,7 +41,7 @@ class MPESAController extends Controller
 
     public function mpesaRegisterUrls()
     {
-        $url = "https://api.safaricom.co.ke/mpesa/c2b/v1/registerurl";
+        $url = "https://api.safaricom.co.ke/mpesa/c2b/v2/registerurl";
         $credentials = $this->generateAccessToken();
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_URL, $url);
