@@ -28,6 +28,8 @@ Route::get('/privacy-policy', [App\Http\Controllers\HomeController::class, 'priv
 Route::get('/terms-and-conditions', [App\Http\Controllers\HomeController::class, 'terms'])->name('terms');
 Route::get('/copyright', [App\Http\Controllers\HomeController::class, 'copyright'])->name('copyright');
 
+Route::get('/invoices', [App\Http\Controllers\HomeController::class, 'invoice'])->name('invoice');
+
 Route::get('/clear-cache', function() {
     $exitCode = Artisan::call('cache:clear');
     $exitCode2 = Artisan::call('config:clear');

@@ -13,6 +13,11 @@ class HomeController extends Controller
         return view('front.index');
     }
 
+    public function invoice()
+    {
+        return view('invoice');
+    }
+
     public function search(){
         return view('front.search');
     }
