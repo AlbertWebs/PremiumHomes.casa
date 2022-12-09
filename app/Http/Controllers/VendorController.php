@@ -15,31 +15,38 @@ class VendorController extends Controller
 {
     public function index()
     {
+        $active = "home";
         $MyListings = DB::table('properties')->where('user_id',Auth::user()->id)->get();
-        return view('vendor.index',compact('MyListings'));
+        return view('vendor.index',compact('MyListings','active'));
     }
 
     public function user_profile()
     {
-        return view('vendor.user_profile');
+        $active = "profile";
+        return view('vendor.user_profile',compact('active'));
     }
 
     public function my_listings()
     {
+        $active = "properties";
         $MyListings = DB::table('properties')->where('user_id',Auth::user()->id)->get();
-        return view('vendor.my_listings', compact('MyListings'));
+        return view('vendor.my_listings', compact('MyListings','active'));
     }
 
     public function add_property(){
-        return view('vendor.add_property');
+        $active = "add_property";
+        return view('vendor.add_property', compact('active'));
     }
 
     public function payment_method(){
-        return view('vendor.payment_method');
+        $active = "payment_method";
+        return view('vendor.payment_method', compact('active'));
     }
 
     public function invoices(){
-        return view('vendor.invoices');
+        $MyListings = DB::table('properties')->where('user_id',Auth::user()->id)->get();
+        $active = "invoices";
+        return view('vendor.invoices', compact('active','MyListings'));
     }
 
     public function invoice(){

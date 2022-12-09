@@ -16,33 +16,33 @@
         <div class="detail clearfix">
             <ul class="mb-0">
                 <li>
-                    <a class="active" href="{{route('dashboard')}}">
+                    <a class="@if($active == 'home') active @else @endif" href="{{route('dashboard')}}">
                         <i class="fa fa-map-marker"></i> Dashboard
                     </a>
                 </li>
                 <li>
-                    <a href="{{route('user-profile')}}">
+                    <a class="@if($active == 'profile') active @else @endif" href="{{route('user-profile')}}">
                         <i class="fa fa-user"></i>Profile
                     </a>
                 </li>
                 <li>
-                    <a href="{{route('my-listings')}}">
+                    <a class="@if($active == 'properties') active @else @endif" href="{{route('my-listings')}}">
                         <i class="fa fa-list" aria-hidden="true"></i>My Properties
                     </a>
                 </li>
 
                 <li>
-                    <a href="{{route('add-property')}}">
+                    <a class="@if($active == 'add_property') active @else @endif" href="{{route('add-property')}}">
                         <i class="fa fa-list" aria-hidden="true"></i>Add Property
                     </a>
                 </li>
                 <li>
-                    <a href="{{route('payment-method')}}">
+                    <a class="@if($active == 'payment_method') active @else @endif" href="{{route('payment-method')}}">
                         <i class="fas fa-credit-card"></i>Payments
                     </a>
                 </li>
                 <li>
-                    <a href="{{route('invoices')}}">
+                    <a class="@if($active == 'invoices') active @else @endif" href="{{route('invoices')}}">
                         <i class="fas fa-paste"></i>Invoices
                     </a>
                 </li>
