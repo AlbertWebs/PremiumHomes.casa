@@ -29,8 +29,8 @@
       <link rel="preconnect" href="https://fonts.googleapis.com/">
       <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="assets/css/app.min.css">
-      <link rel="stylesheet" href="assets/css/style.css">
+      <link rel="stylesheet" href="https://premiumhomes.casa/assets/css/app.min.css">
+      <link rel="stylesheet" href="https://premiumhomes.casa/assets/css/style.css">
    </head>
    <body>
       <div class="invoice-container-wrap">
@@ -179,9 +179,9 @@
             </main>
          </div>
       </div>
-      <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
-      <script src="assets/js/app.min.js"></script>
-      <script src="assets/js/main.js"></script>
+      <script src="https://premiumhomes.casa/assets/js/vendor/jquery-3.6.0.min.js"></script>
+      <script src="https://premiumhomes.casa/assets/js/app.min.js"></script>
+      <script src="https://premiumhomes.casa/assets/js/main.js"></script>
    </body>
 </html>
 
