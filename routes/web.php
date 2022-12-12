@@ -241,10 +241,14 @@ Route::group(['prefix'=>'vendors'], function(){
     Route::get('/change-password', [App\Http\Controllers\VendorController::class, 'change_password'])->name('change-password');
     Route::get('/invoice', [App\Http\Controllers\VendorController::class, 'invoice'])->name('invoice');
     Route::get('/add-gallery/{id}', [App\Http\Controllers\VendorController::class, 'add_gallery'])->name('add_gallery');
+    Route::get('/update-gallery/{id}', [App\Http\Controllers\VendorController::class, 'update_gallery'])->name('update_gallery');
+    Route::get('/delete-gallery/{id}', [App\Http\Controllers\VendorController::class, 'delete_gallery'])->name('delete-gallery');
 
-    Route::get('/upgrade/{slung}', [App\Http\Controllers\VendorController::class, 'upgrade'])->name('upgrade');
-    Route::get('/downgrade/{slung}', [App\Http\Controllers\VendorController::class, 'downgrade'])->name('downgrade');
 
+    Route::get('/upgrade/{id}', [App\Http\Controllers\VendorController::class, 'upgrade'])->name('upgrade');
+    Route::get('/downgrade/{id}', [App\Http\Controllers\VendorController::class, 'downgrade'])->name('downgrade');
+
+    Route::get('/delete-properties/{id}', [App\Http\Controllers\VendorController::class, 'delete_property'])->name('delete-properties');
 
 
     // Post

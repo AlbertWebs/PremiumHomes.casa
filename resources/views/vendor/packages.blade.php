@@ -106,88 +106,70 @@
                                  </div>
                              </div>
                          </div>
-                         <div class="my-properties">
-                             <table class="table-responsive">
-                                 <thead>
-                                     <tr>
-                                         <th class="pl-2">My Properties</th>
-                                         <th class="p-0"></th>
-                                         <th>Date Added</th>
-                                         <th>Views</th>
-                                         <th>Actions</th>
-                                         <th>Subscription</th>
-                                     </tr>
-                                 </thead>
-                                 <tbody>
-                                     @foreach($MyListings as $mylisting)
-                                     <tr>
-                                         <td class="image myelist">
-                                             <a href="{{url('/')}}/properties/{{$mylisting->slung}}">
-                                                <img alt="{{$mylisting->property_name}}" src="{{url('/')}}/uploads/properties/{{$mylisting->featured_image}}" class="img-fluid">
-                                                <center>
-                                                    <a style="color:#bf9d34" href="{{url('/')}}/vendors/add-gallery/{{$mylisting->id}}" class="edit"><i class="fa fa-image"></i> Add</a>
-                                                    |
-                                                    <a style="color:#bf9d34" href="{{url('/')}}/vendors/update-gallery/{{$mylisting->id}}" class="edit"><i class="fa fa-edit"></i> Update</a>
-                                                </center>
-                                            </a>
-                                         </td>
-                                         <td>
-                                             <div class="inner">
-                                                 <a target="new" href="{{url('/')}}/properties/{{$mylisting->slung}}">
-                                                    <h2 style="max-width:300px">{{$mylisting->property_name}}</h2>
-                                                </a>
-                                                 <figure>
-                                                    <i class="lni-map-marker"></i>
-                                                    {{$mylisting->address}},  {{$mylisting->city}}
-                                                    {{-- <br> --}}
+                         {{--  --}}
+                            <!-- START SECTION PRICING -->
+                            <section class="pricing-table bg-white-2">
+                                <div class="container">
+                                    <div class="section-title">
+                                        <h3>Pricing</h3>
+                                        <h2>Packages</h2>
+                                    </div>
+                                    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+                                    <div class="row">
+                                        <!-- plan start -->
+                                        <div class="col-lg-4 col-md-6 col-xs-12">
+                                            <div class="plan text-center">
+                                                <span class="plan-name">Basic <small>Monthly plan</small></span>
+                                                <p class="plan-price"><sup class="currency">KES</sup><strong>0</strong><sub>.00</sub></p>
+                                                <ul class="list-unstyled">
+                                                    <li>Basic Listing</li>
+                                                    <li>Admin Dashboard</li>
+                                                    <li>Featured Properties</li>
+                                                    <li>Traffic Guaranteed</li>
+                                                    <li>24/7 Live Support</li>
+                                                </ul>
+                                                <a class="btn btn-primary" href="#."><span class="fa fa-check"></span> Select Package</a>
+                                            </div>
+                                        </div>
+                                        <!-- plan end -->
+                                        <!-- plan start -->
+                                        <div class="col-lg-4 col-md-6 col-xs-12">
+                                            <div class="plan text-center">
+                                                <span class="plan-name">Standard <small>Monthly plan</small></span>
+                                                <p class="plan-price"><sup class="currency">$</sup><strong>15500</strong><sub>.99</sub></p>
+                                                <ul class="list-unstyled">
+                                                    <li>Basic Listing</li>
+                                                    <li>Admin Dashboard</li>
+                                                    <li>Featured Properties</li>
+                                                    <li>Traffic Guaranteed</li>
+                                                    <li>24/7 Live Support</li>
+                                                </ul>
+                                                <a class="btn btn-primary" href="{{url('/')}}/vendors/payment-method/standard"><span class="fa fa-trophy" aria-hidden="true"></span> Select Package</a>
+                                            </div>
+                                        </div>
+                                        <!-- plan end -->
 
-                                                </figure>
-                                                 {{-- <ul class="starts text-left mb-0">
-                                                     <li class="mb-0"><i class="fa fa-star"></i>
-                                                     </li>
-                                                     <li class="mb-0"><i class="fa fa-star"></i>
-                                                     </li>
-                                                     <li class="mb-0"><i class="fa fa-star"></i>
-                                                     </li>
-                                                     <li class="mb-0"><i class="fa fa-star"></i>
-                                                     </li>
-                                                     <li class="mb-0"><i class="fa fa-star"></i>
-                                                     </li>
-                                                     <li class="ml-3">(6 Reviews)</li>
-                                                 </ul> --}}
-                                             </div>
-                                         </td>
-                                         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-                                         <td>{{date('d.m.Y',strtotime($mylisting->created_at))}}</td>
-                                         <td>163</td>
-                                         <td class="actions">
-                                             <a href="#" class="edit"><i class="fa fa-edit"></i> Edit</a>
-                                             <a onclick="return confirm('Would you wish to Delete this listing?')" href="{{url('/')}}/vendors/delete-properties/{{$mylisting->id}}"><i class="far fa-trash-alt"></i> Delete</a>
-                                         </td>
-                                         <td>
-                                            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-                                            @if($mylisting->subscription == 0)
-                                            <a onclick="return confirm('Would you wish to upgrade this listing to Premium?')" href="{{url('/')}}/vendors/upgrade/{{$mylisting->id}}"  class="btn btn-outline" style="background-color:#C0C0C0; color:#ffffff"><span class="fa fa-check-square" aria-hidden="true"></span> Standard</a>
-                                            @else
-                                            <a onclick="return confirm('Would you wish to downgread this listing to Standard?')" href="{{url('/')}}/vendors/downgrade/{{$mylisting->id}}"  class="btn btn-outline" style="background-color:#bf9d34; color:#ffffff"><span class="fa fa-crown"></span> Premium</a>
-                                            @endif
-                                        </td>
-                                     </tr>
-                                     @endforeach
-                                 </tbody>
-                             </table>
-                             {{-- <div class="pagination-container">
-                                 <nav>
-                                     <ul class="pagination">
-                                         <li class="page-item"><a class="btn btn-common" href="#"><i class="lni-chevron-left"></i> Previous </a></li>
-                                         <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                         <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                         <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                         <li class="page-item"><a class="btn btn-common" href="#">Next <i class="lni-chevron-right"></i></a></li>
-                                     </ul>
-                                 </nav>
-                             </div> --}}
-                         </div>
+                                        <!-- plan start -->
+                                        <div class="col-lg-4 col-md-6 col-xs-12">
+                                            <div class="plan text-center no-mgb">
+                                                <span class="plan-name">Premium <small>Monthly plan</small></span>
+                                                <p class="plan-price"><sup class="currency">KES</sup><strong>32500</strong><sub>.99</sub></p>
+                                                <ul class="list-unstyled">
+                                                    <li>Basic Listing</li>
+                                                    <li>Admin Dashboard</li>
+                                                    <li>Featured Properties</li>
+                                                    <li>Traffic Guaranteed</li>
+                                                    <li>24/7 Live Support</li>
+                                                </ul>
+                                                <a class="btn btn-primary" href="{{url('/')}}/vendors/payment-method/premium"><span class="fa fa-crown"></span> Select Package</a>
+                                            </div>
+                                        </div>
+                                        <!-- plan end -->
+                                    </div>
+                                </div>
+                            </section>
+                            <!-- END SECTION PRICING -->
+                         {{--  --}}
                      </div>
                     {{--  --}}
                 </div>

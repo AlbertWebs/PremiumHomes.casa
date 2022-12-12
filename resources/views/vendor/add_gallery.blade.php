@@ -123,6 +123,7 @@
                                             <form action="{{url('image/upload/store')}}" enctype="multipart/form-data" class="dropzone">
                                                @csrf
                                                 <input type="hidden" name="property_id" value="{{$latest->id}}">
+                                                <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
                                             </form>
                                         </div>
                                     </div>

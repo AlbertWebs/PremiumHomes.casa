@@ -15,6 +15,7 @@ class ImageUploadController extends Controller
 
         $imageUpload = new Gallery;
         $imageUpload->filename = $imageName;
+        $imageUpload->user_id = $request->user_id;
         $imageUpload->property_id = $request->property_id;
         $imageUpload->save();
         return response()->json(['success'=>$imageName]);

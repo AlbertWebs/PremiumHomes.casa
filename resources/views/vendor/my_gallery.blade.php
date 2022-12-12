@@ -111,67 +111,40 @@
                                  <thead>
                                      <tr>
                                          <th class="pl-2">My Properties</th>
-                                         <th class="p-0"></th>
-                                         <th>Date Added</th>
-                                         <th>Views</th>
+
+                                         <th class="pl-2">Property Name</th>
+
                                          <th>Actions</th>
-                                         <th>Subscription</th>
+
                                      </tr>
                                  </thead>
                                  <tbody>
-                                     @foreach($MyListings as $mylisting)
+                                     @foreach($MyGallery as $mylisting)
                                      <tr>
                                          <td class="image myelist">
-                                             <a href="{{url('/')}}/properties/{{$mylisting->slung}}">
-                                                <img alt="{{$mylisting->property_name}}" src="{{url('/')}}/uploads/properties/{{$mylisting->featured_image}}" class="img-fluid">
-                                                <center>
-                                                    <a style="color:#bf9d34" href="{{url('/')}}/vendors/add-gallery/{{$mylisting->id}}" class="edit"><i class="fa fa-image"></i> Add</a>
-                                                    |
-                                                    <a style="color:#bf9d34" href="{{url('/')}}/vendors/update-gallery/{{$mylisting->id}}" class="edit"><i class="fa fa-edit"></i> Update</a>
-                                                </center>
+                                             <a href="#">
+                                                <img alt="{{$mylisting->property_name}}" src="{{url('/')}}/images/{{$mylisting->filename}}" class="img-fluid">
+
                                             </a>
                                          </td>
-                                         <td>
-                                             <div class="inner">
-                                                 <a target="new" href="{{url('/')}}/properties/{{$mylisting->slung}}">
-                                                    <h2 style="max-width:300px">{{$mylisting->property_name}}</h2>
-                                                </a>
-                                                 <figure>
-                                                    <i class="lni-map-marker"></i>
-                                                    {{$mylisting->address}},  {{$mylisting->city}}
-                                                    {{-- <br> --}}
 
-                                                </figure>
-                                                 {{-- <ul class="starts text-left mb-0">
-                                                     <li class="mb-0"><i class="fa fa-star"></i>
-                                                     </li>
-                                                     <li class="mb-0"><i class="fa fa-star"></i>
-                                                     </li>
-                                                     <li class="mb-0"><i class="fa fa-star"></i>
-                                                     </li>
-                                                     <li class="mb-0"><i class="fa fa-star"></i>
-                                                     </li>
-                                                     <li class="mb-0"><i class="fa fa-star"></i>
-                                                     </li>
-                                                     <li class="ml-3">(6 Reviews)</li>
-                                                 </ul> --}}
-                                             </div>
-                                         </td>
                                          <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-                                         <td>{{date('d.m.Y',strtotime($mylisting->created_at))}}</td>
-                                         <td>163</td>
+                                         <td>
+                                            <div class="inner">
+                                                &nbsp;&nbsp;<?php $Property = DB::table('properties')->where('id',$mylisting->property_id)->get(); ?>
+                                                @foreach ($Property as $item)
+                                                <a href="{{url('/')}}/properties/{{$item->slung}}">
+                                                    <h2 style="max-width:300px">{{$item->property_name}}</h2>
+                                                </a>
+                                                @endforeach
+                                         </td>
+
                                          <td class="actions">
                                              <a href="#" class="edit"><i class="fa fa-edit"></i> Edit</a>
-                                             <a onclick="return confirm('Would you wish to Delete this listing?')" href="{{url('/')}}/vendors/delete-properties/{{$mylisting->id}}"><i class="far fa-trash-alt"></i> Delete</a>
+                                             &nbsp; &nbsp; &nbsp;
+                                             <a onclick="return confirm('Would you wish to Delete this image?')" href="{{url('/')}}/vendors/delete-gallery/{{$mylisting->id}}"><i class="far fa-trash-alt"></i> Delete</a>
                                          </td>
-                                         <td>
-                                            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-                                            @if($mylisting->subscription == 0)
-                                            <a onclick="return confirm('Would you wish to upgrade this listing to Premium?')" href="{{url('/')}}/vendors/upgrade/{{$mylisting->id}}"  class="btn btn-outline" style="background-color:#C0C0C0; color:#ffffff"><span class="fa fa-check-square" aria-hidden="true"></span> Standard</a>
-                                            @else
-                                            <a onclick="return confirm('Would you wish to downgread this listing to Standard?')" href="{{url('/')}}/vendors/downgrade/{{$mylisting->id}}"  class="btn btn-outline" style="background-color:#bf9d34; color:#ffffff"><span class="fa fa-crown"></span> Premium</a>
-                                            @endif
-                                        </td>
+
                                      </tr>
                                      @endforeach
                                  </tbody>

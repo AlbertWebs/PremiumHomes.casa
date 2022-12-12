@@ -6,10 +6,13 @@ use Pesapal;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Models\Property;
+use App\Models\Gallery;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use DB;
-
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
+use Redirect;
 
 class VendorController extends Controller
 {
@@ -58,16 +61,55 @@ class VendorController extends Controller
     }
 
     public function add_gallery($id){
+        $active = "Add Gallery";
         $Latest = Property::where('id',$id)->get();
-        return view('vendor.add_gallery',compact('Latest'));
+        return view('vendor.add_gallery',compact('Latest','active'));
     }
+
+    public function update_gallery($id){
+        $active = "Update Gallery";
+        $MyGallery = Gallery::where('property_id',$id)->get();
+        return view('vendor.my_gallery',compact('MyGallery','active'));
+    }
+
+
+    public function delete_property($id){
+        $Property = Property::find($id);
+        $GetGallery = DB::table('galleries')->where('property_id',$id)->get();
+        foreach($GetGallery as $getGallery){
+            $path = "images/$getGallery->filename";
+            $image_path = public_path("images/$getGallery->filename");
+            if (File::exists($image_path)) {
+                File::delete($image_path);
+            }
+        }
+        $DeleteGallery = DB::table('galleries')->where('property_id',$id)->where('user_id',Auth::User()->id)->delete();
+        $Property->delete();
+        return Redirect::back();
+    }
+
+    public function delete_gallery($id){
+        $GetGallery = DB::table('galleries')->where('id',$id)->get();
+        foreach($GetGallery as $getGallery){
+            $path = "images/$getGallery->filename";
+            $image_path = public_path("images/$getGallery->filename");
+            if (File::exists($image_path)) {
+                File::delete($image_path);
+            }
+        }
+        $DeleteGallery = DB::table('galleries')->where('id',$id)->where('user_id',Auth::User()->id)->delete();
+        return Redirect::back();
+    }
+
+
 
     public function downgrade($id){
 
     }
 
     public function upgrade($id){
-
+        $active = "payment_method";
+        return view('vendor.packages', compact('active'));
     }
 
 
