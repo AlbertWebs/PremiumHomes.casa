@@ -188,7 +188,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="dashborad-box">
+                        {{-- <div class="dashborad-box">
                             <h4 class="title">Message</h4>
                             <div class="section-body">
                                 <div class="messages">
@@ -242,7 +242,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                         {{-- <div class="dashborad-box">
                             <h4 class="title">Review</h4>
                             <div class="section-body">
