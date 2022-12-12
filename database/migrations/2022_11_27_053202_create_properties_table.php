@@ -46,6 +46,7 @@ return new class extends Migration
             $table->string('iframe');
             $table->string('featured_image');
 
+            $table->integer('subscription')->default('0');
             $table->timestamps();
         });
     }

@@ -62,6 +62,14 @@ class VendorController extends Controller
         return view('vendor.add_gallery',compact('Latest'));
     }
 
+    public function downgrade($id){
+
+    }
+
+    public function upgrade($id){
+
+    }
+
 
     public function add_properties(Request $request){
         $data = $request->all();

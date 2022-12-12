@@ -242,6 +242,10 @@ Route::group(['prefix'=>'vendors'], function(){
     Route::get('/invoice', [App\Http\Controllers\VendorController::class, 'invoice'])->name('invoice');
     Route::get('/add-gallery/{id}', [App\Http\Controllers\VendorController::class, 'add_gallery'])->name('add_gallery');
 
+    Route::get('/upgrade/{slung}', [App\Http\Controllers\VendorController::class, 'upgrade'])->name('upgrade');
+    Route::get('/downgrade/{slung}', [App\Http\Controllers\VendorController::class, 'downgrade'])->name('downgrade');
+
+
 
     // Post
     Route::post('/add-property', [App\Http\Controllers\VendorController::class, 'add_properties'])->name('add-property-post');

@@ -115,6 +115,7 @@
                                          <th>Date Added</th>
                                          <th>Views</th>
                                          <th>Actions</th>
+                                         <th>Subscription</th>
                                      </tr>
                                  </thead>
                                  <tbody>
@@ -144,12 +145,21 @@
                                                  </ul> --}}
                                              </div>
                                          </td>
+                                         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
                                          <td>{{date('d.m.Y',strtotime($mylisting->created_at))}}</td>
                                          <td>163</td>
                                          <td class="actions">
-                                             <a href="#" class="edit"><i class="lni-pencil"></i>Edit</a>
-                                             <a href="#"><i class="far fa-trash-alt"></i></a>
+                                             <a href="#" class="edit"><i class="fa fa-edit"></i> Edit</a>
+                                             <a href="#"><i class="far fa-trash-alt"></i> Delete</a>
                                          </td>
+                                         <td>
+                                            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+                                            @if($mylisting->subscription == 0)
+                                            <a onclick="return confirm('Would you wish to upgrade this listing to Premium?')" href="{{url('/')}}/vendors/upgrade/{{$mylisting->id}}"  class="btn btn-outline" style="background-color:#C0C0C0; color:#ffffff"><span class="fa fa-check-square" aria-hidden="true"></span> Standard</a>
+                                            @else
+                                            <a onclick="return confirm('Would you wish to downgread this listing to Standard?')" href="{{url('/')}}/vendors/downgrade/{{$mylisting->id}}"  class="btn btn-outline" style="background-color:#bf9d34; color:#ffffff"><span class="fa fa-crown"></span> Premium</a>
+                                            @endif
+                                        </td>
                                      </tr>
                                      @endforeach
                                  </tbody>
