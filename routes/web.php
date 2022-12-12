@@ -259,6 +259,7 @@ Route::get('/image/upload', [App\Http\Controllers\ImageUploadController::class, 
 Route::post('/image/upload/store', [App\Http\Controllers\ImageUploadController::class, 'fileStore'])->name('fileStore');
 Route::get('/image/delete', [App\Http\Controllers\ImageUploadController::class, 'fileDestroy'])->name('fileDestroy');
 
+Route::post('/create-invoice', [App\Http\Controllers\InvoiceController::class, 'create'])->name('create-invoice');
 
 Route::post('make-payment', [App\Http\Controllers\PaymentsController::class, 'payment'])->name('make-payment');
 Route::group(['prefix' => '/webhooks'], function () {

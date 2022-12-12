@@ -15,7 +15,9 @@ class HomeController extends Controller
 
     public function invoice()
     {
-        return view('invoice');
+        $subject = "Subject";
+        $name = "Albert Muhatia";
+        return view('invoice', compact('subject','name'));
     }
 
     public function search(){

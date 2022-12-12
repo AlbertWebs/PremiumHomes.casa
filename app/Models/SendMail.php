@@ -4,7 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\http\Models\Invoice;
+use App\Models\Invoice;
+use Mail;
 
 class SendMail extends Model
 {
@@ -18,6 +19,7 @@ class SendMail extends Model
               'subject'=>$Invoice->invoice_number,
               'Invoice'=>$Invoice
               );
+              $subject = "Invoice Number $Invoice->invoice_number";
               $FromVariable = "hello@premiumhomes.casa";
               $FromVariableName = "Premium Homes";
 
@@ -27,7 +29,6 @@ class SendMail extends Model
               Mail::send('invoice', $data, function($message) use ($subject,$FromVariable,$FromVariableName,$toVariable,$toVariableName){
                   $message->from($FromVariable , $FromVariableName);
                   $message->to($toVariable, $toVariableName)->cc('albertmuhatia@gmail.com')->cc('info@designekta.com')->subject($subject);
-
               });
           }
 }
