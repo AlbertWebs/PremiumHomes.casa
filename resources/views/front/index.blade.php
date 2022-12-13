@@ -123,23 +123,25 @@
         </div>
         <div class="portfolio col-xl-12 p-0">
             <div class="slick-lancers">
+                @foreach ($Property as $prop)
                 <div class="agents-grid">
                     <div class="landscapes listing-item compact thehp-1" data-aos="fade-up" data-aos-delay="150">
-                        <a href="single-property-1#" class="recent-16">
-                            <div class="recent-img16 img-fluid img-center" style="background-image: url({{asset('theme/images/feature-properties/fp-8.jpg')}});"></div>
+                        <a href="{{route('property-single',[$prop->slung])}}" class="recent-16">
+                            <div class="recent-img16 img-fluid img-center" style="background-image: url('{{asset('uploads/properties/')}}/{{$prop->featured_image}}');"></div>
                             <div class="recent-content"></div>
                             <div class="listing-badges">
                                 <span>For Sale</span>
                             </div>
                             <div class="recent-details">
-                                <div class="recent-title">Luxury House</div>
-                                <div class="recent-price mb-3">$235,720</div>
-                                <div class="house-details thehp-1"><i class="fa fa-bed mr-1" aria-hidden="true"></i> 6 Bed <span>|</span><i class="fa fa-bath mr-1" aria-hidden="true"></i> 3 Bath <span>|</span><i class="fa fa-object-group mr-1" aria-hidden="true"></i> 720 sq ft</div>
+                                <div class="recent-title">{{$prop->property_name}}</div>
+                                <div class="recent-price mb-3">kes {{$prop->price}}</div>
+                                <div class="house-details thehp-1"><i class="fa fa-bed mr-1" aria-hidden="true"></i> {{$prop->bedrooms}} Bed <span>|</span><i class="fa fa-bath mr-1" aria-hidden="true"></i> {{$prop->Bath}} Bath <span>|</span><i class="fa fa-object-group mr-1" aria-hidden="true"></i> {{$prop->sqft}} sq ft</div>
                             </div>
                             <div class="view-proper">View Details</div>
                         </a>
                     </div>
                 </div>
+                @endforeach
                 <div class="agents-grid" data-aos="fade-up" data-aos-delay="250">
                     <div class="people listing-item compact thehp-1">
                         <a href="single-property-1#" class="recent-16">

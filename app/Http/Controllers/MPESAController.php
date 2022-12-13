@@ -124,7 +124,7 @@ class MPESAController extends Controller
             'PartyB' => 4101843,
             'PhoneNumber' => $phoneNumber, // replace this with your phone number
             'CallBackURL' => 'https://premiumhomes.casa/api/v1/stk/push_call_back',
-            'AccountReference' => "Room booking",
+            'AccountReference' => $request->TransactionDesc,
             'TransactionDesc' => "Testing stk push on sandbox"
         ];
         $data_string = json_encode($curl_post_data);

@@ -144,7 +144,8 @@
                                                     <li>Traffic Guaranteed</li>
                                                     <li>24/7 Live Support</li>
                                                 </ul>
-                                                <a class="btn btn-primary" href="{{url('/')}}/vendors/payment-method/standard"><span class="fa fa-trophy" aria-hidden="true"></span> Select Package</a>
+                                                <?php $premiums = "standard" ?>
+                                                <a class="btn btn-primary" href="{{url('/')}}/vendors/invoice-page/{{$premiums}}"><span class="fa fa-trophy" aria-hidden="true"></span> Select Package</a>
                                             </div>
                                         </div>
                                         <!-- plan end -->
@@ -161,7 +162,8 @@
                                                     <li>Traffic Guaranteed</li>
                                                     <li>24/7 Live Support</li>
                                                 </ul>
-                                                <a class="btn btn-primary" href="{{url('/')}}/vendors/payment-method/premium"><span class="fa fa-crown"></span> Select Package</a>
+                                                <?php $premiums = "premium" ?>
+                                                <a class="btn btn-primary" href="{{url('/')}}/vendors/invoice-page/{{$premiums}}"><span class="fa fa-crown"></span> Select Package</a>
                                             </div>
                                         </div>
                                         <!-- plan end -->

@@ -14,6 +14,11 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 use Redirect;
 use Session;
+use App\Models\Invoice;
+use App\Models\User;
+use App\Models\SendMail;
+use Mail;
+
 
 class VendorController extends Controller
 {
@@ -227,6 +232,41 @@ class VendorController extends Controller
             Session::flash('message', "Nothing to update");
             return Redirect::back();
         }
+    }
+
+    public function invoice_page($premiums){
+        // Create Invoice
+        $Invoices = DB::table('invoices')->orderBy('id','DESC')->Limit('1')->get();
+        $count_invoices = count($Invoices);
+        if($count_invoices == 0){
+            $InvoiceNumber = 'Premium-1';
+        }else{
+            foreach($Invoices as $invoice)
+            {
+                $LastID = $invoice->id;
+                $Next = $LastID+1;
+                $InvoiceNumber = "Premium-".$Next;
+            }
+        }
+        if($premiums == "standard"){
+            $amount = "15500";
+        }else{
+            $amount = "32500";
+        }
+        $qty = "1";
+        $active = "payment_method";
+        // Log to DB & Generate Invoice
+        request()->request->add(['invoice_number'=>$InvoiceNumber]);
+        $Invoice = Invoice::create($request->all());
+        $User = User::find(Auth::User()->id);
+        if($Invoice->save()){
+            $InvoiceGetNumber = Invoice::where('invoice_number',$InvoiceNumber)->get();
+            foreach($InvoiceGetNumber as $InvNo){
+                SendMail::notify($User->email,$User->name,$InvNo->id);
+            }
+        }
+        //Ajax Return Success
+        return view('vendor.payment_method', compact('active','premiums','InvoiceNumber','amount','qty'));
     }
 
 

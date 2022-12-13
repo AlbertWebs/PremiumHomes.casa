@@ -10,7 +10,8 @@ class HomeController extends Controller
 
     public function index()
     {
-        return view('front.index');
+        $Property = Property::all();
+        return view('front.index', compact('Property'));
     }
 
     public function invoice()

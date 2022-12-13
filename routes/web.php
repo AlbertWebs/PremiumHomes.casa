@@ -256,6 +256,8 @@ Route::group(['prefix'=>'vendors'], function(){
     Route::post('/add-property', [App\Http\Controllers\VendorController::class, 'add_properties'])->name('add-property-post');
     Route::post('/save-property', [App\Http\Controllers\VendorController::class, 'save_property_post'])->name('save-property-post');
 
+    Route::get('/invoice-page/{id}', [App\Http\Controllers\VendorController::class, 'invoice_page'])->name('invoice-page');
+
 
     // SocialMedia
     Route::get('/facebook', [LoginController::class, 'facebook'])->name('facebook-login');
