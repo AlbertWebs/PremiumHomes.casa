@@ -47,6 +47,7 @@ return new class extends Migration
             $table->string('featured_image');
 
             $table->integer('subscription')->default('0');
+            $table->integer('active')->default('Pending Approval');
             $table->timestamps();
         });
     }

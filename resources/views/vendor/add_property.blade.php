@@ -337,40 +337,40 @@
                                                 <li class="fl-wrap filter-tags clearfix">
                                                     <div class="checkboxes float-left">
                                                         <div class="filter-tags-wrap">
-                                                            <input id="check-d" type="checkbox" name="laundry">
-                                                            <label for="check-d">Laundry Room</label>
+                                                            <input id="laundry" type="checkbox" name="laundry">
+                                                            <label for="laundry">Laundry Room</label>
                                                         </div>
                                                     </div>
                                                 </li>
                                                 <li class="fl-wrap filter-tags clearfix">
                                                     <div class="checkboxes float-left">
                                                         <div class="filter-tags-wrap">
-                                                            <input id="check-da" type="checkbox" name="parking">
-                                                            <label for="check-d">Parking</label>
+                                                            <input id="parking" type="checkbox" name="parking">
+                                                            <label for="parking">Parking</label>
                                                         </div>
                                                     </div>
                                                 </li>
                                                 <li class="fl-wrap filter-tags clearfix">
                                                     <div class="checkboxes float-left">
                                                         <div class="filter-tags-wrap">
-                                                            <input id="check-db" type="checkbox" name="dishwasher">
-                                                            <label for="check-d">Dishwasher</label>
+                                                            <input id="dishwasher" type="checkbox" name="dishwasher">
+                                                            <label for="dishwasher">Dishwasher</label>
                                                         </div>
                                                     </div>
                                                 </li>
                                                 <li class="fl-wrap filter-tags clearfix">
                                                     <div class="checkboxes float-left">
                                                         <div class="filter-tags-wrap">
-                                                            <input id="check-dc" type="checkbox" name="balcony">
-                                                            <label for="check-d">Balcony</label>
+                                                            <input id="balcony" type="checkbox" name="balcony">
+                                                            <label for="balcony">Balcony</label>
                                                         </div>
                                                     </div>
                                                 </li>
                                                 <li class="fl-wrap filter-tags clearfix">
                                                     <div class="checkboxes float-left">
                                                         <div class="filter-tags-wrap">
-                                                            <input id="check-dd" type="checkbox" name="internet">
-                                                            <label for="check-d">Internet</label>
+                                                            <input id="internet" type="checkbox" name="internet">
+                                                            <label for="internet">Internet</label>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -378,24 +378,24 @@
                                                 <li class="fl-wrap filter-tags clearfix">
                                                     <div class="checkboxes float-left">
                                                         <div class="filter-tags-wrap">
-                                                            <input id="check-e" type="checkbox" name="gym">
-                                                            <label for="check-e">Gym</label>
+                                                            <input id="gym" type="checkbox" name="gym">
+                                                            <label for="gym">Gym</label>
                                                         </div>
                                                     </div>
                                                 </li>
                                                 <li class="fl-wrap filter-tags clearfix">
                                                     <div class="checkboxes float-left">
                                                         <div class="filter-tags-wrap">
-                                                            <input id="check-g" type="checkbox" name="alarm">
-                                                            <label for="check-g">Alarm</label>
+                                                            <input id="alarm" type="checkbox" name="alarm">
+                                                            <label for="alarm">Alarm</label>
                                                         </div>
                                                     </div>
                                                 </li>
                                                 <li class="fl-wrap filter-tags clearfix">
                                                     <div class="checkboxes float-left">
                                                         <div class="filter-tags-wrap">
-                                                            <input id="check-h" type="checkbox" name="window_covering">
-                                                            <label for="check-h">Window Covering</label>
+                                                            <input id="window_covering" type="checkbox" name="window_covering">
+                                                            <label for="window_covering">Window Covering</label>
                                                         </div>
                                                     </div>
                                                 </li>

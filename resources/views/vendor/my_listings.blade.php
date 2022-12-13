@@ -112,7 +112,7 @@
                                      <tr>
                                          <th class="pl-2">My Properties</th>
                                          <th class="p-0"></th>
-                                         <th>Date Added</th>
+                                         <th>Status</th>
                                          <th>Views</th>
                                          <th>Actions</th>
                                          <th>Subscription</th>
@@ -158,11 +158,27 @@
                                              </div>
                                          </td>
                                          <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-                                         <td>{{date('d.m.Y',strtotime($mylisting->created_at))}}</td>
-                                         <td>163</td>
+                                         <td>
+                                            <div class="inner">
+                                                @if($mylisting->active == "Pending Approval")
+                                                    <p style="font-weight: 800; text-align:center" class="alert-warning"><span class="fa fa-clock"></span> {{$mylisting->active}}</p>
+                                                @elseif($mylisting->active == "Approved")
+                                                    <p style="font-weight: 800; text-align:center" class="alert-success"><span class="fa fa-check"></span> {{$mylisting->active}}</p>
+                                                @else
+                                                    <p style="font-weight: 800; text-align:center" class="alert-danger"><span class="fa fa-times"></span> {{$mylisting->active}}</p>
+                                                @endif
+                                                {{-- <br> --}}
+                                                {{-- Added On:{{date('d.m.Y',strtotime($mylisting->created_at))}} --}}
+                                            </div>
+                                         </td>
+
+                                         <td>
+                                            <div class="inner">163
+                                            </div>
+                                         </td>
                                          <td class="actions">
                                              <a href="{{url('/')}}/vendors/edit-properties/{{$mylisting->id}}" class="edit"><i class="fa fa-edit"></i> Edit</a>
-                                             <a onclick="return confirm('Would you wish to Delete this listing?')" href="{{url('/')}}/vendors/delete-properties/{{$mylisting->id}}"><i class="far fa-trash-alt"></i> Delete</a>
+                                             <a onclick="return confirm('Would you wish to Delete this listing? You cannot undo this operation')" href="{{url('/')}}/vendors/delete-properties/{{$mylisting->id}}"><i class="far fa-trash-alt"></i> Delete</a>
                                          </td>
                                          <td>
                                             <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">

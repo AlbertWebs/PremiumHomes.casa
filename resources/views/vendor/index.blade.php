@@ -166,7 +166,7 @@
                                     <table class="table table-striped">
                                         <thead>
                                             <tr>
-                                                <th>Listing Name</th>
+                                                <th>Property Name</th>
                                                 <th>Date</th>
                                                 <th>Rating</th>
                                                 <th>Status</th>
@@ -179,8 +179,18 @@
                                                 <td>{{$mylisting->property_name}}</td>
                                                 <td>{{date('d.m.Y',strtotime($mylisting->created_at))}}</td>
                                                 <td class="rating"><span>5.0</span></td>
-                                                <td class="status"><span class=" active">Active</span></td>
-                                                <td class="edit"><a href="#"><i class="fa fa-pencil"></i></a></td>
+                                                <td class="status">
+                                                    <span class="active">
+                                                        @if($mylisting->active == "Pending Approval")
+                                                        <p style="font-weight: 800; text-align:center" class="alert-warning"><span class="fa fa-clock"></span> {{$mylisting->active}}</p>
+                                                        @elseif($mylisting->active == "Approved")
+                                                            <p style="font-weight: 800; text-align:center" class="alert-success"><span class="fa fa-check"></span> {{$mylisting->active}}</p>
+                                                        @else
+                                                            <p style="font-weight: 800; text-align:center" class="alert-danger"><span class="fa fa-times"></span> {{$mylisting->active}}</p>
+                                                        @endif
+                                                    </span>
+                                                </td>
+                                                <td class="edit"><a href="{{url('/')}}/vendors/edit-properties/{{$mylisting->id}}"><i class="fa fa-pencil"></i> Edit</a></td>
                                             </tr>
                                             @endforeach
                                         </tbody>

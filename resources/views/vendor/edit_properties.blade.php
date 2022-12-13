@@ -112,7 +112,11 @@
                                 <h3>Property description and price</h3>
                                 <center>
                                     @if(Session::has('message'))
-                                                  <div class="alert alert-success">{{ Session::get('message') }}</div>
+                                                    <div class="alert alert-success">
+                                                        {{ Session::get('message') }}
+                                                        &nbsp;
+                                                        <a href="{{url('/')}}/vendors/update-gallery/{{$Property->id}}" class="btn btn-success text-right"><span class="fa fa-edit"></span> Update Gallery</a>
+                                                    </div>
                                    @endif
 
                                    @if(Session::has('messageError'))
