@@ -241,6 +241,7 @@ Route::group(['prefix'=>'vendors'], function(){
     Route::get('/change-password', [App\Http\Controllers\VendorController::class, 'change_password'])->name('change-password');
     Route::get('/invoice', [App\Http\Controllers\VendorController::class, 'invoice'])->name('invoice');
     Route::get('/add-gallery/{id}', [App\Http\Controllers\VendorController::class, 'add_gallery'])->name('add_gallery');
+    Route::get('/edit-properties/{id}', [App\Http\Controllers\VendorController::class, 'edit_properties'])->name('edit-properties');
     Route::get('/update-gallery/{id}', [App\Http\Controllers\VendorController::class, 'update_gallery'])->name('update_gallery');
     Route::get('/delete-gallery/{id}', [App\Http\Controllers\VendorController::class, 'delete_gallery'])->name('delete-gallery');
 
@@ -253,6 +254,8 @@ Route::group(['prefix'=>'vendors'], function(){
 
     // Post
     Route::post('/add-property', [App\Http\Controllers\VendorController::class, 'add_properties'])->name('add-property-post');
+    Route::post('/save-property', [App\Http\Controllers\VendorController::class, 'save_property_post'])->name('save-property-post');
+
 
     // SocialMedia
     Route::get('/facebook', [LoginController::class, 'facebook'])->name('facebook-login');

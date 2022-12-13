@@ -13,6 +13,7 @@ use DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 use Redirect;
+use Session;
 
 class VendorController extends Controller
 {
@@ -164,7 +165,69 @@ class VendorController extends Controller
         return redirect()->route('add_gallery', [$Latest->id]);
     }
 
+    public function edit_properties($id){
+        $active = "properties";
+        $Property = Property::find($id);
+        return view('vendor.edit_properties',compact('Property','active'));
+    }
 
+    public function save_property_post(Request $request){
+        $data = $request->all();
+        if (!empty($request->featured_image)) {
+            $file =$request->file('featured_image');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time().'.' . $extension;
+            $file->move(public_path('uploads/properties/'), $filename);
+            $data['image']= 'public/uploads/'.$filename;
+        }else{
+            $filename = $request->featured_image_cheat;
+        }
+        $updateDetails = array(
+            'featured_image' =>$filename,
+            'property_name' =>$request->property_name,
+            'slung' => Str::slug($request->property_name),
+            'property_description' => $request->property_description,
+            'status' => $request->status,
+            'user_id' => Auth::User()->id,
+            'type' => $request->type,
+            'rooms' => $request->rooms,
+            'price' => $request->price,
+            'type' => $request->type,
+            'sqft' => $request->sqft,
+            'address' => $request->address,
+            'city' => $request->city,
+            'state' => $request->state,
+            'country' => $request->country,
+            'latitude' => $request->latitude,
+            'longitude' => $request->longitude,
+            'yom' => $request->yom,
+            'ac' => $request->ac,
+            'swimming' => $request->swimming,
+            'heater' => $request->heater,
+            'laundry' => $request->laundry,
+            'gym' => $request->gym,
+            'alarm' => $request->alarm,
+            'window_covering' => $request->window_covering,
+            'refrigerator' => $request->refrigerator,
+            'cable' => $request->cable,
+            'microwave' => $request->microwave,
+            'parking' => $request->parking,
+            'dishwasher' => $request->dishwasher,
+            'balcony' => $request->balcony,
+            'internet' => $request->internet,
+            'iframe' => $request->iframe,
+            'video' => $request->video,
+        );
+
+        $Update = DB::table('properties')->where('id',$request->PropertyID)->update($updateDetails);
+        if($Update){
+            Session::flash('message', "Property has been updated");
+            return Redirect::back();
+        }else{
+            Session::flash('message', "Nothing to update");
+            return Redirect::back();
+        }
+    }
 
 
 }

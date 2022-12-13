@@ -161,7 +161,7 @@
                                          <td>{{date('d.m.Y',strtotime($mylisting->created_at))}}</td>
                                          <td>163</td>
                                          <td class="actions">
-                                             <a href="#" class="edit"><i class="fa fa-edit"></i> Edit</a>
+                                             <a href="{{url('/')}}/vendors/edit-properties/{{$mylisting->id}}" class="edit"><i class="fa fa-edit"></i> Edit</a>
                                              <a onclick="return confirm('Would you wish to Delete this listing?')" href="{{url('/')}}/vendors/delete-properties/{{$mylisting->id}}"><i class="far fa-trash-alt"></i> Delete</a>
                                          </td>
                                          <td>

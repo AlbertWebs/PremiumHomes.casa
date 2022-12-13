@@ -106,16 +106,25 @@
                                 </div>
                             </div>
                         </div>
-                        <form action="{{route('add-property-post')}}" method="POST" enctype="multipart/form-data">
+                        <form action="{{route('save-property-post')}}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="single-add-property">
                                 <h3>Property description and price</h3>
+                                <center>
+                                    @if(Session::has('message'))
+                                                  <div class="alert alert-success">{{ Session::get('message') }}</div>
+                                   @endif
+
+                                   @if(Session::has('messageError'))
+                                                  <div class="alert alert-danger">{{ Session::get('messageError') }}</div>
+                                   @endif
+                                </center>
                                 <div class="property-form-group">
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <p>
                                                     <label for="title">Property Title</label>
-                                                    <input required name="property_name" type="text" name="title" id="title" placeholder="Enter your property title">
+                                                    <input required name="property_name" type="text" value="{{$Property->property_name}}" name="title" id="title" placeholder="Enter your property title">
                                                 </p>
                                             </div>
                                         </div>
@@ -124,7 +133,7 @@
                                                 <p>
                                                     <label for="description">Property Description</label>
                                                     {{-- <textarea id="description" name="property_description" placeholder="Describe about your property"></textarea> --}}
-                                                    <textarea name="property_description" id="article_ckeditor" rows="10" cols="80" required></textarea>
+                                                    <textarea name="property_description" id="article_ckeditor" rows="10" cols="80" required>{{$Property->property_name}}</textarea>
 
                                                     <script src="https://amanivehiclesounds.co.ke/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
                                                     <script>
@@ -139,9 +148,9 @@
                                                 <div class="form-group categories">
                                                     <label for="price">Rent/Sale</label>
                                                     <select name="status" class="nice-select form-control wide" required>
-                                                        {{-- <option selected="" value="Default">Select status</option> --}}
-                                                        <option value="Small">Rent</option>
-                                                        <option value="Medium">Sale</option>
+                                                        <option selected value="{{$Property->status}}">{{$Property->status}}</option>
+                                                        <option value="Rent">Rent</option>
+                                                        <option value="Sale">Sale</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -150,7 +159,7 @@
                                                 <div class="form-group categories">
                                                     <label for="price">Type</label>
                                                     <select name="type" class="nice-select form-control wide" required>
-                                                        {{-- <option selected="" value="Default">Type</option> --}}
+                                                        <option selected value="{{$Property->type}}">{{$Property->type}}</option>
                                                         <option value="commercial">commercial</option>
                                                         <option value="apartment">apartment</option>
                                                         <option value="home">home</option>
@@ -162,7 +171,7 @@
                                                 <div class="form-group categories">
                                                     <label for="price">Rooms</label>
                                                     <select name="rooms" class="nice-select form-control wide" required>
-                                                        {{-- <option selected="" value="Default">Rooms</option> --}}
+                                                        <option selected value="{{$Property->rooms}}">{{$Property->rooms}}</option>
                                                         <option value="1">1</option>
                                                         <option value="2">2</option>
                                                         <option value="3">3</option>
@@ -187,13 +196,13 @@
                                             <div class="col-lg-6 col-md-12">
                                                 <p class="no-mb">
                                                     <label for="price">Price</label>
-                                                    <input type="text" name="price" placeholder="USD" id="price" required>
+                                                    <input type="text" value="{{$Property->price}}" name="price" placeholder="USD" id="price" required>
                                                 </p>
                                             </div>
                                             <div class="col-lg-6 col-md-12">
                                                 <p class="no-mb last">
                                                     <label for="area">Area</label>
-                                                    <input type="text" name="sqft" placeholder="Sqft" id="area" required>
+                                                    <input type="text" name="sqft" value="{{$Property->sqft}}" placeholder="Sqft" id="area" required>
                                                 </p>
                                             </div>
                                         </div>
@@ -213,11 +222,13 @@
                                                 <input name="featured_image" class="form-control" type="file" id="formFile" onchange="preview()">
                                                 {{-- <button onclick="clearImage()" class="btn btn-primary mt-3">Click me</button> --}}
                                             </div>
-                                            <img id="frame" src="" class="img-fluid" />
+                                            <img id="frame" src="{{url('/')}}/uploads/properties/{{$Property->featured_image}}" class="img-fluid" />
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <input type="hidden" value="{{$Property->featured_image}}" name="featured_image_cheat">
+                            <input type="hidden" value="{{$Property->id}}" name="PropertyID">
                             {{--  --}}
                             <script>
                                 function preview() {
@@ -236,13 +247,13 @@
                                         <div class="col-lg-6 col-md-12">
                                             <p>
                                                 <label for="address">Address</label>
-                                                <input type="text" name="address" placeholder="e.g 3571 Riverside Downs" id="address" required>
+                                                <input type="text" name="address" value="{{$Property->address}}" placeholder="e.g 3571 Riverside Downs" id="address" required>
                                             </p>
                                         </div>
                                         <div class="col-lg-6 col-md-12">
                                             <p>
                                                 <label for="city">City</label>
-                                                <input type="text" name="city" placeholder="Enter Your City" id="city" required>
+                                                <input type="text" name="city" value="{{$Property->city}}"  placeholder="Enter Your City" id="city" required>
                                             </p>
                                         </div>
                                     </div>
@@ -250,13 +261,13 @@
                                         <div class="col-lg-6 col-md-12">
                                             <p>
                                                 <label for="state">State</label>
-                                                <input type="text" name="state" placeholder="Enter Your State" id="state" required>
+                                                <input type="text" name="state" value="{{$Property->state}}" placeholder="Enter Your State" id="state" required>
                                             </p>
                                         </div>
                                         <div class="col-lg-6 col-md-12">
                                             <p>
                                                 <label for="country">Country</label>
-                                                <input type="text" name="country" placeholder="Enter Your Country" id="country" required>
+                                                <input type="text" name="country" value="{{$Property->country}}" placeholder="Enter Your Country" id="country" required>
                                             </p>
                                         </div>
                                     </div>
@@ -264,13 +275,13 @@
                                         <div class="col-lg-6 col-md-12">
                                             <p class="no-mb first">
                                                 <label for="latitude">Google Maps latitude</label>
-                                                <input type="text" name="latitude" placeholder="Google Maps latitude" id="latitude" >
+                                                <input type="text" name="latitude" value="{{$Property->latitude}}" placeholder="Google Maps latitude" id="latitude" >
                                             </p>
                                         </div>
                                         <div class="col-lg-6 col-md-12">
                                             <p class="no-mb last">
                                                 <label for="longitude">Google Maps longitude</label>
-                                                <input type="text" name="longitude" placeholder="Google Maps longitude" id="longitude">
+                                                <input type="text" name="longitude" value="{{$Property->longitude}}" placeholder="Google Maps longitude" id="longitude">
                                             </p>
                                         </div>
                                     </div>
@@ -278,7 +289,7 @@
                                         <div class="col-md-12">
                                             <p>
                                                 <label for="description">iframe</label>
-                                                <textarea id="description" name="iframe" placeholder="Property Iframe"></textarea>
+                                                <textarea id="description" name="iframe" placeholder="Property Iframe">{{$Property->iframe}}</textarea>
                                             </p>
                                         </div>
                                     </div>
@@ -291,13 +302,13 @@
                                         <div class="col-lg-6 col-md-12">
                                             <p class="no-mb">
                                                 <label for="price">Year of Make</label>
-                                                <input type="text" name="yom" placeholder="{{date('Y')}}" id="price" required>
+                                                <input type="text" value="{{$Property->yom}}" name="yom" placeholder="{{date('Y')}}" id="price" required>
                                             </p>
                                         </div>
                                         <div class="col-lg-6 col-md-12">
                                             <p class="no-mb">
                                                 <label for="price">Video</label>
-                                                <input type="text" name="video" placeholder="https://www.youtube.com/watch?v=hGiTSuJl1U8" id="price" required>
+                                                <input type="text" value="{{$Property->video}}" name="video" placeholder="https://www.youtube.com/watch?v=hGiTSuJl1U8" id="price" required>
                                             </p>
                                         </div>
 
@@ -313,7 +324,7 @@
                                                 <li class="fl-wrap filter-tags clearfix">
                                                     <div class="checkboxes float-left">
                                                         <div class="filter-tags-wrap">
-                                                            <input id="check-a" type="checkbox" name="ac">
+                                                            <input id="check-a" type="checkbox" @if($Property->ac == "on") checked @endif name="ac">
                                                             <label for="check-a">Air Conditioning</label>
                                                         </div>
                                                     </div>
@@ -321,7 +332,7 @@
                                                 <li class="fl-wrap filter-tags clearfix">
                                                     <div class="checkboxes float-left">
                                                         <div class="filter-tags-wrap">
-                                                            <input id="check-b" type="checkbox" name="swimming">
+                                                            <input id="check-b" type="checkbox" @if($Property->swimming == "on") checked @endif name="swimming">
                                                             <label for="check-b">Swimming Pool</label>
                                                         </div>
                                                     </div>
@@ -329,7 +340,7 @@
                                                 <li class="fl-wrap filter-tags clearfix">
                                                     <div class="checkboxes float-left">
                                                         <div class="filter-tags-wrap">
-                                                            <input id="check-c" type="checkbox" name="heater">
+                                                            <input id="check-c" type="checkbox" @if($Property->heater == "on") checked @endif name="heater">
                                                             <label for="check-c">Solar Heater</label>
                                                         </div>
                                                     </div>
@@ -337,40 +348,40 @@
                                                 <li class="fl-wrap filter-tags clearfix">
                                                     <div class="checkboxes float-left">
                                                         <div class="filter-tags-wrap">
-                                                            <input id="check-d" type="checkbox" name="laundry">
-                                                            <label for="check-d">Laundry Room</label>
+                                                            <input id="laundry" type="checkbox" @if($Property->laundry == "on") checked @endif name="laundry">
+                                                            <label for="laundry">Laundry Room</label>
                                                         </div>
                                                     </div>
                                                 </li>
                                                 <li class="fl-wrap filter-tags clearfix">
                                                     <div class="checkboxes float-left">
                                                         <div class="filter-tags-wrap">
-                                                            <input id="check-da" type="checkbox" name="parking">
-                                                            <label for="check-d">Parking</label>
+                                                            <input id="parking" type="checkbox" @if($Property->parking == "on") checked @endif name="parking">
+                                                            <label for="parking">Parking</label>
                                                         </div>
                                                     </div>
                                                 </li>
                                                 <li class="fl-wrap filter-tags clearfix">
                                                     <div class="checkboxes float-left">
                                                         <div class="filter-tags-wrap">
-                                                            <input id="check-db" type="checkbox" name="dishwasher">
-                                                            <label for="check-d">Dishwasher</label>
+                                                            <input id="dishwasher" type="checkbox" @if($Property->dishwasher == "on") checked @endif name="dishwasher">
+                                                            <label for="dishwasher">Dishwasher</label>
                                                         </div>
                                                     </div>
                                                 </li>
                                                 <li class="fl-wrap filter-tags clearfix">
                                                     <div class="checkboxes float-left">
                                                         <div class="filter-tags-wrap">
-                                                            <input id="check-dc" type="checkbox" name="balcony">
-                                                            <label for="check-d">Balcony</label>
+                                                            <input id="balcony" type="checkbox" @if($Property->balcony == "on") checked @endif name="balcony">
+                                                            <label for="balcony">Balcony</label>
                                                         </div>
                                                     </div>
                                                 </li>
                                                 <li class="fl-wrap filter-tags clearfix">
                                                     <div class="checkboxes float-left">
                                                         <div class="filter-tags-wrap">
-                                                            <input id="check-dd" type="checkbox" name="internet">
-                                                            <label for="check-d">Internet</label>
+                                                            <input id="internet" type="checkbox" @if($Property->internet == "on") checked @endif name="internet">
+                                                            <label for="internet">Internet</label>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -378,7 +389,7 @@
                                                 <li class="fl-wrap filter-tags clearfix">
                                                     <div class="checkboxes float-left">
                                                         <div class="filter-tags-wrap">
-                                                            <input id="check-e" type="checkbox" name="gym">
+                                                            <input id="check-e" type="checkbox" @if($Property->gym == "on") checked @endif name="gym">
                                                             <label for="check-e">Gym</label>
                                                         </div>
                                                     </div>
@@ -386,7 +397,7 @@
                                                 <li class="fl-wrap filter-tags clearfix">
                                                     <div class="checkboxes float-left">
                                                         <div class="filter-tags-wrap">
-                                                            <input id="check-g" type="checkbox" name="alarm">
+                                                            <input id="check-g" type="checkbox" @if($Property->alarm == "on") checked @endif name="alarm">
                                                             <label for="check-g">Alarm</label>
                                                         </div>
                                                     </div>
@@ -394,7 +405,7 @@
                                                 <li class="fl-wrap filter-tags clearfix">
                                                     <div class="checkboxes float-left">
                                                         <div class="filter-tags-wrap">
-                                                            <input id="check-h" type="checkbox" name="window_covering">
+                                                            <input id="check-h" type="checkbox" @if($Property->window_covering == "on") checked @endif name="window_covering">
                                                             <label for="check-h">Window Covering</label>
                                                         </div>
                                                     </div>
@@ -402,7 +413,7 @@
                                                 <li class="fl-wrap filter-tags clearfix">
                                                     <div class="checkboxes float-left">
                                                         <div class="filter-tags-wrap">
-                                                            <input id="check-i" type="checkbox" name="refrigerator">
+                                                            <input id="check-i" type="checkbox" @if($Property->refrigerator == "on") checked @endif name="refrigerator">
                                                             <label for="check-i">Refrigerator</label>
                                                         </div>
                                                     </div>
@@ -410,7 +421,7 @@
                                                 <li class="fl-wrap filter-tags clearfix">
                                                     <div class="checkboxes float-left">
                                                         <div class="filter-tags-wrap">
-                                                            <input id="check-j" type="checkbox" name="cable">
+                                                            <input id="check-j" type="checkbox" @if($Property->cable == "on") checked @endif name="cable">
                                                             <label for="check-j">TV Cable & WIFI</label>
                                                         </div>
                                                     </div>
@@ -418,7 +429,7 @@
                                                 <li class="fl-wrap filter-tags clearfix">
                                                     <div class="checkboxes float-left">
                                                         <div class="filter-tags-wrap">
-                                                            <input id="check-k" type="checkbox" name="microwave">
+                                                            <input id="check-k" type="checkbox" @if($Property->microwave == "on") checked @endif name="microwave">
                                                             <label for="check-k">Microwave</label>
                                                         </div>
                                                     </div>
@@ -464,7 +475,7 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="prperty-submit-button">
-                                                <button type="submit">Submit Property</button>
+                                                <button type="submit"><span class="fa fa-save"></span> Save Changes</button>
                                             </div>
                                         </div>
                                     </div>
