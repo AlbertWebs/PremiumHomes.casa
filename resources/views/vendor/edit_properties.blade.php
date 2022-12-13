@@ -133,7 +133,7 @@
                                                 <p>
                                                     <label for="description">Property Description</label>
                                                     {{-- <textarea id="description" name="property_description" placeholder="Describe about your property"></textarea> --}}
-                                                    <textarea name="property_description" id="article_ckeditor" rows="10" cols="80" required>{{$Property->property_name}}</textarea>
+                                                    <textarea name="property_description" id="article_ckeditor" rows="10" cols="80" required>{{$Property->property_description}}</textarea>
 
                                                     <script src="https://amanivehiclesounds.co.ke/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
                                                     <script>
@@ -440,7 +440,7 @@
                                 </div>
                             </div>
                             <div class="single-add-property">
-                                <h3>Contact Information</h3>
+                                {{-- <h3>Contact Information</h3>
                                 <div class="property-form-group">
                                     <div class="row">
                                         <div class="col-lg-6 col-md-12">
@@ -470,11 +470,11 @@
                                             </p>
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
                                 <div class="add-property-button pt-5">
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <div class="prperty-submit-button">
+                                            <div class="prperty-submit-button text-center">
                                                 <button type="submit"><span class="fa fa-save"></span> Save Changes</button>
                                             </div>
                                         </div>
