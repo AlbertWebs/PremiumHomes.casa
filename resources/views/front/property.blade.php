@@ -152,6 +152,7 @@
     <!-- Header Container / End -->
     <!-- END SECTION HEADINGS -->
 
+    @foreach ($Property as $Property)
     <!-- START SECTION PROPERTIES LISTING -->
     <section class="single-proper blog details int_dark_bg">
         <div class="container">
@@ -163,7 +164,7 @@
                                 <div class="pro-wrapper">
                                     <div class="detail-wrapper-body">
                                         <div class="listing-title-bar">
-                                            <h3>Rosehill Residence<span class="mrg-l-5 category-tag">For Sale</span></h3>
+                                            <h3>{{$Property->property_name}}<span class="mrg-l-5 category-tag">For Sale</span></h3>
                                             <div class="mt-0">
                                                 <a href="https://goo.gl/maps/CNmkJmheKMGWS83X6" class="listing-address">
                                                     <i class="fa fa-map-marker pr-2 ti-location-pin mrg-r-5"></i>Westfields Apartments - Lower Kabete
@@ -174,7 +175,7 @@
                                     <div class="single detail-wrapper mr-2">
                                         <div class="detail-wrapper-body">
                                             <div class="listing-title-bar">
-                                                <h4>$ 77,800</h4>
+                                                <h4>kes {{$Property->price}}</h4>
                                                 <div class="mt-0">
                                                     <a href="#listing-location" class="listing-address">
                                                         <p>187 sq ft</p>
@@ -938,6 +939,7 @@
         </div>
     </section>
     <!-- END SECTION PROPERTIES LISTING -->
+    @endforeach
 
     <!-- START FOOTER -->
     @include('front.footer')

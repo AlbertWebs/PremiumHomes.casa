@@ -592,6 +592,7 @@ class ComposerStaticInitc4197389d2da37cafcedd5c03b5d9663
         'App\\Models\\MpesaTransactionB2B' => __DIR__ . '/../..' . '/app/Models/MpesaTransactionB2B.php',
         'App\\Models\\MpesaTransactionB2C' => __DIR__ . '/../..' . '/app/Models/MpesaTransactionB2C.php',
         'App\\Models\\MpesaTransactionStatus' => __DIR__ . '/../..' . '/app/Models/MpesaTransactionStatus.php',
+        'App\\Models\\Nearby' => __DIR__ . '/../..' . '/app/Models/Nearby.php',
         'App\\Models\\Notification' => __DIR__ . '/../..' . '/app/Models/Notification.php',
         'App\\Models\\Package' => __DIR__ . '/../..' . '/app/Models/Package.php',
         'App\\Models\\Payment' => __DIR__ . '/../..' . '/app/Models/Payment.php',

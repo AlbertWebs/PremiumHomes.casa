@@ -506,83 +506,28 @@
 
 
 
+
                 <div class="row portfolio-items">
+                    @foreach ($Property as $prop)
                     <div class="item col-lg-6 col-md-6 col-xs-12 landscapes sale">
                         <div class="project-single mb-0" data-aos="fade-up">
                             <a href="single-property-1.html" class="recent-16">
-                                <div class="recent-img16 img-center" style="background-image: url('{{asset('theme/images/interior/p-1.jpg')}}');"></div>
+                                <div class="recent-img16 img-center" style="background-image: url('{{asset('uploads/properties/')}}/{{$prop->featured_image}}');"></div>
                                 <div class="recent-content"></div>
                                 <div class="recent-details">
-                                    <div class="recent-title">Luxury House</div>
-                                    <div class="recent-price">kes 23,000,000</div>
-                                    <div class="house-details">6 Bed <span>|</span> 3 Bath <span>|</span> 720 sq ft</div>
+                                    <div class="recent-title">{{$prop->property_name}}</div>
+                                <div class="recent-price mb-3">kes {{$prop->price}}</div>
+                                <div class="house-details thehp-1"><i class="fa fa-bed mr-1" aria-hidden="true"></i> {{$prop->bedrooms}} Bed <span>|</span><i class="fa fa-bath mr-1" aria-hidden="true"></i> {{$prop->Bath}} Bath <span>|</span><i class="fa fa-object-group mr-1" aria-hidden="true"></i> {{$prop->sqft}} sq ft</div>
                                 </div>
                                 <div class="view-proper">View Details</div>
                             </a>
                         </div>
                     </div>
-                    <div class="item col-lg-6 col-md-6 col-xs-12 people rent">
-                        <div class="project-single mb-0" data-aos="fade-up">
-                            <a href="single-property-1.html" class="recent-16">
-                                <div class="recent-img16 img-center" style="background-image: url('{{asset('theme/images/interior/p-2.jpg')}}');"></div>
-                                <div class="recent-content"></div>
-                                <div class="recent-details">
-                                    <div class="recent-title">Family Apartment</div>
-                                    <div class="recent-price">kes 23,000,000</div>
-                                    <div class="house-details">6 Bed <span>|</span> 3 Bath <span>|</span> 720 sq ft</div>
-                                </div>
-                                <div class="view-proper">View Details</div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="item col-lg-6 col-md-6 col-xs-12 people landscapes sale">
-                        <div class="project-single mb-0" data-aos="fade-up">
-                            <a href="single-property-1.html" class="recent-16">
-                                <div class="recent-img16 img-center" style="background-image: url('{{asset('theme/images/interior/p-3.jpg')}}');"></div>
-                                <div class="recent-content"></div>
-                                <div class="recent-details">
-                                    <div class="recent-title">Villa House</div>
-                                    <div class="recent-price">kes 23,000,000</div>
-                                    <div class="house-details">6 Bed <span>|</span> 3 Bath <span>|</span> 720 sq ft</div>
-                                </div>
-                                <div class="view-proper">View Details</div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="item col-lg-6 col-md-6 col-xs-12 people landscapes rent">
-                        <div class="project-single mb-0" data-aos="fade-up">
-                            <a href="single-property-1.html" class="recent-16">
-                                <div class="recent-img16 img-center" style="background-image: url('{{asset('theme/images/interior/p-4.jpg')}}');"></div>
-                                <div class="recent-content"></div>
-                                <div class="recent-details">
-                                    <div class="recent-title">Luxury Condo</div>
-                                    <div class="recent-price">kes 23,000,000</div>
-                                    <div class="house-details">6 Bed <span>|</span> 3 Bath <span>|</span> 720 sq ft</div>
-                                </div>
-                                <div class="view-proper">View Details</div>
-                            </a>
-                        </div>
-                    </div>
+                    @endforeach
 
 
                 </div>
-                <nav aria-label="..." class="pt-33">
-                    <ul class="pagination">
-                        <li class="page-item disabled">
-                            <a class="page-link" href="#" tabindex="-1">Previous</a>
-                        </li>
-                        <li class="page-item active">
-                            <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">5</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">Next</a>
-                        </li>
-                    </ul>
-                </nav>
+
             </div>
         </section>
         <!-- END SECTION PROPERTIES LISTING -->

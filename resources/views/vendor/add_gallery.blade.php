@@ -126,7 +126,21 @@
                                                 <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
                                             </form>
                                         </div>
-                                    </div>
+                                    </div><br><br>
+                                    {{--  --}}
+                                    {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> --}}
+                                    <section>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="prperty-submit-button">
+                                                    <a style="background-color: #bf9d34" class="btn btn-primary" href="#"><span class="fa fa-map-marker"></span> Update Nearby</a>
+
+                                                    <a style="background-color: #bf9d34" class="btn btn-primary" href="{{url('/')}}/vendors/update-gallery/{{$latest->id}}"><span class="fa fa-edit"></span> Update Galley</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    {{--  --}}
                                 </div>
                             </div>
                             @endforeach
@@ -156,11 +170,16 @@
 
                         {{--  --}}
 
+
+
                     </div>
+
                     {{--  --}}
                 </div>
             </div>
         </section>
+
+
         <!-- END SECTION DASHBOARD -->
 
         <a data-scroll href="#wrapper" class="go-up"><i class="fa fa-angle-double-up" aria-hidden="true"></i></a>

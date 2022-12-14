@@ -26,10 +26,12 @@ class HomeController extends Controller
     }
 
     public function properties($id){
-        return view('front.properties',compact('id'));
+        $Property = Property::where('Status',$id)->get();
+        return view('front.properties',compact('id','Property'));
     }
 
     public function plots($id){
+        $Property = Property::where('slung',$id)->get();
         return view('front.plots',compact('id'));
     }
 
