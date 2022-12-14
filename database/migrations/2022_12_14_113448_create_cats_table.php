@@ -13,13 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('nearbies', function (Blueprint $table) {
+        Schema::create('cats', function (Blueprint $table) {
             $table->id();
-            $table->string('amenities')->nullable();
-            $table->string('category')->nullable();
-            $table->string('proximity')->nullable();
-            $table->string('rating')->nullable();
-            $table->string('property_id')->nullable();
+            $table->string('title')->nullable();
+            $table->string('icon')->nullable();
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }
@@ -31,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('nearbies');
+        Schema::dropIfExists('cats');
     }
 };

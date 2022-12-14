@@ -577,6 +577,7 @@ class ComposerStaticInitc4197389d2da37cafcedd5c03b5d9663
         'App\\Models\\About' => __DIR__ . '/../..' . '/app/Models/About.php',
         'App\\Models\\Banner' => __DIR__ . '/../..' . '/app/Models/Banner.php',
         'App\\Models\\Blog' => __DIR__ . '/../..' . '/app/Models/Blog.php',
+        'App\\Models\\Cat' => __DIR__ . '/../..' . '/app/Models/Cat.php',
         'App\\Models\\Category' => __DIR__ . '/../..' . '/app/Models/Category.php',
         'App\\Models\\Comment' => __DIR__ . '/../..' . '/app/Models/Comment.php',
         'App\\Models\\Copyright' => __DIR__ . '/../..' . '/app/Models/Copyright.php',

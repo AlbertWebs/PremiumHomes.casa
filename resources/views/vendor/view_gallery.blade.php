@@ -113,63 +113,35 @@
                         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.4.0/min/dropzone.min.css">
                         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
                         <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.4.0/dropzone.js"></script>
+                        <br><br>
                         {{--  --}}
-                            @foreach ($Latest as $latest)
-                            <div class="single-add-property">
-                                <h3>property Media - {{$latest->property_name}}</h3>
-                                <div class="property-form-group">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <form action="{{url('image/upload/store')}}" enctype="multipart/form-data" class="dropzone">
-                                               @csrf
-                                                <input type="hidden" name="property_id" value="{{$latest->id}}">
-                                                <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
-                                            </form>
-                                        </div>
-                                    </div><br><br>
-                                    {{--  --}}
-                                    {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> --}}
-                                    <section>
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="prperty-submit-button">
-                                                    <a style="background-color: #bf9d34" class="btn btn-primary" href="{{url('/')}}/vendors/update-nearby/{{$latest->property_id}}"><span class="fa fa-map-marker"></span> Update Nearby</a>
-
-                                                    <a style="background-color: #bf9d34" class="btn btn-primary" href="{{url('/')}}/vendors/update-gallery/{{$latest->id}}"><span class="fa fa-edit"></span> Update Gallery</a>
-
-                                                    <a style="background-color: #bf9d34" class="btn btn-primary" href="{{url('/')}}/vendors/view-gallery/{{$latest->id}}"><span class="fa fa-image"></span> View Gallery</a>
-                                                </div>
+                        <div class="row">
+                            <div class="container">
+                                @foreach ($Gallery as $gal)
+                                <div class="col-md-2 thumax-2" style="margin-bottom: 10px;">
+                                    <div class="single-portfolio thumax">
+                                        <div class="portfolio-img">
+                                            <div class="popup-images">
+                                                <a class="popup-img" href="{{url('/')}}/images/{{$gal->filename}}"><img class="img-fluid w100" src="{{url('/')}}/images/{{$gal->filename}}" alt=""></a>
                                             </div>
                                         </div>
-                                    </section>
-                                    {{--  --}}
+                                    </div>
+                                </div>
+                                @endforeach
+                            </div>
+                        </div>
+                        <br><br>
+                        <center>
+                            <div class="row" >
+                                <div class="col-md-12" >
+                                    <div class="prperty-submit-button" >
+                                        <a style="background-color: #bf9d34" class="btn btn-primary" href="{{url('/')}}/vendors/update-nearby/{{$gal->property_id}}"><span class="fa fa-map-marker"></span> Update Nearby</a>
+
+                                        <a style="background-color: #bf9d34" class="btn btn-primary" href="{{url('/')}}/vendors/update-gallery/{{$gal->property_id}}"><span class="fa fa-edit"></span> Update Gallery</a>
+                                    </div>
                                 </div>
                             </div>
-                            @endforeach
-
-                            <script type="text/javascript">
-                                Dropzone.options.dropzone =
-                                 {
-                                        maxFilesize: 12,
-                                        renameFile: function(file) {
-                                            var dt = new Date();
-                                            var time = dt.getTime();
-                                        return time+file.name;
-                                        },
-                                        acceptedFiles: ".jpeg,.jpg,.png,.gif",
-                                        addRemoveLinks: true,
-                                        timeout: 5000,
-                                        success: function(file, response)
-                                        {
-                                            console.log(response);
-                                        },
-                                        error: function(file, response)
-                                        {
-                                          return false;
-                                        }
-                                };
-                                </script>
-
+                        </center>
                         {{--  --}}
 
 
@@ -180,6 +152,7 @@
                 </div>
             </div>
         </section>
+
 
 
         <!-- END SECTION DASHBOARD -->
@@ -199,13 +172,15 @@
 
         <!-- ARCHIVES JS -->
         <script src="{{asset('theme/js/jquery-3.5.1.min.js')}}"></script>
-        <script src="{{asset('theme/js/popper.min.js')}}"></script>
         <script src="{{asset('theme/js/jquery-ui.js')}}"></script>
         <script src="{{asset('theme/js/tether.min.js')}}"></script>
+        <script src="{{asset('theme/js/popper.min.js')}}"></script>
         <script src="{{asset('theme/js/moment.js')}}"></script>
         <script src="{{asset('theme/js/bootstrap.min.js')}}"></script>
         <script src="{{asset('theme/js/mmenu.min.js')}}"></script>
         <script src="{{asset('theme/js/mmenu.js')}}"></script>
+        <script src="{{asset('theme/js/jquery.magnific-popup.min.js')}}"></script>
+        <script src="{{asset('theme/js/popup.js')}}"></script>
         <script src="{{asset('theme/js/swiper.min.js')}}"></script>
         <script src="{{asset('theme/js/swiper.js')}}"></script>
         <script src="{{asset('theme/js/slick.min.js')}}"></script>
@@ -229,6 +204,7 @@
         <script src="{{asset('theme/js/forms-2.js')}}"></script>
         <script src="{{asset('theme/js/color-switcher.js')}}"></script>
         <script src="{{asset('theme/js/dropzone.js')}}"></script>
+        <script src="{{asset('theme/js/inner.js')}}"></script>
 
         <!-- MAIN JS -->
         <script src="{{asset('theme/js/script.js')}}"></script>
@@ -244,6 +220,9 @@
                 $(this).toggleClass("hu-menu-visdec");
             });
 
+        </script>
+          <script>
+            $('a[data-rel^=lightcase]').lightcase();
         </script>
         {{--  --}}
 

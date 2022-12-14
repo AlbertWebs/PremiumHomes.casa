@@ -245,11 +245,13 @@ Route::group(['prefix'=>'vendors'], function(){
     Route::get('/update-gallery/{id}', [App\Http\Controllers\VendorController::class, 'update_gallery'])->name('update_gallery');
     Route::get('/delete-gallery/{id}', [App\Http\Controllers\VendorController::class, 'delete_gallery'])->name('delete-gallery');
 
+    Route::get('/update-nearby/{id}', [App\Http\Controllers\VendorController::class, 'update_nearby'])->name('update-nearby');
 
     Route::get('/upgrade/{id}', [App\Http\Controllers\VendorController::class, 'upgrade'])->name('upgrade');
     Route::get('/downgrade/{id}', [App\Http\Controllers\VendorController::class, 'downgrade'])->name('downgrade');
 
     Route::get('/delete-properties/{id}', [App\Http\Controllers\VendorController::class, 'delete_property'])->name('delete-properties');
+    Route::get('/view-gallery/{id}', [App\Http\Controllers\VendorController::class, 'view_gallery'])->name('view_gallery');
 
 
     // Post

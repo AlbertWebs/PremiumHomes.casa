@@ -16,6 +16,7 @@ use Redirect;
 use Session;
 use App\Models\Invoice;
 use App\Models\User;
+use App\Models\Nearby;
 use App\Models\SendMail;
 use Mail;
 
@@ -168,6 +169,19 @@ class VendorController extends Controller
         //Get Latest
         $Latest = Property::orderBy('created_at','DESC')->first();
         return redirect()->route('add_gallery', [$Latest->id]);
+    }
+
+
+    public function view_gallery($id){
+        $active = "properties";
+        $Gallery = Gallery::where('property_id',$id)->get();
+        return view('vendor.view_gallery',compact('Gallery','active'));
+    }
+
+    public function update_nearby($id){
+        $active = "properties";
+        $Nearby = Nearby::where('property_id',$id)->get();
+        return view('vendor.update_nearby',compact('Nearby','active'));
     }
 
     public function edit_properties($id){

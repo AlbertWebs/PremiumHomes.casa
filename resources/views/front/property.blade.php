@@ -188,26 +188,21 @@
                             </section>
                             <!-- main slider carousel items -->
                             <div id="listingDetailsSlider" class="carousel listing-details-sliders slide mb-30">
-                                <h5 class="mb-4">Gallery</h5>
+                                {{-- <h5 class="mb-4">Gallery</h5> --}}
                                 <div class="carousel-inner">
                                     <div class="active item carousel-item" data-slide-number="0">
-                                        <img src="{{asset('uploads/properties/rosehill-render.jpg')}}" class="img-fluid" alt="slider-listing">
+                                        <img src="{{url('/')}}/uploads/properties/{{$Property->featured_image}}" class="img-fluid" alt="slider-listing">
                                     </div>
-                                    <div class="item carousel-item" data-slide-number="1">
-                                        <img src="{{asset('uploads/properties/rosehill-1.jpg')}}" class="img-fluid" alt="slider-listing">
+                                    <?php
+                                        $Gallery = DB::table('galleries')->where('property_id', $Property->id)->get();
+                                    ?>
+                                    @foreach ($Gallery as $gallery)
+                                    <div class="item carousel-item" data-slide-number="{{$gallery->id}}">
+                                        <img src="{{url('/')}}/images/{{$gallery->filename}}" class="img-fluid" alt="slider-listing">
                                     </div>
-                                    <div class="item carousel-item" data-slide-number="2">
-                                        <img src="{{asset('uploads/properties/rosehill-2.jpg')}}" class="img-fluid" alt="slider-listing">
-                                    </div>
-                                    <div class="item carousel-item" data-slide-number="4">
-                                        <img src="{{asset('uploads/properties/rosehill-3.jpg')}}" class="img-fluid" alt="slider-listing">
-                                    </div>
-                                    <div class="item carousel-item" data-slide-number="5">
-                                        <img src="{{asset('uploads/properties/rosehill-4.jpg')}}" class="img-fluid" alt="slider-listing">
-                                    </div>
-                                    <div class="item carousel-item" data-slide-number="6">
-                                        <img src="{{asset('uploads/properties/rosehill-5.jpg')}}" class="img-fluid" alt="slider-listing">
-                                    </div>
+                                    @endforeach
+
+
 
                                     <a class="carousel-control left" href="#listingDetailsSlider" data-slide="prev"><i class="fa fa-angle-left"></i></a>
                                     <a class="carousel-control right" href="#listingDetailsSlider" data-slide="next"><i class="fa fa-angle-right"></i></a>
@@ -217,50 +212,23 @@
                                 <ul class="carousel-indicators smail-listing list-inline">
                                     <li class="list-inline-item active">
                                         <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#listingDetailsSlider">
-                                            <img style="min-height:85px" src="{{asset('uploads/properties/rosehill-render.jpg')}}" class="img-fluid" alt="listing-small">
+                                            <img style="min-height:85px" src="{{url('/')}}/uploads/properties/{{$Property->featured_image}}" class="img-fluid" alt="listing-small">
                                         </a>
                                     </li>
+                                    @foreach ($Gallery as $gallery)
                                     <li class="list-inline-item">
-                                        <a id="carousel-selector-1" data-slide-to="1" data-target="#listingDetailsSlider">
-                                            <img src="{{asset('uploads/properties/rosehill-1.jpg')}}" class="img-fluid" alt="listing-small">
+                                        <a id="carousel-selector-1" data-slide-to="{{$gallery->id}}" data-target="#listingDetailsSlider">
+                                            <img style="min-height:85px" src="{{url('/')}}/images/{{$gallery->filename}}" class="img-fluid" alt="listing-small">
                                         </a>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <a id="carousel-selector-2" data-slide-to="2" data-target="#listingDetailsSlider">
-                                            <img src="{{asset('uploads/properties/rosehill-2.jpg')}}" class="img-fluid" alt="listing-small">
-                                        </a>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <a id="carousel-selector-3" data-slide-to="3" data-target="#listingDetailsSlider">
-                                            <img src="{{asset('uploads/properties/rosehill-3.jpg')}}" class="img-fluid" alt="listing-small">
-                                        </a>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <a id="carousel-selector-4" data-slide-to="4" data-target="#listingDetailsSlider">
-                                            <img src="{{asset('uploads/properties/rosehill-4.jpg')}}" class="img-fluid" alt="listing-small">
-                                        </a>
-                                    </li>
-
+                                    @endforeach
                                 </ul>
                                 <!-- main slider carousel items -->
                             </div>
                             <div class="blog-info details mb-30">
                                 <h5 class="mb-4">Description</h5>
                                 <p class="mb-3">
-                                    Modern living having incorporated good quality finishes and
-                                    good use of space.3 and 2 bedrooms.
-                                    journey for good and steady returns starting from only KES
-                                    9.5 million.
-                                    <br>
-                                    Main features include:<br>
-                                    Gym & fitness center<br>
-                                    High speed lift <br>
-                                    127sqm plinth area.<br>
-                                    Solar power <br>
-                                    Back up genset <br>
-                                    On-site borehole <br>
-                                    Ample parking <br>
-                                    Rooftop terrace<br>
+                                    {!! nl2br($Property->property_description) !!}
                                 </p>
                                 {{-- <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum rerum beatae consequatur, totam fugit, alias fuga aliquam quod tempora a nisi esse magnam nulla quas! Error praesentium, vero dolorum laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum rerum beatae consequatur, totam fugit.</p>
                                 <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum rerum beatae consequatur, totam fugit, alias fuga aliquam quod tempora a nisi esse magnam nulla quas! Error praesentium, vero dolorum laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum rerum beatae consequatur, totam fugit.</p> --}}
@@ -359,122 +327,73 @@
                         <div class="property-nearby">
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <div class="nearby-info mb-4">
-                                        <span class="nearby-title mb-3 d-block text-info">
-                                           <i class="fas fa-graduation-cap mr-2"></i><b class="title">Education</b>
-                                        </span>
-                                        <div class="nearby-list">
-                                            <ul class="property-list list-unstyled mb-0">
-                                                <li class="d-flex">
-                                                    <h6 class="mb-3 mr-2">Peponi School</h6>
-                                                    <span>(15.61 miles)</span>
-                                                    <ul class="list-unstyled list-inline ml-auto">
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star-half fa-xs"></i></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="d-flex">
-                                                    <h6 class="mb-3 mr-2">Internatonal Schools</h6>
-                                                    <span>(15.23 miles)</span>
-                                                    <ul class="list-unstyled list-inline ml-auto">
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="far fa-star fa-xs"></i></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="d-flex">
-                                                    <h6 class="mb-3 mr-2">University of Nairobi</h6>
-                                                    <span>(15.16 miles)</span>
-                                                    <ul class="list-unstyled list-inline ml-auto">
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="nearby-info mb-4">
-                                        <span class="nearby-title mb-3 d-block text-success">
-                                          <i class="fas fa-user-md mr-2"></i><b class="title">Health & Medical</b>
-                                        </span>
-                                        <div class="nearby-list">
-                                            <ul class="property-list list-unstyled mb-0">
-                                                <li class="d-flex">
-                                                    <h6 class="mb-3 mr-2">Mp Sha Market</h6>
-                                                    <span>(13.20 miles)</span>
-                                                    <ul class="list-unstyled list-inline ml-auto">
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star-half fa-xs"></i></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="d-flex">
-                                                    <h6 class="mb-3 mr-2">St. Ann's Hospital</h6>
-                                                    <span>(13.22 miles)</span>
-                                                    <ul class="list-unstyled list-inline ml-auto">
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star-half fa-xs"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="far fa-star fa-xs"></i></li>
-                                                    </ul>
-                                                </li>
 
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="nearby-info">
-                                        <span class="nearby-title mb-3 d-block text-danger">
-                                            <i class="fas fa-car mr-2"></i><b class="title">Transportation</b>
-                                        </span>
-                                        <div class="nearby-list">
-                                            <ul class="property-list list-unstyled mb-0">
-                                                <li class="d-flex">
-                                                    <h6 class="mb-3 mr-2">Nairobi Express Way</h6>
-                                                    <span>(11.36 miles)</span>
-                                                    <ul class="list-unstyled list-inline ml-auto">
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star-half fa-xs"></i></li>
+                                    <?php
+                                        $Cat = DB::table('cats')->get();
+                                    ?>
+                                        @foreach ($Cat as $cat)
+
+                                            <div class="nearby-info mb-4">
+                                                <span class="nearby-title mb-3 d-block text-{{$cat->image}}">
+                                                <i class="fas fa-graduation-cap mr-2"></i><b class="title">{{$cat->title}}</b>
+                                                </span>
+                                                <div class="nearby-list">
+                                                    <ul class="property-list list-unstyled mb-0">
+                                                        <?php $Nearby = DB::table('nearbies')->where('category',$cat->title)->get(); ?>
+                                                        @foreach ($Nearby as $nearby)
+                                                        <li class="d-flex">
+                                                            <h6 class="mb-3 mr-2">{{$nearby->amenities}}</h6>
+                                                            <span>({{$nearby->proximity}})</span>
+                                                            <?php
+                                                                $Rating = ceil($nearby->rating);
+                                                             ?>
+                                                            @if($Rating == 1)
+                                                            <ul class="list-unstyled list-inline ml-auto">
+                                                                <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
+                                                                <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
+                                                                <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
+                                                                <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
+                                                                <li class="list-inline-item m-0 text-warning"><i class="fas fa-star-half fa-xs"></i></li>
+                                                            </ul>
+                                                            @elseif($Rating == 2)
+                                                            <ul class="list-unstyled list-inline ml-auto">
+                                                                <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
+                                                                <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
+                                                                <li class="list-inline-item m-0 text-warning"><i class="far fa-star fa-xs"></i></li>
+                                                                <li class="list-inline-item m-0 text-warning"><i class="far fa-star fa-xs"></i></li>
+                                                                <li class="list-inline-item m-0 text-warning"><i class="far fa-star fa-xs"></i></li>
+                                                            </ul>
+                                                            @elseif($Rating == 3)
+                                                            <ul class="list-unstyled list-inline ml-auto">
+                                                                <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
+                                                                <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
+                                                                <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
+                                                                <li class="list-inline-item m-0 text-warning"><i class="far fa-star fa-xs"></i></li>
+                                                                <li class="list-inline-item m-0 text-warning"><i class="far fa-star fa-xs"></i></li>
+                                                            </ul>
+                                                            @elseif($Rating == 4)
+                                                            <ul class="list-unstyled list-inline ml-auto">
+                                                                <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
+                                                                <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
+                                                                <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
+                                                                <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
+                                                                <li class="list-inline-item m-0 text-warning"><i class="far fa-star fa-xs"></i></li>
+                                                            </ul>
+                                                            @elseif($Rating == 5)
+                                                            <ul class="list-unstyled list-inline ml-auto">
+                                                                <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
+                                                                <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
+                                                                <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
+                                                                <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
+                                                                <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
+                                                            </ul>
+                                                            @endif
+                                                        </li>
+                                                        @endforeach
                                                     </ul>
-                                                </li>
-                                                <li class="d-flex">
-                                                    <h6 class="mb-3 mr-2">NYC Executive Limo</h6>
-                                                    <span>(11.87 miles)</span>
-                                                    <ul class="list-unstyled list-inline ml-auto">
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star-half fa-xs"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="far fa-star fa-xs"></i></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="d-flex">
-                                                    <h6 class="mb-3 mr-2">Uber, Bolt & PTG</h6>
-                                                    <span>(0 miles)</span>
-                                                    <ul class="list-unstyled list-inline ml-auto">
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star-half"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                        <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                                </div>
+                                            </div>
+                                        @endforeach
                                 </div>
                             </div>
                         </div>
@@ -482,9 +401,9 @@
                     <div>
                         <div class="property wprt-image-video w50 pro" style="position: relative">
                             <h5>Property Video</h5>
-                            <img style="border-radius:10px" alt="image" src="{{asset('theme/images/slider/home-slider-4.jpg')}}">
+                            <img style="border-radius:10px" alt="image" src="{{url('/')}}/uploads/properties/{{$Property->featured_image}}">
                             <div style="position: absolute; top: 50%; left: 50%;">
-                                <a class="icon-wrap popup-video popup-youtube" href="https://www.youtube.com/watch?v=eDp8jLl4LVs">
+                                <a class="icon-wrap popup-video popup-youtube" href="{{$Property->video}}">
                                     <i class="fa fa-play"></i>
                                 </a>
                                 <div class="iq-waves">
@@ -499,8 +418,10 @@
                         <h5>Location</h5>
                         <div class="divider-fade"></div>
                         <div class="contact-map">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15955.557192204415!2d36.7201291!3d-1.2364671!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1e2f130aa1a43250!2sRosehill%20residence!5e0!3m2!1sen!2ske!4v1669530628064!5m2!1sen!2ske" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            {{-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15955.557192204415!2d36.7201291!3d-1.2364671!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1e2f130aa1a43250!2sRosehill%20residence!5e0!3m2!1sen!2ske!4v1669530628064!5m2!1sen!2ske" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> --}}
+                            {!! nl2br($Property->iframe) !!}
                         </div>
+                        <br><br><br>
                     </div>
                 </div>
                 <aside class="col-lg-4 col-md-12 car">
@@ -764,178 +685,7 @@
                     </div>
                 </aside>
             </div>
-            <!-- START SIMILAR PROPERTIES -->
-            <section class="similar-property featured portfolio p-0 bg-white-inner">
-                <div class="container">
-                    <h5>Similar Properties</h5>
-                    <div class="row portfolio-items">
-                        <div class="item col-lg-4 col-md-6 col-xs-12 landscapes">
-                            <div class="project-single">
-                                <div class="project-inner project-head">
-                                    <div class="homes">
-                                        <!-- homes img -->
-                                        <a href="single-property-1.html" class="homes-img">
-                                            <div class="homes-tag button alt featured">Featured</div>
-                                            <div class="homes-tag button alt sale">For Sale</div>
-                                            <div class="homes-price">$900,000</div>
-                                            <img src="{{asset('theme/images/blog/b-11.jpg')}}" alt="home-1" class="img-responsive">
-                                        </a>
-                                    </div>
-                                    <div class="button-effect">
-                                        <a href="single-property-1.html" class="btn"><i class="fa fa-link"></i></a>
-                                        <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                        <a href="{{url('/')}}/properties/slung" class="img-poppu btn"><i class="fa fa-photo"></i></a>
-                                    </div>
-                                </div>
-                                <!-- homes content -->
-                                <div class="homes-content">
-                                    <!-- homes address -->
-                                    <h3><a href="single-property-1.html">Real House Luxury Villa</a></h3>
-                                    <p class="homes-address mb-3">
-                                        <a href="single-property-1.html">
-                                            <i class="fa fa-map-marker"></i><span>Karuna Close, Westlands, Nairobi</span>
-                                        </a>
-                                    </p>
-                                    <!-- homes List -->
-                                    <ul class="homes-list clearfix pb-3">
-                                        <li class="the-icons">
-                                            <i class="flaticon-bed mr-2" aria-hidden="true"></i>
-                                            <span>6 Bedrooms</span>
-                                        </li>
-                                        <li class="the-icons">
-                                            <i class="flaticon-bathtub mr-2" aria-hidden="true"></i>
-                                            <span>3 Bathrooms</span>
-                                        </li>
-                                        <li class="the-icons">
-                                            <i class="flaticon-square mr-2" aria-hidden="true"></i>
-                                            <span>720 sq ft</span>
-                                        </li>
-                                        <li class="the-icons">
-                                            <i class="flaticon-car mr-2" aria-hidden="true"></i>
-                                            <span>2 Garages</span>
-                                        </li>
-                                    </ul>
-                                    <div class="footer">
-                                        <a href="agent-details.html">
-                                            <img src="{{asset('theme/images/testimonials/199259143_4389625377747506_3043984032264076715_n.jpg')}}" alt="" class="mr-2"> Beatrice Mwangi
-                                        </a>
-                                        <span>2 months ago</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item col-lg-4 col-md-6 col-xs-12 people">
-                            <div class="project-single">
-                                <div class="project-inner project-head">
-                                    <div class="homes">
-                                        <!-- homes img -->
-                                        <a href="single-property-1.html" class="homes-img">
-                                            <div class="homes-tag button sale rent">For Rent</div>
-                                            <div class="homes-price">$3,000/mo</div>
-                                            <img src="{{asset('theme/images/blog/b-12.jpg')}}" alt="home-1" class="img-responsive">
-                                        </a>
-                                    </div>
-                                    <div class="button-effect">
-                                        <a href="single-property-1.html" class="btn"><i class="fa fa-link"></i></a>
-                                        <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                        <a href="{{url('/')}}/properties/slung" class="img-poppu btn"><i class="fa fa-photo"></i></a>
-                                    </div>
-                                </div>
-                                <!-- homes content -->
-                                <div class="homes-content">
-                                    <!-- homes address -->
-                                    <h3><a href="single-property-1.html">Real House Luxury Villa</a></h3>
-                                    <p class="homes-address mb-3">
-                                        <a href="single-property-1.html">
-                                            <i class="fa fa-map-marker"></i><span>Karuna Close, Westlands, Nairobi</span>
-                                        </a>
-                                    </p>
-                                    <!-- homes List -->
-                                    <ul class="homes-list clearfix pb-3">
-                                        <li class="the-icons">
-                                            <i class="flaticon-bed mr-2" aria-hidden="true"></i>
-                                            <span>6 Bedrooms</span>
-                                        </li>
-                                        <li class="the-icons">
-                                            <i class="flaticon-bathtub mr-2" aria-hidden="true"></i>
-                                            <span>3 Bathrooms</span>
-                                        </li>
-                                        <li class="the-icons">
-                                            <i class="flaticon-square mr-2" aria-hidden="true"></i>
-                                            <span>720 sq ft</span>
-                                        </li>
-                                        <li class="the-icons">
-                                            <i class="flaticon-car mr-2" aria-hidden="true"></i>
-                                            <span>2 Garages</span>
-                                        </li>
-                                    </ul>
-                                    <div class="footer">
-                                        <a href="agent-details.html">
-                                            <img src="{{asset('theme/images/testimonials/199259143_4389625377747506_3043984032264076715_n.jpg')}}" alt="" class="mr-2"> Albert Muhatia
-                                        </a>
-                                        <span>2 months ago</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item col-lg-4 col-md-6 col-xs-12 people landscapes no-pb pbp-3">
-                            <div class="project-single no-mb mbp-3">
-                                <div class="project-inner project-head">
-                                    <div class="homes">
-                                        <!-- homes img -->
-                                        <a href="single-property-1.html" class="homes-img">
-                                            <div class="homes-tag button alt sale">For Sale</div>
-                                            <div class="homes-price">$9,000/mo</div>
-                                            <img src="{{asset('theme/images/blog/b-1.jpg')}}" alt="home-1" class="img-responsive">
-                                        </a>
-                                    </div>
-                                    <div class="button-effect">
-                                        <a href="single-property-1.html" class="btn"><i class="fa fa-link"></i></a>
-                                        <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                        <a href="{{url('/')}}/properties/slung" class="img-poppu btn"><i class="fa fa-photo"></i></a>
-                                    </div>
-                                </div>
-                                <!-- homes content -->
-                                <div class="homes-content">
-                                    <!-- homes address -->
-                                    <h3><a href="single-property-1.html">Real House Luxury Villa</a></h3>
-                                    <p class="homes-address mb-3">
-                                        <a href="single-property-1.html">
-                                            <i class="fa fa-map-marker"></i><span>Karuna Close, Westlands, Nairobi</span>
-                                        </a>
-                                    </p>
-                                    <!-- homes List -->
-                                    <ul class="homes-list clearfix pb-3">
-                                        <li class="the-icons">
-                                            <i class="flaticon-bed mr-2" aria-hidden="true"></i>
-                                            <span>6 Bedrooms</span>
-                                        </li>
-                                        <li class="the-icons">
-                                            <i class="flaticon-bathtub mr-2" aria-hidden="true"></i>
-                                            <span>3 Bathrooms</span>
-                                        </li>
-                                        <li class="the-icons">
-                                            <i class="flaticon-square mr-2" aria-hidden="true"></i>
-                                            <span>720 sq ft</span>
-                                        </li>
-                                        <li class="the-icons">
-                                            <i class="flaticon-car mr-2" aria-hidden="true"></i>
-                                            <span>2 Garages</span>
-                                        </li>
-                                    </ul>
-                                    <div class="footer">
-                                        <a href="agent-details.html">
-                                            <img src="{{asset('theme/images/testimonials/199259143_4389625377747506_3043984032264076715_n.jpg')}}" alt="" class="mr-2"> Terry Waweru
-                                        </a>
-                                        <span>2 months ago</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- END SIMILAR PROPERTIES -->
+
         </div>
     </section>
     <!-- END SECTION PROPERTIES LISTING -->
