@@ -195,11 +195,13 @@
                                     </div>
                                     <?php
                                         $Gallery = DB::table('galleries')->where('property_id', $Property->id)->get();
+                                        $Count = 1
                                     ?>
                                     @foreach ($Gallery as $gallery)
-                                    <div class="item carousel-item" data-slide-number="{{$gallery->id}}">
+                                    <div class="item carousel-item" data-slide-number="{{$Count}}">
                                         <img src="{{url('/')}}/images/{{$gallery->filename}}" class="img-fluid" alt="slider-listing">
                                     </div>
+                                    <?php $Count = $Count+1;?>
                                     @endforeach
 
 
@@ -212,15 +214,17 @@
                                 <ul class="carousel-indicators smail-listing list-inline">
                                     <li class="list-inline-item active">
                                         <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#listingDetailsSlider">
-                                            <img style="min-height:85px" src="{{url('/')}}/uploads/properties/{{$Property->featured_image}}" class="img-fluid" alt="listing-small">
+                                            <img  src="{{url('/')}}/uploads/properties/{{$Property->featured_image}}" class="img-fluid" alt="listing-small">
                                         </a>
                                     </li>
+                                    <?php $Count = 1 ?>
                                     @foreach ($Gallery as $gallery)
                                     <li class="list-inline-item">
-                                        <a id="carousel-selector-1" data-slide-to="{{$gallery->id}}" data-target="#listingDetailsSlider">
-                                            <img style="min-height:85px" src="{{url('/')}}/images/{{$gallery->filename}}" class="img-fluid" alt="listing-small">
+                                        <a id="carousel-selector-{{$Count}}" data-slide-to="{{$Count}}" data-target="#listingDetailsSlider">
+                                            <img src="{{url('/')}}/images/{{$gallery->filename}}" class="img-fluid" alt="listing-small">
                                         </a>
                                     </li>
+                                    <?php $Count = $Count+1;?>
                                     @endforeach
                                 </ul>
                                 <!-- main slider carousel items -->
@@ -318,10 +322,10 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="floor-plan property wprt-image-video w50 pro">
+                    {{-- <div class="floor-plan property wprt-image-video w50 pro">
                         <h5>Floor Plans</h5>
                         <img alt="image" src="{{asset('theme/images/bg/floor-plan-1.png')}}">
-                    </div>
+                    </div> --}}
                     <div class="floor-plan property wprt-image-video w50 pro">
                         <h5>What's Nearby</h5>
                         <div class="property-nearby">
