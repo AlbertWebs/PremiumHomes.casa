@@ -525,165 +525,24 @@
                                     </div>
                                     <div class="widget-boxed-body">
                                         <div class="recent-post">
-                                            <div class="recent-main">
-                                                <div class="recent-img">
-                                                    <a href="blog-details.html"><img src="{{asset('theme/images/feature-properties/fp-1.jpg')}}" alt=""></a>
-                                                </div>
-                                                <div class="info-img">
-                                                    <a href="blog-details.html"><h6>Family Home</h6></a>
-                                                    <p>$640,000</p>
-                                                </div>
-                                            </div>
+                                            <?php
+                                                $RecentProperties = DB::table('properties')->orderBy('id','ASC')->get();
+                                            ?>
+                                            @foreach ($RecentProperties as $Recent)
                                             <div class="recent-main my-4">
                                                 <div class="recent-img">
-                                                    <a href="blog-details.html"><img src="{{asset('theme/images/feature-properties/fp-2.jpg')}}" alt=""></a>
+                                                    <a href="{{route('property-single',[$Recent->slung])}}"><img src="{{url('/')}}/uploads/properties/{{$Recent->featured_image}}" alt=""></a>
                                                 </div>
-                                                <div class="info-img">
-                                                    <a href="blog-details.html"><h6>Family Home</h6></a>
-                                                    <p>$330,000</p>
-                                                </div>
-                                            </div>
-                                            <div class="recent-main">
-                                                <div class="recent-img">
-                                                    <a href="blog-details.html"><img src="{{asset('theme/images/feature-properties/fp-3.jpg')}}" alt=""></a>
-                                                </div>
-                                                <div class="info-img">
-                                                    <a href="blog-details.html"><h6>Family Home</h6></a>
-                                                    <p>$198,000</p>
+                                                <div class="info-img" style="margin-left:5px">
+                                                    <a href="{{route('property-single',[$Recent->slung])}}"><h6>{{$Recent->property_name}}</h6></a>
+                                                    <p>{{$Recent->price}}</p>
                                                 </div>
                                             </div>
+                                            @endforeach
                                         </div>
                                     </div>
                                 </div>
-                                <div class="widget-boxed mt-5">
-                                    <div class="widget-boxed-header mb-5">
-                                        <h4>Feature Properties</h4>
-                                    </div>
-                                    <div class="widget-boxed-body">
-                                        <div class="slick-lancers">
-                                            <div class="agents-grid mr-0">
-                                                <div class="listing-item compact">
-                                                    <a href="properties-details.html" class="listing-img-container">
-                                                        <div class="listing-badges">
-                                                            <span class="featured">$ 200,000</span>
-                                                            <span>For Sale</span>
-                                                        </div>
-                                                        <div class="listing-img-content">
-                                                            <span class="listing-compact-title">House Luxury <i>Lavington</i></span>
-                                                            <ul class="listing-hidden-content">
-                                                                <li>Area <span>720 sq ft</span></li>
-                                                                <li>Rooms <span>6</span></li>
-                                                                <li>Beds <span>2</span></li>
-                                                                <li>Baths <span>3</span></li>
-                                                            </ul>
-                                                        </div>
-                                                        <img src="{{asset('theme/images/feature-properties/fp-1.jpg')}}" alt="">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="agents-grid mr-0">
-                                                <div class="listing-item compact">
-                                                    <a href="properties-details.html" class="listing-img-container">
-                                                        <div class="listing-badges">
-                                                            <span class="featured">$ 6,500</span>
-                                                            <span class="rent">For Rent</span>
-                                                        </div>
-                                                        <div class="listing-img-content">
-                                                            <span class="listing-compact-title">House Luxury <i>Runda</i></span>
-                                                            <ul class="listing-hidden-content">
-                                                                <li>Area <span>720 sq ft</span></li>
-                                                                <li>Rooms <span>6</span></li>
-                                                                <li>Beds <span>2</span></li>
-                                                                <li>Baths <span>3</span></li>
-                                                            </ul>
-                                                        </div>
-                                                        <img src="{{asset('theme/images/feature-properties/fp-2.jpg')}}" alt="">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="agents-grid mr-0">
-                                                <div class="listing-item compact">
-                                                    <a href="properties-details.html" class="listing-img-container">
-                                                        <div class="listing-badges">
-                                                            <span class="featured">$ 235,000</span>
-                                                            <span>For Sale</span>
-                                                        </div>
-                                                        <div class="listing-img-content">
-                                                            <span class="listing-compact-title">House Luxury <i>Langata</i></span>
-                                                            <ul class="listing-hidden-content">
-                                                                <li>Area <span>720 sq ft</span></li>
-                                                                <li>Rooms <span>6</span></li>
-                                                                <li>Beds <span>2</span></li>
-                                                                <li>Baths <span>3</span></li>
-                                                            </ul>
-                                                        </div>
-                                                        <img src="{{asset('theme/images/feature-properties/fp-3.jpg')}}" alt="">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="agents-grid mr-0">
-                                                <div class="listing-item compact">
-                                                    <a href="properties-details.html" class="listing-img-container">
-                                                        <div class="listing-badges">
-                                                            <span class="featured">$ 6,500</span>
-                                                            <span class="rent">For Rent</span>
-                                                        </div>
-                                                        <div class="listing-img-content">
-                                                            <span class="listing-compact-title">House Luxury <i>Upper Hill</i></span>
-                                                            <ul class="listing-hidden-content">
-                                                                <li>Area <span>720 sq ft</span></li>
-                                                                <li>Rooms <span>6</span></li>
-                                                                <li>Beds <span>2</span></li>
-                                                                <li>Baths <span>3</span></li>
-                                                            </ul>
-                                                        </div>
-                                                        <img src="{{asset('theme/images/feature-properties/fp-4.jpg')}}" alt="">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="agents-grid mr-0">
-                                                <div class="listing-item compact">
-                                                    <a href="properties-details.html" class="listing-img-container">
-                                                        <div class="listing-badges">
-                                                            <span class="featured">$ 230,000</span>
-                                                            <span>For Sale</span>
-                                                        </div>
-                                                        <div class="listing-img-content">
-                                                            <span class="listing-compact-title">House Luxury <i>Loresho</i></span>
-                                                            <ul class="listing-hidden-content">
-                                                                <li>Area <span>720 sq ft</span></li>
-                                                                <li>Rooms <span>6</span></li>
-                                                                <li>Beds <span>2</span></li>
-                                                                <li>Baths <span>3</span></li>
-                                                            </ul>
-                                                        </div>
-                                                        <img src="{{asset('theme/images/feature-properties/fp-5.jpg')}}" alt="">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="agents-grid mr-0">
-                                                <div class="listing-item compact">
-                                                    <a href="properties-details.html" class="listing-img-container">
-                                                        <div class="listing-badges">
-                                                            <span class="featured">$ 6,500</span>
-                                                            <span class="rent">For Rent</span>
-                                                        </div>
-                                                        <div class="listing-img-content">
-                                                            <span class="listing-compact-title">House Luxury <i>Kilimani</i></span>
-                                                            <ul class="listing-hidden-content">
-                                                                <li>Area <span>720 sq ft</span></li>
-                                                                <li>Rooms <span>6</span></li>
-                                                                <li>Beds <span>2</span></li>
-                                                                <li>Baths <span>3</span></li>
-                                                            </ul>
-                                                        </div>
-                                                        <img src="{{asset('theme/images/feature-properties/fp-6.jpg')}}" alt="">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                     </div>

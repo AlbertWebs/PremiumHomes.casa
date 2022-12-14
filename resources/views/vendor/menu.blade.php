@@ -1,5 +1,5 @@
 <ul id="responsive">
-    <li style="border:2px solid #bf9d34"><a style="color:#bf9d34" target="new" href="#">Home</a>
+    <li style="border:2px solid #bf9d34"><a style="color:#bf9d34" target="new" href="{{url('/')}}">Home</a>
     <li style="border:2px solid #bf9d34"><a style="color:#bf9d34" target="new"  href="{{route('properties-home',['rent'])}}">For Rent</a> </li>
     <li style="border:2px solid #bf9d34"><a style="color:#bf9d34" target="new" href="{{route('properties-home',['sale'])}}">For Sale</a> </li>
     <li style="border:2px solid #bf9d34"><a style="color:#bf9d34" target="new" onclick="alert('work in progress')" href="#">Property Advice</a> </li>
