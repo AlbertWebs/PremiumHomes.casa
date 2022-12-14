@@ -11,7 +11,8 @@ class HomeController extends Controller
     public function index()
     {
         $Property = Property::all();
-        return view('front.index', compact('Property'));
+        $PropertyRent = Property::where('Status','Rent')->get();
+        return view('front.index', compact('Property','PropertyRent'));
     }
 
     public function invoice()

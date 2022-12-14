@@ -140,10 +140,8 @@
                             Hi, {{Auth::User()->name}}
                         </div>
                         <ul>
-                            <li><a href="user-profile#"> Edit profile</a></li>
-                            <li><a href="add-property#"> Add Property</a></li>
-                            <li><a href="payment-method#">  Payments</a></li>
-                            <li><a href="change-password#"> Change Password</a></li>
+                            <li><a href="{{url('/')}}/vendors/add-property#"> Add Property</a></li>
+
                             <li><a onclick="event.preventDefault(); document.getElementById('logout-form').submit();" href="{{ route('logout') }}">{{ __('Logout') }}</a></li>
                         </ul>
                     </div>
