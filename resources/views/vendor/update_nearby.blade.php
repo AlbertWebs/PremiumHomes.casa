@@ -112,8 +112,8 @@
                              <table class="table-responsive">
                                  <thead>
                                      <tr>
-                                         <th class="pl-2">Amenities</th>
-                                         <th class="p-0">Property Name</th>
+
+                                         <th class="p-0">Amenity</th>
                                          <th>Proximity</th>
                                          <th>Rating</th>
                                          <th>Category</th>
@@ -122,75 +122,45 @@
                                      </tr>
                                  </thead>
                                  <tbody>
-                                     @foreach($Nearby as $mylisting)
+                                     @foreach($Nearby as $nearby)
                                      <tr>
-                                         <td class="image myelist">
-                                             <a href="{{url('/')}}/properties/{{$mylisting->slung}}">
-                                                <img alt="{{$mylisting->property_name}}" src="{{url('/')}}/uploads/properties/{{$mylisting->featured_image}}" class="img-fluid">
-                                                <center>
-                                                    <a style="color:#bf9d34" href="{{url('/')}}/vendors/add-gallery/{{$mylisting->id}}" class="edit"><i class="fa fa-image"></i> Add</a>
-                                                    |
-                                                    <a style="color:#bf9d34" href="{{url('/')}}/vendors/update-gallery/{{$mylisting->id}}" class="edit"><i class="fa fa-edit"></i> Update</a>
-                                                </center>
-                                            </a>
-                                         </td>
+                                        <?php
+                                           $Amenities = \App\Models\Property::find($nearby->property_id);
+                                        ?>
+
                                          <td>
                                              <div class="inner">
-                                                 <a target="new" href="{{url('/')}}/properties/{{$mylisting->slung}}">
-                                                    <h2 style="max-width:300px">{{$mylisting->property_name}}</h2>
+                                                 <a target="new" href="{{url('/')}}/properties/{{$Amenities->slung}}">
+                                                    <h2 style="max-width:300px">{{$nearby->amenities}}</h2>
+                                                    <small>
+                                                        {{$Amenities->property_name}}
+                                                    </small>
                                                 </a>
-                                                 <figure>
-                                                    <i class="lni-map-marker"></i>
-                                                    {{$mylisting->address}},  {{$mylisting->city}}
-                                                    {{-- <br> --}}
 
-                                                </figure>
-                                                 {{-- <ul class="starts text-left mb-0">
-                                                     <li class="mb-0"><i class="fa fa-star"></i>
-                                                     </li>
-                                                     <li class="mb-0"><i class="fa fa-star"></i>
-                                                     </li>
-                                                     <li class="mb-0"><i class="fa fa-star"></i>
-                                                     </li>
-                                                     <li class="mb-0"><i class="fa fa-star"></i>
-                                                     </li>
-                                                     <li class="mb-0"><i class="fa fa-star"></i>
-                                                     </li>
-                                                     <li class="ml-3">(6 Reviews)</li>
-                                                 </ul> --}}
+
                                              </div>
                                          </td>
                                          <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
                                          <td>
                                             <div class="inner">
-                                                @if($mylisting->active == "Pending Approval")
-                                                    <p style="font-weight: 800; text-align:center" class="alert-warning"><span class="fa fa-clock"></span> {{$mylisting->active}}</p>
-                                                @elseif($mylisting->active == "Approved")
-                                                    <p style="font-weight: 800; text-align:center" class="alert-success"><span class="fa fa-check"></span> {{$mylisting->active}}</p>
-                                                @else
-                                                    <p style="font-weight: 800; text-align:center" class="alert-danger"><span class="fa fa-times"></span> {{$mylisting->active}}</p>
-                                                @endif
-                                                {{-- <br> --}}
-                                                {{-- Added On:{{date('d.m.Y',strtotime($mylisting->created_at))}} --}}
+                                                {{$nearby->proximity}}
                                             </div>
                                          </td>
-
                                          <td>
-                                            <div class="inner">163
+                                            <div class="inner">
+                                                {{$nearby->rating}}
+                                            </div>
+                                         </td>
+                                         <td>
+                                            <div class="inner">
+                                                {{$nearby->category}}
                                             </div>
                                          </td>
                                          <td class="actions">
-                                             <a href="{{url('/')}}/vendors/edit-properties/{{$mylisting->id}}" class="edit"><i class="fa fa-edit"></i> Edit</a>
-                                             <a onclick="return confirm('Would you wish to Delete this listing? You cannot undo this operation')" href="{{url('/')}}/vendors/delete-properties/{{$mylisting->id}}"><i class="far fa-trash-alt"></i> Delete</a>
+                                             <a href="{{url('/')}}/vendors/edit-nearby/{{$nearby->id}}" class="edit"><i class="fa fa-edit"></i> Edit</a>
+                                             <a onclick="return confirm('Would you wish to Delete this Amenity? You cannot undo this operation')" href="{{url('/')}}/vendors/delete-nearby/{{$nearby->id}}"><i class="far fa-trash-alt"></i> Delete</a>
                                          </td>
-                                         <td>
-                                            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-                                            @if($mylisting->subscription == 0)
-                                            <a onclick="return confirm('Would you wish to upgrade this listing to Premium?')" href="{{url('/')}}/vendors/upgrade/{{$mylisting->id}}"  class="btn btn-outline" style="background-color:#C0C0C0; color:#ffffff"><span class="fa fa-check-square" aria-hidden="true"></span> Standard</a>
-                                            @else
-                                            <a onclick="return confirm('Would you wish to downgread this listing to Standard?')" href="{{url('/')}}/vendors/downgrade/{{$mylisting->id}}"  class="btn btn-outline" style="background-color:#bf9d34; color:#ffffff"><span class="fa fa-crown"></span> Premium</a>
-                                            @endif
-                                        </td>
+
                                      </tr>
                                      @endforeach
                                  </tbody>

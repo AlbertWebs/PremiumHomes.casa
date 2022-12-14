@@ -80,6 +80,12 @@ class VendorController extends Controller
     }
 
 
+    public function delete_nearby($id){
+        $Nearby = Nearby::find($id);
+        $Nearby->delete();
+        return Redirect::back();
+    }
+
     public function delete_property($id){
         $Property = Property::find($id);
         $GetGallery = DB::table('galleries')->where('property_id',$id)->get();
@@ -188,6 +194,19 @@ class VendorController extends Controller
         $active = "properties";
         $Gallery = Gallery::find($id);
         return view('vendor.edit_gallery',compact('Gallery','active'));
+    }
+
+    public function edit_nearby($id){
+        $active = "properties";
+        $Nearby = Nearby::find($id);
+        return view('vendor.edit_nearby',compact('Nearby','active'));
+    }
+
+    public function save_nearby_post(Request $request, $id){
+        $data = $request->except(['_token']);
+        Nearby::where('id',$id)->update($data);
+        Session::flash('message', "NearBy has been updated");
+        return Redirect::back();
     }
 
     public function save_gallery_post(Request $request){
