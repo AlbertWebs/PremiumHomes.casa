@@ -184,6 +184,31 @@ class VendorController extends Controller
         return view('vendor.update_nearby',compact('Nearby','active'));
     }
 
+    public function edit_gallery($id){
+        $active = "properties";
+        $Gallery = Gallery::find($id);
+        return view('vendor.edit_gallery',compact('Gallery','active'));
+    }
+
+    public function save_gallery_post(Request $request){
+        $data = $request->all();
+        if (!empty($request->featured_image)) {
+            $file =$request->file('featured_image');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time().'.' . $extension;
+            $file->move(public_path('images/'), $filename);
+            $data['image']= 'images/'.$filename;
+        }else{
+            $filename = $request->featured_image_cheat;
+        }
+        $updateDetails = array(
+            'filename' =>$filename,
+        );
+        $Update = DB::table('galleries')->where('id',$request->GalleryID)->update($updateDetails);
+        Session::flash('message', "Image has been updated");
+        return Redirect::back();
+    }
+
     public function edit_properties($id){
         $active = "properties";
         $Property = Property::find($id);

@@ -110,7 +110,7 @@
                              <table class="table-responsive">
                                  <thead>
                                      <tr>
-                                         <th class="pl-2">My Properties</th>
+                                         <th class="pl-2">Images</th>
 
                                          <th class="pl-2">Property Name</th>
 
@@ -140,7 +140,7 @@
                                          </td>
 
                                          <td class="actions">
-                                             <a href="#" class="edit"><i class="fa fa-edit"></i> Edit</a>
+                                             <a href="{{url('/')}}/vendors/edit-gallery/{{$mylisting->id}}" class="edit"><i class="fa fa-edit"></i> Edit</a>
                                              &nbsp; &nbsp; &nbsp;
                                              <a onclick="return confirm('Would you wish to Delete this image?')" href="{{url('/')}}/vendors/delete-gallery/{{$mylisting->id}}"><i class="far fa-trash-alt"></i> Delete</a>
                                          </td>
