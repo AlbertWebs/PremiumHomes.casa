@@ -40,6 +40,8 @@ return new class extends Migration
             $table->string('parking');
             $table->string('dishwasher');
             $table->string('bar');
+            $table->string('swimming');
+            $table->string('Fridge');
 
             $table->string('floor_plan');
             $table->string('video');

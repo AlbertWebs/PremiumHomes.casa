@@ -137,7 +137,7 @@ class VendorController extends Controller
         }
         $Property = new Property;
         $Property->property_name = $request->property_name;
-        $Property->property_id = Str::random(40);
+        $Property->property_id = Str::random(5);
         $Property->slung = Str::slug($request->property_name);
         $Property->property_description = $request->property_description;
         $Property->status = $request->status;
