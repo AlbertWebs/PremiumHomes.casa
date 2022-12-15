@@ -355,7 +355,7 @@
                                                 </span>
                                                 <div class="nearby-list">
                                                     <ul class="property-list list-unstyled mb-0">
-                                                        <?php $Nearby = DB::table('nearbies')->where('category',$cat->title)->get(); ?>
+                                                        <?php $Nearby = DB::table('nearbies')->where('category',$cat->title)->where('property_id',$Property->id)->get(); ?>
                                                         @foreach ($Nearby as $nearby)
                                                         <li class="d-flex">
                                                             <h6 class="mb-3 mr-2">{{$nearby->amenities}}</h6>

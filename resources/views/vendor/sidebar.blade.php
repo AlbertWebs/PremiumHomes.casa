@@ -36,11 +36,11 @@
                         <i class="fa fa-list" aria-hidden="true"></i>Add Property
                     </a>
                 </li>
-                <li>
+                {{-- <li>
                     <a class="@if($active == 'payment_method') active @else @endif" href="{{route('payment-method')}}">
                         <i class="fas fa-credit-card"></i>Payments
                     </a>
-                </li>
+                </li> --}}
                 <li>
                     <a class="@if($active == 'invoices') active @else @endif" href="{{route('invoices')}}">
                         <i class="fas fa-paste"></i>Invoices
