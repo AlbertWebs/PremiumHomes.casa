@@ -140,8 +140,8 @@
                                                     <label for="price">Rent/Sale</label>
                                                     <select name="status" class="nice-select form-control wide" required>
                                                         {{-- <option selected="" value="Default">Select status</option> --}}
-                                                        <option value="Small">Rent</option>
-                                                        <option value="Medium">Sale</option>
+                                                        <option value="Rent">Rent</option>
+                                                        <option value="Sale">Sale</option>
                                                     </select>
                                                 </div>
                                             </div>
