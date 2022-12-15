@@ -348,67 +348,71 @@
                                         $Cat = DB::table('cats')->get();
                                     ?>
                                         @foreach ($Cat as $cat)
+                                        <?php $Nearby = DB::table('nearbies')->where('category',$cat->title)->where('property_id',$Property->id)->get(); $countNearby = count($Nearby); ?>
 
-                                            <div class="nearby-info mb-4">
-                                                <span class="nearby-title mb-3 d-block text-{{$cat->image}}">
-                                                <i class="fas fa-graduation-cap mr-2"></i><b class="title">{{$cat->title}}</b>
-                                                </span>
-                                                <div class="nearby-list">
-                                                    <ul class="property-list list-unstyled mb-0">
-                                                        <?php $Nearby = DB::table('nearbies')->where('category',$cat->title)->where('property_id',$Property->id)->get(); ?>
-                                                        @foreach ($Nearby as $nearby)
-                                                        <li class="d-flex">
-                                                            <h6 class="mb-3 mr-2">{{$nearby->amenities}}</h6>
-                                                            <span>({{$nearby->proximity}})</span>
-                                                            <?php
-                                                                $Rating = ceil($nearby->rating);
-                                                             ?>
-                                                            @if($Rating == 1)
-                                                            <ul class="list-unstyled list-inline ml-auto">
-                                                                <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                                <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                                <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                                <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                                <li class="list-inline-item m-0 text-warning"><i class="fas fa-star-half fa-xs"></i></li>
-                                                            </ul>
-                                                            @elseif($Rating == 2)
-                                                            <ul class="list-unstyled list-inline ml-auto">
-                                                                <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                                <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                                <li class="list-inline-item m-0 text-warning"><i class="far fa-star fa-xs"></i></li>
-                                                                <li class="list-inline-item m-0 text-warning"><i class="far fa-star fa-xs"></i></li>
-                                                                <li class="list-inline-item m-0 text-warning"><i class="far fa-star fa-xs"></i></li>
-                                                            </ul>
-                                                            @elseif($Rating == 3)
-                                                            <ul class="list-unstyled list-inline ml-auto">
-                                                                <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                                <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                                <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                                <li class="list-inline-item m-0 text-warning"><i class="far fa-star fa-xs"></i></li>
-                                                                <li class="list-inline-item m-0 text-warning"><i class="far fa-star fa-xs"></i></li>
-                                                            </ul>
-                                                            @elseif($Rating == 4)
-                                                            <ul class="list-unstyled list-inline ml-auto">
-                                                                <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                                <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                                <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                                <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                                <li class="list-inline-item m-0 text-warning"><i class="far fa-star fa-xs"></i></li>
-                                                            </ul>
-                                                            @elseif($Rating == 5)
-                                                            <ul class="list-unstyled list-inline ml-auto">
-                                                                <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                                <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                                <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                                <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                                <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                            </ul>
-                                                            @endif
-                                                        </li>
-                                                        @endforeach
-                                                    </ul>
+                                            @if($countNearby == 0)
+
+                                            @else
+                                                <div class="nearby-info mb-4">
+                                                    <span class="nearby-title mb-3 d-block text-{{$cat->image}}">
+                                                    <i class="fas fa-graduation-cap mr-2"></i><b class="title">{{$cat->title}}</b>
+                                                    </span>
+                                                    <div class="nearby-list">
+                                                        <ul class="property-list list-unstyled mb-0">
+                                                            @foreach ($Nearby as $nearby)
+                                                            <li class="d-flex">
+                                                                <h6 class="mb-3 mr-2">{{$nearby->amenities}}</h6>
+                                                                <span>({{$nearby->proximity}})</span>
+                                                                <?php
+                                                                    $Rating = ceil($nearby->rating);
+                                                                ?>
+                                                                @if($Rating == 1)
+                                                                <ul class="list-unstyled list-inline ml-auto">
+                                                                    <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
+                                                                    <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
+                                                                    <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
+                                                                    <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
+                                                                    <li class="list-inline-item m-0 text-warning"><i class="fas fa-star-half fa-xs"></i></li>
+                                                                </ul>
+                                                                @elseif($Rating == 2)
+                                                                <ul class="list-unstyled list-inline ml-auto">
+                                                                    <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
+                                                                    <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
+                                                                    <li class="list-inline-item m-0 text-warning"><i class="far fa-star fa-xs"></i></li>
+                                                                    <li class="list-inline-item m-0 text-warning"><i class="far fa-star fa-xs"></i></li>
+                                                                    <li class="list-inline-item m-0 text-warning"><i class="far fa-star fa-xs"></i></li>
+                                                                </ul>
+                                                                @elseif($Rating == 3)
+                                                                <ul class="list-unstyled list-inline ml-auto">
+                                                                    <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
+                                                                    <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
+                                                                    <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
+                                                                    <li class="list-inline-item m-0 text-warning"><i class="far fa-star fa-xs"></i></li>
+                                                                    <li class="list-inline-item m-0 text-warning"><i class="far fa-star fa-xs"></i></li>
+                                                                </ul>
+                                                                @elseif($Rating == 4)
+                                                                <ul class="list-unstyled list-inline ml-auto">
+                                                                    <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
+                                                                    <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
+                                                                    <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
+                                                                    <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
+                                                                    <li class="list-inline-item m-0 text-warning"><i class="far fa-star fa-xs"></i></li>
+                                                                </ul>
+                                                                @elseif($Rating == 5)
+                                                                <ul class="list-unstyled list-inline ml-auto">
+                                                                    <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
+                                                                    <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
+                                                                    <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
+                                                                    <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
+                                                                    <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
+                                                                </ul>
+                                                                @endif
+                                                            </li>
+                                                            @endforeach
+                                                        </ul>
+                                                    </div>
                                                 </div>
-                                            </div>
+                                            @endif
                                         @endforeach
                                 </div>
                             </div>
