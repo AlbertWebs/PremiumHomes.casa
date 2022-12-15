@@ -129,7 +129,7 @@
                                                 <i class="fas fa-star"></i>
                                             </div>
                                             <div class="info">
-                                                <h6 class="number">116</h6>
+                                                <h6 class="number">0</h6>
                                                 <p class="type ml-1">Total Reviews</p>
                                             </div>
                                         </div>
@@ -140,7 +140,7 @@
                                                 <i class="fas fa-comments"></i>
                                             </div>
                                             <div class="info">
-                                                <h6 class="number">23</h6>
+                                                <h6 class="number">0</h6>
                                                 <p class="type ml-1">Messages</p>
                                             </div>
                                         </div>
@@ -151,7 +151,7 @@
                                                 <i class="fas fa-heart"></i>
                                             </div>
                                             <div class="info">
-                                                <h6 class="number">432</h6>
+                                                <h6 class="number">0</h6>
                                                 <p class="type ml-1">Times Bookmarked</p>
                                             </div>
                                         </div>
@@ -224,7 +224,7 @@
                                         </div>
                                         <div class="body">
                                             <h6>Karl Tyron</h6>
-                                            <p class="post-time">23 Minutes ago</p>
+                                            <p class="post-time">0 Minutes ago</p>
                                             <p class="content mb-0 mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
                                             <div class="controller">
                                                 <ul>
