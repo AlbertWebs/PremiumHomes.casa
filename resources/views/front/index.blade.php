@@ -3,6 +3,9 @@
 @section('content')
 <div class="int_content_wraapper int_content_left">
     <!--===Start Revolution Slider===-->
+    <?php
+       $Slider = DB::table('properties')->where('subscription','1')->get();
+    ?>
     <div class="int_banner_slider">
         <div class="banner_box_wrapper">
             <div class="container-fluid">
@@ -11,37 +14,39 @@
                         <div class="main_contentblock">
                             <div class="swiper-container" data-aos="fade-right">
                                 <div class="swiper-wrapper">
+                                    @foreach ($Slider as $slider)
                                     <div class="swiper-slide">
                                         <div class="swiper_imgbox imgbox1">
                                             <div class="swipper_img">
-                                                <h4>For Sale <span>Estate</span></h4>
-                                                <h2>Rosehill Residence</h2>
-                                                <h3>$ 77,800<span class="banner_span1"></span></h3>
-                                                <p><i class="fa fa-map-marker mr-3"></i>Rosehill Residence - Lower Kabete Road, Nairobi</p>
+                                                <h4>{{$slider->status}} <span>Estate</span></h4>
+                                                <h2 class="Property-heading">{{$slider->property_name}}</h2>
+                                                <h3>kes {{$slider->price}}<span class="banner_span1"></span></h3>
+                                                <p><i class="fa fa-map-marker mr-3"></i>{{$slider->address}}</p>
                                                 <!-- homes List -->
                                                 <ul class="homes-list clearfix">
                                                     <li>
                                                         <i class="fa fa-bed" aria-hidden="true"></i>
-                                                        <span>3 Bedrooms</span>
+                                                        <span>{{$slider->bedroom}} Bedrooms</span>
                                                     </li>
                                                     <li>
                                                         <i class="fa fa-bath" aria-hidden="true"></i>
-                                                        <span>3 Bathrooms</span>
+                                                        <span>{{$slider->Bath}} Bathrooms</span>
                                                     </li>
                                                     <li>
                                                         <i class="fa fa-object-group" aria-hidden="true"></i>
-                                                        <span>187 sq ft</span>
+                                                        <span>{{$slider->sqft}} sq ft</span>
                                                     </li>
                                                     <li>
                                                         <i class="fas fa-warehouse" aria-hidden="true"></i>
                                                         <span>1 Garages</span>
                                                     </li>
                                                 </ul>
-                                                <a href="{{route('property-single',['rosehill-residence'])}}" class="int_btn">View Property <span class="btn_caret"><i class="fas fa-caret-right"></i></span></a>
+                                                <a href="{{route('property-single',[$slider->slung])}}" class="int_btn">View Property <span class="btn_caret"><i class="fas fa-caret-right"></i></span></a>
                                                 <h1>Real</h1>
                                             </div>
                                         </div>
                                     </div>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
@@ -52,49 +57,28 @@
                         <div class="main_imgblock">
                             <div class="swiper-container" data-aos="fade-left">
                                 <div class="swiper-wrapper">
+                                    @foreach ($Slider as $slider)
                                     <div class="swiper-slide">
                                         <div class="swiper_contbox">
                                             <div class="swipper_conntent">
-                                                <img src="{{asset('theme/images/slider/slider-8.jpg')}}" class="img-fluid " alt="images" />
+                                                <img src="{{url('/')}}/uploads/properties/{{$slider->featured_image}}" class="img-fluid " alt="images" />
                                             </div>
                                         </div>
                                     </div>
+                                    @endforeach
+                                    <?php
+                                        $Gallery = DB::table('galleries')->where('property_id', $slider->id)->get();
+                                        $Count = 1
+                                    ?>
+                                    @foreach ($Gallery as $gallery)
                                     <div class="swiper-slide">
                                         <div class="swiper_contbox">
                                             <div class="swipper_conntent">
-                                                <img src="{{asset('uploads/properties/rosehill-render.jpg')}}" class="img-fluid " alt="images" />
+                                                <img src="{{url('/')}}/images/{{$gallery->filename}}" class="img-fluid " alt="images" />
                                             </div>
                                         </div>
                                     </div>
-
-                                    <div class="swiper-slide">
-                                        <div class="swiper_contbox">
-                                            <div class="swipper_conntent">
-                                                <img src="{{asset('uploads/properties/rosehill-2.jpg')}}" class="img-fluid" alt="images" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                   <div class="swiper-slide">
-                                        <div class="swiper_contbox">
-                                            <div class="swipper_conntent">
-                                                <img src="{{asset('uploads/properties/rosehill-3.jpg')}}" class="img-fluid" alt="images" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    {{--  <div class="swiper-slide">
-                                        <div class="swiper_contbox">
-                                            <div class="swipper_conntent">
-                                                <img src="{{asset('uploads/properties/rosehill-4.jpg')}}" class="img-fluid" alt="images" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="swiper_contbox">
-                                            <div class="swipper_conntent">
-                                                <img src="{{asset('uploads/properties/rosehill-5.jpg')}}" class="img-fluid" alt="images" />
-                                            </div>
-                                        </div>
-                                    </div> --}}
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
