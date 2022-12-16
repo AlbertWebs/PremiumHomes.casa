@@ -253,7 +253,7 @@
                                              </div>
                                              <!-- Pesapal Option -->
                                              <div class="payment-card">
-                                                 <header class="payment-card-header cursor-pointer" data-toggle="collapse" data-target="#paypal" aria-expanded="true">
+                                                 <header class="payment-card-header cursor-pointer" data-toggle="collapsed" data-target="#paypal" aria-expanded="true">
                                                      <div class="payment-card-title flexbox">
                                                          <h4>Card Payment</h4>
                                                      </div>
@@ -261,7 +261,7 @@
                                                          <img src="{{asset('uploads/logo.png')}}" class="img-responsive" alt="">
                                                      </div>
                                                  </header>
-                                                 <div class="collapse" id="paypal" role="tablist" aria-expanded="false">
+                                                 <div class="collapsed" id="paypal" role="tablist" aria-expanded="false">
                                                     <form method="post" action="{{route('make-payment')}}">
                                                         @csrf
                                                         <div class="payment-card-body">
@@ -361,7 +361,7 @@
                                                                </div>
                                                                <div class="col-sm-6 padd-top-10 text-right">
                                                                    <label>Total Order</label>
-                                                                   <h2 class="mrg-0"><span class="theme-cl">$</span>950</h2>
+                                                                   <h2 class="mrg-0"><span class="theme-cl">kes</span>{{$amount}}</h2>
                                                                </div>
                                                                <div class="col-sm-12 bt-1 padd-top-15 pt-3">
                                                                    <span class="custom-checkbox d-block font-12 mb-3">
