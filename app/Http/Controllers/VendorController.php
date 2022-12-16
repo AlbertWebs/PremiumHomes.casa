@@ -388,7 +388,7 @@ class VendorController extends Controller
             return response()->json(array('success' => 'Unable To Verify Transaction, Please try again'));
         }else{
             $updateDetails = array(
-                'user_id'=>Auth::User(),
+                'user_id'=>Auth::User()->id,
                 'status'=>1,
             );
             DB::table('mobile_payments')->where('TransID',$transactionCode)->where('status','0')->update($updateDetails);
