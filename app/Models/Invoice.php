@@ -20,6 +20,7 @@ class Invoice extends Model
         'content',
         'qty',
         'user_id',
+        'property_id',
         'due',
         'status',
     ];

@@ -263,6 +263,8 @@ Route::group(['prefix'=>'vendors'], function(){
     Route::post('/save-property', [App\Http\Controllers\VendorController::class, 'save_property_post'])->name('save-property-post');
     Route::post('/save-gallery-post', [App\Http\Controllers\VendorController::class, 'save_gallery_post'])->name('save-gallery-post');
     Route::post('/save-nearby-post/{id}', [App\Http\Controllers\VendorController::class, 'save_nearby_post'])->name('save-nearby-post');
+    Route::post('/invoice-make', [App\Http\Controllers\VendorController::class, 'invoice_make'])->name('invoice-make');
+
 
 
 

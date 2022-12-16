@@ -158,14 +158,14 @@
                          <br><br>
                          <section class="payment-method notfound">
                              <div class="row">
-                                 <div class="col-md-12 col-lg-7">
+                                 {{-- <div class="col-md-12 col-lg-7">
                                      <div class="tr-single-box">
                                          <div class="tr-single-body">
                                              <div class="tr-single-header">
                                                  <h4><i class="far fa-address-card pr-2"></i>Billing Information</h4>
                                              </div>
                                              <div class="row">
-                                                 {{--  --}}
+
                                                     <div class="invoice mb-0">
                                                         <div class="card border-0">
                                                             <div class="card-body p-0">
@@ -211,8 +211,8 @@
                                                                             </thead>
                                                                             <tbody>
                                                                                 <tr>
-                                                                                    <td>{{$premiums}} Plan</td>
-                                                                                    <td>kes {{$amount}}</td>
+                                                                                    <td>{{$content}}</td>
+                                                                                    <td>{{$amount}}</td>
                                                                                     <td>{{$qty}}</td>
                                                                                     <td>{{$amount*$qty}}</td>
                                                                                 </tr>
@@ -240,12 +240,12 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                 {{--  --}}
+
                                              </div>
                                          </div>
                                      </div>
-                                 </div>
-                                 <div class="col-md-12 col-lg-5">
+                                 </div> --}}
+                                 <div class="col-md-12 col-lg-6" style="margin:0 auto">
                                      <div class="tr-single-box">
                                          <div class="tr-single-body">
                                              <div class="tr-single-header">
@@ -326,7 +326,7 @@
                                                                 </div>
                                                                 <div class="col-sm-5 padd-top-10 text-right">
                                                                     <label>Total Order</label>
-                                                                    <h2 class="mrg-0"><span class="theme-cl">kes</span>12540</h2>
+                                                                    <h2 class="mrg-0"><span class="theme-cl">kes</span>{{$amount}}</h2>
                                                                 </div>
                                                                 <div class="col-sm-12 bt-1 padd-top-15 pt-3">
 

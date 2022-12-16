@@ -122,7 +122,7 @@ class VendorController extends Controller
 
     public function upgrade($id){
         $active = "payment_method";
-        return view('vendor.packages', compact('active'));
+        return view('vendor.packages', compact('active','id'));
     }
 
 
@@ -326,6 +326,46 @@ class VendorController extends Controller
         //Ajax Return Success
         return view('vendor.payment_method', compact('active','premiums','InvoiceNumber','amount','qty'));
     }
+
+    public function invoice_make(Request $request){
+        // Create Invoice
+        $Invoices = DB::table('invoices')->orderBy('id','DESC')->Limit('1')->get();
+        $count_invoices = count($Invoices);
+        if($count_invoices == 0){
+            $InvoiceNumber = 'Premium-1';
+        }else{
+            foreach($Invoices as $invoice)
+            {
+                $LastID = $invoice->id;
+                $Next = $LastID+1;
+                $InvoiceNumber = "Premium-".$Next;
+            }
+        }
+        $premiums = $request->package;
+        if($request->package == "standard"){
+            $amount = "15500";
+        }else{
+            $amount = "32500";
+        }
+        $qty = "1";
+        $active = "payment_method";
+        $due =  \Carbon\Carbon::today();
+        // Log to DB & Generate Invoice
+        request()->request->add(['invoice_number'=>$InvoiceNumber,'amount'=>$amount,'qty'=>$qty,'due'=>$due]);
+        $Invoice = Invoice::create($request->all());
+        $User = User::find(Auth::User()->id);
+        if($Invoice->save()){
+            $InvoiceGetNumber = Invoice::where('invoice_number',$InvoiceNumber)->get();
+            foreach($InvoiceGetNumber as $InvNo){
+                SendMail::notify($User->email,$User->name,$InvNo->id);
+            }
+        }
+        $content = $request->content;
+        //Ajax Return Success
+        return view('vendor.payment_method', compact('active','premiums','InvoiceNumber','amount','qty','content'));
+    }
+
+
 
 
 }

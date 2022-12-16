@@ -144,8 +144,16 @@
                                                     <li>Traffic Guaranteed</li>
                                                     <li>24/7 Live Support</li>
                                                 </ul>
-                                                <?php $premiums = "standard" ?>
-                                                <a class="btn btn-primary" href="{{url('/')}}/vendors/invoice-page/{{$premiums}}"><span class="fa fa-trophy" aria-hidden="true"></span> Select Package</a>
+                                                <?php $premiums = "standard"; $mytime = Carbon\Carbon::today();  ?>
+                                                <form method="post" action="{{url('/')}}/vendors/invoice-make">
+                                                    @csrf
+                                                    <input type="hidden" name="user_id" value="{{Auth::User()->id}}">
+                                                    <input type="hidden" name="package" value="{{$premiums}}">
+                                                    <input type="hidden" name="content" value="Your Premium Homes Subscription Order for {{$premiums}} dated {{$mytime}}  ">
+                                                    <input type="hidden" name="property_id" value="{{$id}}">
+                                                    <input type="hidden" name="user_id" value="{{Auth::User()->id}}">
+                                                    <a class="btn btn-primary" onclick="$(this).closest('form').submit();"><span class="fa fa-trophy"></span> Select Package</a>
+                                                </form>
                                             </div>
                                         </div>
                                         <!-- plan end -->
@@ -162,8 +170,16 @@
                                                     <li>Traffic Guaranteed</li>
                                                     <li>24/7 Live Support</li>
                                                 </ul>
-                                                <?php $premiums = "premium" ?>
-                                                <a class="btn btn-primary" href="{{url('/')}}/vendors/invoice-page/{{$premiums}}"><span class="fa fa-crown"></span> Select Package</a>
+                                                <?php $premiums = "premium"; $mytime = Carbon\Carbon::today(); ?>
+                                                <form method="post" action="{{url('/')}}/vendors/invoice-make">
+                                                    @csrf
+                                                    <input type="hidden" name="user_id" value="{{Auth::User()->id}}">
+                                                    <input type="hidden" name="package" value="{{$premiums}}">
+                                                    <input type="hidden" name="content" value="Your Premium Homes Subscription Order for {{$premiums}} dated {{$mytime}}  ">
+                                                    <input type="hidden" name="property_id" value="{{$id}}">
+                                                    <input type="hidden" name="user_id" value="{{Auth::User()->id}}">
+                                                    <a class="btn btn-primary" onclick="$(this).closest('form').submit();"><span class="fa fa-crown"></span> Select Package</a>
+                                                </form>
                                             </div>
                                         </div>
                                         <!-- plan end -->
