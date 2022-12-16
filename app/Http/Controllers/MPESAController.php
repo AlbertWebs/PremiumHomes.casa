@@ -26,22 +26,15 @@ class MPESAController extends Controller
         $consumer_secret = env('MPESA_CONSUMER_SECRET');
         $credentials = base64_encode($consumer_key.":".$consumer_secret);
         $url = "https://api.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials";
-        // $curl = curl_init();
-        // curl_setopt($curl, CURLOPT_URL, $url);
-        // curl_setopt($curl, CURLOPT_HTTPHEADER, array("Authorization: Basic ".$credentials));
-        // curl_setopt($curl, CURLOPT_HEADER,false);
-        // curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-        // curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-        // $curl_response = curl_exec($curl);
-        // $access_token=json_decode($curl_response);
-        // return $access_token->access_token;
-        $ch = curl_init('https://api.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials');
-curl_setopt($ch, CURLOPT_HTTPHEADER, ["Authorization: Bearer ".$credentials]);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-$response = curl_exec($ch);
-dd($response);
-curl_close($ch);
-echo $response;
+        $curl = curl_init();
+        curl_setopt($curl, CURLOPT_URL, $url);
+        curl_setopt($curl, CURLOPT_HTTPHEADER, array("Authorization: Basic ".$credentials));
+        curl_setopt($curl, CURLOPT_HEADER,false);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        $curl_response = curl_exec($curl);
+        $access_token=json_decode($curl_response);
+        return $access_token->access_token;
     }
 
 
