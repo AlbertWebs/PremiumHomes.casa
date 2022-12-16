@@ -23,6 +23,22 @@ use Mail;
 
 class VendorController extends Controller
 {
+      /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+
     public function index()
     {
         $active = "home";
@@ -343,9 +359,9 @@ class VendorController extends Controller
         }
         $premiums = $request->package;
         if($request->package == "standard"){
-            $amount = "15500";
+            $amount = "1";
         }else{
-            $amount = "32500";
+            $amount = "2";
         }
         $qty = "1";
         $active = "payment_method";
@@ -365,6 +381,21 @@ class VendorController extends Controller
         return view('vendor.payment_method', compact('active','premiums','InvoiceNumber','amount','qty','content'));
     }
 
+    public function verify_payment(Request $request){
+        $transactionCode = $request->verify_transaction;
+        $Verify = DB::table('mobile_payments')->where('TransID',$transactionCode)->where('status','0')->get();
+        if($Verify == null){
+            return response()->json(array('success' => 'Unable To Verify Transaction, Please try again'));
+        }else{
+            $updateDetails = array(
+                'user_id'=>Auth::User(),
+                'status'=>1,
+            );
+            DB::table('mobile_payments')->where('TransID',$transactionCode)->where('status','0')->update($updateDetails);
+            return response()->json(array('success' => 'Your Payment Has Been Received'));
+        }
+
+    }
 
 
 

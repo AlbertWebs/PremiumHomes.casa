@@ -351,25 +351,35 @@
                                                     </div>
                                                 </header>
                                                 <div class="collapse" id="c2b" role="tablist" aria-expanded="false">
-                                                   <form method="post" action="{{route('make-payment')}}">
+                                                   <form method="post" action="{{route('verify-payment')}}" id="mpesa-c2b">
                                                        @csrf
                                                        <div class="payment-card-body">
                                                            <div class="row mrg-bot-20">
+                                                               {{-- Instructions --}}
+                                                                <ul>
+                                                                    <li>Open Your M-PESA </li>
+                                                                    <li>Select Lipa na M-PESA </li>
+                                                                    <li>Select Paybill </li>
+                                                                    <li>Enter Paybill <strong>4101843</strong> </li>
+                                                                    <li>Enter Account Number <strong>{{$InvoiceNumber}}</strong> </li>
+                                                                    <li>Enter Amount <strong>kes {{$amount}}</strong> </li>
+                                                                    <li>Enter Your Pin To Confirm </li>
+                                                                    <li>Enter The M-PESA Transaction Code Below and click verify Payment</li>
+                                                                </ul>
+                                                               {{-- Instructions --}}
                                                                <div class="col-sm-6">
                                                                    <label>M-PESA Code</label>
-                                                                   <input placeholder="QL95R86QYJ" name="verify-transaction" type="text" class="form-control">
+                                                                   <input placeholder="QL95R86QYJ" name="verify_transaction" type="text" class="form-control">
                                                                </div>
                                                                <div class="col-sm-6 padd-top-10 text-right">
                                                                    <label>Total Order</label>
                                                                    <h2 class="mrg-0"><span class="theme-cl">kes</span>{{$amount}}</h2>
                                                                </div>
                                                                <div class="col-sm-12 bt-1 padd-top-15 pt-3">
-                                                                   <span class="custom-checkbox d-block font-12 mb-3">
-                                                                   <input type="checkbox" id="privacy">
-                                                                   <label for="privacy"></label>
-                                                                   By ordering you are agreeing to our <a href="{{url('/')}}/privacy-policy" class="theme-cl">Privacy policy</a>.
-                                                                   </span>
-                                                                   <button type="submit" class="btn btn-m btn-success">Veryfy</button>
+                                                                   <br>
+                                                                   <button type="submit" class="btn btn-m btn-success">Veryfy Payment <span class="fa fa-spinner fa-spin" id="show-loading-c2b"></span></button>
+                                                                   <p class="text-success" id="show-c2b">Working.....</p>
+                                                                   <p class="text-success" id="sucess-c2b">Your Payment Has Been Received</p>
                                                                </div>
                                                            </div>
                                                        </div>
@@ -487,6 +497,31 @@
                     // show response from the php script.
                         $("#show-loading").hide();
                         $("#sucessSTK").show();
+                        // $("#showSTK").html(data['CustomerMessage']);
+                    }
+                });
+
+            });
+
+            $("#mpesa-c2b").submit(function(e) {
+                $("#show-loading-c2b").show();
+                $("#show-c2b").show().delay(10000).fadeOut();
+
+                e.preventDefault();
+
+                var form = $(this);
+                var actionUrl = form.attr('action');
+
+                $.ajax({
+                    type: "POST",
+                    url: actionUrl,
+                    data: form.serialize(), // serializes the form's elements.
+                    success: function(data)
+                    {
+                        // alert(data);
+                    // show response from the php script.
+                        $("#show-loading-c2b").hide();
+                        $("#sucess-c2b").show();
                         // $("#showSTK").html(data['CustomerMessage']);
                     }
                 });
