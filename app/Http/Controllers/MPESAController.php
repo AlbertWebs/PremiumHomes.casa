@@ -39,6 +39,7 @@ class MPESAController extends Controller
 curl_setopt($ch, CURLOPT_HTTPHEADER, ["Authorization: Bearer ".$credentials]);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 $response = curl_exec($ch);
+dd($response);
 curl_close($ch);
 echo $response;
     }
