@@ -32,7 +32,6 @@ class MPESAController extends Controller
         curl_setopt($curl, CURLOPT_HEADER,false);
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-        dd($curl);
         $curl_response = curl_exec($curl);
         $access_token=json_decode($curl_response);
         return $access_token->access_token;
