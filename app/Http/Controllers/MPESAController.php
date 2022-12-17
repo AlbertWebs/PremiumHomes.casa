@@ -22,8 +22,6 @@ class MPESAController extends Controller
 
     public function generateAccessToken()
     {
-        phpinfo();
-        dd();
         $consumer_key = env('MPESA_CONSUMER_KEY');
         $consumer_secret = env('MPESA_CONSUMER_SECRET');
         $credentials = base64_encode($consumer_key.":".$consumer_secret);
