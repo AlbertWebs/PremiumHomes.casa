@@ -37,7 +37,7 @@ class MPESAController extends Controller
         // $access_token=json_decode($curl_response);
         // return $access_token->access_token;
         $ch = curl_init('https://api.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials');
-        curl_setopt($ch, CURLOPT_HTTPHEADER, ['Authorization: Basic '.$credentials]);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, ['Authorization: Bearer '.$credentials]);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         $response = curl_exec($ch);
         curl_close($ch);
