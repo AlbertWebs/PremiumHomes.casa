@@ -24,7 +24,6 @@ class MPESAController extends Controller
     {
         $consumer_key = env('MPESA_CONSUMER_KEY');
         $consumer_secret = env('MPESA_CONSUMER_SECRET');
-        dd($consumer_key);
         $credentials = base64_encode($consumer_key.":".$consumer_secret);
         $url = "https://api.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials";
         $curl = curl_init();
