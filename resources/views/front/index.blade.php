@@ -304,22 +304,22 @@ Premium Homes offers local real estate agents in major cities offering a wide ra
             <div class="team-block col-sm-6 col-md-4 col-lg-4 col-xl-2 team-pro" data-aos="fade-up" data-aos-delay="150">
                 <div class="team-wrap">
                     <div class="team-img">
-                        <img style="min-height:273px" src="{{url('/')}}/uploads/users/{{$agent->image}}" alt="" />
+                        <img src="{{url('/')}}/uploads/users/{{$agent->image}}" alt="" />
                     </div>
                     <div class="team-content">
                         <div class="team-info">
                             <h3>{{$agent->name}}</h3>
                             <p>Real Estate Agent</p>
                             <div class="team-socials">
-                                <ul>
+                                {{-- <ul>
                                     <li>
                                         <a href="#" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                                         <a href="#" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                                         <a href="#" title="instagran"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                                     </li>
-                                </ul>
+                                </ul> --}}
                             </div>
-                            <span><a href="agent-details#">View Profile</a></span>
+                            <span><a href="{{url('/')}}/properties-agent/{{$agent->id}}">View Properties</a></span>
                         </div>
                     </div>
                 </div>
