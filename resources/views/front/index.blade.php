@@ -297,6 +297,34 @@ Premium Homes offers local real estate agents in major cities offering a wide ra
                     </div>
                 </div>
             </div>
+            <?php
+               $Agents = DB::table('users')->where('agent','1')->get();
+            ?>
+            @foreach ($Agents as $agent)
+            <div class="team-block col-sm-6 col-md-4 col-lg-4 col-xl-2 team-pro" data-aos="fade-up" data-aos-delay="150">
+                <div class="team-wrap">
+                    <div class="team-img">
+                        <img src="{{url('/')}}/uploads/users/{{$agent->image}}" alt="" />
+                    </div>
+                    <div class="team-content">
+                        <div class="team-info">
+                            <h3>{{$agent->name}}</h3>
+                            <p>Real Estate Agent</p>
+                            <div class="team-socials">
+                                <ul>
+                                    <li>
+                                        <a href="#" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                        <a href="#" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                        <a href="#" title="instagran"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <span><a href="agent-details#">View Profile</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @endforeach
         </div>
     </div>
 </section>
