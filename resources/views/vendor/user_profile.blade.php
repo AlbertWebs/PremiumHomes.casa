@@ -158,7 +158,20 @@
                          </div>
                          <div class="sidebar-widget author-widget2">
                              <div class="author-box clearfix">
-                                 <img src="{{url('/')}}/theme/images/testimonials/{{Auth::user()->image}}" alt="author-image" class="author__img">
+
+                                 @if(Auth::User()->avatar == null)
+                                 <img title="Image" src="{{url('/')}}/uploads/users/{{Auth::user()->image}}" alt="author-image" class="author__img">
+                                 <?php $select = "image" ?>
+                                 <a title="avatar" href="{{url('/')}}/vendors/edit-image/{{$select}}/{{Auth::user()->id}}">Edit Image</a>
+                                 &nbsp;
+                                 |
+                                 &nbsp;
+                                 <?php $select = "avatar" ?>
+                                 <a href="{{url('/')}}/vendors/edit-avatar/{{$select}}/{{Auth::user()->id}}">Edit Avatar</a>
+
+                                 <img style="border:2px solid #bf9d34" src="{{url('/')}}/uploads/users/avatar.jpg" alt="{{Auth::user()->name}}" class="author__img">
+                                 @else
+                                 <span><img style="border:2px solid #bf9d34" src="{{url('/')}}/uploads/users/{{Auth::user()->avatar}}" alt=""></span>{{Auth::User()->name}}<img style="border:2px solid #bf9d34" src="{{url('/')}}/theme/images/testimonials/{{Auth::user()->image}}" alt="{{Auth::user()->name}}" class="author__img">@endif
                                  <h4 class="author__title">{{Auth::User()->name}}</h4>
                                  <p class="author__meta">Agent of Property</p>
                              </div>
@@ -168,7 +181,7 @@
                                  <li><span class="la la-envelope-o"><i class="fa fa-envelope" aria-hidden="true"></i></span><a href="#">{{Auth::User()->email}}</a></li>
                              </ul>
                              <div class="agent-contact-form-sidebar">
-                                 <h4>Request Inquiry</h4>
+                                 <h4>Request Inquiry/Profile Edit</h4>
                                  <form name="contact_form" method="post" action="https://code-theme.com/html/findhouses/functions.php">
                                      <input type="text" id="fname" name="full_name" placeholder="Full Name" required />
                                      <input type="number" id="pnumber" name="phone_number" placeholder="Phone Number" required />

@@ -244,10 +244,48 @@ class VendorController extends Controller
         return Redirect::back();
     }
 
+    public function save_image_post(Request $request){
+        $data = $request->all();
+        if (!empty($request->featured_image)) {
+            $file =$request->file('featured_image');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time().'.' . $extension;
+            $file->move(public_path('uploads/users/'), $filename);
+            $data['image']= 'uploads/users/'.$filename;
+        }else{
+            $filename = $request->featured_image_cheat;
+        }
+
+        if($data['select'] == "image")
+        {
+            $updateDetails = array(
+                'image' =>$filename,
+            );
+        }
+        else
+        {
+            $updateDetails = array(
+                'avatar' =>$filename,
+            );
+        }
+        $User = Auth::User()->id;
+        $Profile = DB::table('users')->where('id',$User)->update($updateDetails);
+        Session::flash('message', "Image has been updated");
+        return Redirect::back();
+    }
+
+
+
     public function edit_properties($id){
         $active = "properties";
         $Property = Property::find($id);
         return view('vendor.edit_properties',compact('Property','active'));
+    }
+
+    public function edit_image($select, $id){
+        $active = "profile";
+        $Profile = User::find($id);
+        return view('vendor.edit_image',compact('Profile','active','select'));
     }
 
     public function save_property_post(Request $request){

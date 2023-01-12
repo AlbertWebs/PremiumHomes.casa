@@ -27,10 +27,10 @@
             <!-- Right Side Content / -->
             <div class="header-user-menu user-menu">
                 <div class="header-user-name">
-                    @if(Auth::User())
-                    <span><img src="{{url('/')}}/theme/images/testimonials/{{Auth::user()->image}}" alt=""></span>{{Auth::User()->name}}
+                    @if(Auth::User()->avatar == null)
+                    <span><img style="border:2px solid #bf9d34" src="{{url('/')}}/uploads/users/avatar.jpg" alt=""></span>{{Auth::User()->name}}
                     @else
-                    <span><img src="{{url('/')}}/theme/images/testimonials/{{Auth::user()->image}}"" alt=""></span>Albert Muhatia
+                    <span><img style="border:2px solid #bf9d34" src="{{url('/')}}/uploads/users/{{Auth::user()->avatar}}" alt=""></span>{{Auth::User()->name}}
                     @endif
                 </div>
                 <ul>

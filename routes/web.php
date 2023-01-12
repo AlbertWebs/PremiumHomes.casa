@@ -246,6 +246,7 @@ Route::group(['prefix'=>'vendors'], function(){
     Route::get('/delete-gallery/{id}', [App\Http\Controllers\VendorController::class, 'delete_gallery'])->name('delete-gallery');
     Route::get('/delete-nearby/{id}', [App\Http\Controllers\VendorController::class, 'delete_nearby'])->name('delete-nearby');
 
+    Route::get('/edit-image/{select}/{id}', [App\Http\Controllers\VendorController::class, 'edit_image'])->name('edit-image');
     Route::get('/edit-gallery/{id}', [App\Http\Controllers\VendorController::class, 'edit_gallery'])->name('edit-gallery');
     Route::get('/edit-nearby/{id}', [App\Http\Controllers\VendorController::class, 'edit_nearby'])->name('edit-nearby');
 
@@ -262,6 +263,7 @@ Route::group(['prefix'=>'vendors'], function(){
     Route::post('/add-property', [App\Http\Controllers\VendorController::class, 'add_properties'])->name('add-property-post');
     Route::post('/save-property', [App\Http\Controllers\VendorController::class, 'save_property_post'])->name('save-property-post');
     Route::post('/save-gallery-post', [App\Http\Controllers\VendorController::class, 'save_gallery_post'])->name('save-gallery-post');
+    Route::post('/save-image-post', [App\Http\Controllers\VendorController::class, 'save_image_post'])->name('save-image-post');
     Route::post('/save-nearby-post/{id}', [App\Http\Controllers\VendorController::class, 'save_nearby_post'])->name('save-nearby-post');
     Route::post('/invoice-make', [App\Http\Controllers\VendorController::class, 'invoice_make'])->name('invoice-make');
     Route::post('/verify-payment', [App\Http\Controllers\VendorController::class, 'verify_payment'])->name('verify-payment');

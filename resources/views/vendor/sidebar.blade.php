@@ -4,7 +4,11 @@
             <img src="{{asset('theme/images/Landscape-logo-premium-4.png')}}" alt="header-logo Premium Homes">
         </div>
         <div class="header clearfix">
-            <img src="{{asset('theme/images/testimonials/199259143_4389625377747506_3043984032264076715_n.jpg')}}" alt="avatar" class="img-fluid profile-img">
+            @if(Auth::User()->avatar == null)
+            <img src="{{url('/')}}/uploads/users/avatar.jpg" alt="avatar" class="img-fluid profile-img">
+            @else
+            <img src="{{url('/')}}/uploads/users/{{Auth::User()->avatar}}" alt="avatar" class="img-fluid profile-img">
+            @endif
         </div>
         <div class="active-user">
             @if(Auth::User())
