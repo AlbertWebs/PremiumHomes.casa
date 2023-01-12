@@ -50,11 +50,11 @@
                         <i class="fas fa-paste"></i>Invoices
                     </a>
                 </li>
-                <li>
+                {{-- <li>
                     <a href="change-password#">
                         <i class="fa fa-lock"></i>Change Password
                     </a>
-                </li>
+                </li> --}}
                 <li>
 
                     <a class="dropdown-item" href="{{ route('logout') }}"
