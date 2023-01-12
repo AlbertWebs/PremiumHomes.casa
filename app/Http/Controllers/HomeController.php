@@ -32,7 +32,7 @@ class HomeController extends Controller
     }
 
     public function properties_agent($id){
-        $Property = Property::where('Status',$id)->where('agent',$id)->get();
+        $Property = Property::where('Status',$id)->where('user_id',$id)->get();
         return view('front.properties_agent',compact('id','Property'));
     }
 
