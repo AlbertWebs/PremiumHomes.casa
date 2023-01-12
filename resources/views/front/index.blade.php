@@ -299,9 +299,10 @@ Premium Homes offers local real estate agents in major cities offering a wide ra
             </div>
             <?php
                $Agents = DB::table('users')->where('agent','1')->get();
+               $delay = 5;
             ?>
             @foreach ($Agents as $agent)
-            <div class="team-block col-sm-6 col-md-4 col-lg-4 col-xl-2 team-pro" data-aos="fade-up" data-aos-delay="150">
+            <div class="team-block col-sm-6 col-md-4 col-lg-4 col-xl-2 team-pro" data-aos="fade-up" data-aos-delay="1{{$delay}}0">
                 <div class="team-wrap">
                     <div class="team-img">
                         <img src="{{url('/')}}/uploads/users/{{$agent->image}}" alt="" />
@@ -324,6 +325,7 @@ Premium Homes offers local real estate agents in major cities offering a wide ra
                     </div>
                 </div>
             </div>
+            <?php $delay = $delay+1; ?>
             @endforeach
         </div>
     </div>
