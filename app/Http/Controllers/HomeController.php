@@ -31,6 +31,11 @@ class HomeController extends Controller
         return view('front.properties',compact('id','Property'));
     }
 
+    public function properties_agent($id){
+        $Property = Property::where('Status',$id)->where('agent',$id)->get();
+        return view('front.properties_agent',compact('id','Property'));
+    }
+
     public function plots($id){
         $Property = Property::where('slung',$id)->get();
         return view('front.plots',compact('id'));
