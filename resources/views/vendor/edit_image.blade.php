@@ -112,15 +112,15 @@
 
                                 <center>
                                     @if(Session::has('message'))
-                                                    <div class="alert alert-success">
-                                                        {{ Session::get('message') }}
-                                                        &nbsp;
+                                        <div class="alert alert-success">
+                                            {{ Session::get('message') }}
+                                            &nbsp;
 
-                                                    </div>
+                                        </div>
                                    @endif
 
                                    @if(Session::has('messageError'))
-                                                  <div class="alert alert-danger">{{ Session::get('messageError') }}</div>
+                                       <div class="alert alert-danger">{{ Session::get('messageError') }}</div>
                                    @endif
                                 </center>
 

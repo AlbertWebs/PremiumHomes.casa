@@ -135,7 +135,11 @@
                     <div class="header-user-menu user-menu add">
                         <div class="header-user-name">
                             <span>
-                                <img src="{{asset('theme/images/testimonials/199259143_4389625377747506_3043984032264076715_n.jpg')}}" alt="">
+                                @if(Auth::User()->avatar == null)
+                                <img src="{{url('/')}}/uploads/users/avatar.jpg" alt="">
+                                @else
+                                <img src="{{url('/')}}/uploads/users/{{Auth::user()->avatar}}" alt="">
+                                @endif
                             </span>
                             Hi, {{Auth::User()->name}}
                         </div>
