@@ -6,9 +6,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="html 5 template">
-    <meta name="author" content="">
+
     <title>Premium Homes - High End Homes in Kenya</title>
+    <meta name="description" content="Apartments, Houses, Homes, Condos, Studios, High Rise, High End Living in Africa">
+    <link rel="canonical" href="https://premiumhomes.casa/"/>
+    <meta name="author" content="Designekta Studios">
+    <meta property="og:description" content="Apartments, Houses, Homes, Condos, Studios, High Rise, High End Living in Africa">
+    <meta property="og:image" content="https://premiumhomes.casa/theme/images/preloader.png" />
+    <meta property="fb:app_id" content="431980657174772" />
+    <meta property="og:title" content="Premium Homes - High End Homes in Kenya - Premium Business Den - " />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://premiumhomes.casa/" />
+
+    <meta name="twitter:title" content="Premium Homes - High End Homes in Kenya - Premium Business Den" />
+    <meta name="twitter:site" content="@premiumhomescasa" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@premiumhomescasa" />
     <!-- FAVICON -->
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('theme/images/preloader.png')}}">
     <link rel="stylesheet" href="{{asset('theme/css/jquery-ui.css')}}">
