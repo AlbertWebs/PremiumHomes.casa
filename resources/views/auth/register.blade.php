@@ -10,30 +10,45 @@
             <a href="#0" class="social_bt linkedin">Login with Linkedin</a>
         </div>
         <div class="divider"><span>Or</span></div>
-        <form autocomplete="off">
+        <form autocomplete="off" method="POST" action="{{ route('register') }}">
+            @csrf
             <div class="form-group">
                 <label>Your Name</label>
-                <input class="form-control" type="text">
+                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+
+                @error('name')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
                 <i class="ti-user"></i>
             </div>
-            <div class="form-group">
-                <label>Your Last Name</label>
-                <input class="form-control" type="text">
-                <i class="ti-user"></i>
-            </div>
+
             <div class="form-group">
                 <label>Your Email</label>
-                <input class="form-control" type="email">
+                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+
+                @error('email')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
                 <i class="icon_mail_alt"></i>
             </div>
             <div class="form-group">
                 <label>Your password</label>
-                <input class="form-control" type="password" id="password1">
+                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+
+                @error('password')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
                 <i class="icon_lock_alt"></i>
             </div>
             <div class="form-group">
                 <label>Confirm password</label>
-                <input class="form-control" type="password" id="password2">
+                <input class="form-control" type="password" name="password_confirmation" id="password2">
                 <i class="icon_lock_alt"></i>
             </div>
             <div id="pass-info" class="clearfix"></div>
