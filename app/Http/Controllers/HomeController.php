@@ -57,8 +57,13 @@ class HomeController extends Controller
     }
 
     public function property($slung){
+
         $Property = Property::where('slung',$slung)->get();
-        return view('front.property', compact('Property'));
+        foreach($Property as $prop){
+            $title = $prop->property_name;
+            $description = "$prop->property_name located at  $prop->address listed for $prop->status";
+        }
+        return view('front.property', compact('Property','title','description'));
     }
 
 

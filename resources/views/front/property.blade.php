@@ -6,9 +6,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="html 5 template">
-    <meta name="author" content="">
-    <title>Premium Homes - High End Homes in Kenya</title>
+    {{--  --}}
+    <title>{{$title}} - Premium Homes</title>
+    <meta name="description" content="{{$description}}">
+    @foreach($Property as $prop)
+    <link rel="canonical" href="https://premiumhomes.casa/properties/{{$prop->slung}}"/>
+    <meta name="author" content="Designekta Studios">
+    <meta property="og:description" content="{{$description}}">
+    <meta property="og:image" content="https://premiumhomes.casa/uploads/properties/{{$prop->featured_image}}" />
+    <meta property="fb:app_id" content="431980657174772" />
+    <meta property="og:title" content="{{$title}} - Premium Homes " />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://premiumhomes.casa/properties/{{$prop->slung}}" />
+
+    <meta name="twitter:title" content="{{$title}} - Premium Homes" />
+    <meta name="twitter:site" content="@premiumhomescasa" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@premiumhomescasa" />
+    @endforeach
+    {{--  --}}
+
+
     <!-- FAVICON -->
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('theme/images/preloader.png')}}">
     <link rel="stylesheet" href="{{asset('theme/css/jquery-ui.css')}}">
