@@ -72,41 +72,34 @@
             </li>
             {{--  --}}
 
-             {{--  --}}
-             <li><a href="{{url('/')}}/admin/enroll-users" class="collapsible-header"><i class="fa fa-registered " aria-hidden="true"></i> Enroll Users </a>
 
-            </li>
-            {{--  --}}
-
-            {{--  --}}
-            <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Academia </a>
+            <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-check " aria-hidden="true"></i> Approvals </a>
                 <div class="collapsible-body left-sub-menu">
                     <ul>
-                        <li><a href="{{url('/')}}/admin/courses">All Courses </a>
+                        <li><a href="{{url('/')}}/admin/courses">Approved Properties </a>
                         </li>
-                        <li><a href="{{url('/')}}/admin/addCourse">Add Course </a>
+                        <li><a href="{{url('/')}}/admin/addCourse">Pending Approval </a>
                         </li>
-                        <li><a href="{{url('/')}}/admin/topics">All Topics </a>
+
+                    </ul>
+                </div>
+            </li>
+
+            {{--  --}}
+            <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-home" aria-hidden="true"></i> Properties </a>
+                <div class="collapsible-body left-sub-menu">
+                    <ul>
+                        <li><a href="{{url('/')}}/admin/courses">All Properties </a>
                         </li>
-                        <li><a href="{{url('/')}}/admin/addTopic">Add Topic </a>
+                        <li><a href="{{url('/')}}/admin/addCourse">Add Property </a>
                         </li>
+
                     </ul>
                 </div>
             </li>
             {{--  --}}
 
-                     {{--  --}}
-                     <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-bar-chart" aria-hidden="true"></i> Signals </a>
-                        <div class="collapsible-body left-sub-menu">
-                            <ul>
-                                <li><a href="{{url('/')}}/admin/signals">All Signals </a>
-                                </li>
-                                <li><a href="{{url('/')}}/admin/addSignal">Add Signal </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    {{--  --}}
+
 
 
             {{--  --}}
@@ -183,8 +176,6 @@
             <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-gavel" aria-hidden="true"></i>Legal Pages</a>
                 <div class="collapsible-body left-sub-menu">
                     <ul>
-                        <li><a href="{{url('/')}}/admin/editRisk">Risk Declaration</a>
-                        </li>
                         <li><a href="{{url('/')}}/admin/privacy">Privacy Policy</a>
                         </li>
                         <li><a href="{{url('/')}}/admin/terms">Terms and Conditions</a>

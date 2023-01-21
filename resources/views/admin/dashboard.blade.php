@@ -6,7 +6,7 @@
                     <span class="ad-hom-col-com ad-hom-col-1"><i class="fa fa-bar-chart"></i></span>
                     <div class="ad-hom-view-com">
                     <p><i class="fa  fa-arrow-up up"></i> Today Views</p>
-                    <h3>22,520</h3>
+                    <h3>2210</h3>
                     </div>
                 </div>
             </li>
@@ -15,7 +15,7 @@
                     <span class="ad-hom-col-com ad-hom-col-2"><i class="fa fa-usd"></i></span>
                     <div class="ad-hom-view-com">
                     <p><i class="fa  fa-arrow-up up"></i> Earnings</p>
-                    <h3>22,520</h3>
+                    <h3>kes16</h3>
                     </div>
                 </div>
             </li>

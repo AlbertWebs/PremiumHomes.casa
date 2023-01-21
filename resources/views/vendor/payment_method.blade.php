@@ -249,7 +249,7 @@
                                      <div class="tr-single-box">
                                          <div class="tr-single-body">
                                              <div class="tr-single-header">
-                                                 <h4><i class="far fa-credit-card pr-2"></i>Payment Method</h4>
+                                                 <h4><i class="far fa-credit-card pr-2"></i>Payment Method & M-Pesa Express</h4>
                                              </div>
                                              <!-- Pesapal Option -->
                                              <div class="payment-card">
@@ -290,7 +290,7 @@
                                                  </div>
                                              </div>
                                              <!-- M-PESA Express -->
-                                             <div class="payment-card mb-0">
+                                             {{-- <div class="payment-card mb-0">
                                                  <header class="payment-card-header cursor-pointer" data-toggle="collapse" data-target="#debit-credit" aria-expanded="true">
                                                      <div class="payment-card-title flexbox">
                                                          <h4>M-Pesa Express</h4>
@@ -317,12 +317,7 @@
 
                                                             <div class="row mrg-bot-20">
                                                                 <div class="col-sm-7">
-                                                                    {{-- <span class="custom-checkbox d-block font-12 mb-2">
-                                                                    <input type="checkbox" id="promo">
-                                                                    <label for="promo"></label>
-                                                                    Have a promo code?
-                                                                    </span>
-                                                                    <input type="text" class="form-control"> --}}
+
                                                                 </div>
                                                                 <div class="col-sm-5 padd-top-10 text-right">
                                                                     <label>Total Order</label>
@@ -338,7 +333,7 @@
                                                         </div>
                                                     </div>
                                                  </form>
-                                             </div>
+                                             </div> --}}
                                              <!-- C2B -->
                                              <br>
                                              <div class="payment-card">

@@ -42,8 +42,8 @@ Route::get('/clear-cache', function() {
 Auth::routes();
 
 Route::group(['prefix'=>'admin'], function(){
-    Route::get('/', [App\Http\Controllers\AdminsController::class, 'adminHome'])->name('admin.home');
-    Route::get('/home', [App\Http\Controllers\AdminsController::class, 'adminHome'])->name('admin.home');
+    Route::get('/', [App\Http\Controllers\AdminsController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
+    Route::get('/home', [App\Http\Controllers\AdminsController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
     // SiteSettings
     Route::get('/credentials', [AdminsController::class, 'systemsCredentials'])->middleware('is_admin');
     Route::get('/SiteSettings', [AdminsController::class, 'SiteSettings'])->middleware('is_admin');

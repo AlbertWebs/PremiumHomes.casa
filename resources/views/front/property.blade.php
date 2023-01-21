@@ -10,19 +10,19 @@
     <title>{{$title}} - Premium Homes</title>
     <meta name="description" content="{{$description}}">
     @foreach($Property as $prop)
-    <link rel="canonical" href="https://premiumhomes.casa/properties/{{$prop->slung}}"/>
-    <meta name="author" content="Designekta Studios">
-    <meta property="og:description" content="{{$description}}">
-    <meta property="og:image" content="https://premiumhomes.casa/uploads/properties/{{$prop->featured_image}}" />
-    <meta property="fb:app_id" content="431980657174772" />
-    <meta property="og:title" content="{{$title}} - Premium Homes " />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://premiumhomes.casa/properties/{{$prop->slung}}" />
+        <link rel="canonical" href="https://premiumhomes.casa/properties/{{$prop->slung}}"/>
+        <meta name="author" content="Designekta Studios">
+        <meta property="og:description" content="{{$description}}">
+        <meta property="og:image" content="https://premiumhomes.casa/uploads/properties/{{$prop->featured_image}}" />
+        <meta property="fb:app_id" content="431980657174772" />
+        <meta property="og:title" content="{{$title}} - Premium Homes " />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://premiumhomes.casa/properties/{{$prop->slung}}" />
 
-    <meta name="twitter:title" content="{{$title}} - Premium Homes" />
-    <meta name="twitter:site" content="@premiumhomescasa" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:creator" content="@premiumhomescasa" />
+        <meta name="twitter:title" content="{{$title}} - Premium Homes" />
+        <meta name="twitter:site" content="@premiumhomescasa" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:creator" content="@premiumhomescasa" />
     @endforeach
     {{--  --}}
 

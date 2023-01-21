@@ -141,7 +141,7 @@
                                                     <li>Basic Listing</li>
                                                     <li>Admin Dashboard</li>
                                                     <li>Featured Properties</li>
-                                                    <li>Traffic Guaranteed</li>
+                                                    <li>250 Visits/Month Traffic Guaranteed</li>
                                                     <li>24/7 Live Support</li>
                                                 </ul>
                                                 <?php $premiums = "standard"; $mytime = Carbon\Carbon::today();  ?>
@@ -167,8 +167,9 @@
                                                     <li>Basic Listing</li>
                                                     <li>Admin Dashboard</li>
                                                     <li>Featured Properties</li>
-                                                    <li>Traffic Guaranteed</li>
+                                                    <li>1000 Visits/Month Traffic Guaranteed</li>
                                                     <li>24/7 Live Support</li>
+                                                    <li>Featured Billboards</li>
                                                 </ul>
                                                 <?php $premiums = "premium"; $mytime = Carbon\Carbon::today(); ?>
                                                 <form method="post" action="{{url('/')}}/vendors/invoice-make">
