@@ -173,7 +173,11 @@
                                          </td>
 
                                          <td>
-                                            <div class="inner">163
+                                            <div class="inner">
+                                                <?php
+                                                     $PostView = DB::table('post_views')->where('post_id',$mylisting->id)->get();
+                                                ?>
+                                                {{count($PostView)}}
                                             </div>
                                          </td>
                                          <td class="actions">

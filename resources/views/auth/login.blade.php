@@ -29,7 +29,7 @@
                         <label for="check-b">Remember me</label>
                     </div>
                 </div>
-                <div class="float-right mt-1"><a id="forgot" href="javascript:void(0);">Forgot Password?</a></div>
+                <div class="float-right mt-1"><a id="forgot" href="{{ route('password.request') }}">Forgot Password?</a></div>
             </div>
             <button type="submit" class="btn_1 rounded full-width">Login to Premium Homes</button>
             <div class="text-center add_top_10">New to Premium Homes? <strong><a href="{{ route('register') }}">Sign up!</a></strong></div>

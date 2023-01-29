@@ -21,7 +21,7 @@ class PostView extends Model
         $postViews->slug = $post->slug;
         $postViews->url = request()->url();
         $postViews->session_id = request()->getSession()->getId();
-        $postViews->user_id = (auth()->check())?auth()->id():null; 
+        $postViews->user_id = (auth()->check())?auth()->id():null;
         $postViews->ip = request()->ip();
         $postViews->agent = request()->header('User-Agent');
         $postViews->save();
