@@ -106,85 +106,100 @@
                                 </div>
                             </div>
                         </div>
-                        {{--  --}}
-                        <br><br>
-                        {{--  --}}
-                        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.4.0/min/dropzone.min.css">
-                        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-                        <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.4.0/dropzone.js"></script>
-                        {{--  --}}
-                            @foreach ($Latest as $latest)
+                        <form action="{{route('add-nearby-post',[$id])}}" method="POST" enctype="multipart/form-data">
+                            @csrf
                             <div class="single-add-property">
-                                <h3>property Media - {{$latest->property_name}}</h3>
+                                <?php
+                                $Properties = DB::table('properties')->where('id',$id)->get();
+                            ?>
+                            @foreach ($Properties as $Pro)
+                            <h3>Amenities Around {{$Pro->property_name}}</h3>
+                            @endforeach
+
+                                <center>
+                                    @if(Session::has('message'))
+                                                    <div class="alert alert-success">
+                                                        {{ Session::get('message') }}
+                                                    </div>
+                                   @endif
+
+                                   @if(Session::has('messageError'))
+                                                  <div class="alert alert-danger">{{ Session::get('messageError') }}</div>
+                                   @endif
+
+                                </center>
                                 <div class="property-form-group">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <form action="{{url('image/upload/store')}}" enctype="multipart/form-data" class="dropzone">
-                                               @csrf
-                                                <input type="hidden" name="property_id" value="{{$latest->id}}">
-                                                <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
-                                            </form>
-                                        </div>
-                                    </div><br><br>
-                                    {{--  --}}
-                                    {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> --}}
-                                    <section>
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <div class="prperty-submit-button">
-                                                    &nbsp;
-                                                    <a href="{{url('/')}}/vendors/add-nearby/{{$latest->id}}" class="btn btn-success text-right"><span class="fa fa-map-marker"></span> Add Nearby</a>
-                                                    &nbsp;
-                                                    <a style="background-color: #bf9d34" class="btn btn-primary" href="{{url('/')}}/vendors/update-nearby/{{$latest->id}}"><span class="fa fa-map-marker"></span> Update Nearby</a>
+                                                <p>
+                                                    <label for="title">Property Title</label>
+                                                    <input required type="text" value="" name="amenities" id="title" placeholder="Enter your property title">
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12 col-md-12">
+                                                <p class="no-mb">
+                                                    <label for="price">Proximity</label>
+                                                    <input type="text" value="" name="proximity" placeholder="1km" id="price" required>
+                                                </p>
+                                            </div>
+                                        </div>
 
-                                                    <a style="background-color: #bf9d34" class="btn btn-primary" href="{{url('/')}}/vendors/update-gallery/{{$latest->id}}"><span class="fa fa-edit"></span> Update Gallery</a>
+                                        <br>
+                                        <input type="hidden" value="{{$id}}" name="property_id">
 
-                                                    <a style="background-color: #bf9d34" class="btn btn-primary" href="{{url('/')}}/vendors/view-gallery/{{$latest->id}}"><span class="fa fa-image"></span> View Gallery</a>
+
+                                        <div class="row">
+
+                                            <div class="col-lg-6 col-md-12 dropdown faq-drop">
+                                                <div class="form-group categories">
+                                                    <label for="price">Category</label>
+                                                    <select name="category" class="nice-select form-control wide" required>
+
+                                                        <?php
+                                                           $Category = App\Models\Cat::all()
+                                                        ?>
+                                                        @foreach ($Category as $Cat)
+                                                           <option value="{{$Cat->title}}">{{$Cat->title}}</option>
+                                                        @endforeach
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-12 dropdown faq-drop">
+                                                <div class="form-group categories">
+                                                    <label for="price">Ratings</label>
+                                                    <select name="rating" class="nice-select form-control wide" required>
+
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
-                                    </section>
-                                    {{--  --}}
                                 </div>
                             </div>
-                            @endforeach
 
-                            <script type="text/javascript">
-                                Dropzone.options.dropzone =
-                                 {
-                                        maxFilesize: 12,
-                                        renameFile: function(file) {
-                                            var dt = new Date();
-                                            var time = dt.getTime();
-                                        return time+file.name;
-                                        },
-                                        acceptedFiles: ".jpeg,.jpg,.png,.gif",
-                                        addRemoveLinks: true,
-                                        timeout: 5000,
-                                        success: function(file, response)
-                                        {
-                                            console.log(response);
-                                        },
-                                        error: function(file, response)
-                                        {
-                                          return false;
-                                        }
-                                };
-                                </script>
-
-                        {{--  --}}
-
-
-
+                            <div class="single-add-property">
+                                <div class="add-property-button pt-5">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="prperty-submit-button text-center">
+                                                <button type="submit"><span class="fa fa-save"></span> Add Nearby</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-
                     {{--  --}}
                 </div>
             </div>
         </section>
-
-
         <!-- END SECTION DASHBOARD -->
 
         <a data-scroll href="#wrapper" class="go-up"><i class="fa fa-angle-double-up" aria-hidden="true"></i></a>

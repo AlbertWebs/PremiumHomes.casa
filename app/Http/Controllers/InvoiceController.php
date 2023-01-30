@@ -15,13 +15,13 @@ class InvoiceController extends Controller
         $Invoices = DB::table('invoices')->orderBy('id','DESC')->Limit('1')->get();
         $count_invoices = count($Invoices);
         if($count_invoices == 0){
-            $InvoiceNumber = 'Premium-1';
+            $InvoiceNumber = 'PremiumHomes-1';
         }else{
             foreach($Invoices as $invoice)
             {
                 $LastID = $invoice->id;
                 $Next = $LastID+1;
-                $InvoiceNumber = "Premium-".$Next;
+                $InvoiceNumber = "PremiumHomes-".$Next;
             }
         }
         // Log to DB

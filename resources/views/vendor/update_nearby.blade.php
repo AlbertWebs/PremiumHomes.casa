@@ -107,6 +107,30 @@
                              </div>
                          </div>
                          <br><br>
+                         {{--  --}}
+                         {{-- <section>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="prperty-submit-button">
+                                        <a style="background-color: #bf9d34" class="btn btn-primary" href="{{url('/')}}/vendors/update-nearby/{{$latest->id}}"><span class="fa fa-map-marker"></span> Update Nearby</a>
+
+                                        <a style="background-color: #bf9d34" class="btn btn-primary" href="{{url('/')}}/vendors/update-gallery/{{$latest->id}}"><span class="fa fa-edit"></span> Update Gallery</a>
+
+                                        <a style="background-color: #bf9d34" class="btn btn-primary" href="{{url('/')}}/vendors/view-gallery/{{$latest->id}}"><span class="fa fa-image"></span> View Gallery</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section> --}}
+                         {{--  --}}
+                         <br><br>
+                         <?php
+                             $Properties = DB::table('properties')->where('id',$id)->get();
+                         ?>
+                         @foreach ($Properties as $Pro)
+                         <h4>Amenities Around {{$Pro->property_name}}</h4>
+                         @endforeach
+
+                         <br><br>
                          <div class="my-properties">
 
                              <table class="table-responsive">

@@ -254,6 +254,9 @@ Route::group(['prefix'=>'vendors'], function(){
 
     Route::get('/update-nearby/{id}', [App\Http\Controllers\VendorController::class, 'update_nearby'])->name('update-nearby');
 
+
+    Route::get('/add-nearby/{id}', [App\Http\Controllers\VendorController::class, 'add_nearby'])->name('add-nearby');
+
     Route::get('/upgrade/{id}', [App\Http\Controllers\VendorController::class, 'upgrade'])->name('upgrade');
     Route::get('/downgrade/{id}', [App\Http\Controllers\VendorController::class, 'downgrade'])->name('downgrade');
 
@@ -267,6 +270,7 @@ Route::group(['prefix'=>'vendors'], function(){
     Route::post('/save-gallery-post', [App\Http\Controllers\VendorController::class, 'save_gallery_post'])->name('save-gallery-post');
     Route::post('/save-image-post', [App\Http\Controllers\VendorController::class, 'save_image_post'])->name('save-image-post');
     Route::post('/save-nearby-post/{id}', [App\Http\Controllers\VendorController::class, 'save_nearby_post'])->name('save-nearby-post');
+    Route::post('/add-nearby-post/{id}', [App\Http\Controllers\VendorController::class, 'add_nearby_post'])->name('add-nearby-post');
     Route::post('/invoice-make', [App\Http\Controllers\VendorController::class, 'invoice_make'])->name('invoice-make');
     Route::post('/verify-payment', [App\Http\Controllers\VendorController::class, 'verify_payment'])->name('verify-payment');
 

@@ -203,8 +203,27 @@ class VendorController extends Controller
     public function update_nearby($id){
         $active = "properties";
         $Nearby = Nearby::where('property_id',$id)->get();
-        return view('vendor.update_nearby',compact('Nearby','active'));
+        return view('vendor.update_nearby',compact('Nearby','active','id'));
     }
+
+    public function add_nearby($id){
+        $active = "properties";
+        return view('vendor.add_nearby',compact('id','active'));
+    }
+
+    public function add_nearby_post(Request $request){
+        $Nearby = new NearBy;
+        $Nearby->rating = $request->rating;
+        $Nearby->category = $request->category;
+        $Nearby->proximity = $request->proximity;
+        $Nearby->amenities = $request->amenities;
+        $Nearby->property_id = $request->property_id;
+        $Nearby->save();
+        Session::flash('message', "Nearby has been added");
+        return Redirect::back();
+
+    }
+
 
     public function edit_gallery($id){
         $active = "properties";
@@ -351,13 +370,13 @@ class VendorController extends Controller
         $Invoices = DB::table('invoices')->orderBy('id','DESC')->Limit('1')->get();
         $count_invoices = count($Invoices);
         if($count_invoices == 0){
-            $InvoiceNumber = 'Premium-1';
+            $InvoiceNumber = 'PremiumHomes-1';
         }else{
             foreach($Invoices as $invoice)
             {
                 $LastID = $invoice->id;
                 $Next = $LastID+1;
-                $InvoiceNumber = "Premium-".$Next;
+                $InvoiceNumber = "PremiumHomes-".$Next;
             }
         }
         if($premiums == "standard"){
@@ -386,20 +405,20 @@ class VendorController extends Controller
         $Invoices = DB::table('invoices')->orderBy('id','DESC')->Limit('1')->get();
         $count_invoices = count($Invoices);
         if($count_invoices == 0){
-            $InvoiceNumber = 'Premium-1';
+            $InvoiceNumber = 'PremiumHomes-1';
         }else{
             foreach($Invoices as $invoice)
             {
                 $LastID = $invoice->id;
                 $Next = $LastID+1;
-                $InvoiceNumber = "Premium-".$Next;
+                $InvoiceNumber = "PremiumHomes-".$Next;
             }
         }
         $premiums = $request->package;
         if($request->package == "standard"){
-            $amount = "1";
+            $amount = "15500";
         }else{
-            $amount = "2";
+            $amount = "32500";
         }
         $qty = "1";
         $active = "payment_method";

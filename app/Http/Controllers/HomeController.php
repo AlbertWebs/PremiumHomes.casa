@@ -59,9 +59,6 @@ class HomeController extends Controller
     }
 
     public function property($slung){
-
-
-
         $Property = Property::where('slung',$slung)->get();
         foreach($Property as $prop){
             $title = $prop->property_name;
