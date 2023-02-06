@@ -470,6 +470,8 @@
                 $("#show-loading").hide();
                 $("#showSTK").hide();
                 $("#sucessSTK").hide();
+                $(".text-success").hide();
+                $("#show-loading-c2b").hide();
             });
 
 

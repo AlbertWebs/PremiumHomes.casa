@@ -45,11 +45,11 @@
                         <i class="fas fa-credit-card"></i>Payments
                     </a>
                 </li> --}}
-                <li>
+                {{-- <li>
                     <a class="@if($active == 'invoices') active @else @endif" href="{{route('invoices')}}">
                         <i class="fas fa-paste"></i>Invoices
                     </a>
-                </li>
+                </li> --}}
                 {{-- <li>
                     <a href="change-password#">
                         <i class="fa fa-lock"></i>Change Password
