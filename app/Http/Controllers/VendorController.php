@@ -401,6 +401,7 @@ class VendorController extends Controller
     }
 
     public function invoice_make(Request $request){
+        $property_id = $request->property_id;
         // Create Invoice
         $Invoices = DB::table('invoices')->orderBy('id','DESC')->Limit('1')->get();
         $count_invoices = count($Invoices);
@@ -435,15 +436,32 @@ class VendorController extends Controller
         }
         $content = $request->content;
         //Ajax Return Success
-        return view('vendor.payment_method', compact('active','premiums','InvoiceNumber','amount','qty','content'));
+        return view('vendor.payment_method', compact('active','premiums','InvoiceNumber','amount','qty','content','property_id'));
     }
 
     public function verify_payment(Request $request){
+        $property_id = $request->property_id;
+        $amount = $request->amount;
+        $premiums = $request->premiums;
         $transactionCode = $request->verify_transaction;
         $Verify = DB::table('mobile_payments')->where('TransID',$transactionCode)->where('status','0')->get();
         if($Verify == null){
             return response()->json(array('success' => 'Unable To Verify Transaction, Please try again'));
         }else{
+            if($premiums=="standard"){
+               $updateSubscription = array(
+                    'subscription'=>1,
+                );
+            }elseif($premiums=="premium"){
+                $updateSubscription = array(
+                    'subscription'=>2,
+                );
+            }else{
+                $updateSubscription = array(
+                    'subscription'=>0,
+                );
+            }
+            DB::table('properties')->where('id',$property_id)->update($updateSubscription);
             $updateDetails = array(
                 'user_id'=>Auth::User()->id,
                 'status'=>1,

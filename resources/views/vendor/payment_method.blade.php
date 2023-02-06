@@ -251,44 +251,7 @@
                                              <div class="tr-single-header">
                                                  <h4><i class="far fa-credit-card pr-2"></i>Payment Method & M-Pesa Express</h4>
                                              </div>
-                                             <!-- Pesapal Option -->
-                                             <div class="payment-card">
-                                                 <header class="payment-card-header cursor-pointer" data-toggle="collapsed" data-target="#paypal" aria-expanded="true">
-                                                     <div class="payment-card-title flexbox">
-                                                         <h4>Card Payment</h4>
-                                                     </div>
-                                                     <div class="pull-right">
-                                                         <img src="{{asset('uploads/logo.png')}}" class="img-responsive" alt="">
-                                                     </div>
-                                                 </header>
-                                                 <div class="collapsed" id="paypal" role="tablist" aria-expanded="false">
-                                                    <form method="post" action="{{route('make-payment')}}">
-                                                        @csrf
-                                                        <div class="payment-card-body">
-                                                            <div class="row mrg-bot-20">
-                                                                <div class="col-sm-6">
 
-
-                                                                </div>
-                                                                <div class="col-sm-6 padd-top-10 text-right">
-                                                                    <label>Total Order</label>
-                                                                    <h2 class="mrg-0"><span class="theme-cl">kes</span>{{$amount}}</h2>
-                                                                </div>
-                                                                <div class="col-sm-12 bt-1 padd-top-15 pt-3">
-
-                                                                    <input type="hidden" name="TransactionDesc" value="Premium Business Den - Home Listing Subscription">
-                                                                    <input type="hidden" name="AccountReference" value="Premium Homes - invoice-{{$InvoiceNumber}}">
-                                                                    <input type="hidden" name="Amount" value="{{$amount}}">
-                                                                    <input type="hidden" name="name" value="{{Auth::User()->name}}">
-                                                                    <input type="hidden" name="email" value="{{Auth::User()->email}}">
-                                                                    <input type="hidden" name="mobile" value="{{Auth::User()->mobile}}">
-                                                                    <button type="submit" class="btn btn-m btn-success">Pay Now</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </form>
-                                                 </div>
-                                             </div>
                                              <!-- M-PESA Express -->
                                              {{-- <div class="payment-card mb-0">
                                                  <header class="payment-card-header cursor-pointer" data-toggle="collapse" data-target="#debit-credit" aria-expanded="true">
@@ -337,7 +300,7 @@
                                              <!-- C2B -->
                                              <br>
                                              <div class="payment-card">
-                                                <header class="payment-card-header cursor-pointer" data-toggle="collapse" data-target="#c2b" aria-expanded="true">
+                                                <header class="payment-card-header cursor-pointer" data-toggle="collapsed" data-target="#c2b" aria-expanded="true">
                                                     <div class="payment-card-title flexbox">
                                                         <h4>M-PESA PayBill</h4>
                                                     </div>
@@ -345,9 +308,12 @@
                                                         <img src="{{asset('uploads/1200px-M-PESA_LOGO-01.svg.png')}}" class="img-responsive" alt="">
                                                     </div>
                                                 </header>
-                                                <div class="collapse" id="c2b" role="tablist" aria-expanded="false">
+                                                <div class="collapsed" id="c2b" role="tablist" aria-expanded="false">
                                                    <form method="post" action="{{route('verify-payment')}}" id="mpesa-c2b">
                                                        @csrf
+                                                       <input type="hidden" name="property_id" value="{{$property_id}}">
+                                                       <input type="hidden" name="amount" value="{{$amount}}">
+                                                       <input type="hidden" name="premiums" value="{{$premiums}}">
                                                        <div class="payment-card-body">
                                                            <div class="row mrg-bot-20">
                                                                {{-- Instructions --}}
@@ -375,6 +341,47 @@
                                                                    <button type="submit" class="btn btn-m btn-success">Veryfy Payment <span class="fa fa-spinner fa-spin" id="show-loading-c2b"></span></button>
                                                                    <p class="text-success" id="show-c2b">Working.....</p>
                                                                    <p class="text-success" id="sucess-c2b">Your Payment Has Been Received</p>
+                                                               </div>
+                                                           </div>
+                                                       </div>
+                                                   </form>
+                                                </div>
+                                            </div>
+                                            <br>
+                                             <!-- Pesapal Option -->
+                                             <div class="payment-card">
+                                                <header class="payment-card-header cursor-pointer" data-toggle="collapse" data-target="#paypal" aria-expanded="true">
+                                                    <div class="payment-card-title flexbox">
+                                                        <h4>Card Payment</h4>
+                                                    </div>
+                                                    <div class="pull-right">
+                                                        <img src="{{asset('uploads/logo.png')}}" class="img-responsive" alt="">
+                                                    </div>
+                                                </header>
+                                                <div class="collapse" id="paypal" role="tablist" aria-expanded="false">
+                                                   <form method="post" action="{{route('make-payment')}}">
+                                                       @csrf
+                                                       <div class="payment-card-body">
+                                                           <div class="row mrg-bot-20">
+                                                               <div class="col-sm-6">
+
+
+                                                               </div>
+                                                               <div class="col-sm-6 padd-top-10 text-right">
+                                                                   <label>Total Order</label>
+                                                                   <h2 class="mrg-0"><span class="theme-cl">kes</span>{{$amount}}</h2>
+                                                               </div>
+                                                               <div class="col-sm-12 bt-1 padd-top-15 pt-3">
+
+                                                                   <input type="hidden" name="TransactionDesc" value="Premium Business Den - Home Listing Subscription">
+                                                                   <input type="hidden" name="AccountReference" value="Premium Homes - invoice-{{$InvoiceNumber}}">
+                                                                   <input type="hidden" name="Amount" value="1">
+                                                                   <input type="hidden" name="name" value="{{Auth::User()->name}}">
+                                                                   <input type="hidden" name="property_id" value="{{$property_id}}">
+                                                                   <input type="hidden" name="email" value="{{Auth::User()->email}}">
+                                                                   <input type="hidden" name="mobile" value="{{Auth::User()->mobile}}">
+                                                                   <input type="hidden" name="premiums" value="{{$premiums}}">
+                                                                   <button type="submit" class="btn btn-m btn-success">Pay Now</button>
                                                                </div>
                                                            </div>
                                                        </div>

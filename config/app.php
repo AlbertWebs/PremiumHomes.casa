@@ -184,6 +184,7 @@ return [
         Laravel\Socialite\SocialiteServiceProvider::class,
         Knox\Pesapal\PesapalServiceProvider::class,
 
+
         /*
          * Package Service Providers...
          */
