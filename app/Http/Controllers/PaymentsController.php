@@ -4,11 +4,9 @@ namespace App\Http\Controllers;
 
 use Pesapal;
 use Illuminate\Http\Request;
-// use Illuminate\Support\Facades\Request;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Payment;
-use Illuminate\Support\Facades\Input;
 
 
 class PaymentsController extends Controller
@@ -53,19 +51,13 @@ class PaymentsController extends Controller
     public function paymentsuccess(Request $request)//just tells u payment has gone thru..but not confirmed
     {
         // send message
-        $trackingid = $request->input('pesapal_transaction_tracking_id');
-        $ref = $request->input('pesapal_merchant_reference');
-
+        $trackingid = $request->pesapal_transaction_tracking_id;
+        $ref = $request->pesapal_merchant_reference;
         try {
-
             $this->sendSMS($trackingid,$ref);
-
           } catch (\Exception $e) {
-
               echo $e->getMessage();
           }
-
-
         $payments = Payment::where('transactionid',$ref)->first();
         $payments -> trackingid = $trackingid;
         $payments -> status = 'Confirmed';
@@ -77,7 +69,7 @@ class PaymentsController extends Controller
     public function sendSMS($trackingid,$ref){
         $name = Session::get('UserName');
         $phone = Session::get('UserMobile');
-        $message = "Hello $name, Your booking with tracking Id $trackingid has been received. Welcome to Villa Serene Hotel";
+        $message = "Hello $name, Your booking with tracking Id $trackingid has been received. Your Premium Subscripion will be activated after Moderators Approvals";
         $senderid = "DESIGNEKTA";
 
         $url = 'https://bulk.cloudrebue.co.ke/api/v1/send-sms';
@@ -113,9 +105,9 @@ class PaymentsController extends Controller
 
     public function paymentconfirmation(Request $request)
     {
-        $trackingid = Request::input('pesapal_transaction_tracking_id');
-        $merchant_reference = Request::input('pesapal_merchant_reference');
-        $pesapal_notification_type= Request::input('pesapal_notification_type');
+        $trackingid = $request->pesapal_transaction_tracking_id;
+        $merchant_reference = $request->pesapal_merchant_reference;
+        $pesapal_notification_type= $request->pesapal_notification_type;
         $this->checkpaymentstatus($trackingid,$merchant_reference,$pesapal_notification_type);
     }
 
