@@ -215,6 +215,7 @@ return [
         // 'ExampleClass' => App\Example\ExampleClass::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
         'Pesapal' => Knox\Pesapal\Facades\Pesapal::class,
+        'Input' => Illuminate\Support\Facades\Request::class,
     ])->toArray(),
 
 ];

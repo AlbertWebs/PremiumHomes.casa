@@ -7,12 +7,17 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Payment;
+use Session;
+use DB;
 
 
 class PaymentsController extends Controller
 {
     public function payment(Request $request){//initiates payment
         // dd(Request::all());
+        // Set Session for Property ID
+        $property_id = Session::put('property_id', $request->property_id);
+        $premiums = Session::put('premiums', $request->premiums);
         $payments = new Payment;
         $payments -> businessid = 1; //Business ID
         $payments -> transactionid = Pesapal::random_reference();
@@ -51,13 +56,35 @@ class PaymentsController extends Controller
     public function paymentsuccess(Request $request)//just tells u payment has gone thru..but not confirmed
     {
         // send message
-        $trackingid = $request->pesapal_transaction_tracking_id;
-        $ref = $request->pesapal_merchant_reference;
-        try {
-            $this->sendSMS($trackingid,$ref);
-          } catch (\Exception $e) {
-              echo $e->getMessage();
-          }
+        $trackingid = $request->pesapal_tracking_id;
+        $ref = $request->merchant_reference;
+
+        // Session::get('pesapal_tracking_id');
+        // try {
+        //     $this->sendSMS($trackingid,$ref);
+        //   } catch (\Exception $e) {
+        //       echo $e->getMessage();
+        //   }
+        // Update property ID:
+        $PropertyId = Session::get('property_id');
+        $premiums = Session::get('premiums');
+
+        if($premiums=="standard"){
+            $updateSubscription = array(
+                 'subscription'=>1,
+             );
+        }elseif($premiums=="premium"){
+             $updateSubscription = array(
+                 'subscription'=>2,
+             );
+        }else{
+             $updateSubscription = array(
+                 'subscription'=>0,
+             );
+        }
+
+        DB::table('properties')->where('id',$PropertyId)->update($updateSubscription);
+
         $payments = Payment::where('transactionid',$ref)->first();
         $payments -> trackingid = $trackingid;
         $payments -> status = 'Confirmed';
