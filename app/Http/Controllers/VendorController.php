@@ -133,7 +133,9 @@ class VendorController extends Controller
 
 
     public function downgrade($id){
-
+        $updateSubscription = array('subscription'=>0);
+        DB::table('properties')->where('id',$id)->update($updateSubscription);
+        return Redirect::back();
     }
 
     public function upgrade($id){
