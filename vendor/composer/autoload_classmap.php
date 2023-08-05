@@ -72,6 +72,7 @@ return array(
     'App\\Models\\SendMails' => $baseDir . '/app/Models/SendMails.php',
     'App\\Models\\Signal' => $baseDir . '/app/Models/Signal.php',
     'App\\Models\\Slider' => $baseDir . '/app/Models/Slider.php',
+    'App\\Models\\Target' => $baseDir . '/app/Models/Target.php',
     'App\\Models\\Term' => $baseDir . '/app/Models/Term.php',
     'App\\Models\\Testimonial' => $baseDir . '/app/Models/Testimonial.php',
     'App\\Models\\Thread' => $baseDir . '/app/Models/Thread.php',

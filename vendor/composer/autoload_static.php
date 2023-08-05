@@ -604,6 +604,7 @@ class ComposerStaticInitc4197389d2da37cafcedd5c03b5d9663
         'App\\Models\\SendMails' => __DIR__ . '/../..' . '/app/Models/SendMails.php',
         'App\\Models\\Signal' => __DIR__ . '/../..' . '/app/Models/Signal.php',
         'App\\Models\\Slider' => __DIR__ . '/../..' . '/app/Models/Slider.php',
+        'App\\Models\\Target' => __DIR__ . '/../..' . '/app/Models/Target.php',
         'App\\Models\\Term' => __DIR__ . '/../..' . '/app/Models/Term.php',
         'App\\Models\\Testimonial' => __DIR__ . '/../..' . '/app/Models/Testimonial.php',
         'App\\Models\\Thread' => __DIR__ . '/../..' . '/app/Models/Thread.php',

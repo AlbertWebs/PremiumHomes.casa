@@ -562,7 +562,7 @@ class AdminsController extends Controller
         return view('admin.users',compact('page_title','Users','page_name'));
     }
 
-    public function agents(){
+    public function properties(){
         activity()->log('Access All users Page');
         $Users = DB::table('users')->where('is_admin','0')->get();
         $page_title = 'list';

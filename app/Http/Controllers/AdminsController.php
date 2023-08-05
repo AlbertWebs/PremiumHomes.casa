@@ -2008,6 +2008,72 @@ class AdminsController extends Controller
     }
 
 
+      // Propertys
+      public function slider(){
+        activity()->log('Accessed All Propertys Page');
+        $Property = Property::all();
+        $page_title = 'list';
+        $page_name = 'Home Page Property';
+        return view('admin.slider',compact('page_title','Property','page_name'));
+    }
+
+    public function addProperty(){
+        activity()->log('Add Property Page');
+        $page_title = 'formfiletext';
+        $page_name = 'Add Home Page Property';
+        return view('admin.addProperty',compact('page_title','page_name'));
+    }
+
+    public function add_Property(Request $request){
+        activity()->log('Evoked an add Property Operation ');
+        $path = 'uploads/slider';
+        $file = $request->file('image');
+        $filename = $file->getClientOriginalName();
+        $file->move($path, $filename);
+        $image = $filename;
+        $Property = new Property;
+        $Property->name = $request->name;
+        $Property->content = $request->content;
+        $Property->image = $image;
+        $Property->save();
+        Session::flash('message', "Property Image Has Been Added");
+        return Redirect::back();
+    }
+
+    public function editProperty($id){
+        activity()->log('Accessed Page Property With number '.$id.' ');
+        $Property = Property::find($id);
+        $page_title = 'formfiletext';
+        $page_name = 'Edit Home Page Property';
+        return view('admin.editProperty',compact('page_title','Property','page_name'));
+    }
+
+    public function edit_Property(Request $request, $id){
+        activity()->log('Edited Property ID number '.$id.' ');
+        $path = 'uploads/slider';
+        if(isset($request->image)){
+            $file = $request->file('image');
+            $filename = $file->getClientOriginalName();
+            $file->move($path, $filename);
+            $image = $filename;
+        }else{
+            $image = $request->image_cheat;
+        }
+        $updateDetails = array(
+            'name'=>$request->name,
+            'content' =>$request->content,
+            'image' =>$image
+        );
+        DB::table('properties')->where('id',$id)->update($updateDetails);
+        Session::flash('message', "Changes have been saved");
+        return Redirect::back();
+    }
+
+    public function deleteProperty($id){
+        activity()->log(' Deleted Property Number '.$id.'');
+        DB::table('properties')->where('id',$id)->delete();
+        return Redirect::back();
+    }
 }
 
 

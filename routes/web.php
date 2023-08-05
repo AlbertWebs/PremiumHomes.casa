@@ -121,6 +121,15 @@ Route::group(['prefix'=>'admin'], function(){
     Route::post('/edit_Slider/{id}', [AdminsController::class, 'edit_Slider'])->middleware('is_admin');
     Route::get('/deleteSlider/{id}', [AdminsController::class, 'deleteSlider'])->middleware('is_admin');
 
+    // Properties
+    Route::get('/properties', [AdminsController::class, 'properties'])->middleware('is_admin');
+    Route::get('/addProperty', [AdminsController::class, 'addProperty'])->middleware('is_admin');
+    Route::post('/add_Property', [AdminsController::class, 'add_Property'])->middleware('is_admin');
+    Route::get('/editProperty/{id}', [AdminsController::class, 'editProperty'])->middleware('is_admin');
+    Route::post('/edit_Property/{id}', [AdminsController::class, 'edit_Property'])->middleware('is_admin');
+    Route::get('/deleteProperty/{id}', [AdminsController::class, 'deleteProperty'])->middleware('is_admin');
+
+
     // Banners
     Route::get('/banners', [AdminsController::class, 'banners'])->middleware('is_admin');
     Route::get('/editBanner/{id}', [AdminsController::class, 'editBanner'])->middleware('is_admin');

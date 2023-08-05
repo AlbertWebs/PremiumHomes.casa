@@ -76,9 +76,9 @@
             <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-check " aria-hidden="true"></i> Approvals </a>
                 <div class="collapsible-body left-sub-menu">
                     <ul>
-                        <li><a href="{{url('/')}}/admin/courses">Approved Properties </a>
+                        <li><a href="{{url('/')}}/admin/approved">Approved Properties </a>
                         </li>
-                        <li><a href="{{url('/')}}/admin/addCourse">Pending Approval </a>
+                        <li><a href="{{url('/')}}/admin/approved-pending">Pending Approval </a>
                         </li>
 
                     </ul>
@@ -100,9 +100,9 @@
             <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-home" aria-hidden="true"></i> Properties </a>
                 <div class="collapsible-body left-sub-menu">
                     <ul>
-                        <li><a href="{{url('/')}}/admin/courses">All Properties </a>
+                        <li><a href="{{url('/')}}/admin/properties">All Properties </a>
                         </li>
-                        <li><a href="{{url('/')}}/admin/addCourse">Add Property </a>
+                        <li><a href="{{url('/')}}/admin/addProperty">Add Property </a>
                         </li>
 
                     </ul>
