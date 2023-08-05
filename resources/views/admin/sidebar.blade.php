@@ -85,6 +85,17 @@
                 </div>
             </li>
 
+            <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-bar-chart " aria-hidden="true"></i> Data Metrix </a>
+                <div class="collapsible-body left-sub-menu">
+                    <ul>
+                        <li><a href="{{url('/')}}/admin/agents">Agents </a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </li>
+
             {{--  --}}
             <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-home" aria-hidden="true"></i> Properties </a>
                 <div class="collapsible-body left-sub-menu">

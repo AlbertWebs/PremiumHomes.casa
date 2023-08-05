@@ -181,6 +181,13 @@ Route::group(['prefix'=>'admin'], function(){
     Route::post('/enroll-user-now', [AdminsController::class, 'enroll_user_now'])->middleware('is_admin');
     Route::get('/enroll-users-posts/{email}', [AdminsController::class, 'enroll_users_now'])->middleware('is_admin');
 
+    Route::get('/agents', [AdminsController::class, 'agents'])->middleware('is_admin');
+    Route::get('/enroll-users-post/{id}', [AdminsController::class, 'enroll_users_post'])->middleware('is_admin');
+    Route::post('/enroll-user-now', [AdminsController::class, 'enroll_user_now'])->middleware('is_admin');
+    Route::get('/enroll-users-posts/{email}', [AdminsController::class, 'enroll_users_now'])->middleware('is_admin');
+
+
+
     //Manage Users
     Route::get('/users', [AdminsController::class, 'users'])->middleware('is_admin');
     Route::get('/admins', [AdminsController::class, 'admins'])->middleware('is_admin');
