@@ -2008,14 +2008,14 @@ class AdminsController extends Controller
     }
 
 
-      // Propertys
-      public function slider(){
-        activity()->log('Accessed All Propertys Page');
-        $Property = Property::all();
+    public function properties(){
+        activity()->log('Access All users Page');
+        $Users = DB::table('users')->where('is_admin','0')->get();
         $page_title = 'list';
-        $page_name = 'Home Page Property';
-        return view('admin.slider',compact('page_title','Property','page_name'));
+        $page_name = 'Users';
+        return view('admin.agents',compact('page_title','Users','page_name'));
     }
+
 
     public function addProperty(){
         activity()->log('Add Property Page');
