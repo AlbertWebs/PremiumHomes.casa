@@ -72,7 +72,7 @@
                             <ul id="responsive">
                                 <li><a onclick="" href="{{route('properties-home')}}">For Rent</a> </li>
                                 <li><a onclick="alert('work in progress')" href="#">For Sale</a> </li>
-                                <li><a onclick="alert('work in progress')" href="#">Property Advice</a> </li>
+                                <li><a onclick="alert('work in progress')" href="#">Property Talks</a> </li>
                                 {{-- <li><a href="{{route('search-home')}}"><i class="fa fa-search"></i> Search</a> </li> --}}
 
                                 <li><a onclick="alert('work in progress')" href="#">Locations</a> </li>

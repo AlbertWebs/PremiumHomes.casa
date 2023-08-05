@@ -75,7 +75,7 @@
                             </g>
                         </g>
                     </svg>
-                    Call +254 707 190 188</a>
+                    Call +254 727 111 222</a>
             </div>
             <div class="siderbar_email">
                 <a href="javascript:;">
@@ -116,7 +116,7 @@
                                 <li><a  href="{{route('properties-home',['rent'])}}">For Rent</a> </li>
                                 <li><a  href="{{route('properties-home',['sale'])}}">For Sale</a> </li>
                                 <li><a onclick="return alert('Work in progress')"  href="#">Plots</a> </li>
-                                <li><a onclick="alert('work in progress')" href="#">Property Advice</a> </li>
+                                <li><a onclick="alert('work in progress')" href="#">Property Talks</a> </li>
                                 {{-- <li><a href="{{route('search-home')}}"><i class="fa fa-search"></i> Search</a> </li> --}}
 
                                 <li><a onclick="alert('work in progress')" href="#">Locations</a> </li>

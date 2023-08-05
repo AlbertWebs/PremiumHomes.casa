@@ -21,7 +21,7 @@
                          <li>
                              <div class="info">
                                  <i class="fa fa-phone" aria-hidden="true"></i>
-                                 <p class="in-p">+254 707 190 188</p>
+                                 <p class="in-p">+254 727 111 222</p>
                              </div>
                          </li>
                          <li>
