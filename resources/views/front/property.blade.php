@@ -478,51 +478,47 @@
                                         <input type="text" id="reservation-time" class="form-control" readonly="">
                                     </div>
                                 </div>
-                                <div class="row mrg-top-15 mb-3">
-                                    <div class="col-lg-12 col-md-12 mt-4">
-                                        <label class="mb-4">Number of People</label>
-                                        <div class="input-group">
-                                            <span class="input-group-btn">
-                                     <button type="button" class="btn counter-btn theme-cl btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
-                                         <i class="fa fa-minus"></i>
-                                     </button>
-                                        </span>
-                                            <input type="text" name="quant[1]" class="border-0 text-center form-control input-number" data-min="0" data-max="10" value="0">
-                                            <span class="input-group-btn">
-                                         <button type="button" class="btn counter-btn theme-cl btn-number" data-type="plus" data-field="quant[1]">
-                                          <i class="fa fa-plus"></i>
-                                         </button>
-                                        </span>
+                                <form action="{{url('/schedule-post')}}" method="post">
+                                    @csrf
+                                    <div class="row mrg-top-15 mb-3">
+                                        <div class="col-lg-12 col-md-12 mt-4">
+                                            <label class="mb-4">Number of People</label>
+                                            <div class="input-group">
+                                                <span class="input-group-btn">
+                                        <button type="button" class="btn counter-btn theme-cl btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+                                            <i class="fa fa-minus"></i>
+                                        </button>
+                                            </span>
+                                                <input type="text" name="quant[1]" class="border-0 text-center form-control input-number" data-min="0" data-max="10" value="0">
+                                                <span class="input-group-btn">
+                                            <button type="button" class="btn counter-btn theme-cl btn-number" data-type="plus" data-field="quant[1]">
+                                            <i class="fa fa-plus"></i>
+                                            </button>
+                                            </span>
+                                            </div>
                                         </div>
+
                                     </div>
-                                    {{-- <div class="col-lg-6 col-md-12 mt-4">
-                                        <label class="mb-4">Children</label>
-                                        <div class="input-group">
-                                            <span class="input-group-btn">
-                                     <button type="button" class="btn counter-btn theme-cl btn-number" disabled="disabled" data-type="minus" data-field="quant[2]">
-                                         <i class="fa fa-minus"></i>
-                                     </button>
-                                        </span>
-                                            <input type="text" name="quant[2]" class="border-0 text-center form-control input-number" data-min="0" data-max="10" value="0">
-                                            <span class="input-group-btn">
-                                         <button type="button" class="btn counter-btn theme-cl btn-number" data-type="plus" data-field="quant[2]">
-                                          <i class="fa fa-plus"></i>
-                                         </button>
-                                        </span>
-                                        </div>
-                                    </div> --}}
-                                </div>
-                                <div class="agent-contact-form-sidebar">
-                                <input type="text" id="fname" name="full_name" placeholder="Full Name" required />
-                                <input type="email" id="fname" name="email_address" placeholder="Email " required />
-                                <input type="text" id="phone" name="phone_number" placeholder="Phone " required />
-                                </div>
-                                <a href="payment-method.html" class="btn reservation btn-radius theme-btn full-width mrg-top-10">Submit Request</a>
+                                    <div class="agent-contact-form-sidebar">
+                                    <input type="text" id="fname" name="full_name" placeholder="Full Name" required />
+                                    <input type="email" id="fname" name="email_address" placeholder="Email " required />
+                                    <input type="text" id="phone" name="phone_number" placeholder="Phone " required />
+                                    </div>
+                                    <button type="submit" class="btn reservation btn-radius theme-btn full-width mrg-top-10">Submit Request</button>
+                                </form>
+
                             </div>
                         </div>
                         <!-- End: Schedule a Tour -->
                         <!-- end author-verified-badge -->
+                        <?php
+                           $Agent = DB::table('users')->where('id',$Property->user_id)->get();
+                        ?>
+
+
+
                         <div class="sidebar">
+                            @foreach ($Agent as $agent)
                             <div class="widget-boxed mt-33 mt-5">
                                 <div class="widget-boxed-header">
                                     <h4>Agent Information</h4>
@@ -531,15 +527,15 @@
                                     <div class="sidebar-widget author-widget2">
                                         <div class="author-box clearfix">
                                             <img src="{{asset('theme/images/testimonials/199259143_4389625377747506_3043984032264076715_n.jpg')}}" alt="author-image" class="author__img">
-                                            <h4 class="author__title">Albert Muhatia</h4>
+                                            <h4 class="author__title">{{$agent->name}}</h4>
                                             <p class="author__meta">Agent of Property</p>
                                         </div>
                                         <ul class="author__contact">
-                                            <li><span class="la la-map-marker"><i class="fa fa-map-marker"></i></span>3571 Riverside Downs</li>
-                                            <li><span class="la la-phone"><i class="fa fa-phone" aria-hidden="true"></i></span><a href="tel:(+254) 72 301 4032">(+254) 72 301 4032 </a></li>
-                                            <li><span class="la la-envelope-o"><i class="fa fa-envelope" aria-hidden="true"></i></span><a href="#">albertmuhatia@gmail.com</a></li>
+                                            <li><span class="la la-map-marker"><i class="fa fa-map-marker"></i></span>{{$agent->address}}</li>
+                                            <li><span class="la la-phone"><i class="fa fa-phone" aria-hidden="true"></i></span><a href="tel:+254 727 111 222">+254 727 111 222 </a></li>
+                                            <li><span class="la la-envelope-o"><i class="fa fa-envelope" aria-hidden="true"></i></span><a href="#">{{$agent->email}}</a></li>
                                         </ul>
-                                        <div class="agent-contact-form-sidebar">
+                                        {{-- <div class="agent-contact-form-sidebar">
                                             <h4>Request Inquiry</h4>
                                             <form name="contact_form" method="post" action="https://code-theme.com/html/findhouses/functions.php">
                                                 <input type="text" id="fname" name="full_name" placeholder="Full Name" required />
@@ -548,10 +544,11 @@
                                                 <textarea placeholder="Message" name="message" required></textarea>
                                                 <input type="submit" name="sendmessage" class="multiple-send-message" value="Submit Request" />
                                             </form>
-                                        </div>
+                                        </div> --}}
                                     </div>
                                 </div>
                             </div>
+                            @endforeach
                             <div class="main-search-field-2">
                                 <div class="widget-boxed mt-5">
                                     <div class="widget-boxed-header">

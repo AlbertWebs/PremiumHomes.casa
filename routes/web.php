@@ -29,6 +29,9 @@ Route::get('/plots-for-sale/{id}', [App\Http\Controllers\HomeController::class, 
 Route::get('/privacy-policy', [App\Http\Controllers\HomeController::class, 'privacy'])->name('privacy');
 Route::get('/terms-and-conditions', [App\Http\Controllers\HomeController::class, 'terms'])->name('terms');
 Route::get('/copyright', [App\Http\Controllers\HomeController::class, 'copyright'])->name('copyright');
+Route::post('/schedule-post', [App\Http\Controllers\HomeController::class, 'schedule_post'])->name('schedule-post');
+
+
 
 Route::get('/invoices', [App\Http\Controllers\HomeController::class, 'invoice'])->name('invoice');
 

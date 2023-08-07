@@ -92,5 +92,12 @@ class HomeController extends Controller
 
 
 
+    public function schedule_post(Request $request){
+        $numberOfPeople = $request->quant[1];
+        $full_name = $request->full_name;
+        $email_address = $request->email_address;
+        $phone_number = $request->phone_number;
+        return "Done";
+    }
 
 }
