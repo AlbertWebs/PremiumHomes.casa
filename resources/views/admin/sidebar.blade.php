@@ -76,11 +76,8 @@
             <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-check " aria-hidden="true"></i> Approvals </a>
                 <div class="collapsible-body left-sub-menu">
                     <ul>
-                        <li><a href="{{url('/')}}/admin/approved">Approved Properties </a>
+                        <li><a href="{{url('/')}}/admin/approved"> Properties & Approval </a>
                         </li>
-                        <li><a href="{{url('/')}}/admin/approved-pending">Pending Approval </a>
-                        </li>
-
                     </ul>
                 </div>
             </li>
@@ -102,7 +99,7 @@
                     <ul>
                         <li><a href="{{url('/')}}/vendors/my-listings">All Properties </a>
                         </li>
-                        <li><a href="{{url('/')}}/vendors/add-property>Add Property </a>
+                        <li><a href="{{url('/')}}/vendors/add-property">Add Property </a>
                         </li>
 
                     </ul>

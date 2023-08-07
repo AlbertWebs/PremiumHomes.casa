@@ -1901,6 +1901,32 @@ class AdminsController extends Controller
         return response()->json(['success'=>'Deleted Successfully!']);
     }
 
+    public function deletePropertyAjax(Request $request){
+        activity()->log('Evoked a delete Properties');
+        $id = $request->id;
+        DB::table('properties')->where('id',$id)->delete();
+        return response()->json(['success'=>'Deleted Successfully!']);
+    }
+
+
+    public function switchStatusUserAjax(Request $request){
+        activity()->log('Evoked a switch status Approve/Revoke');
+        $id = $request->id;
+        $active = $request->active;
+        if($active == "Pending Approval")
+        {
+           $newActive = "Approved";
+        }else{
+            $newActive = "Pending Approval";
+        }
+        $updateDetails = array(
+            'active'=>$newActive
+        );
+        DB::table('properties')->where('id',$id)->update($updateDetails);
+        return response()->json(['success'=>'Deleted Successfully!']);
+    }
+
+
 
     public function updateSiteSettingsAjax(Request $request){
         activity()->log('Evoked an update Settings Request');
@@ -2009,10 +2035,10 @@ class AdminsController extends Controller
 
     public function properties(){
         activity()->log('Access All users Page');
-        $Users = DB::table('users')->where('is_admin','0')->get();
+        $Properties = DB::table('properties')->get();
         $page_title = 'list';
         $page_name = 'Users';
-        return view('admin.agents',compact('page_title','Users','page_name'));
+        return view('admin.properties',compact('page_title','Properties','page_name'));
     }
 
 
