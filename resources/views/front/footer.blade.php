@@ -21,9 +21,15 @@
                          <li>
                              <div class="info">
                                  <i class="fa fa-phone" aria-hidden="true"></i>
-                                 <p class="in-p">+254 727 111 222</p>
+                                 <p class="in-p"><a style="color:#EFE165" href="tel:+254 727 111 222">+254 727 111 222 </a></p>
                              </div>
                          </li>
+                         <li>
+                            <div class="info">
+                                <i class="fa fa-comment" aria-hidden="true"></i>
+                                <p class="in-p"><a style="color:#EFE165" href="sms://+254 727 111 222">+254 727 111 222 </a></p>
+                            </div>
+                        </li>
                          <li>
                              <div class="info">
                                  <i class="fa fa-envelope" aria-hidden="true"></i>
