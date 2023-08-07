@@ -100,9 +100,9 @@
             <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-home" aria-hidden="true"></i> Properties </a>
                 <div class="collapsible-body left-sub-menu">
                     <ul>
-                        <li><a href="{{url('/')}}/admin/properties">All Properties </a>
+                        <li><a href="{{url('/')}}/vendors/my-listings">All Properties </a>
                         </li>
-                        <li><a href="{{url('/')}}/admin/addProperty">Add Property </a>
+                        <li><a href="{{url('/')}}/vendors/add-property>Add Property </a>
                         </li>
 
                     </ul>

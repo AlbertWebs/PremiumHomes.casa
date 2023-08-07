@@ -2007,7 +2007,6 @@ class AdminsController extends Controller
         return "Done";
     }
 
-
     public function properties(){
         activity()->log('Access All users Page');
         $Users = DB::table('users')->where('is_admin','0')->get();
@@ -2021,7 +2020,8 @@ class AdminsController extends Controller
         activity()->log('Add Property Page');
         $page_title = 'formfiletext';
         $page_name = 'Add Home Page Property';
-        return view('admin.addProperty',compact('page_title','page_name'));
+        $Category = Category::all();
+        return view('admin.addProperty',compact('page_title','page_name','Category'));
     }
 
     public function add_Property(Request $request){

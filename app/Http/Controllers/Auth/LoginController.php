@@ -66,7 +66,7 @@ class LoginController extends Controller
             }
         }else{
             Session::flash('error', "email-address or password are wrong.");
-            return redirect()->route('loginRoute');
+            return redirect()->route('vendor.home');
         }
 
     }
