@@ -56,9 +56,9 @@
                 <ul class="p-0">
                     <br><br>
                     <li><a href="https://www.facebook.com/premiumhomes.casa"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="javascript:;"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.instagram.com/premiumhomes.casa/"><i class="fab fa-instagram"></i></a></li>
                     <li><a href="javascript:;"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="javascript:;"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/87387000/admin/feed/posts/"><i class="fab fa-linkedin"></i></a></li>
                     <li><a href="javascript:;"><i class="fab fa-pinterest-p"></i></a></li>
                 </ul>
             </div>
