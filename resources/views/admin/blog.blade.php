@@ -35,12 +35,12 @@
                     @if(Session::has('message'))
                                   <div class="alert alert-success">{{ Session::get('message') }}</div>
                    @endif
-   
+
                    @if(Session::has('messageError'))
                                   <div class="alert alert-danger">{{ Session::get('messageError') }}</div>
                    @endif
                 </center>
-               
+
                 <table class="table">
                     <thead>
                         <tr>
@@ -65,7 +65,7 @@
                                 @endforeach
                             </td>
                             <td>
-                                <?php 
+                                <?php
                                     $RawDate = $item->created_at;
                                     $FormatDate = strtotime($RawDate);
                                     $Month = date('M',$FormatDate);
@@ -100,7 +100,7 @@
                                                 type: "POST",
                                                 data: {id: {{$item->id}}},
                                                 dataType: "html",
-                                                success: function () 
+                                                success: function ()
                                                 {
                                                     swal("Done!","It was succesfully deleted!","success");
                                                     setTimeout(function() {
@@ -109,8 +109,8 @@
 
                                                 }
                                             });
-                                            // 
-                                          
+                                            //
+
                                         } else {
                                             swal("Your imaginary file is safe!");
                                         }
@@ -150,13 +150,13 @@
                                     <input  type="submit" class="waves-effect waves-light btn-large" value="Submit">
                                 </div>
                             </div>
-                            
+
                             <div class="tab-inn" id="loading-bar">
                                 <div class="progress">
                                     <div class="indeterminate"></div>
                                 </div>
                             </div>
-                            
+
                         </form>
                     </div>
                 </div>
@@ -171,10 +171,10 @@
     $('#categoryAddForm').on('submit',function(event){
         event.preventDefault();
         $('#loading-bar').show();
-   
+
 
         let title = $('#CategoryTitle').val();
-       
+
 
         $.ajax({
           url: "{{url('/')}}/admin/addCategoryAjaxRequest",
