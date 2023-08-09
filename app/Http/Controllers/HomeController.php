@@ -13,7 +13,7 @@ class HomeController extends Controller
     public function index()
     {
         $Property = Property::all();
-        $PropertyRent = Property::where('Status','Rent')->get();
+        $PropertyRent = Property::where('Status','Rent')->where('active','Approved')->get();
         return view('front.index', compact('Property','PropertyRent'));
     }
 
@@ -29,12 +29,12 @@ class HomeController extends Controller
     }
 
     public function properties($id){
-        $Property = Property::where('Status',$id)->get();
+        $Property = Property::where('Status',$id)->where('active','Approved')->get();
         return view('front.properties',compact('id','Property'));
     }
 
     public function properties_agent($id){
-        $Property = Property::where('user_id',$id)->get();
+        $Property = Property::where('user_id',$id)->where('active','Approved')->get();
         return view('front.properties_agent',compact('id','Property'));
     }
 
