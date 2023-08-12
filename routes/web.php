@@ -21,7 +21,7 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('so
 Route::get('/homepage', [App\Http\Controllers\HomeController::class, 'index'])->name('homepage');
 Route::get('/home', [App\Http\Controllers\VendorController::class, 'index'])->name('home');
 Route::get('/search-home', [App\Http\Controllers\HomeController::class, 'search'])->name('search-home');
-
+Route::get('/land-for-sale', [App\Http\Controllers\HomeController::class, 'land_for_sale'])->name('land-for-sale');
 Route::get('/properties-agent/{id}', [App\Http\Controllers\HomeController::class, 'properties_agent'])->name('properties-agent');
 Route::get('/listed-properties/{id}', [App\Http\Controllers\HomeController::class, 'properties'])->name('properties-home');
 Route::get('/properties/{slung}', [App\Http\Controllers\HomeController::class, 'property'])->name('property-single');

@@ -43,6 +43,13 @@ class HomeController extends Controller
         return view('front.plots',compact('id'));
     }
 
+
+    public function land_for_sale(){
+        $id = "Plots";
+        $Property = Property::where('Status','Plots')->where('active','Approved')->get();
+        return view('front.land_for_sale', compact('Property','id'));
+    }
+
     public function privacy(){
         return view('front.privacy');
     }
