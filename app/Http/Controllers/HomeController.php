@@ -6,15 +6,18 @@ use Illuminate\Http\Request;
 use App\Models\Property;
 use Illuminate\Support\Facades\Auth;
 use App\Models\PostView;
+use App\Models\Blog;
+use DB;
 
 class HomeController extends Controller
 {
 
     public function index()
     {
+        $Blog = Blog::limit('2')->get();
         $Property = Property::all();
         $PropertyRent = Property::where('Status','Rent')->where('active','Approved')->get();
-        return view('front.index', compact('Property','PropertyRent'));
+        return view('front.index', compact('Property','PropertyRent','Blog'));
     }
 
     public function invoice()
@@ -38,6 +41,11 @@ class HomeController extends Controller
         return view('front.properties_agent',compact('id','Property'));
     }
 
+    public function blogs($id){
+        $Blog = Blog::where('slung',$id)->get();
+        return view('front.blog',compact('id','Blog'));
+    }
+
     public function plots($id){
         $Property = Property::where('slung',$id)->get();
         return view('front.plots',compact('id'));
@@ -49,6 +57,17 @@ class HomeController extends Controller
         $Property = Property::where('Status','Plots')->where('active','Approved')->get();
         return view('front.land_for_sale', compact('Property','id'));
     }
+
+    public function buying(){
+        $Buying = DB::table('abouts')->get();
+        return view('front.buying',compact('Buying'));
+    }
+
+    public function renting(){
+        $Renting = DB::table('abouts')->get();
+        return view('front.renting',compact('Renting'));
+    }
+
 
     public function privacy(){
         return view('front.privacy');

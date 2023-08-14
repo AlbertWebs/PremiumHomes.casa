@@ -30,6 +30,9 @@ Route::get('/privacy-policy', [App\Http\Controllers\HomeController::class, 'priv
 Route::get('/terms-and-conditions', [App\Http\Controllers\HomeController::class, 'terms'])->name('terms');
 Route::get('/copyright', [App\Http\Controllers\HomeController::class, 'copyright'])->name('copyright');
 Route::post('/schedule-post', [App\Http\Controllers\HomeController::class, 'schedule_post'])->name('schedule-post');
+Route::get('/blogs/{slung}', [App\Http\Controllers\HomeController::class, 'blogs'])->name('blogs');
+Route::get('/buying', [App\Http\Controllers\HomeController::class, 'buying'])->name('buying');
+Route::get('/renting', [App\Http\Controllers\HomeController::class, 'renting'])->name('renting');
 
 
 

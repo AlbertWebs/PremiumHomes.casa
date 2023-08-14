@@ -148,13 +148,16 @@
                     <div class="agent-section p-top-35 p-bottom-30 p-right-25 p-left-25">
                         <h4 class="m-bottom-15 text-bold-700">Buying</h4>
                         <p>
+
+                            Imagine a world where your dream home isn't just a vision, but a reality. Welcome to Premium Homes, where luxury living becomes a tangible experience. If you're considering buying property with Premium Homes, you're stepping into a realm of unparalleled craftsmanship, thoughtful design, and exceptional service. In this guide, we'll walk you through the process of purchasing property with Premium Homes, ensuring that your journey is as smooth and rewarding as the homes themselves.
+                            <br><br>
                             We handpick high-end luxurious homes across the globe.
 
                             With our distinctive taste of class we list only the best homes.
 
                             With access to unrivaled property for sale Globally, premium Homes is expertly positioned to help you in your property search.
                         </p>
-                        <a class="text-base text-base-dark-hover text-size-13" href="properties-full-list#">Read More <i class="fa fa-long-arrow-right ml-2"></i></a>
+                        <a class="text-base text-base-dark-hover text-size-13" href="{{url('/')}}/buying">Read More <i class="fa fa-long-arrow-right ml-2"></i></a>
                     </div>
                 </div>
             </div>
@@ -168,8 +171,10 @@
                         <p>
                             Welcome to Premium Homes  - your starting point to the finest property to rent across the world and gateway to luxury global rental properties through Premium Homes.
 Premium Homes offers local real estate agents in major cities offering a wide range of property for rent in Listed areas including apartments, town houses, maisonettes and houses.
+<br><br>
+When it comes to finding the perfect rental property, every detail matters. Your home should not only reflect your lifestyle but also offer a haven of comfort, convenience, and sophistication. That's where Premium Homes comes in. We're not just a real estate company; we're your partners in discovering rental properties that redefine luxury living.
                         </p>
-                        <a class="text-base text-base-dark-hover text-size-13" href="properties-full-list#">Read More <i class="fa fa-long-arrow-right ml-2"></i></a>
+                        <a class="text-base text-base-dark-hover text-size-13" href="{{url('/')}}/renting">Read More <i class="fa fa-long-arrow-right ml-2"></i></a>
                     </div>
                 </div>
             </div>
@@ -322,23 +327,25 @@ Premium Homes offers local real estate agents in major cities offering a wide ra
         </div>
         <div class="news-wrap">
             <div class="row">
+                @foreach ($Blog as $Blog)
                 <div class="col-xl-6 col-md-12 col-xs-12" data-aos="fade-right">
                     <div class="news-item news-item-sm">
-                        <a href="blog-details#" class="news-img-link">
+                        <a href="{{url('/')}}/blogs/{{$Blog->slung}}" class="news-img-link">
                             <div class="news-item-img">
-                                <img class="resp-img" src="{{asset('theme/images/blog/b-1.jpg')}}" alt="blog image">
+                                <img class="resp-img" src="{{url('/')}}/uploads/blogs/{{$Blog->image_one}}" alt="blog image">
                             </div>
                         </a>
                         <div class="news-item-text">
-                            <a href="blog-details#"><h3>How Long Does It Really Take to Buy a House?</h3></a>
-                            <span class="date">Jun 23, 2022 &nbsp;/&nbsp; By Albert</span>
+                            <a href="{{url('/')}}/blogs/{{$Blog->slung}}"><h3>{{$Blog->title}}</h3></a>
+                            <span class="date">{{date('M', strtotime($Blog->created_at))}} {{date('d', strtotime($Blog->created_at))}}, {{date('Y', strtotime($Blog->created_at))}}  &nbsp;/&nbsp; By Admin</span>
                             <div class="news-item-descr">
                                 <p>
-                                    It is super important for any real estate investor to be familiar with the process of closing the sale of a property.
+                                    {!!html_entity_decode($Blog->meta)!!}
                                 </p>
                             </div>
+                            <br>
                             <div class="news-item-bottom">
-                                <a href="blog-details#" class="news-link">Read more...</a>
+                                <a href="{{url('/')}}/blogs/{{$Blog->slung}}" class="news-link">Read more...</a>
                                 <ul class="action-list">
                                     <li class="action-item"><i class="fa fa-heart"></i> <span>306</span></li>
                                     <li class="action-item"><i class="fa fa-comment"></i> <span>34</span></li>
@@ -349,33 +356,7 @@ Premium Homes offers local real estate agents in major cities offering a wide ra
                     </div>
 
                 </div>
-                <div class="col-xl-6 col-md-12 col-xs-12" data-aos="fade-left">
-                    <div class="news-item news-item-sm">
-                        <a href="blog-details#" class="news-img-link">
-                            <div class="news-item-img">
-                                <img class="resp-img" src="{{asset('theme/images/blog/b-3.jpg')}}" alt="blog image">
-                            </div>
-                        </a>
-                        <div class="news-item-text">
-                            <a href="blog-details#"><h3>Avoid Paying Unnecessary Fees by Lowering Your Closing Costs—Here’s How</h3></a>
-                            <span class="date">Oct 22, 2022 &nbsp;/&nbsp; By Albert</span>
-                            <div class="news-item-descr">
-                                <p>
-                                    The hardest part’s over because you’ve found the perfect house. Now you have to go through negotiations to buy the house and determine your closing costs.
-                                </p>
-                            </div>
-                            <div class="news-item-bottom">
-                                <a href="blog-details#" class="news-link">Read more...</a>
-                                <ul class="action-list">
-                                    <li class="action-item"><i class="fa fa-heart"></i> <span>306</span></li>
-                                    <li class="action-item"><i class="fa fa-comment"></i> <span>34</span></li>
-                                    <li class="action-item"><i class="fa fa-share-alt"></i> <span>122</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+                @endforeach
             </div>
         </div>
     </div>

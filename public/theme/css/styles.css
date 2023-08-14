@@ -3907,7 +3907,7 @@ section.blog-section {
 }
 
 .blog-section .news-item-descr.big-news {
-  height: 106px;
+  height: 100%;
 }
 
 .blog-section .news-item h3 {
