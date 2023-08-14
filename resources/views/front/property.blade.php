@@ -535,7 +535,7 @@
                                             <li><span class="la la-phone"><i class="fa fa-phone" aria-hidden="true"></i></span><a href="tel:+254 727 111 222">+254 727 111 222 </a></li>
                                             <li><span class="la la-phone"><i class="fa fa-comment" aria-hidden="true"></i></span><a href="sms://+254 727 111 222">+254 727 111 222 </a></li>
 
-                                            <li><span class="la la-envelope-o"><i class="fa fa-envelope" aria-hidden="true"></i></span><a href="mailto:{{$agent->email}}">{{$agent->email}}</a></li>
+                                            <li><span class="la la-envelope-o"><i class="fa fa-envelope" aria-hidden="true"></i></span><a href="mailto:info@premiumhomes.casa">info@premiumhomes.casa</a></li>
                                         </ul>
                                         {{-- <div class="agent-contact-form-sidebar">
                                             <h4>Request Inquiry</h4>
