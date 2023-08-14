@@ -170,9 +170,9 @@
                         <h4 class="m-bottom-15 text-bold-700">Renting</h4>
                         <p>
                             Welcome to Premium Homes  - your starting point to the finest property to rent across the world and gateway to luxury global rental properties through Premium Homes.
-Premium Homes offers local real estate agents in major cities offering a wide range of property for rent in Listed areas including apartments, town houses, maisonettes and houses.
-<br><br>
-When it comes to finding the perfect rental property, every detail matters. Your home should not only reflect your lifestyle but also offer a haven of comfort, convenience, and sophistication. That's where Premium Homes comes in. We're not just a real estate company; we're your partners in discovering rental properties that redefine luxury living.
+                            Premium Homes offers local real estate agents in major cities offering a wide range of property for rent in Listed areas including apartments, town houses, maisonettes and houses.
+                            <br><br>
+                            When it comes to finding the perfect rental property, every detail matters. Your home should not only reflect your lifestyle but also offer a haven of comfort, convenience, and sophistication. That's where Premium Homes comes in. We're not just a real estate company; we're your partners in discovering rental properties that redefine luxury living.
                         </p>
                         <a class="text-base text-base-dark-hover text-size-13" href="{{url('/')}}/renting">Read More <i class="fa fa-long-arrow-right ml-2"></i></a>
                     </div>
@@ -213,58 +213,6 @@ When it comes to finding the perfect rental property, every detail matters. Your
                     </div>
                 </div>
                 @endforeach
-                <div class="agents-grid" data-aos="fade-up" data-aos-delay="250">
-                    <div class="people listing-item compact thehp-2">
-                        <a href="single-property-1#" class="recent-16">
-                            <div class="recent-img16 img-center" style="background-image: url({{asset('theme/images/interior/p-2.jpg')}});"></div>
-                            <div class="recent-content"></div>
-                            <div class="listing-badges">
-                                <span>For Rent</span>
-                            </div>
-                            <div class="recent-details">
-                                <div class="recent-title">Family Apartment</div>
-                                <div class="recent-price mb-3">$6,500</div>
-                                <div class="house-details thehp-1"><i class="fa fa-bed mr-1" aria-hidden="true"></i> 6 Bed <span>|</span><i class="fa fa-bath mr-1" aria-hidden="true"></i> 3 Bath <span>|</span><i class="fa fa-object-group mr-1" aria-hidden="true"></i> 720 sq ft</div>
-                            </div>
-                            <div class="view-proper">View Details</div>
-                        </a>
-                    </div>
-                </div>
-                <div class="agents-grid" data-aos="fade-up" data-aos-delay="350">
-                    <div class="people landscapes no-pb pbp-3 listing-item compact thehp-2">
-                        <a href="single-property-1#" class="recent-16">
-                            <div class="recent-img16 img-center" style="background-image: url({{asset('theme/images/interior/p-3.jpg')}});"></div>
-                            <div class="recent-content"></div>
-                            <div class="listing-badges">
-                                <span>For Rent</span>
-                            </div>
-                            <div class="recent-details">
-                                <div class="recent-title">Villa House</div>
-                                <div class="recent-price mb-3">$6,500</div>
-                                <div class="house-details thehp-1"><i class="fa fa-bed mr-1" aria-hidden="true"></i> 6 Bed <span>|</span><i class="fa fa-bath mr-1" aria-hidden="true"></i> 3 Bath <span>|</span><i class="fa fa-object-group mr-1" aria-hidden="true"></i> 720 sq ft</div>
-                            </div>
-                            <div class="view-proper">View Details</div>
-                        </a>
-                    </div>
-                </div>
-                <div class="agents-grid" data-aos="fade-up" data-aos-delay="450">
-                    <div class="landscapes listing-item compact thehp-2">
-                        <a href="single-property-1#" class="recent-16">
-                            <div class="recent-img16 img-center" style="background-image: url({{asset('theme/images/feature-properties/fp-11.jpg')}});"></div>
-                            <div class="recent-content"></div>
-                            <div class="listing-badges">
-                                <span>For Rent</span>
-                            </div>
-                            <div class="recent-details">
-                                <div class="recent-title">Luxury Condo</div>
-                                <div class="recent-price mb-3">$6,500</div>
-                                <div class="house-details thehp-1"><i class="fa fa-bed mr-1" aria-hidden="true"></i> 6 Bed <span>|</span><i class="fa fa-bath mr-1" aria-hidden="true"></i> 3 Bath <span>|</span><i class="fa fa-object-group mr-1" aria-hidden="true"></i> 720 sq ft</div>
-                            </div>
-                            <div class="view-proper">View Details</div>
-                        </a>
-                    </div>
-                </div>
-
             </div>
         </div>
     </div>
