@@ -15,7 +15,7 @@ class HomeController extends Controller
     public function index()
     {
         $Blog = Blog::limit('2')->get();
-        $Property = Property::all();
+        $Property = Property::where('Status','Sale')->where('active','Approved')->get();
         $PropertyRent = Property::where('Status','Rent')->where('active','Approved')->get();
         return view('front.index', compact('Property','PropertyRent','Blog'));
     }
