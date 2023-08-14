@@ -9,7 +9,7 @@
     <div class="int_banner_slider">
         <div class="banner_box_wrapper">
             <div class="container-fluid">
-                <div class="row ">
+                <div class="row">
                     <div class="col-xl-4 col-lg-4 col-md-5 col-sm-12 align-self-center">
                         <div class="main_contentblock">
                             <div class="swiper-container" data-aos="fade-right">

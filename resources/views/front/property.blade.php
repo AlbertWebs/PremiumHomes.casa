@@ -526,7 +526,7 @@
                                 <div class="widget-boxed-body">
                                     <div class="sidebar-widget author-widget2">
                                         <div class="author-box clearfix">
-                                            <img src="{{asset('theme/images/testimonials/199259143_4389625377747506_3043984032264076715_n.jpg')}}" alt="author-image" class="author__img">
+                                            <img src="{{url('/')}}//uploads/users/{{$agent->image}}" alt="author-image" class="author__img">
                                             <h4 class="author__title">{{$agent->name}}</h4>
                                             <p class="author__meta">Agent of Property</p>
                                         </div>
