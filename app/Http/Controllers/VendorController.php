@@ -153,6 +153,13 @@ class VendorController extends Controller
             $file->move(public_path('uploads/properties/'), $filename);
             $data['image']= 'public/uploads/'.$filename;
         }
+
+        if(Auth::User()){
+            $agent = $request->agent;
+        }else{
+             $agent = Auth::User()->id;
+        }
+
         $Property = new Property;
         $Property->property_name = $request->property_name;
         $Property->property_id = Str::random(5);
@@ -160,7 +167,7 @@ class VendorController extends Controller
         $Property->property_description = $request->property_description;
         $Property->status = $request->status;
         $Property->featured_image = $filename;
-        $Property->user_id = Auth::User()->id;
+        $Property->user_id = $agent;
         $Property->type = $request->type;
         $Property->rooms = $request->rooms;
         $Property->price = $request->price;

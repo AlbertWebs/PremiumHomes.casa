@@ -183,6 +183,36 @@
                                             </div>
                                             {{--  --}}
                                         </div>
+                                        @if(Auth::User()->id == 1)
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-12">
+                                                <p class="no-mb">
+                                                    <label for="price">Price</label>
+                                                    <input type="text" name="price" placeholder="USD" id="price" required>
+                                                </p>
+                                            </div>
+                                            <div class="col-lg-4 col-md-12">
+                                                <p class="no-mb last">
+                                                    <label for="area">Area</label>
+                                                    <input type="text" name="sqft" placeholder="Sqft" id="area" required>
+                                                </p>
+                                            </div>
+                                            <div class="col-lg-4 col-md-12 dropdown faq-drop">
+                                                <div class="form-group categories">
+                                                    {{-- <label for="price">Agent</label> --}}
+                                                    <select name="agent" class="nice-select form-control wide" required>
+                                                        {{-- <option selected="" value="Default">Rooms</option> --}}
+                                                        <?php
+                                                          $Agent = DB::table('users')->where('agent','1')->get();
+                                                        ?>
+                                                        @foreach ($Agent as $agent)
+                                                         <option value="{{$agent->id}}">{{$agent->name}}</option>
+                                                        @endforeach
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @else
                                         <div class="row">
                                             <div class="col-lg-6 col-md-12">
                                                 <p class="no-mb">
@@ -197,6 +227,8 @@
                                                 </p>
                                             </div>
                                         </div>
+                                        @endif
+
                                 </div>
                             </div>
                             <div class="single-add-property">
