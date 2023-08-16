@@ -203,7 +203,7 @@
                                                     <select name="agent" class="nice-select form-control wide" required>
                                                         {{-- <option selected="" value="Default">Rooms</option> --}}
                                                         <?php
-                                                          $Agent = DB::table('users')->where('agent','1')->get();
+                                                          $Agent = DB::table('users')->get();
                                                         ?>
                                                         @foreach ($Agent as $agent)
                                                          <option value="{{$agent->id}}">{{$agent->name}}</option>
