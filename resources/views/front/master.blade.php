@@ -47,6 +47,18 @@
     <link rel="stylesheet" id="color" href="{{asset('theme/css/default.css')}}">
     @include('tawkto')
 
+    {{--  --}}
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0NX487958K"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-0NX487958K');
+    </script>
+    {{--  --}}
+
     <!-- Facebook Pixel Code -->
     <script>
         !function(f,b,e,v,n,t,s)
