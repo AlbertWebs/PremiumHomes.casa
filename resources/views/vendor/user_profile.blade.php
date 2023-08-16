@@ -124,7 +124,17 @@
 
                                  <img style="border:2px solid #bf9d34" src="{{url('/')}}/uploads/users/avatar.jpg" alt="{{Auth::user()->name}}" class="author__img">
                                  @else
-                                 <span><img style="border:2px solid #bf9d34" src="{{url('/')}}/uploads/users/{{Auth::user()->avatar}}" alt=""></span>{{Auth::User()->name}}<img style="border:2px solid #bf9d34" src="{{url('/')}}/theme/images/testimonials/{{Auth::user()->image}}" alt="{{Auth::user()->name}}" class="author__img">@endif
+                                 <img title="Image" src="{{url('/')}}/uploads/users/{{Auth::user()->image}}" alt="author-image" class="author__img">
+                                 <?php $select = "image" ?>
+                                 <a title="avatar" href="{{url('/')}}/vendors/edit-image/{{$select}}/{{Auth::user()->id}}">Edit Image</a>
+                                 &nbsp;
+                                 |
+                                 &nbsp;
+                                 <?php $select = "avatar" ?>
+                                 <a href="{{url('/')}}/vendors/edit-avatar/{{$select}}/{{Auth::user()->id}}">Edit Avatar</a>
+
+                                 <img style="border:2px solid #bf9d34" src="{{url('/')}}/uploads/users/avatar.jpg" alt="{{Auth::user()->name}}" class="author__img">
+                                 @endif
                                  <h4 class="author__title">{{Auth::User()->name}}</h4>
                                  <p class="author__meta">Agent of Property</p>
                              </div>
