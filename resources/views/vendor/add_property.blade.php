@@ -282,13 +282,13 @@
                                         <div class="col-lg-6 col-md-12">
                                             <p>
                                                 <label for="state">State</label>
-                                                <input type="text" name="state" placeholder="Enter Your State" id="state" required>
+                                                <input type="text" name="state" value="Kenya" placeholder="Enter Your State" id="state" required>
                                             </p>
                                         </div>
                                         <div class="col-lg-6 col-md-12">
                                             <p>
                                                 <label for="country">Country</label>
-                                                <input type="text" name="country" placeholder="Enter Your Country" id="country" required>
+                                                <input type="text" name="country" value="Kenya" placeholder="Enter Your Country" id="country" required>
                                             </p>
                                         </div>
                                     </div>
@@ -487,7 +487,7 @@
                                         <div class="col-lg-6 col-md-12">
                                             <p class="no-mb last">
                                                 <label for="con-phn">Phone</label>
-                                                <input type="text" value="{{Auth::User()->mobile}}" placeholder="Enter Your Phone Number" id="con-phn" name="con_phn" required>
+                                                <input type="text" value="0727111222" placeholder="Enter Your Phone Number" id="con-phn" name="con_phn" required>
                                             </p>
                                         </div>
                                     </div>
