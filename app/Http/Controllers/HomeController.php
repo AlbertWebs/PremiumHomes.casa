@@ -54,7 +54,7 @@ class HomeController extends Controller
 
     public function land_for_sale(){
         $id = "Plots";
-        $Property = Property::where('Status','Plot')->where('active','Approved')->get();
+        $Property = Property::where('type','Plot')->where('active','Approved')->get();
         return view('front.land_for_sale', compact('Property','id'));
     }
 
