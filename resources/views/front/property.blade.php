@@ -185,7 +185,7 @@
                                             <h3>{{$Property->property_name}}<span class="mrg-l-5 category-tag">For Sale</span></h3>
                                             <div class="mt-0">
                                                 <a href="https://goo.gl/maps/CNmkJmheKMGWS83X6" class="listing-address">
-                                                    <i class="fa fa-map-marker pr-2 ti-location-pin mrg-r-5"></i>Westfields Apartments - Lower Kabete
+                                                    <i class="fa fa-map-marker pr-2 ti-location-pin mrg-r-5"></i>{{$Property->address}}
                                                 </a>
                                             </div>
                                         </div>
