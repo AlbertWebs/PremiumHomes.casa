@@ -528,10 +528,10 @@
                                         <div class="author-box clearfix">
                                             <img src="{{url('/')}}//uploads/users/{{$agent->image}}" alt="author-image" class="author__img">
                                             <h4 class="author__title">{{$agent->name}}</h4>
-                                            <p class="author__meta">Agent of Property</p>
+                                            <p class="author__meta">Coordinator</p>
                                         </div>
                                         <ul class="author__contact">
-                                            <li><span class="la la-map-marker"><i class="fa fa-map-marker"></i></span>{{$agent->address}}</li>
+                                            <li><span class="la la-map-marker"><i class="fa fa-map-marker"></i></span>Nelson's Court, Ring Road, Westlands, Nairobi</li>
                                             <li><span class="la la-phone"><i class="fa fa-phone" aria-hidden="true"></i></span><a href="tel:+254 727 111 222">+254 727 111 222 </a></li>
                                             <li><span class="la la-phone"><i class="fa fa-comment" aria-hidden="true"></i></span><a href="sms://+254 727 111 222">+254 727 111 222 </a></li>
 
