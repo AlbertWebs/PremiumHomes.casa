@@ -36,9 +36,13 @@ class HomeController extends Controller
         return view('front.properties',compact('id','Property'));
     }
 
-    public function properties_agent($id){
-        $Property = Property::where('slung',$id)->where('active','Approved')->get();
-        return view('front.properties_agent',compact('id','Property'));
+    public function properties_agent($slung){
+        $Users = DB::table('users')->where('slung',$slung)->get();
+        foreach($Users as $user){
+            $id = $user->id;
+            $Property = Property::where('user_id',$user->id)->where('active','Approved')->get();
+            return view('front.properties_agent',compact('id','Property'));
+        }
     }
 
     public function blogs($id){
