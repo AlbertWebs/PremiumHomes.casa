@@ -2041,8 +2041,11 @@ class AdminsController extends Controller
             $updateDetails = array(
                 'slung' => Str::slug($User->name),
             );
+            $Update = DB::table('users')->where('id',$User->id)->update($updateDetails);
         }
+
         return "Done";
+
     }
 
 
