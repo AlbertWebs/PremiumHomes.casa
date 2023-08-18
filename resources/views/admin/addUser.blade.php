@@ -18,7 +18,7 @@
         @include('admin.sidebar')
 
         <!--== BODY INNER CONTAINER ==-->
-        
+
         <div class="sb2-2">
             <div class="sb2-2-2">
                 <ul>
@@ -29,7 +29,7 @@
                     <li class="page-back"><a href="{{url('/')}}/admin/users"><i class="fa fa-backward" aria-hidden="true"></i> All Users</a>
                     </li>
                 </ul>
-               
+
             </div>
             <div class="sb2-2-add-blog sb2-2-1">
                 <div class="box-inn-sp">
@@ -40,7 +40,7 @@
                             @if(Session::has('message'))
                                           <div class="alert alert-success">{{ Session::get('message') }}</div>
                            @endif
-           
+
                            @if(Session::has('messageError'))
                                           <div class="alert alert-danger">{{ Session::get('messageError') }}</div>
                            @endif
@@ -83,30 +83,46 @@
                                 </div>
                             </div>
                             <div class="row">
-                             
+
                                 {{--  --}}
                                 <div class="input-field col s12">
                                     <select required name="is_admin" class="icons" id="mydiv">
                                         <option value="0" disabled selected>User Role</option>
                                         <option value="0" class="circle">Normal User</option>
                                         <option value="1" class="circle">Administrator</option>
-                                        
+
                                     </select>
                                     <label>User Role</label>
                                 </div>
-                               
+
                                 <div class="section-space col s12"></div>
-                        
+
+                            </div>
+                            <div class="row">
+
+                                {{--  --}}
+                                <div class="input-field col s12">
+                                    <select required name="agent" class="icons" id="mydiv">
+                                        <option value="0" disabled selected>Agent Role</option>
+                                        <option value="1" class="circle">Agent</option>
+                                        <option value="0" class="circle">Marketing</option>
+
+                                    </select>
+                                    <label>Agent Role</label>
+                                </div>
+
+                                <div class="section-space col s12"></div>
+
                             </div>
                             <br><br>
-                           
+
                             <div class="row">
                                 <div class="input-field col s12">
                                     <input required autocomplete="off" value="{{Auth::user()->name }}" id="post-auth" name="author" type="text" class="validate">
                                     <label for="post-auth">Author</label>
                                 </div>
                             </div>
-                            
+
                             <div class="row">
                                 <div class="input-field col s12">
                                     <input  type="submit" class="waves-effect waves-light btn-large" value="Add New User">
@@ -145,13 +161,13 @@
                                     <input  type="submit" class="waves-effect waves-light btn-large" value="Submit">
                                 </div>
                             </div>
-                            
+
                             <div class="tab-inn" id="loading-bar">
                                 <div class="progress">
                                     <div class="indeterminate"></div>
                                 </div>
                             </div>
-                            
+
                         </form>
                     </div>
                 </div>
@@ -166,10 +182,10 @@
     $('#categoryAddForm').on('submit',function(event){
         event.preventDefault();
         $('#loading-bar').show();
-   
+
 
         let title = $('#CategoryTitle').val();
-       
+
 
         $.ajax({
           url: "{{url('/')}}/admin/addCategoryAjaxRequest",

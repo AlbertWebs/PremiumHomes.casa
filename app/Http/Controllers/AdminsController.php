@@ -594,6 +594,7 @@ class AdminsController extends Controller
         $password = Hash::make($Password);
         $User = new User;
         $User->name = $request->name;
+        $User->agent = $request->agent;
         $User->email = $request->email;
         $User->mobile = $request->mobile;
         $User->address = $request->address;

@@ -159,6 +159,7 @@
                                                         <option selected value="{{$Property->status}}">{{$Property->status}}</option>
                                                         <option value="Rent">Rent</option>
                                                         <option value="Sale">Sale</option>
+                                                        <option value="Lease">Lease</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -168,9 +169,19 @@
                                                     <label for="price">Type</label>
                                                     <select name="type" class="nice-select form-control wide" required>
                                                         <option selected value="{{$Property->type}}">{{$Property->type}}</option>
-                                                        <option value="commercial">commercial</option>
-                                                        <option value="apartment">apartment</option>
-                                                        <option value="home">home</option>
+                                                        <option value="Duplex">Duplex</option>
+                                                        <option value="Condominium">Condominium</option>
+                                                        <option value="Villa">Villa</option>
+
+                                                        <option value="Mansion">Mansion</option>
+                                                        <option value="Townhouse">Townhouse</option>
+                                                        <option value="Cottages">Cottages</option>
+
+                                                        <option value="Bungalow">Bungalow</option>
+                                                        <option value="Apartment">Apartment</option>
+                                                        <option value="Mansion">Mansion</option>
+                                                        <option value="Resorts">Resorts</option>
+                                                        <option value="Plot">Resorts</option>
                                                     </select>
                                                 </div>
                                             </div>

@@ -142,6 +142,7 @@
                                                         {{-- <option selected="" value="Default">Select status</option> --}}
                                                         <option value="Rent">Rent</option>
                                                         <option value="Sale">Sale</option>
+                                                        <option value="Lease">Lease</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -151,17 +152,51 @@
                                                     <label for="price">Type</label>
                                                     <select name="type" class="nice-select form-control wide" required>
                                                         {{-- <option selected="" value="Default">Type</option> --}}
-                                                        <option value="commercial">commercial</option>
-                                                        <option value="apartment">apartment</option>
-                                                        <option value="home">home</option>
+                                                        <option value="Duplex">Duplex</option>
+                                                        <option value="Condominium">Condominium</option>
+                                                        <option value="Villa">Villa</option>
+
+                                                        <option value="Mansion">Mansion</option>
+                                                        <option value="Townhouse">Townhouse</option>
+                                                        <option value="Cottages">Cottages</option>
+
+                                                        <option value="Bungalow">Bungalow</option>
+                                                        <option value="Apartment">Apartment</option>
+                                                        <option value="Mansion">Mansion</option>
+                                                        <option value="Resorts">Resorts</option>
+
                                                     </select>
                                                 </div>
                                             </div>
                                             {{--  --}}
-                                            <div class="col-lg-4 col-md-12 dropdown faq-drop">
+                                            <div class="col-lg-2 col-md-12 dropdown faq-drop">
                                                 <div class="form-group categories">
                                                     <label for="price">Rooms</label>
                                                     <select name="rooms" class="nice-select form-control wide" required>
+                                                        {{-- <option selected="" value="Default">Rooms</option> --}}
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="10">10</option>
+                                                        <option value="11">11</option>
+                                                        <option value="12">12</option>
+                                                        <option value="13">13</option>
+                                                        <option value="14">14</option>
+                                                        <option value="15">15</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-2 col-md-12 dropdown faq-drop">
+                                                <div class="form-group categories">
+                                                    <label for="bedrooms">Bedrooms</label>
+                                                    <select name="bedrooms" class="nice-select form-control wide" required>
                                                         {{-- <option selected="" value="Default">Rooms</option> --}}
                                                         <option value="1">1</option>
                                                         <option value="2">2</option>
@@ -187,14 +222,14 @@
                                         <div class="row">
                                             <div class="col-lg-4 col-md-12">
                                                 <p class="no-mb">
-                                                    <label for="price">Price</label>
-                                                    <input type="text" name="price" placeholder="USD" id="price" required>
+                                                    <label for="price">Price(KES)</label>
+                                                    <input type="text" name="price" placeholder="750,000,000" id="price" required>
                                                 </p>
                                             </div>
                                             <div class="col-lg-4 col-md-12">
                                                 <p class="no-mb last">
                                                     <label for="area">Area</label>
-                                                    <input type="text" name="sqft" placeholder="Sqft" id="area" required>
+                                                    <input type="text" name="sqft" placeholder="1334 Sqft" id="area" required>
                                                 </p>
                                             </div>
                                             <div class="col-lg-4 col-md-12 dropdown faq-drop">
@@ -216,8 +251,8 @@
                                         <div class="row">
                                             <div class="col-lg-6 col-md-12">
                                                 <p class="no-mb">
-                                                    <label for="price">Price</label>
-                                                    <input type="text" name="price" placeholder="USD" id="price" required>
+                                                    <label for="price">Price(KES)</label>
+                                                    <input type="text" name="price" placeholder="750,000,000" id="price" required>
                                                 </p>
                                             </div>
                                             <div class="col-lg-6 col-md-12">
@@ -274,7 +309,7 @@
                                         <div class="col-lg-6 col-md-12">
                                             <p>
                                                 <label for="city">City</label>
-                                                <input type="text" name="city" placeholder="Enter Your City" id="city" required>
+                                                <input type="text" name="city" value="Nairobi" placeholder="Enter Your City" id="city" required>
                                             </p>
                                         </div>
                                     </div>

@@ -40,6 +40,11 @@
                         <i class="fa fa-list" aria-hidden="true"></i>Add Property
                     </a>
                 </li>
+                <li>
+                    <a class="" target="new" href="https://premiumhomes.erpserver.one/admin/leads">
+                        <i class="fa fa-bar-chart" aria-hidden="true"></i>Leads
+                    </a>
+                </li>
                 {{-- <li>
                     <a class="@if($active == 'payment_method') active @else @endif" href="{{route('payment-method')}}">
                         <i class="fas fa-credit-card"></i>Payments

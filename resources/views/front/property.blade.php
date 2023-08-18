@@ -373,7 +373,7 @@
                                             @else
                                                 <div class="nearby-info mb-4">
                                                     <span class="nearby-title mb-3 d-block text-{{$cat->image}}">
-                                                    <i class="fas fa-graduation-cap mr-2"></i><b class="title">{{$cat->title}}</b>
+                                                    <i class="{{$cat->icon}} mr-2"></i><b class="title">{{$cat->title}}</b>
                                                     </span>
                                                     <div class="nearby-list">
                                                         <ul class="property-list list-unstyled mb-0">
