@@ -76,7 +76,7 @@
             <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-check " aria-hidden="true"></i> Approvals </a>
                 <div class="collapsible-body left-sub-menu">
                     <ul>
-                        <li><a href="{{url('/')}}/admin/approved"> Properties & Approval </a>
+                        <li><a href="{{url('/')}}/admin/approval"> Properties & Approval </a>
                         </li>
                     </ul>
                 </div>

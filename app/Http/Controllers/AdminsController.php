@@ -21,6 +21,9 @@ use App\Models\How;
 
 use App\Models\Slider;
 
+use App\Models\Property;
+
+
 use App\Models\User;
 
 use App\Models\Banner;
@@ -687,7 +690,35 @@ class AdminsController extends Controller
         }
     }
 
+    public function approved($id){
+        activity()->log('Approved Property with ID Number '.$id.' ');
+        $Property = DB::table('properties')->where('id',$id)->get();
+        foreach ($Property as $key => $value) {
+            if($value->active == "Approved"){
+                $new_value = "Not Approved";
+                $updateDetails = array(
+                    'active'=>$new_value,
+                );
+            }else{
+                $new_value = "Approved";
+                $updateDetails = array(
+                    'active'=>$new_value,
+                );
+            }
+            DB::table('properties')->where('id',$id)->update($updateDetails);
+            Session::flash('message', "Property Status Have Been Updated");
+            return Redirect::back();
+        }
+    }
 
+
+    public function approval(){
+        activity()->log('Accessed The All testimonials page');
+        $Properties = Property::all();
+        $page_title = 'list';
+        $page_name = 'Property';
+        return view('admin.approval',compact('page_title','Properties','page_name'));
+    }
 
     //
 

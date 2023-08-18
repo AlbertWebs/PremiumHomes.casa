@@ -193,6 +193,9 @@ Route::group(['prefix'=>'admin'], function(){
     Route::get('/approve-transaction/{id}', [AdminsController::class, 'approve_transaction'])->middleware('is_admin');
     Route::get('/approve-transaction-stk/{id}', [AdminsController::class, 'approve_transaction_stk'])->middleware('is_admin');
 
+    Route::get('/approval', [AdminsController::class, 'approval'])->middleware('is_admin');
+    Route::get('/approved/{id}', [AdminsController::class, 'approved'])->middleware('is_admin');
+
     // Enroll Users
     Route::get('/enroll-users', [AdminsController::class, 'enroll_users'])->middleware('is_admin');
     Route::get('/enroll-users-post/{id}', [AdminsController::class, 'enroll_users_post'])->middleware('is_admin');
