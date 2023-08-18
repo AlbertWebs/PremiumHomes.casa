@@ -155,16 +155,14 @@
                                                         <option value="Duplex">Duplex</option>
                                                         <option value="Condominium">Condominium</option>
                                                         <option value="Villa">Villa</option>
-
                                                         <option value="Mansion">Mansion</option>
                                                         <option value="Townhouse">Townhouse</option>
                                                         <option value="Cottages">Cottages</option>
-
                                                         <option value="Bungalow">Bungalow</option>
                                                         <option value="Apartment">Apartment</option>
                                                         <option value="Mansion">Mansion</option>
                                                         <option value="Resorts">Resorts</option>
-
+                                                        <option value="Plot">Plot</option>
                                                     </select>
                                                 </div>
                                             </div>
