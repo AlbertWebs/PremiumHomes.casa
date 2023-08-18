@@ -469,17 +469,29 @@
                             <div class="widget-boxed-header">
                                 <h4><i class="fa fa-calendar pr-3 padd-r-10"></i>Schedule a Tour</h4>
                             </div>
+                            <?php
+                                $Agent = DB::table('users')->where('id',$Property->user_id)->get();
+                            ?>
                             <div class="widget-boxed-body">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-12 book">
-                                        <input type="text" id="reservation-date" data-lang="en" data-large-mode="true" data-min-year="2017" data-max-year="2020" data-disabled-days="08/17/2017,08/18/2017" data-id="datedropper-0" data-theme="my-style" class="form-control" readonly="">
-                                    </div>
-                                    <div class="col-lg-6 col-md-12 book2">
-                                        <input type="text" id="reservation-time" class="form-control" readonly="">
-                                    </div>
-                                </div>
+                                @if(Session::has('message'))
+                                <div class="alert alert-success">{{ Session::get('message') }}</div>
+                                @endif
+
+                                @if(Session::has('messageError'))
+                                                <div class="alert alert-danger">{{ Session::get('messageError') }}</div>
+                                @endif
+
                                 <form action="{{url('/schedule-post')}}" method="post">
+
                                     @csrf
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-12 book">
+                                            <input name="reservation_date" type="text" id="reservation-date" data-lang="en" data-large-mode="true" data-min-year="2017" data-max-year="2020" data-disabled-days="08/17/2017,08/18/2017" data-id="datedropper-0" data-theme="my-style" class="form-control" readonly="">
+                                        </div>
+                                        <div class="col-lg-6 col-md-12 book2">
+                                            <input name="reservation_time" type="text" id="reservation-time" class="form-control" readonly="">
+                                        </div>
+                                    </div>
                                     <div class="row mrg-top-15 mb-3">
                                         <div class="col-lg-12 col-md-12 mt-4">
                                             <label class="mb-4">Number of People</label>
@@ -497,8 +509,11 @@
                                             </span>
                                             </div>
                                         </div>
-
                                     </div>
+                                    @foreach ($Agent as $agent)
+                                       <input type="hidden" id="fname" name="email_agent" value="{{$agent->email}}" placeholder="Full Name" required />
+                                       <input type="hidden" id="fname" name="name_agent" value="{{$agent->name}}" placeholder="Full Name" required />
+                                    @endforeach
                                     <div class="agent-contact-form-sidebar">
                                     <input type="text" id="fname" name="full_name" placeholder="Full Name" required />
                                     <input type="email" id="fname" name="email_address" placeholder="Email " required />
@@ -511,9 +526,7 @@
                         </div>
                         <!-- End: Schedule a Tour -->
                         <!-- end author-verified-badge -->
-                        <?php
-                           $Agent = DB::table('users')->where('id',$Property->user_id)->get();
-                        ?>
+
 
 
 

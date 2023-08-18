@@ -7,7 +7,11 @@ use App\Models\Property;
 use Illuminate\Support\Facades\Auth;
 use App\Models\PostView;
 use App\Models\Blog;
+use App\Models\SendMail;
 use DB;
+use Session;
+
+use Redirect;
 
 class HomeController extends Controller
 {
@@ -127,7 +131,14 @@ class HomeController extends Controller
         $full_name = $request->full_name;
         $email_address = $request->email_address;
         $phone_number = $request->phone_number;
-        return "Done";
+        $agent_email = $request->email_agent;
+        $agent_name = $request->name_agent;
+        $reservation_date = $request->reservation_date;
+        $reservation_time = $request->reservation_time;
+        // Send Email
+        SendMail::bookAppointment($numberOfPeople,$full_name,$email_address,$phone_number,$reservation_time,$reservation_date,$agent_email,$agent_name);
+        Session::flash('message', "Message Submited Successfully");
+        return Redirect::back();
     }
 
 }

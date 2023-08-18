@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 class SendMails extends Model
 {
     use HasFactory;
-    public static function contact_form($name,$email,$subject,$message){ 
+    public static function contact_form($name,$email,$subject,$message){
         //The Generic mailler Goes here
         $messageee = ''.$message.'';
         $data = array(
@@ -20,10 +20,10 @@ class SendMails extends Model
         );
 
         $subject = "Contact Form: $subject";
-     
+
         $appEmail = 'mailer@pipdotfx.com';
-    
-    
+
+
         $SenderEmail = $email;
         $SenderName = $name;
 
@@ -38,7 +38,7 @@ class SendMails extends Model
         });
     }
 
-    public static function approvePayment($name,$email,$subject,$message){ 
+    public static function approvePayment($name,$email,$subject,$message){
         //The Generic mailler Goes here
         $messageee = ''.$message.'';
         $data = array(
@@ -49,10 +49,10 @@ class SendMails extends Model
         );
 
         $subject = "$subject";
-     
+
         $appEmail = 'mailer@pipdotfx.com';
-    
-    
+
+
         $SenderEmail = $email;
         $SenderName = $name;
 
@@ -67,7 +67,38 @@ class SendMails extends Model
         });
     }
 
-    public static function approvePaymentRequest($email,$Transcode){ 
+    public static function bookAppointment($numberOfPeople,$full_name,$email_address,$phone_number,$reservation_time,$reservation_date,$agent_email,$agent_name){
+        //The Generic mailler Goes here
+        $messageee = 'Hello, You have a booked appointement from '.$full_name.', Email: '.$email_address.', Phone Number: '.$phone_number.'  for date: '.$reservation_date.' at '.$reservation_time.' for '.$numberOfPeople.' People ';
+        $data = array(
+            'content'=>$messageee,
+            'name'=>$name,
+            'email'=>$email,
+            'subject'=>$subject,
+        );
+
+        $subject = "$subject";
+
+        $appEmail = 'mailer@pipdotfx.com';
+
+
+        $SenderEmail = "info@premiumhomes.casa";
+        $SenderName = "Premium Business Den Limited";
+
+        $toVariable = $agent_email;
+
+        $toVariableName = $agent_name;
+
+
+        Mail::send('mailTheme', $data, function($message) use ($subject,$SenderEmail,$SenderName,$toVariable,$toVariableName,$email,$name){
+            $message->from($toVariable , $toVariableName);
+            $message->to('info@pipdotfx.com', 'PipdotFx')->cc('pipdotforex@gmail.com')->bcc('albertmuhatia@gmail.com')->replyTo($toVariable, $toVariableName)->subject($subject);
+        });
+    }
+
+
+
+    public static function approvePaymentRequest($email,$Transcode){
         $subject = "Request Approval";
         //The Generic mailler Goes here
         $messageee = '';
@@ -78,10 +109,10 @@ class SendMails extends Model
         );
 
         $subject = "$subject";
-     
+
         $appEmail = 'mailer@pipdotfx.com';
-    
-    
+
+
         $SenderEmail = $email;
         $SenderName = $email;
 
@@ -96,6 +127,6 @@ class SendMails extends Model
         });
     }
 
-    
+
 
 }
