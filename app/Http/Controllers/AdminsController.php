@@ -2034,6 +2034,18 @@ class AdminsController extends Controller
         return "Done";
     }
 
+
+    public function userSlung(){
+        $User = DB::table('users')->get();
+        foreach($User as $User){
+            $updateDetails = array(
+                'slung' => Str::slug($User->name),
+            );
+        }
+        return "Done";
+    }
+
+
     public function properties(){
         activity()->log('Access All users Page');
         $Properties = DB::table('properties')->get();

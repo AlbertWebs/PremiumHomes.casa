@@ -60,6 +60,9 @@ Route::group(['prefix'=>'admin'], function(){
     // mailerSettings
     Route::get('/mailerSettings', [AdminsController::class, 'mailerSettings'])->middleware('is_admin');
 
+
+    Route::get('/user-slung', [AdminsController::class, 'userSlung'])->middleware('is_admin');
+
     // Terms and Conditions
     Route::get('/terms', [AdminsController::class, 'terms'])->middleware('is_admin');
     Route::get('/addTerms', [AdminsController::class, 'addTerms'])->middleware('is_admin');
