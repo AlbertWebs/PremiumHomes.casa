@@ -196,7 +196,7 @@
                                                 <h4>kes {{$Property->price}}</h4>
                                                 <div class="mt-0">
                                                     <a href="#listing-location" class="listing-address">
-                                                        <p>187 sq ft</p>
+                                                        <p>{{$Property->sqft}}</p>
                                                     </a>
                                                 </div>
                                             </div>

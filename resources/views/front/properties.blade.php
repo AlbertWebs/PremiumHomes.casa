@@ -509,7 +509,7 @@
 
                 <div class="row portfolio-items">
                     @foreach ($Property as $prop)
-                    <div class="item col-lg-6 col-md-6 col-xs-12 landscapes sale">
+                    <div class="item col-lg-4 col-md-6 col-xs-12 landscapes sale">
                         <div class="project-single mb-0" data-aos="fade-up">
                             <a href="{{route('property-single',[$prop->slung])}}" class="recent-16">
                                 <div class="recent-img16 img-center" style="background-image: url('{{asset('uploads/properties/')}}/{{$prop->featured_image}}');"></div>
