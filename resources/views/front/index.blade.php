@@ -224,7 +224,7 @@
     <div class="container-fluid">
         <div class="section-title col-md-5">
             <h3>Meet Our</h3>
-            <h2>Agents</h2>
+            <h2>Representatives</h2>
         </div>
         <div class="row team-all">
             <?php
@@ -235,12 +235,12 @@
             <div class="team-block col-sm-6 col-md-4 col-lg-4 col-xl-2 team-pro" data-aos="fade-up" data-aos-delay="1{{$delay}}0">
                 <div class="team-wrap">
                     <div class="team-img">
-                        <img src="{{url('/')}}/uploads/users/{{$agent->image}}" alt="" />
+                        <img style="width:225px; height:226px" src="{{url('/')}}/uploads/users/{{$agent->image}}" alt="" />
                     </div>
                     <div class="team-content">
                         <div class="team-info">
                             <h3>{{$agent->name}}</h3>
-                            <p>Real Estate Agent</p>
+                            <p>Marketing Coordinator</p>
                             <div class="team-socials">
                                 {{-- <ul>
                                     <li>
