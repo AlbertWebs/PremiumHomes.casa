@@ -170,7 +170,7 @@ class VendorController extends Controller
         $Property->user_id = $agent;
         $Property->type = $request->type;
         $Property->rooms = $request->rooms;
-        $Property->bedrooms = $request->bedrooms;
+        $Property->bedroom = $request->bedrooms;
         $Property->price = $request->price;
         $Property->type = $request->type;
         $Property->sqft = $request->sqft;
