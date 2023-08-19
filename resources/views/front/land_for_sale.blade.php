@@ -8,7 +8,37 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="html 5 template">
     <meta name="author" content="">
-    <title>Premium Homes - High End Homes in Kenya</title>
+    <?php
+       $PropertySEO = App\Models\Property::where('type','Plot')->limit(1)->where('active','Approved')->get();
+    ?>
+    @foreach($PropertySEO as $prop)
+       <meta name="robots" content="index,follow">
+        <meta name="googlebot" content="index,follow"><!-- Google Specific -->
+        <meta name="subject" content="Premium Plots in Kenya - Premium Homes Limited">
+        <meta name="rating" content="General">
+        <meta name="referrer" content="no-referrer">
+        <meta name="theme-color" content="#EFE165">
+
+        <link rel="canonical" href="https://premiumhomes.casa/properties/land-for-sale"/>
+        <meta name="author" content="Designekta Studios">
+        <meta property="og:description" content="{{$description}}">
+        <meta property="og:image" content="https://premiumhomes.casa/uploads/properties/{{$prop->featured_image}}" />
+        <meta property="fb:app_id" content="431980657174772" />
+        <meta property="og:title" content="Premium Plots in Kenya - Premium Homes Limited" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://premiumhomes.casa/land-for-sale" />
+        <meta property="og:site_name" content="Premium Homes Limited">
+        <meta property="og:locale" content="en_US">
+
+        <meta name="twitter:title" content="Premium Plots in Kenya - Premium Homes Limited" />
+        <meta name="twitter:site" content="@premiumhomescasa" />
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@premiumhomescasa">
+        <meta name="twitter:url" content="https://premiumhomes.casa/land-for-sale">
+        <meta name="twitter:description" content="{{$description}}">
+        <meta name="twitter:image" content="https://royaltech.co.ke/uploads/products/1_062eeb89-ffbf-474a-8443-1285ea8a9b41.jpg">
+        <meta name="twitter:creator" content="@premiumhomescasa" />
+    @endforeach
     <!-- FAVICON -->
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="css/jquery-ui.css">
@@ -68,8 +98,8 @@
                             <ul id="responsive">
                                 <li><a  href="{{route('properties-home',['rent'])}}">For Rent</a> </li>
                                 <li><a  href="{{route('properties-home',['sale'])}}">For Sale</a> </li>
-                                <li><a onclick="return alert('Work in progress')"  href="#">Plots</a> </li>
-                                <li><a onclick="alert('work in progress')" href="#">Property Advice</a> </li>
+                                <li><a  href="{{route('land-for-sale')}}">Plots</a> </li>
+                                <li><a onclick="alert('work in progress')" href="#">Property Talks</a> </li>
                                 {{-- <li><a href="{{route('search-home')}}"><i class="fa fa-search"></i> Search</a> </li> --}}
 
                                 <li><a onclick="alert('work in progress')" href="#">Locations</a> </li>

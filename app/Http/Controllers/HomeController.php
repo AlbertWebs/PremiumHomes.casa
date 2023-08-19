@@ -117,7 +117,7 @@ class HomeController extends Controller
         $PostView->titleslug = $PostSlung;
         $PostView->url = $url;
         $PostView->session_id = $session_id;
-        $PostView->user_id = $user_id;
+        $PostView->user_id = $prop->user_id;
         $PostView->ip = $ip;
         $PostView->agent = $user_agent;
         $PostView->save();
