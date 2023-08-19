@@ -24864,8 +24864,8 @@ section.ui-element {
 
 @media screen and (max-width: 768px) {
     .team-img{
-        width:auto;
-        height:auto;
+        width:100% !important;
+        height:100% !important;
     }
 
     .team-img img{
