@@ -239,7 +239,7 @@
                                     @foreach ($Gallery as $gallery)
                                     <li class="list-inline-item">
                                         <a id="carousel-selector-{{$Count}}" data-slide-to="{{$Count}}" data-target="#listingDetailsSlider">
-                                            <img style="width:127px; height:95px;" src="{{url('/')}}/images/{{$gallery->filename}}" class="img-fluid" alt="listing-small">
+                                            <img style="width:127px; height:95px; object-fit:contain;" src="{{url('/')}}/images/{{$gallery->filename}}" class="img-fluid" alt="listing-small">
                                         </a>
                                     </li>
                                     <?php $Count = $Count+1;?>
