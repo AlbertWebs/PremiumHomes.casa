@@ -24873,4 +24873,8 @@ section.ui-element {
         height:100% !important;
         object-fit: cover !important;
     }
+
+    .hide-mobile{
+        display: none !important;
+    }
 }

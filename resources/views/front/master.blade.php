@@ -155,7 +155,8 @@
                                 <img src="{{url('/')}}/uploads/users/{{Auth::user()->avatar}}" alt="">
                                 @endif
                             </span>
-                            Hi, {{Auth::User()->name}}
+                            Hi,
+                            <i class="hide-mobile">{{Auth::User()->name}}</i>
                         </div>
                         <ul>
                             <li><a href="{{url('/')}}/vendors/add-property#"> Add Property</a></li>

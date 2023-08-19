@@ -28,9 +28,13 @@
             <div class="header-user-menu user-menu">
                 <div class="header-user-name">
                     @if(Auth::User()->avatar == null)
-                    <span><img style="border:2px solid #bf9d34" src="{{url('/')}}/uploads/users/avatar.jpg" alt=""></span>{{Auth::User()->name}}
+                    <span>
+                        <img style="border:2px solid #bf9d34" src="{{url('/')}}/uploads/users/avatar.jpg" alt="">
+                    </span><i class="hide-mobile">{{Auth::User()->name}}</i>
                     @else
-                    <span><img style="border:2px solid #bf9d34" src="{{url('/')}}/uploads/users/{{Auth::user()->avatar}}" alt=""></span>{{Auth::User()->name}}
+                    <span>
+                        <img style="border:2px solid #bf9d34" src="{{url('/')}}/uploads/users/{{Auth::user()->avatar}}" alt="">
+                    </span><i class="hide-mobile">{{Auth::User()->name}}</i>
                     @endif
                 </div>
                 <ul>
