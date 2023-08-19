@@ -122,12 +122,18 @@
                                     <div class="recent-title">{{$prop->property_name}}</div>
                                     <div class="price-details">
                                     <div class="recent-price mb-3">KES {{$prop->price}}</div>
-                                    <div class="house-details thehp-1">
-                                        <i class="fa fa-bed mr-1" aria-hidden="true"></i> {{$prop->bedroom}} Br <span class="mr-1">|</span>
-                                        <i class="fa fa-bath mr-1" aria-hidden="true"></i> {{$prop->Bath}} Ba <span class="mr-1">|</span>
-                                        <i class="fa fa-car mr-1" aria-hidden="true"></i> {{$prop->garages}} Gr <span class="mr-1">|</span>
-                                        <i class="fa fa-object-group mr-1" aria-hidden="true"></i> {{$prop->sqft}}</div>
-                                    </div>
+                                    @if($prop->price == "Plot")
+                                        <div class="house-details thehp-1">
+                                            <i class="fa fa-object-group mr-1" aria-hidden="true"></i> {{$prop->sqft}}</div>
+                                        </div>
+                                    @else
+                                        <div class="house-details thehp-1">
+                                            <i class="fa fa-bed mr-1" aria-hidden="true"></i> {{$prop->bedroom}} Br <span class="mr-1">|</span>
+                                            <i class="fa fa-bath mr-1" aria-hidden="true"></i> {{$prop->Bath}} Ba <span class="mr-1">|</span>
+                                            <i class="fa fa-car mr-1" aria-hidden="true"></i> {{$prop->garages}} Gr <span class="mr-1">|</span>
+                                            <i class="fa fa-object-group mr-1" aria-hidden="true"></i> {{$prop->sqft}}</div>
+                                        </div>
+                                    @endif
                                 </div>
                                 <div class="view-proper">View Details</div>
                             </a>
