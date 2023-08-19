@@ -6,12 +6,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="html 5 template">
-    <meta name="author" content="">
+
     <?php
        $PropertySEO = App\Models\Property::where('type','Plot')->limit(1)->where('active','Approved')->get();
     ?>
     @foreach($PropertySEO as $prop)
+        <title>Premium Plots in Kenya - Premium Homes Limited</title>
+        <meta name="description" content="{{$description}}">
        <meta name="robots" content="index,follow">
         <meta name="googlebot" content="index,follow"><!-- Google Specific -->
         <meta name="subject" content="Premium Plots in Kenya - Premium Homes Limited">
