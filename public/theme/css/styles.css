@@ -3513,6 +3513,7 @@ section.team {
   width: 100%;
 }
 
+
 .team-content {
   height: 80px;
   width: 100%;
@@ -24849,3 +24850,13 @@ section.ui-element {
     font-size: 30px !important;
 }
 /*# sourceMappingURL=styles.css.map */
+.team-img{
+    width:225px;
+    height:286px
+}
+@media screen and (max-width: 768px) {
+    .team-img{
+        width:auto;
+        height:auto;
+    }
+}

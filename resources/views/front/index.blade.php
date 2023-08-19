@@ -338,7 +338,7 @@
             @foreach ($Agents as $agent)
             <div class="team-block col-sm-6 col-md-4 col-lg-4 col-xl-2 team-pro" data-aos="fade-up" data-aos-delay="1{{$delay}}0">
                 <div class="team-wrap">
-                    <div class="team-img" style="width:225px; height:286px">
+                    <div class="team-img">
                         <img style="width:100%; height:100%; object-fit: cover;" src="{{url('/')}}/uploads/users/{{$agent->image}}" alt="" />
                     </div>
                     <div class="team-content">
