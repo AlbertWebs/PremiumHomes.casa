@@ -24851,8 +24851,8 @@ section.ui-element {
 }
 /*# sourceMappingURL=styles.css.map */
 .team-img{
-    width:225px;
-    height:286px
+    width:225px !important;
+    height:286px !important;
 }
 @media screen and (max-width: 768px) {
     .team-img{
