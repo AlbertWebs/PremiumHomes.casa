@@ -63,8 +63,9 @@ class HomeController extends Controller
 
     public function land_for_sale(){
         $id = "Plots";
+        $description = "Discover exclusive premium plots for sale in prime locations around Nairobi. Explore your dream investment with spacious, well-located plots offering unmatched potential. Don't miss out on this opportunity to secure your piece of Nairobi's thriving real estate market.";
         $Property = Property::where('type','Plot')->where('active','Approved')->get();
-        return view('front.land_for_sale', compact('Property','id'));
+        return view('front.land_for_sale', compact('Property','id','description'));
     }
 
     public function buying(){
