@@ -271,11 +271,34 @@
                             </div>
                         </div>
                     </div>
-                    @if($Property->type == "Plot")
+
+
+
                     <div class="single homes-content details mb-30">
                         <!-- title -->
                         <h5 class="mb-4">Property Details</h5>
                         <ul class="homes-list clearfix">
+                            @if($Property->status == "Plot")
+
+
+                            <li>
+                                <span class="font-weight-bold mr-1">Property ID:</span>
+                                <span class="det">{{$Property->property_id}}</span>
+                            </li>
+                            <li>
+                                <span class="font-weight-bold mr-1">Property Type:</span>
+                                <span class="det">{{$Property->type}}</span>
+                            </li>
+                            <li>
+                                <span class="font-weight-bold mr-1">Property status:</span>
+                                <span class="det">For Sale</span>
+                            </li>
+                            <li>
+                                <span class="font-weight-bold mr-1">Property Price:</span>
+                                <span class="det">kes {{$Property->price}}</span>
+                            </li>
+
+                            @else
                             <li>
                                 <span class="font-weight-bold mr-1">Property ID:</span>
                                 <span class="det">{{$Property->property_id}}</span>
@@ -312,6 +335,7 @@
                                 <span class="font-weight-bold mr-1">Year Built:</span>
                                 <span class="det">{{$Property->yom}}</span>
                             </li>
+                            @endif
                         </ul>
                         <!-- title -->
                         <h5 class="mt-5">Amenities</h5>
@@ -367,85 +391,6 @@
                             @endif
                         </ul>
                     </div>
-                    @else
-                    <div class="single homes-content details mb-30">
-                        <!-- title -->
-                        <h5 class="mb-4">Property Details</h5>
-                        <ul class="homes-list clearfix">
-                            <li>
-                                <span class="font-weight-bold mr-1">Property ID:</span>
-                                <span class="det">{{$Property->property_id}}</span>
-                            </li>
-                            <li>
-                                <span class="font-weight-bold mr-1">Property Type:</span>
-                                <span class="det">{{$Property->type}}</span>
-                            </li>
-                            <li>
-                                <span class="font-weight-bold mr-1">Property status:</span>
-                                <span class="det">For {{$Property->status}}</span>
-                            </li>
-                            <li>
-                                <span class="font-weight-bold mr-1">Property Price:</span>
-                                <span class="det">kes {{$Property->price}}</span>
-                            </li>
-
-                        </ul>
-                        <!-- title -->
-                        <h5 class="mt-5">Amenities</h5>
-                        <!-- cars List -->
-                        <ul class="homes-list clearfix">
-                            @if($Property->ac == "on")
-                            <li>
-                                <i class="fa fa-check-square" aria-hidden="true"></i>
-                                <span>Air Cond</span>
-                            </li>
-                            @endif
-                            @if($Property->balcony == "on")
-                            <li>
-                                <i class="fa fa-check-square" aria-hidden="true"></i>
-                                <span>Balcony</span>
-                            </li>
-                            @endif
-                            @if($Property->internet == "on")
-                            <li>
-                                <i class="fa fa-check-square" aria-hidden="true"></i>
-                                <span>Internet</span>
-                            </li>
-                            @endif
-                            @if($Property->dishwasher == "on")
-                            <li>
-                                <i class="fa fa-check-square" aria-hidden="true"></i>
-                                <span>Dishwasher</span>
-                            </li>
-                            @endif
-                            @if($Property->parking == "on")
-                            <li>
-                                <i class="fa fa-check-square" aria-hidden="true"></i>
-                                <span>Parking</span>
-                            </li>
-                            @endif
-                            @if($Property->bar == "on")
-                            <li>
-                                <i class="fa fa-check-square" aria-hidden="true"></i>
-                                <span>Bar</span>
-                            </li>
-                            @endif
-                            @if($Property->swimming == "on")
-                            <li>
-                                <i class="fa fa-check-square" aria-hidden="true"></i>
-                                <span>Pool</span>
-                            </li>
-                            @endif
-                            @if($Property->Fridge == "on")
-                            <li>
-                                <i class="fa fa-check-square" aria-hidden="true"></i>
-                                <span>Fridge</span>
-                            </li>
-                            @endif
-                        </ul>
-                    </div>
-                    @endif
-
                     {{-- <div class="floor-plan property wprt-image-video w50 pro">
                         <h5>Floor Plans</h5>
                         <img alt="image" src="{{asset('theme/images/bg/floor-plan-1.png')}}">
