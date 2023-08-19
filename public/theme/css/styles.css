@@ -16279,6 +16279,7 @@ h4.widget_author__name {
 .listing-details-sliders .img-fluid {
   max-width: 100%;
   height: auto;
+  border-radius:10px;
 }
 
 .single-proper .mb-30,
