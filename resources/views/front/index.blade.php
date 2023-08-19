@@ -332,7 +332,7 @@
         </div>
         <div class="row team-all">
             <?php
-               $Agents = DB::table('users')->where('agent','1')->get();
+               $Agents = DB::table('users')->where('agent','1')->orWhere('agent','2')->get();
                $delay = 5;
             ?>
             @foreach ($Agents as $agent)
@@ -344,7 +344,11 @@
                     <div class="team-content">
                         <div class="team-info">
                             <h3>{{$agent->name}}</h3>
+                            @if($agent->agent == 1)
                             <p>Marketing Coordinator</p>
+                            @else
+                            <p>Real Estate Agent</p>
+                            @endif
                             <div class="team-socials">
                                 {{-- <ul>
                                     <li>
