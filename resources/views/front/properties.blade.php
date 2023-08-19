@@ -511,7 +511,7 @@
                 </div>
                 <div class="row portfolio-items">
                     @foreach ($Property as $prop)
-                    <div class="item col-lg-4 col-md-6 col-xs-12 landscapes sale" data-aos="zoom-in" data-aos-delay="150">
+                    <div class="item col-lg-3 col-md-6 col-xs-12 landscapes sale" data-aos="zoom-in" data-aos-delay="150">
                         <div class="landscapes listing-item compact thehp-1">
                             <a href="{{route('property-single',[$prop->slung])}}" class="recent-16 hmp" data-aos="fade-up">
                                 <div class="recent-img16 img-fluid img-center" style="background-image: url('{{asset('uploads/properties/')}}/{{$prop->featured_image}}');"></div>
@@ -541,7 +541,6 @@
                         </div>
                     </div>
                     @endforeach
-
                 </div>
 
             </div>
