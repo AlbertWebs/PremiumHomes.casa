@@ -236,7 +236,7 @@
 </section>
 <!-- END SECTION SERVICES -->
 <!-- START SECTION PROPERTIES FOR RENT -->
-<section class="recently portfolio bg-black-2 rec-pro">
+{{-- <section class="recently portfolio bg-black-2 rec-pro">
     <div class="container-fluid">
         <div class="row">
             <div class="section-title col-md-5 pl-44">
@@ -268,7 +268,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 <!-- END SECTION PROPERTIES FOR RENT -->
 
 <!-- START SECTION PROPERTIES FOR RENT -->
