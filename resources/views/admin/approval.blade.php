@@ -155,7 +155,7 @@
                                                                     dataType: "html",
                                                                     success: function ()
                                                                     {
-                                                                        swal("Done!","It was succesfully deleted!","success");
+                                                                        swal("Done!","Property was approved succesfully!","success");
                                                                         setTimeout(function() {
                                                                             window.location.reload();
                                                                         }, 3000);

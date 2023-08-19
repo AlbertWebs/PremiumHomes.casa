@@ -105,7 +105,7 @@
                         <ul id="responsive">
                             <li><a  href="{{route('properties-home',['rent'])}}">For Rent</a> </li>
                             <li><a  href="{{route('properties-home',['sale'])}}">For Sale</a> </li>
-                            <li><a onclick="return alert('Work in progress')"  href="#">Plots</a> </li>
+                            <li><a  href="{{route('land-for-sale')}}">Plots</a> </li>
                             <li><a onclick="alert('work in progress')" href="#">Property Advice</a> </li>
                             {{-- <li><a href="{{route('search-home')}}"><i class="fa fa-search"></i> Search</a> </li> --}}
 
@@ -370,6 +370,12 @@
                         <h5>Floor Plans</h5>
                         <img alt="image" src="{{asset('theme/images/bg/floor-plan-1.png')}}">
                     </div> --}}
+                    <?php
+                         $NearbyAvailable = DB::table('nearbies')->where('property_id',$Property->id)->get();
+                    ?>
+                    @if($NearbyAvailable->isEmpty())
+
+                    @else
                     <div class="floor-plan property wprt-image-video w50 pro">
                         <h5>What's Nearby</h5>
                         <div class="property-nearby">
@@ -450,6 +456,9 @@
                             </div>
                         </div>
                     </div>
+                    @endif
+
+
                     <div>
                         <div class="property wprt-image-video w50 pro" style="position: relative">
                             <h5>Property Video</h5>
@@ -466,6 +475,10 @@
                             </div>
                         </div>
                     </div>
+
+                    @if($Property->iframe == null)
+
+                    @else
                     <div class="property-location map">
                         <h5>Location</h5>
                         <div class="divider-fade"></div>
@@ -475,6 +488,7 @@
                         </div>
                         <br><br><br>
                     </div>
+                    @endif
                 </div>
                 <aside class="col-lg-4 col-md-12 car">
                     <div class="single widget">

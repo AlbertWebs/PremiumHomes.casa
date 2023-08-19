@@ -286,7 +286,8 @@
                                 </div>
                             </div>
                             <div class="single-add-property">
-                                <h3>Featured Image(1200px by 850px)</h3>
+                                <h3>Featured Image(Pick the best wide Image size preferably 1200px by 850px)</h3>
+                                <small>This is the first image your clients see</small>
                                 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
                                 <div class="property-form-group">
                                     <div class="row">
@@ -383,7 +384,7 @@
                                         <div class="col-lg-6 col-md-12">
                                             <p class="no-mb">
                                                 <label for="price">Video</label>
-                                                <input type="text" name="video" placeholder="https://www.youtube.com/watch?v=hGiTSuJl1U8" id="price" required>
+                                                <input type="text" value="https://www.youtube.com/@premiumhomescasa" name="video" placeholder="https://www.youtube.com/watch?v=hGiTSuJl1U8" id="price" required>
                                             </p>
                                         </div>
 
