@@ -68,8 +68,8 @@
                             <ul id="responsive">
                                 <li><a  href="{{route('properties-home',['rent'])}}">For Rent</a> </li>
                                 <li><a  href="{{route('properties-home',['sale'])}}">For Sale</a> </li>
-                                <li><a onclick="return alert('Work in progress')"  href="#">Plots</a> </li>
-                                <li><a onclick="alert('work in progress')" href="#">Property Advice</a> </li>
+                                <li><a  href="{{route('land-for-sale')}}">Plots</a> </li>
+                                <li><a onclick="alert('work in progress')" href="#">Property Talks</a> </li>
                                 {{-- <li><a href="{{route('search-home')}}"><i class="fa fa-search"></i> Search</a> </li> --}}
 
                                 <li><a onclick="alert('work in progress')" href="#">Locations</a> </li>
@@ -543,9 +543,7 @@
                     @endforeach
 
                 </div>
-                <div class="bg-all">
-                    <a target="new" href="{{route('properties-home',['sale'])}}" class="btn btn-outline-light">All Premium For Sale Properties</a>
-                </div>
+
             </div>
         </section>
         <!-- END SECTION PROPERTIES LISTING -->
