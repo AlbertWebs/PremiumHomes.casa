@@ -45,9 +45,6 @@ class SendMail extends Model
 
             $subject = "$subject";
 
-
-
-
             $SenderEmail = "info@premiumhomes.casa";
             $SenderName = "Premium Business Den Limited";
 
