@@ -21,7 +21,8 @@ class HomeController extends Controller
         $Blog = Blog::limit('2')->get();
         $Property = Property::where('Status','Sale')->where('active','Approved')->limit('6')->get();
         $PropertyRent = Property::where('Status','Rent')->where('active','Approved')->get();
-        return view('front.index', compact('Property','PropertyRent','Blog'));
+        $PropertyPlots = Property::where('type','Plot')->where('active','Approved')->get();
+        return view('front.index', compact('Property','PropertyRent','Blog','PropertyPlots'));
     }
 
     public function invoice()
