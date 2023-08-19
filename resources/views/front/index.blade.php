@@ -122,7 +122,7 @@
                                     <div class="recent-title">{{$prop->property_name}}</div>
                                     <div class="price-details">
                                     <div class="recent-price mb-3">KES {{$prop->price}}</div>
-                                    @if($prop->price == "Plot")
+                                    @if($prop->type == "Plot")
                                         <div class="house-details thehp-1">
                                             <i class="fa fa-object-group mr-1" aria-hidden="true"></i> {{$prop->sqft}}</div>
                                         </div>
