@@ -56,54 +56,7 @@
                                 <div class="dropdown">
                                     <button onclick="myFunction()" class="dropbtn"><i class="fa fa-bars pr10 mr-2"></i> Dashboard Navigation</button>
                                     <ul id="myDropdown" class="dropdown-content">
-                                        <li>
-                                            <a class="active" href="{{route('dashboard')}}">
-                                                <i class="fa fa-map-marker"></i> Dashboard
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{route('user-profile')}}">
-                                                <i class="fa fa-user"></i>Profile
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{route('my-listings')}}">
-                                                <i class="fa fa-list" aria-hidden="true"></i>My Properties
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="{{route('add-property')}}">
-                                                <i class="fa fa-list" aria-hidden="true"></i>Add Property
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{route('payment-method')}}">
-                                                <i class="fas fa-credit-card"></i>Payments
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{route('invoices')}}">
-                                                <i class="fas fa-paste"></i>Invoices
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="change-password#">
-                                                <i class="fa fa-lock"></i>Change Password
-                                            </a>
-                                        </li>
-                                        <li>
-
-                                            <a class="dropdown-item" href="{{ route('logout') }}"
-                                                onclick="event.preventDefault();
-                                                                document.getElementById('logout-form').submit();"> <i class="fas fa-sign-out-alt"></i>
-                                                {{ __('Logout') }}
-                                            </a>
-                                            {{--  --}}
-                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                                @csrf
-                                            </form>
-                                        </li>
+                                        @include('vendor.mobilemenu')
                                     </ul>
                                 </div>
                             </div>
