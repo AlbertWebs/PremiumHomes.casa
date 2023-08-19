@@ -139,6 +139,14 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <p>
+                                                    <label for="title">Short Description</label>
+                                                    <textarea name="meta" type="text" name="title" id="title" placeholder="Very Short description of the property with main features captured">{{$Property->meta}}</textarea>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p>
                                                     <label for="description">Property Description</label>
                                                     {{-- <textarea id="description" name="property_description" placeholder="Describe about your property"></textarea> --}}
                                                     <textarea name="property_description" id="article_ckeditor" rows="10" cols="80" required>{{$Property->property_description}}</textarea>
@@ -152,14 +160,27 @@
                                         </div>
                                         <div class="row">
                                             {{--  --}}
-                                            <div class="col-lg-4 col-md-12 dropdown faq-drop">
+                                            <div class="col-lg-2 col-md-12 dropdown faq-drop">
                                                 <div class="form-group categories">
-                                                    <label for="price">Rent/Sale</label>
+                                                    <label for="status">Rent/Sale</label>
                                                     <select name="status" class="nice-select form-control wide" required>
+                                                        {{-- <option selected="" value="Default">Select status</option> --}}
                                                         <option selected value="{{$Property->status}}">{{$Property->status}}</option>
                                                         <option value="Rent">Rent</option>
                                                         <option value="Sale">Sale</option>
                                                         <option value="Lease">Lease</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-12 dropdown faq-drop">
+                                                <div class="form-group categories">
+                                                    <label for="price">Ownership</label>
+                                                    <select name="ownership" class="nice-select form-control wide" required>
+                                                        {{-- <option selected="" value="Default">Select status</option> --}}
+                                                        <option selected value="{{$Property->ownership}}">{{$Property->ownership}}</option>
+                                                        <option value="direct">Direct</option>
+                                                        <option value="indirect">Indirect</option>
+                                                        <option value="premium">Premium Homes</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -172,25 +193,48 @@
                                                         <option value="Duplex">Duplex</option>
                                                         <option value="Condominium">Condominium</option>
                                                         <option value="Villa">Villa</option>
-
                                                         <option value="Mansion">Mansion</option>
                                                         <option value="Townhouse">Townhouse</option>
                                                         <option value="Cottages">Cottages</option>
-
                                                         <option value="Bungalow">Bungalow</option>
                                                         <option value="Apartment">Apartment</option>
                                                         <option value="Mansion">Mansion</option>
                                                         <option value="Resorts">Resorts</option>
-                                                        <option value="Plot">Resorts</option>
+                                                        <option value="Plot">Plot</option>
+                                                        <option value="Penthouse">Penthouse</option>
                                                     </select>
                                                 </div>
                                             </div>
                                             {{--  --}}
-                                            <div class="col-lg-4 col-md-12 dropdown faq-drop">
+                                            <div class="col-lg-2 col-md-12 dropdown faq-drop">
                                                 <div class="form-group categories">
                                                     <label for="price">Rooms</label>
                                                     <select name="rooms" class="nice-select form-control wide" required>
                                                         <option selected value="{{$Property->rooms}}">{{$Property->rooms}}</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="10">10</option>
+                                                        <option value="11">11</option>
+                                                        <option value="12">12</option>
+                                                        <option value="13">13</option>
+                                                        <option value="14">14</option>
+                                                        <option value="15">15</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-12 dropdown faq-drop">
+                                                <div class="form-group categories">
+                                                    <label for="bedrooms">Bedrooms</label>
+                                                    <select name="bedrooms" class="nice-select form-control wide" required>
+                                                        <option selected value="{{$Property->bedroom}}">{{$Property->bedroom}}</option>
+                                                        {{-- <option selected="" value="Default">Rooms</option> --}}
                                                         <option value="1">1</option>
                                                         <option value="2">2</option>
                                                         <option value="3">3</option>

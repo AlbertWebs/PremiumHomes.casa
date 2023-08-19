@@ -292,7 +292,7 @@ Route::group(['prefix'=>'vendors'], function(){
 
     Route::get('/delete-properties/{id}', [App\Http\Controllers\VendorController::class, 'delete_property'])->name('delete-properties');
     Route::get('/view-gallery/{id}', [App\Http\Controllers\VendorController::class, 'view_gallery'])->name('view_gallery');
-
+    Route::get('/property-views', [App\Http\Controllers\VendorController::class, 'property_views'])->name('property-views');
 
     // Post
     Route::post('/add-property', [App\Http\Controllers\VendorController::class, 'add_properties'])->name('add-property-post');
@@ -303,6 +303,8 @@ Route::group(['prefix'=>'vendors'], function(){
     Route::post('/add-nearby-post/{id}', [App\Http\Controllers\VendorController::class, 'add_nearby_post'])->name('add-nearby-post');
     Route::post('/invoice-make', [App\Http\Controllers\VendorController::class, 'invoice_make'])->name('invoice-make');
     Route::post('/verify-payment', [App\Http\Controllers\VendorController::class, 'verify_payment'])->name('verify-payment');
+
+
 
 
 

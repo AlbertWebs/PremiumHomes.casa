@@ -46,6 +46,15 @@ class VendorController extends Controller
         return view('vendor.index',compact('MyListings','active'));
     }
 
+    public function property_views()
+    {
+        $active = "home";
+        $PostViews = DB::table('post_views')->where('user_id',Auth::user()->id)->get();
+        return view('vendor.property_views',compact('PostViews','active'));
+    }
+
+
+
     public function user_profile()
     {
         $active = "profile";
@@ -165,6 +174,7 @@ class VendorController extends Controller
         $Property->property_id = Str::random(5);
         $Property->slung = Str::slug($request->property_name);
         $Property->property_description = $request->property_description;
+        $Property->meta = $request->meta;
         $Property->status = $request->status;
         $Property->featured_image = $filename;
         $Property->user_id = $agent;
@@ -173,6 +183,7 @@ class VendorController extends Controller
         $Property->bedroom = $request->bedrooms;
         $Property->price = $request->price;
         $Property->type = $request->type;
+        $Property->ownership = $request->ownership;
         $Property->sqft = $request->sqft;
         $Property->address = $request->address;
         $Property->city = $request->city;
@@ -333,10 +344,12 @@ class VendorController extends Controller
             'property_name' =>$request->property_name,
             'slung' => Str::slug($request->property_name),
             'property_description' => $request->property_description,
+            'meta' => $request->meta,
             'status' => $request->status,
             'user_id' => Auth::User()->id,
             'type' => $request->type,
             'rooms' => $request->rooms,
+            'bedroom' => $request->bedrooms,
             'price' => $request->price,
             'type' => $request->type,
             'sqft' => $request->sqft,
@@ -346,6 +359,7 @@ class VendorController extends Controller
             'country' => $request->country,
             'latitude' => $request->latitude,
             'longitude' => $request->longitude,
+            'ownership' => $request->ownership,
             'yom' => $request->yom,
             'ac' => $request->ac,
             'swimming' => $request->swimming,

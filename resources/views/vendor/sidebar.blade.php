@@ -45,6 +45,11 @@
                         <i class="fa fa-bar-chart" aria-hidden="true"></i>Leads
                     </a>
                 </li>
+                <li>
+                    <a class="@if($active == 'property_views') active @else @endif" target="new" href="{{route('my-listings')}}">
+                        <i class="fa fa-bar-chart" aria-hidden="true"></i>Property Views
+                    </a>
+                </li>
                 {{-- <li>
                     <a class="@if($active == 'payment_method') active @else @endif" href="{{route('payment-method')}}">
                         <i class="fas fa-credit-card"></i>Payments

@@ -122,9 +122,17 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <p>
-                                                    <label for="description">Property Description</label>
+                                                    <label for="title">Short Description</label>
+                                                    <textarea name="meta" type="text" name="title" id="title" placeholder="Very Short description of the property with main features captured"></textarea>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p>
+                                                    <label for="description">Property Description(Detailed Description)</label>
                                                     {{-- <textarea id="description" name="property_description" placeholder="Describe about your property"></textarea> --}}
-                                                    <textarea name="property_description" id="article_ckeditor" rows="10" cols="80" required></textarea>
+                                                    <textarea name="property_description" placeholder="Detailed description of the property with main features captured" id="article_ckeditor" rows="10" cols="80" required></textarea>
 
                                                     <script src="https://amanivehiclesounds.co.ke/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
                                                     <script>
@@ -135,7 +143,7 @@
                                         </div>
                                         <div class="row">
                                             {{--  --}}
-                                            <div class="col-lg-4 col-md-12 dropdown faq-drop">
+                                            <div class="col-lg-2 col-md-12 dropdown faq-drop">
                                                 <div class="form-group categories">
                                                     <label for="price">Rent/Sale</label>
                                                     <select name="status" class="nice-select form-control wide" required>
@@ -143,6 +151,17 @@
                                                         <option value="Rent">Rent</option>
                                                         <option value="Sale">Sale</option>
                                                         <option value="Lease">Lease</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-12 dropdown faq-drop">
+                                                <div class="form-group categories">
+                                                    <label for="price">Ownership</label>
+                                                    <select name="ownership" class="nice-select form-control wide" required>
+                                                        {{-- <option selected="" value="Default">Select status</option> --}}
+                                                        <option value="direct">Direct</option>
+                                                        <option value="indirect">Indirect</option>
+                                                        <option value="premium">Premium Homes</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -163,6 +182,8 @@
                                                         <option value="Mansion">Mansion</option>
                                                         <option value="Resorts">Resorts</option>
                                                         <option value="Plot">Plot</option>
+                                                        <option value="Penthouse">Penthouse</option>
+
                                                     </select>
                                                 </div>
                                             </div>
