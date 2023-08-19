@@ -24854,6 +24854,14 @@ section.ui-element {
     width:225px !important;
     height:286px !important;
 }
+
+.team-img img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+
 @media screen and (max-width: 768px) {
     .team-img{
         width:auto;
