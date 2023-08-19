@@ -278,7 +278,7 @@
                         <!-- title -->
                         <h5 class="mb-4">Property Details</h5>
                         <ul class="homes-list clearfix">
-                            @if($Property->status == "Plot")
+                            @if($Property->type == "Plot")
 
 
                             <li>
