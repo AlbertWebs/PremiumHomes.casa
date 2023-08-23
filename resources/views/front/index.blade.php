@@ -69,7 +69,7 @@
                                     </div>
                                     @endforeach
                                     <?php
-                                        $Gallery = DB::table('galleries')->where('property_id', $slider->id)->get();
+                                        $Gallery = DB::table('galleries')->where('property_id', $slider->id)->limit('5')->get();
                                         $Count = 1
                                     ?>
                                     @foreach ($Gallery as $gallery)
