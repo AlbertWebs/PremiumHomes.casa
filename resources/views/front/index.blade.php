@@ -63,7 +63,7 @@
                                     <div class="swiper-slide">
                                         <div class="swiper_contbox">
                                             <div class="swipper_conntent">
-                                                <img src="{{url('/')}}/uploads/properties/{{$slider->featured_image}}" class="img-fluid " alt="images" />
+                                                <img style="max-height:698px" src="{{url('/')}}/uploads/properties/{{$slider->featured_image}}" class="img-fluid " alt="images" />
                                             </div>
                                         </div>
                                     </div>
@@ -76,7 +76,7 @@
                                     <div class="swiper-slide">
                                         <div class="swiper_contbox">
                                             <div class="swipper_conntent">
-                                                <img src="{{url('/')}}/images/{{$gallery->filename}}" class="img-fluid " alt="images" />
+                                                <img style="max-height:698px" src="{{url('/')}}/images/{{$gallery->filename}}" class="img-fluid " alt="images" />
                                             </div>
                                         </div>
                                     </div>
