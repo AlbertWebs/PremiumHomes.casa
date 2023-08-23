@@ -322,7 +322,6 @@
 <!-- END SECTION PROPERTIES FOR RENT -->
 
 
-
 <!-- START SECTION AGENTS -->
 <section class="team bg-white rec-pro bg-black-2">
     <div class="container-fluid">
