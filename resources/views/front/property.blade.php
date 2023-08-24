@@ -207,7 +207,7 @@
                                     <div class="single detail-wrapper mr-2">
                                         <div class="detail-wrapper-body">
                                             <div class="listing-title-bar">
-                                                <h4>kes {{$Property->price}}</h4>
+                                                <h4 style="font-weight: 900">kes {{$Property->price}}</h4>
                                                 <div class="mt-0">
                                                     <a href="#listing-location" class="listing-address">
                                                         <p>{{$Property->sqft}}</p>

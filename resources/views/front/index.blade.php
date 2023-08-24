@@ -99,55 +99,55 @@
 {{-- @include('front.search') --}}
 
 
-        <!-- START SECTION FEATURED PROPERTIES -->
-        <section class="recently portfolio bg-black-1 rec-pro2 hmp ho-17">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="section-title col-md-5 pl-44">
-                        <h3>Properties</h3>
-                        <h2>For Sale</h2>
-                    </div>
-                </div>
-                <div class="row portfolio-items">
-                    @foreach ($Property as $prop)
-                    <div class="item col-lg-4 col-md-6 col-xs-12 landscapes sale" data-aos="zoom-in" data-aos-delay="150">
-                        <div class="landscapes listing-item compact thehp-1">
-                            <a href="{{route('property-single',[$prop->slung])}}" class="recent-16 hmp" data-aos="fade-up">
-                                <div class="recent-img16 img-fluid img-center" style="background-image: url('{{asset('uploads/properties/')}}/{{$prop->featured_image}}');" ></div>
-                                <div class="recent-content"></div>
-                                <div class="listing-badges">
-                                    <span>For {{$prop->status}}</span>
-                                </div>
-                                <div class="recent-details">
-                                    <div class="recent-title">{{$prop->property_name}}</div>
-                                    <div class="price-details">
-                                    <div class="recent-price mb-3">KES {{$prop->price}}</div>
-                                    @if($prop->type == "Plot")
-                                        <div class="house-details thehp-1">
-                                            <i class="fa fa-object-group mr-1" aria-hidden="true"></i> {{$prop->sqft}}</div>
-                                        </div>
-                                    @else
-                                        <div class="house-details thehp-1">
-                                            <i class="fa fa-bed mr-1" aria-hidden="true"></i> {{$prop->bedroom}} Br <span class="mr-1">|</span>
-                                            <i class="fa fa-bath mr-1" aria-hidden="true"></i> {{$prop->Bath}} Ba <span class="mr-1">|</span>
-                                            <i class="fa fa-car mr-1" aria-hidden="true"></i> {{$prop->garages}} Gr <span class="mr-1">|</span>
-                                            <i class="fa fa-object-group mr-1" aria-hidden="true"></i> {{$prop->sqft}}</div>
-                                        </div>
-                                    @endif
-                                </div>
-                                <div class="view-proper">View Details</div>
-                            </a>
+<!-- START SECTION FEATURED PROPERTIES -->
+<section class="recently portfolio bg-black-1 rec-pro2 hmp ho-17">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="section-title col-md-5 pl-44">
+                <h3>Properties</h3>
+                <h2>For Sale</h2>
+            </div>
+        </div>
+        <div class="row portfolio-items">
+            @foreach ($Property as $prop)
+            <div class="item col-lg-4 col-md-6 col-xs-12 landscapes sale" data-aos="zoom-in" data-aos-delay="150">
+                <div class="landscapes listing-item compact thehp-1">
+                    <a href="{{route('property-single',[$prop->slung])}}" class="recent-16 hmp" data-aos="fade-up">
+                        <div class="recent-img16 img-fluid img-center" style="background-image: url('{{asset('uploads/properties/')}}/{{$prop->featured_image}}');" ></div>
+                        <div class="recent-content"></div>
+                        <div class="listing-badges">
+                            <span>For {{$prop->status}}</span>
                         </div>
-                    </div>
-                    @endforeach
-
-                </div>
-                <div class="bg-all">
-                    <a target="new" href="{{route('properties-home',['sale'])}}" class="btn btn-outline-light">All Premium For Sale Properties</a>
+                        <div class="recent-details">
+                            <div class="recent-title">{{$prop->property_name}}</div>
+                            <div class="price-details">
+                            <div class="recent-price mb-3">KES {{$prop->price}}</div>
+                            @if($prop->type == "Plot")
+                                <div class="house-details thehp-1">
+                                    <i class="fa fa-object-group mr-1" aria-hidden="true"></i> {{$prop->sqft}}</div>
+                                </div>
+                            @else
+                                <div class="house-details thehp-1">
+                                    <i class="fa fa-bed mr-1" aria-hidden="true"></i> {{$prop->bedroom}} Br <span class="mr-1">|</span>
+                                    <i class="fa fa-bath mr-1" aria-hidden="true"></i> {{$prop->Bath}} Ba <span class="mr-1">|</span>
+                                    <i class="fa fa-car mr-1" aria-hidden="true"></i> {{$prop->garages}} Gr <span class="mr-1">|</span>
+                                    <i class="fa fa-object-group mr-1" aria-hidden="true"></i> {{$prop->sqft}}</div>
+                                </div>
+                            @endif
+                        </div>
+                        <div class="view-proper">View Details</div>
+                    </a>
                 </div>
             </div>
-        </section>
-        <!-- END SECTION FEATURED PROPERTIES -->
+            @endforeach
+
+        </div>
+        <div class="bg-all">
+            <a target="new" href="{{route('properties-home',['sale'])}}" class="btn btn-outline-light">All Premium For Sale Properties</a>
+        </div>
+    </div>
+</section>
+<!-- END SECTION FEATURED PROPERTIES -->
 
 <!-- START SECTION PROPERTIES FOR SALE -->
 {{-- <section class="recently portfolio featured bg-black-1 rec-pro">
@@ -321,7 +321,6 @@
 </section>
 <!-- END SECTION PROPERTIES FOR RENT -->
 
-
 <!-- START SECTION AGENTS -->
 <section class="team bg-white rec-pro bg-black-2">
     <div class="container-fluid">
@@ -369,10 +368,6 @@
 </section>
 <!-- END SECTION AGENTS -->
 
-
-
-
-
 <!-- START SECTION BLOG -->
 <section class="blog-section bg-black-1 rec-pro">
     <div class="container-fluid">
@@ -409,7 +404,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
                 @endforeach
             </div>
