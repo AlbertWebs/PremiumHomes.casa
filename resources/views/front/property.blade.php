@@ -210,7 +210,7 @@
                                                 <h4 style="font-weight: 900">kes {{$Property->price}}</h4>
                                                 <div class="mt-0">
                                                     <a href="#listing-location" class="listing-address">
-                                                        <p>{{$Property->sqft}}</p>
+                                                        <p> <i class="fa fa-object-group mr-1 pr-2 ti-location-pin mrg-r-5"></i> {{$Property->sqft}}</p>
                                                     </a>
                                                 </div>
                                             </div>
