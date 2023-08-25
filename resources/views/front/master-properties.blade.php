@@ -178,7 +178,7 @@
                                     <li>
                                         <div class="info">
                                             <i class="fa fa-envelope" aria-hidden="true"></i>
-                                            <p class="in-p ti">support@premiumhomes.casa</p>
+                                            <p class="in-p ti">info@premiumhomes.casa</p>
                                         </div>
                                     </li>
                                 </ul>
