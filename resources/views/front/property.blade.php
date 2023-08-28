@@ -613,12 +613,12 @@
                                             ?>
                                             @foreach ($RecentProperties as $Recent)
                                             <div class="recent-main my-4">
-                                                <div class="recent-img">
-                                                    <a style="width:180px; height:90px;" href="{{route('property-single',[$Recent->slung])}}"><img style="width:100%; height:100%;" src="{{url('/')}}/uploads/properties/{{$Recent->featured_image}}" alt=""></a>
+                                                <div class="recent-img" style="max-width:90px !important; height:70px !important;">
+                                                    <a href="{{route('property-single',[$Recent->slung])}}"><img width="100%" src="{{url('/')}}/uploads/properties/{{$Recent->featured_image}}" alt=""></a>
                                                 </div>
                                                 <div class="info-img" style="margin-left:5px">
                                                     <a href="{{route('property-single',[$Recent->slung])}}"><h6>{{$Recent->property_name}}</h6></a>
-                                                    <p>{{$Recent->price}}</p>
+                                                    <p>kes {{$Recent->price}}</p>
                                                 </div>
                                             </div>
                                             @endforeach
