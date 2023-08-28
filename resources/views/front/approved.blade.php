@@ -6,27 +6,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Premium Homes - High End Homes in Kenya</title>
-    <meta name="description" content="Apartments, Houses, Homes, Condos, Studios, High Rise, High End Living in Africa">
-    <link rel="canonical" href="https://premiumhomes.casa/"/>
-    <meta name="author" content="Designekta Studios">
-    <meta property="og:description" content="Apartments, Houses, Homes, Condos, Studios, High Rise, High End Living in Africa">
-    <meta property="og:image" content="https://premiumhomes.casa/theme/images/preloader.png" />
-    <meta property="fb:app_id" content="431980657174772" />
-    <meta property="og:title" content="Premium Homes - High End Homes in Kenya - Premium Business Den - " />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://premiumhomes.casa/" />
+    <?php
+    $PropertySEO = App\Models\Property::where('un','1')->limit(1)->where('active','Approved')->get();
+    $description = "Discover exquisite United Nations approved Properties available for sale and rent in and around Nairobi. Explore luxurious homes, apartments, and estates in prime locations, curated to meet your discerning taste. Your dream property awaits in Nairobi's most sought-after neighborhoods.";
+    ?>
+    @foreach($PropertySEO as $prop)
+        <title>United Nations Properies in Kenya - Premium Homes Limited</title>
+        <meta name="description" content="{{$description}}">
+        <meta name="robots" content="index,follow">
+        <meta name="googlebot" content="index,follow"><!-- Google Specific -->
+        <meta name="subject" content="United Nations Properies in Kenya - Premium Homes Limited">
+        <meta name="rating" content="General">
+        <meta name="referrer" content="no-referrer">
+        <meta name="theme-color" content="#EFE165">
 
-    <meta name="twitter:title" content="Premium Homes - High End Homes in Kenya - Premium Business Den" />
-    <meta name="twitter:site" content="@premiumhomescasa" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:creator" content="@premiumhomescasa" />
+        <link rel="canonical" href="https://premiumhomes.casa/properties/land-for-sale"/>
+        <meta name="author" content="Designekta Studios">
+        <meta property="og:description" content="{{$description}}">
+        <meta property="og:image" content="https://premiumhomes.casa/uploads/properties/{{$prop->featured_image}}" />
+        <meta property="fb:app_id" content="431980657174772" />
+        <meta property="og:title" content="United Nations Properies in Kenya - Premium Homes Limited" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://premiumhomes.casa/land-for-sale" />
+        <meta property="og:site_name" content="Premium Homes Limited">
+        <meta property="og:locale" content="en_US">
+
+        <meta name="twitter:title" content="United Nations Properies in Kenya - Premium Homes Limited" />
+        <meta name="twitter:site" content="@premiumhomescasa" />
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@premiumhomescasa">
+        <meta name="twitter:url" content="https://premiumhomes.casa/land-for-sale">
+        <meta name="twitter:description" content="{{$description}}">
+        <meta name="twitter:image" content="https://royaltech.co.ke/uploads/products/1_062eeb89-ffbf-474a-8443-1285ea8a9b41.jpg">
+        <meta name="twitter:creator" content="@premiumhomescasa" />
+    @endforeach
     <!-- FAVICON -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('theme/images/preloader.png')}}">
-    <link rel="stylesheet" href="{{asset('theme/css/jquery-ui.css')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/jquery-ui.css">
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i%7CMontserrat:600,800" rel="stylesheet">
+
+
+
     <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="{{asset('theme/font/flaticon.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/fontawesome-all.min.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/fontawesome-5-all.min.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/font-awesome.min.css')}}">
@@ -35,64 +58,24 @@
     <link rel="stylesheet" href="{{asset('theme/css/animate.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/aos.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/aos2.css')}}">
-    <link rel="stylesheet" href="{{asset('theme/css/swiper.min.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/magnific-popup.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/lightcase.css')}}">
-    <link rel="stylesheet" href="{{asset('theme/css/owl-carousel.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/menu.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/slick.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/styles.css')}}">
-    <link rel="stylesheet" id="color" href="{{asset('theme/css/default.css')}}">
+    <link rel="stylesheet" href="{{asset('theme/css/video.css')}}">
+    {{-- <link rel="stylesheet" id="color" href="{{asset('theme/css/colors/pink.css')}}"> --}}
     @include('tawkto')
-
-
 </head>
 
-<body class="int_dark_bg">
-    <!-- Wrapper -->
-    <div id="wrapper" class="int_main_wraapper">
-        <div class="int_infosidebar">
-            <div class="siderbar_social">
-                <ul class="p-0">
-                    <br><br>
-                    <li><a href="https://www.facebook.com/premiumhomes.casa"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="https://www.instagram.com/premiumhomes.casa/"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="javascript:;"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="https://www.linkedin.com/company/87387000/admin/feed/posts/"><i class="fab fa-linkedin"></i></a></li>
-                    <li><a href="javascript:;"><i class="fab fa-pinterest-p"></i></a></li>
-                </ul>
-            </div>
-            <div class="siderbar_contact">
-                <a href="javascript:;">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480.56 480.56" width="18px" height="18px">
-                        <g>
-                            <g>
-                                <g>
-                                    <path d="M365.354,317.9c-15.7-15.5-35.3-15.5-50.9,0c-11.9,11.8-23.8,23.6-35.5,35.6c-3.2,3.3-5.9,4-9.8,1.8    c-7.7-4.2-15.9-7.6-23.3-12.2c-34.5-21.7-63.4-49.6-89-81c-12.7-15.6-24-32.3-31.9-51.1c-1.6-3.8-1.3-6.3,1.8-9.4    c11.9-11.5,23.5-23.3,35.2-35.1c16.3-16.4,16.3-35.6-0.1-52.1c-9.3-9.4-18.6-18.6-27.9-28c-9.6-9.6-19.1-19.3-28.8-28.8    c-15.7-15.3-35.3-15.3-50.9,0.1c-12,11.8-23.5,23.9-35.7,35.5c-11.3,10.7-17,23.8-18.2,39.1c-1.9,24.9,4.2,48.4,12.8,71.3    c17.6,47.4,44.4,89.5,76.9,128.1c43.9,52.2,96.3,93.5,157.6,123.3c27.6,13.4,56.2,23.7,87.3,25.4c21.4,1.2,40-4.2,54.9-20.9    c10.2-11.4,21.7-21.8,32.5-32.7c16-16.2,16.1-35.8,0.2-51.8C403.554,355.9,384.454,336.9,365.354,317.9z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#FFFFFF" />
-                                    <path d="M346.254,238.2l36.9-6.3c-5.8-33.9-21.8-64.6-46.1-89c-25.7-25.7-58.2-41.9-94-46.9l-5.2,37.1    c27.7,3.9,52.9,16.4,72.8,36.3C329.454,188.2,341.754,212,346.254,238.2z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#FFFFFF" />
-                                    <path d="M403.954,77.8c-42.6-42.6-96.5-69.5-156-77.8l-5.2,37.1c51.4,7.2,98,30.5,134.8,67.2c34.9,34.9,57.8,79,66.1,127.5    l36.9-6.3C470.854,169.3,444.354,118.3,403.954,77.8z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#FFFFFF" />
-                                </g>
-                            </g>
-                        </g>
-                    </svg>
-                    Call +254 727 111 222</a>
-            </div>
-            <div class="siderbar_email">
-                <a href="javascript:;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 485.211 485.211">
-                        <g>
-                            <g>
-                                <path d="M485.211,363.906c0,10.637-2.992,20.498-7.785,29.174L324.225,221.67l151.54-132.584   c5.895,9.355,9.446,20.344,9.446,32.219V363.906z M242.606,252.793l210.863-184.5c-8.653-4.737-18.397-7.642-28.908-7.642H60.651   c-10.524,0-20.271,2.905-28.889,7.642L242.606,252.793z M301.393,241.631l-48.809,42.734c-2.855,2.487-6.41,3.729-9.978,3.729   c-3.57,0-7.125-1.242-9.98-3.729l-48.82-42.736L28.667,415.23c9.299,5.834,20.197,9.329,31.983,9.329h363.911   c11.784,0,22.687-3.495,31.983-9.329L301.393,241.631z M9.448,89.085C3.554,98.44,0,109.429,0,121.305v242.602   c0,10.637,2.978,20.498,7.789,29.174l153.183-171.44L9.448,89.085z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#FFFFFF" />
-                            </g>
-                        </g>
-                    </svg>
-                    info@premiumhomes.casa</a>
-            </div>
-        </div>
-        <!-- START SECTION HEADINGS -->
-        <!-- Header Container
+
+
+<body class="homepage-9 hp-6 hd-whitse hmp7 mh int_dark_bg">
+    {{--  --}}
+
+    <!-- Header Container
         ================================================== -->
         <header id="header-container">
             <!-- Header -->
@@ -118,11 +101,10 @@
                                 <li><a  href="{{route('properties-home',['rent'])}}">For Rent</a> </li>
                                 <li><a  href="{{route('properties-home',['sale'])}}">For Sale</a> </li>
                                 <li><a  href="{{route('land-for-sale')}}">Plots</a> </li>
-                                6
                                 <li><a  href="{{route('un-approved')}}">UN Approved Properties</a> </li>
                                 {{-- <li><a href="{{route('search-home')}}"><i class="fa fa-search"></i> Search</a> </li> --}}
 
-
+                                <li><a onclick="alert('work in progress')" href="#">Locations</a> </li>
 
                                 <li class="d-none d-xl-none d-block d-lg-block"><a href="login#">Login</a></li>
                                 <li class="d-none d-xl-none d-block d-lg-block"><a href="register#">Register</a></li>
@@ -150,18 +132,15 @@
                     <div class="header-user-menu user-menu add">
                         <div class="header-user-name">
                             <span>
-                                @if(Auth::User()->avatar == null)
-                                <img src="{{url('/')}}/uploads/users/avatar.jpg" alt="">
-                                @else
-                                <img src="{{url('/')}}/uploads/users/{{Auth::user()->avatar}}" alt="">
-                                @endif
+                                <img src="{{asset('theme/images/testimonials/199259143_4389625377747506_3043984032264076715_n.jpg')}}" alt="">
                             </span>
-                            Hi,
-                            <i class="hide-mobile">{{Auth::User()->name}}</i>
+                            Hi, {{Auth::User()->name}}
                         </div>
                         <ul>
-                            <li><a href="{{url('/')}}/vendors/add-property#"> Add Property</a></li>
-
+                            <li><a href="user-profile#"> Edit profile</a></li>
+                            <li><a href="add-property#"> Add Property</a></li>
+                            <li><a href="payment-method#">  Payments</a></li>
+                            <li><a href="change-password#"> Change Password</a></li>
                             <li><a onclick="event.preventDefault(); document.getElementById('logout-form').submit();" href="{{ route('logout') }}">{{ __('Logout') }}</a></li>
                         </ul>
                     </div>
@@ -191,21 +170,6 @@
                     @endif
 
 
-                    <!-- lang-wrap-->
-                    {{-- <div class="header-user-menu user-menu add d-none d-lg-none d-xl-flex">
-                        <div class="lang-wrap">
-                            <div class="show-lang"><span><i class="fas fa-globe-americas"></i><strong>USD</strong></span><i class="fa fa-caret-down arrlan"></i></div>
-                            <ul class="lang-tooltip lang-action no-list-style">
-                                <li><a href="#" onclick="return alert('Currency Swap Is Offline')" class="current-lan" data-lantext="En">KES</a></li>
-                                <li><a href="#" data-lantext="Fr">JPN</a></li>
-                                <li><a href="#" data-lantext="Es">EUR</a></li>
-                                <li><a href="#" data-lantext="De">POUD</a></li>
-                            </ul>
-                        </div>
-                    </div> --}}
-
-                    <!-- lang-wrap end-->
-
                 </div>
             </div>
             <!-- Header / End -->
@@ -213,10 +177,103 @@
         </header>
         <div class="clearfix"></div>
         <!-- Header Container / End -->
+    {{--  --}}
+    <!-- Wrapper -->
+    <div class="clearfix"></div>
+    <div class="clearfix"></div>
+    <div id="wrapper">
+        <!-- START SECTION HEADINGS -->
+        <!-- Header Container
+        ================================================== -->
 
-       @yield('content')
+        <div class="clearfix"></div>
+        <!-- Header Container / End -->
 
-       @include('front.footer')
+        <!-- STAR HEADER SEARCH -->
+        <div id="map-container" class="fullwidth-home-map dark-overlay hero-video">
+            <!-- Video -->
+            <div class="video-container hero-video">
+                <video poster="{{asset('theme/images/bg/video-image.png')}}" loop autoplay muted>
+                    <source src="{{asset('theme/video/videoplayback.webm')}}" type="video/mp4">
+                </video>
+            </div>
+            <div id="hero-area" class="main-search-inner search-2 vid hero-video">
+                <div class="container vid hero-video" data-aos="zoom-in">
+                    <div class="row hero-video" >
+                        <div class="col-md-12 hero-video">
+                            <div class="hero-inner2 hero-video">
+
+                                {{-- <div class="welcome-text hero-video">
+                                    <h1 class="h1">Find Your Dream
+                                    <br class="d-md-none">
+                                    <span class="typed border-bottom"></span>
+                                </h1>
+                                    <p class="mt-4">Premium Properties Guaranteed</p>
+                                </div> --}}
+                                <!--/ End Welcome Text -->
+                                <!-- Search Form -->
+
+                                <!--/ End Search Form -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END HEADER SEARCH -->
+
+        {{--  --}}
+
+         <!-- START SECTION PROPERTIES LISTING -->
+         <section class="recently portfolio bg-black-1 rec-pro2 hmp ho-17">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="section-title col-md-5 pl-44">
+                        <h3>Properties</h3>
+                        <h2 style="text-transform: capitalize">United Nations Approved Properties</h2>
+                    </div>
+                </div>
+                <div class="row portfolio-items">
+                    @foreach ($Property as $prop)
+                    <div class="item col-lg-3 col-md-6 col-xs-12 landscapes sale" data-aos="zoom-in" data-aos-delay="150">
+                        <div class="landscapes listing-item compact thehp-1">
+                            <a href="{{route('property-single',[$prop->slung])}}" class="recent-16 hmp" data-aos="fade-up">
+                                <div class="recent-img16 img-fluid img-center" style="background-image: url('{{asset('uploads/properties/')}}/{{$prop->featured_image}}');"></div>
+                                <div class="recent-content"></div>
+                                <div class="listing-badges">
+                                    <span>For {{$prop->status}}</span>
+                                </div>
+                                <div class="recent-details">
+                                    <div class="recent-title">{{$prop->property_name}}</div>
+                                    <div class="price-details">
+                                    <div class="recent-price mb-3">KES {{$prop->price}}</div>
+                                    @if($prop->type == "Plot")
+                                        <div class="house-details thehp-1">
+                                            <i class="fa fa-object-group mr-1" aria-hidden="true"></i> {{$prop->sqft}}</div>
+                                        </div>
+                                    @else
+                                        <div class="house-details thehp-1">
+                                            <i class="fa fa-bed mr-1" aria-hidden="true"></i> {{$prop->bedroom}} Br <span class="mr-1">|</span>
+                                            <i class="fa fa-bath mr-1" aria-hidden="true"></i> {{$prop->Bath}} Ba <span class="mr-1">|</span>
+                                            <i class="fa fa-car mr-1" aria-hidden="true"></i> {{$prop->garages}} Gr <span class="mr-1">|</span>
+                                            <i class="fa fa-object-group mr-1" aria-hidden="true"></i> {{$prop->sqft}}</div>
+                                        </div>
+                                    @endif
+                                </div>
+                                <div class="view-proper">View Details</div>
+                            </a>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+
+            </div>
+        </section>
+        <!-- END SECTION PROPERTIES LISTING -->
+        {{--  --}}
+
+        @include('front.footer')
+
 
         <a data-scroll href="#wrapper" class="go-up"><i class="fa fa-angle-double-up" aria-hidden="true"></i></a>
         <!-- END FOOTER -->
@@ -294,19 +351,20 @@
 
         <!-- ARCHIVES JS -->
         <script src="{{asset('theme/js/jquery-3.5.1.min.js')}}"></script>
-        <script src="{{asset('theme/js/jquery-ui.js')}}"></script>
+        <script src="{{asset('theme/js/rangeSlider.js')}}"></script>
         <script src="{{asset('theme/js/tether.min.js')}}"></script>
+        <script src="{{asset('theme/js/popper.min.js')}}"></script>
         <script src="{{asset('theme/js/moment.js')}}"></script>
         <script src="{{asset('theme/js/bootstrap.min.js')}}"></script>
         <script src="{{asset('theme/js/mmenu.min.js')}}"></script>
         <script src="{{asset('theme/js/mmenu.js')}}"></script>
+        <script src="{{asset('theme/js/animate.js')}}"></script>
         <script src="{{asset('theme/js/aos.js')}}"></script>
         <script src="{{asset('theme/js/aos2.js')}}"></script>
-        <script src="{{asset('theme/js/swiper.min.js')}}"></script>
-        <script src="{{asset('theme/js/swiper.js')}}"></script>
         <script src="{{asset('theme/js/slick.min.js')}}"></script>
         <script src="{{asset('theme/js/fitvids.js')}}"></script>
         <script src="{{asset('theme/js/jquery.waypoints.min.js')}}"></script>
+        <script src="{{asset('theme/js/typed.min.js')}}"></script>
         <script src="{{asset('theme/js/jquery.counterup.min.js')}}"></script>
         <script src="{{asset('theme/js/imagesloaded.pkgd.min.js')}}"></script>
         <script src="{{asset('theme/js/isotope.pkgd.min.js')}}"></script>
@@ -321,6 +379,12 @@
         <script src="{{asset('theme/js/jquery.validate.min.js')}}"></script>
         <script src="{{asset('theme/js/searched.js')}}"></script>
         <script src="{{asset('theme/js/forms-2.js')}}"></script>
+        <script src="{{asset('theme/js/leaflet.js')}}"></script>
+        <script src="{{asset('theme/js/leaflet-gesture-handling.min.js')}}"></script>
+        <script src="{{asset('theme/js/leaflet-providers.js')}}"></script>
+        <script src="{{asset('theme/js/leaflet.markercluster.js')}}"></script>
+        <script src="{{asset('theme/js/map-style2.js')}}"></script>
+        <script src="{{asset('theme/js/range.js')}}"></script>
         <script src="{{asset('theme/js/color-switcher.js')}}"></script>
 
         <!-- Slider Revolution scripts -->
@@ -328,50 +392,25 @@
         <script src="{{asset('theme/revolution/js/jquery.themepunch.revolution.min.js')}}"></script>
 
         <script>
-            $('.style1').owlCarousel({
+            var typed = new Typed('.typed', {
+                strings: ["Homes ^2000", "Apartment ^2000", "House ^4000", "Villas ^6000"],
+                smartBackspace: false,
                 loop: true,
-                margin: 10,
-                autoplay: true,
-                autoplayTimeout: 5000,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    400: {
-                        items: 1,
-                        margin: 20
-                    },
-                    500: {
-                        items: 1,
-                        margin: 20
-                    },
-                    768: {
-                        items: 2,
-                        margin: 20
-                    },
-                    991: {
-                        items: 2,
-                        margin: 20
-                    },
-                    1025: {
-                        items: 4,
-                        margin: 20
-                    }
-                }
+                showCursor: true,
+                cursorChar: "|",
+                typeSpeed: 50,
+                backSpeed: 30,
+                startDelay: 800
             });
 
         </script>
-
-        <!-- MAIN JS -->
-        <script src="{{asset('theme/js/script.js')}}"></script>
-
         <script>
-            $('.slick-lancers').slick({
+            $('.slick-lancers2').slick({
                 infinite: false,
-                slidesToShow: 5,
+                slidesToShow: 4,
                 slidesToScroll: 1,
                 dots: true,
-                arrows: true,
+                arrows: false,
                 adaptiveHeight: true,
                 responsive: [{
                     breakpoint: 1292,
@@ -401,6 +440,54 @@
             });
 
         </script>
+        <script>
+            $('.slick-lancers').slick({
+                infinite: false,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                dots: true,
+                arrows: false,
+                adaptiveHeight: true,
+                responsive: [{
+                    breakpoint: 1292,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        dots: true,
+                        arrows: false
+                    }
+                }, {
+                    breakpoint: 993,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        dots: true,
+                        arrows: false
+                    }
+                }, {
+                    breakpoint: 769,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        dots: true,
+                        arrows: false
+                    }
+                }]
+            });
+
+        </script>
+
+        <script>
+            $(".dropdown-filter").on('click', function() {
+
+                $(".explore__form-checkbox-list").toggleClass("filter-block");
+
+            });
+
+        </script>
+
+        <!-- MAIN JS -->
+        <script src="{{asset('theme/js/script.js')}}"></script>
 
     </div>
     <!-- Wrapper / End -->

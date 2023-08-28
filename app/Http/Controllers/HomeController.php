@@ -73,6 +73,13 @@ class HomeController extends Controller
         return view('front.buying',compact('Buying'));
     }
 
+    public function approved(){
+        $Property = Property::where('un','1')->where('active','Approved')->get();
+        return view('front.approved',compact('Property'));
+    }
+
+
+
     public function renting(){
         $Renting = DB::table('abouts')->get();
         return view('front.renting',compact('Renting'));

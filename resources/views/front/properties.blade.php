@@ -101,7 +101,7 @@
                                 <li><a  href="{{route('properties-home',['rent'])}}">For Rent</a> </li>
                                 <li><a  href="{{route('properties-home',['sale'])}}">For Sale</a> </li>
                                 <li><a  href="{{route('land-for-sale')}}">Plots</a> </li>
-                                <li><a onclick="alert('work in progress')" href="#">Property Talks</a> </li>
+                                <li><a  href="{{route('un-approved')}}">UN Approved Properties</a> </li>
                                 {{-- <li><a href="{{route('search-home')}}"><i class="fa fa-search"></i> Search</a> </li> --}}
 
                                 <li><a onclick="alert('work in progress')" href="#">Locations</a> </li>
