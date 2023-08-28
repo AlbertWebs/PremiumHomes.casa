@@ -193,8 +193,8 @@
         <div id="map-container" class="fullwidth-home-map dark-overlay hero-video">
             <!-- Video -->
             <div class="video-container hero-video">
-                <video poster="{{asset('theme/images/bg/video-image.png')}}" loop autoplay muted>
-                    <source src="{{asset('theme/video/videoplayback.webm')}}" type="video/mp4">
+                <video poster="{{asset('uploads/properties/1670936451.jpg')}}" loop autoplay muted>
+                    {{-- <source src="{{asset('theme/video/videoplayback.webm')}}" type="video/mp4"> --}}
                 </video>
             </div>
             <div id="hero-area" class="main-search-inner search-2 vid hero-video">
@@ -203,13 +203,15 @@
                         <div class="col-md-12 hero-video">
                             <div class="hero-inner2 hero-video">
 
-                                {{-- <div class="welcome-text hero-video">
-                                    <h1 class="h1">Find Your Dream
+                                <div class="welcome-text hero-video">
+                                    <h1 class="h1">Find UN Approved
                                     <br class="d-md-none">
                                     <span class="typed border-bottom"></span>
                                 </h1>
-                                    <p class="mt-4">Premium Properties Guaranteed</p>
-                                </div> --}}
+                                    <p class="mt-4">
+                                        At Premium Homes, we redefine luxury living by offering a distinctive selection of UN Approved Houses in some of the most sought-after locations. We understand that your lifestyle demands excellence, security, and the assurance of living in a community that meets international standards. That's why we specialize in providing homes that are meticulously crafted to adhere to the strict security guidelines set by the United Nations, catering to the needs of diplomats, expatriates, and discerning individuals.
+                                    </p>
+                                </div>
                                 <!--/ End Welcome Text -->
                                 <!-- Search Form -->
 
