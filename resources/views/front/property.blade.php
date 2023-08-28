@@ -609,7 +609,7 @@
                                     <div class="widget-boxed-body">
                                         <div class="recent-post">
                                             <?php
-                                                $RecentProperties = DB::table('properties')->orderBy('id','ASC')->get();
+                                                $RecentProperties = DB::table('properties')->orderBy('id','ASC')->limit('10')->get();
                                             ?>
                                             @foreach ($RecentProperties as $Recent)
                                             <div class="recent-main my-4">
