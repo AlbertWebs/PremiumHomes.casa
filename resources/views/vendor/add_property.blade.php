@@ -122,7 +122,7 @@
                                                 </div>
                                             </div>
                                             {{--  --}}
-                                            <div class="col-lg-4 col-md-12 dropdown faq-drop">
+                                            <div class="col-lg-2 col-md-12 dropdown faq-drop">
                                                 <div class="form-group categories">
                                                     <label for="price">Type</label>
                                                     <select name="type" class="nice-select form-control wide" required>
@@ -140,6 +140,18 @@
                                                         <option value="Plot">Plot</option>
                                                         <option value="Penthouse">Penthouse</option>
 
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            {{--  --}}
+                                             {{--  --}}
+                                             <div class="col-lg-2 col-md-12 dropdown faq-drop">
+                                                <div class="form-group categories">
+                                                    <label for="price">UN Approved</label>
+                                                    <select name="un" class="nice-select form-control wide" required>
+                                                        {{-- <option selected="" value="Default">Type</option> --}}
+                                                        <option selected="" value="0">No</option>
+                                                        <option value="1">Yes</option>
                                                     </select>
                                                 </div>
                                             </div>

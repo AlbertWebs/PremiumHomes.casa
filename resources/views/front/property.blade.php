@@ -101,23 +101,7 @@
                         </button>
                     </div>
                     <!-- Main Navigation -->
-                    <nav id="navigation" class="style-1 black">
-                        <ul id="responsive">
-                            <li><a  href="{{route('properties-home',['rent'])}}">For Rent</a> </li>
-                            <li><a  href="{{route('properties-home',['sale'])}}">For Sale</a> </li>
-                            <li><a  href="{{route('land-for-sale')}}">Plots</a> </li>
-                            <li><a onclick="alert('work in progress')" href="#">Property Advice</a> </li>
-                            {{-- <li><a href="{{route('search-home')}}"><i class="fa fa-search"></i> Search</a> </li> --}}
-
-                            <li><a onclick="alert('work in progress')" href="#">Locations</a> </li>
-
-                            <li class="d-none d-xl-none d-block d-lg-block"><a href="login#">Login</a></li>
-                            <li class="d-none d-xl-none d-block d-lg-block"><a href="register#">Register</a></li>
-                            <li class="d-none d-xl-none d-block d-lg-block mt-5 pb-4 ml-5 border-bottom-0">
-                                <a href="{{url('/')}}/login" class="button border btn-lg btn-block text-center">Add Listing<i class="fas fa-laptop-house ml-2"></i></a>
-                            </li>
-                        </ul>
-                    </nav>
+                    @include('front.menu')
                     <!-- Main Navigation / End -->
                 </div>
                 <!-- Left Side Content / End -->
@@ -630,7 +614,7 @@
                                             @foreach ($RecentProperties as $Recent)
                                             <div class="recent-main my-4">
                                                 <div class="recent-img">
-                                                    <a href="{{route('property-single',[$Recent->slung])}}"><img src="{{url('/')}}/uploads/properties/{{$Recent->featured_image}}" alt=""></a>
+                                                    <a href="{{route('property-single',[$Recent->slung])}}"><img style="width:90px; height:70px" src="{{url('/')}}/uploads/properties/{{$Recent->featured_image}}" alt=""></a>
                                                 </div>
                                                 <div class="info-img" style="margin-left:5px">
                                                     <a href="{{route('property-single',[$Recent->slung])}}"><h6>{{$Recent->property_name}}</h6></a>

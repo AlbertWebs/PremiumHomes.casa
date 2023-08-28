@@ -96,23 +96,7 @@
                             </button>
                         </div>
                         <!-- Main Navigation -->
-                        <nav id="navigation" class="style-1 black">
-                            <ul id="responsive">
-                                <li><a  href="{{route('properties-home',['rent'])}}">For Rent</a> </li>
-                                <li><a  href="{{route('properties-home',['sale'])}}">For Sale</a> </li>
-                                <li><a  href="{{route('land-for-sale')}}">Plots</a> </li>
-                                <li><a  href="{{route('un-approved')}}">UN Approved Properties</a> </li>
-                                {{-- <li><a href="{{route('search-home')}}"><i class="fa fa-search"></i> Search</a> </li> --}}
-
-                                <li><a onclick="alert('work in progress')" href="#">Locations</a> </li>
-
-                                <li class="d-none d-xl-none d-block d-lg-block"><a href="login#">Login</a></li>
-                                <li class="d-none d-xl-none d-block d-lg-block"><a href="register#">Register</a></li>
-                                <li class="d-none d-xl-none d-block d-lg-block mt-5 pb-4 ml-5 border-bottom-0">
-                                    <a href="{{url('/')}}/login" class="button border btn-lg btn-block text-center">Add Listing<i class="fas fa-laptop-house ml-2"></i></a>
-                                </li>
-                            </ul>
-                        </nav>
+                        @include('front.menu')
                         <!-- Main Navigation / End -->
                     </div>
                     <!-- Left Side Content / End -->
@@ -533,7 +517,7 @@
         {{--  --}}
 
          <!-- START SECTION PROPERTIES LISTING -->
-         <section class="recently portfolio bg-black-1 rec-pro2 hmp ho-17">
+        <section class="recently portfolio bg-black-1 rec-pro2 hmp ho-17">
             <div class="container-fluid">
                 <div class="row">
                     <div class="section-title col-md-5 pl-44">
@@ -562,8 +546,8 @@
                                     @else
                                         <div class="house-details thehp-1">
                                             <i class="fa fa-bed mr-1" aria-hidden="true"></i> {{$prop->bedroom}} Br <span class="mr-1">|</span>
-                                            <i class="fa fa-bath mr-1" aria-hidden="true"></i> {{$prop->Bath}} Ba <span class="mr-1">|</span>
-                                            <i class="fa fa-car mr-1" aria-hidden="true"></i> {{$prop->garages}} Gr <span class="mr-1">|</span>
+                                            <i class="fa fa-bath mr-1" aria-hidden="true"></i> {{$prop->Bath}} Bath <span class="mr-1">|</span>
+                                            <i class="fa fa-car mr-1" aria-hidden="true"></i> {{$prop->garages}}1 Gr <span class="mr-1">|</span>
                                             <i class="fa fa-object-group mr-1" aria-hidden="true"></i> {{$prop->sqft}}</div>
                                         </div>
                                     @endif
