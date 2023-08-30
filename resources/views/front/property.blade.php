@@ -34,7 +34,7 @@
         <meta name="twitter:site" content="@premiumhomescasa">
         <meta name="twitter:url" content="https://premiumhomes.casa/properties/{{$prop->slung}}">
         <meta name="twitter:description" content="{{$description}}">
-        <meta name="twitter:image" content="https://royaltech.co.ke/uploads/products/1_062eeb89-ffbf-474a-8443-1285ea8a9b41.jpg">
+        <meta name="twitter:image" content="https://premiumhomes.casa/uploads/properties/{{$prop->featured_image}}">
         <meta name="twitter:creator" content="@premiumhomescasa" />
     @endforeach
     {{--  --}}

@@ -6,9 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="html 5 template">
-    <meta name="author" content="">
-    <title>Premium Homes - High End Homes in Kenya</title>
+
     <!-- FAVICON -->
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="css/jquery-ui.css">
@@ -16,6 +14,41 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i%7CMontserrat:600,800" rel="stylesheet">
 
 
+    <?php
+    $PropertySEO = App\Models\Property::where('user_id',$id)->limit(1)->where('active','Approved')->get();
+    $description = "Discover exquisite premium properties available for sale and rent in and around Nairobi. Explore luxurious homes, apartments, and estates in prime locations, curated to meet your discerning taste. Your dream property awaits in Nairobi's most sought-after neighborhoods.";
+    $User = App\Models\User::find($id);
+    ?>
+    @foreach($PropertySEO as $prop)
+        <title>{{$User->name}} -Marketing Coordinator - Premium Homes Limited</title>
+        <meta name="description" content="{{$description}}">
+        <meta name="robots" content="index,follow">
+        <meta name="googlebot" content="index,follow"><!-- Google Specific -->
+        <meta name="subject" content="Premium Plots in Kenya - Premium Homes Limited">
+        <meta name="rating" content="General">
+        <meta name="referrer" content="no-referrer">
+        <meta name="theme-color" content="#EFE165">
+
+        <link rel="canonical" href="https://premiumhomes.casa/properties/land-for-sale"/>
+        <meta name="author" content="Designekta Studios">
+        <meta property="og:description" content="{{$description}}">
+        <meta property="og:image" content="https://premiumhomes.casa/uploads/properties/{{$prop->featured_image}}" />
+        <meta property="fb:app_id" content="431980657174772" />
+        <meta property="og:title" content="Premium Plots in Kenya - Premium Homes Limited" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://premiumhomes.casa/land-for-sale" />
+        <meta property="og:site_name" content="Premium Homes Limited">
+        <meta property="og:locale" content="en_US">
+
+        <meta name="twitter:title" content="Premium Plots in Kenya - Premium Homes Limited" />
+        <meta name="twitter:site" content="@premiumhomescasa" />
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@premiumhomescasa">
+        <meta name="twitter:url" content="https://premiumhomes.casa/land-for-sale">
+        <meta name="twitter:description" content="{{$description}}">
+        <meta name="twitter:image" content="https://premiumhomes.casa/uploads/properties/{{$prop->featured_image}}">
+        <meta name="twitter:creator" content="@premiumhomescasa" />
+    @endforeach
 
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="{{asset('theme/font/flaticon.css')}}">
