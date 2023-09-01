@@ -4,6 +4,7 @@
         <li><a  href="{{route('properties-home',['sale'])}}">For Sale</a> </li>
         <li><a  href="{{route('land-for-sale')}}">Plots</a> </li>
         <li><a  href="{{route('un-approved')}}">UN Approved Properties</a> </li>
+        <li><a  href="{{route('search-home')}}">Search Propertes</a> </li>
         {{-- <li><a href="{{route('search-home')}}"><i class="fa fa-search"></i> Search</a> </li> --}}
         <li class="d-none d-xl-none d-block d-lg-block"><a href="login#">Login</a></li>
         <li class="d-none d-xl-none d-block d-lg-block"><a href="register#">Register</a></li>
