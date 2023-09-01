@@ -222,17 +222,23 @@
 
                                 <!--/ End Search Form -->
                             </div>
+
                         </div>
                     </div>
                 </div>
             </div>
+            <a href="#section-property" class="scroll-to">
+                <span class="mouse">
+                     <span class="scroll"></span>
+                </span>
+            </a>
         </div>
         <!-- END HEADER SEARCH -->
 
         {{--  --}}
 
          <!-- START SECTION PROPERTIES LISTING -->
-        <section class="recently portfolio bg-black-1 rec-pro2 hmp ho-17">
+        <section class="recently portfolio bg-black-1 rec-pro2 hmp ho-17" id="section-property">
             <div class="container-fluid">
                 <div class="row">
                     <div class="section-title col-md-5 pl-44">
