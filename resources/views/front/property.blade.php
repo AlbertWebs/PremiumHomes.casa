@@ -180,7 +180,7 @@
                                 <div class="pro-wrapper">
                                     <div class="detail-wrapper-body">
                                         <div class="listing-title-bar">
-                                            <h3>{{$Property->property_name}}<span class="mrg-l-5 category-tag">For Sale</span></h3>
+                                            <h3>{{$Property->property_name}}<span class="mrg-l-5 category-tag">For {{$Property->status}}</span></h3>
                                             <div class="mt-0">
                                                 <a href="https://goo.gl/maps/CNmkJmheKMGWS83X6" class="listing-address">
                                                     <i class="fa fa-map-marker pr-2 ti-location-pin mrg-r-5"></i>{{$Property->address}}
@@ -275,7 +275,7 @@
                             </li>
                             <li>
                                 <span class="font-weight-bold mr-1">Property status:</span>
-                                <span class="det">For Sale</span>
+                                <span class="det">For {{$Property->status}}</span>
                             </li>
                             <li>
                                 <span class="font-weight-bold mr-1">Property Price:</span>
@@ -293,7 +293,7 @@
                             </li>
                             <li>
                                 <span class="font-weight-bold mr-1">Property status:</span>
-                                <span class="det">For Sale</span>
+                                <span class="det">For {{$Property->status}}</span>
                             </li>
                             <li>
                                 <span class="font-weight-bold mr-1">Property Price:</span>
