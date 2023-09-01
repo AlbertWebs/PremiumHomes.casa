@@ -204,7 +204,7 @@
                                     </div>
                                 @elseif($id=="rent")
                                     <div class="welcome-text hero-video">
-                                        <h1 class="h1">Find UN Approved
+                                        <h1 class="h1">Find
                                         <br class="d-md-none">
                                         <span class="typed border-bottom"></span>
                                         For Rent
