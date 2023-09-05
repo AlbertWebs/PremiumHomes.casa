@@ -195,7 +195,7 @@
                         <div class="col-sm-6 col-lg-6 p0">
                             <div class="popup-images p0">
                                 <a  class="popup-img" href="{{url('/')}}/images/{{$gallery->filename}}">
-                                    <img class="img-fluid w100" src="{{url('/')}}/images/{{$gallery->filename}}" alt="">
+                                    <img class="img-fluid w100 img-center" src="{{url('/')}}/images/{{$gallery->filename}}" alt="">
                                 </a>
                             </div>
                         </div>

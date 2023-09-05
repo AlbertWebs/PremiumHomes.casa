@@ -183,7 +183,7 @@
                         <div class="col-sm-4 col-lg-4 p0">
                             <div class="popup-images p0">
                                 <a  class="popup-img" href="{{url('/')}}/uploads/properties/{{$Property->featured_image}}">
-                                    <img class="img-fluid w100" src="{{url('/')}}/uploads/properties/{{$Property->featured_image}}" alt="">
+                                    <img class="img-fluid w100 img-fluid w100 img-center" src="{{url('/')}}/uploads/properties/{{$Property->featured_image}}" alt="">
                                 </a>
                             </div>
                         </div>
@@ -191,7 +191,7 @@
                         <div class="col-sm-4 col-lg-4 p0">
                             <div class="popup-images p0">
                                 <a  class="popup-img" href="{{url('/')}}/images/{{$gallery->filename}}">
-                                    <img class="img-fluid w100" src="{{url('/')}}/images/{{$gallery->filename}}" alt="">
+                                    <img class="img-fluid w100 img-fluid w100 img-center" src="{{url('/')}}/images/{{$gallery->filename}}" alt="">
                                 </a>
                             </div>
                         </div>
