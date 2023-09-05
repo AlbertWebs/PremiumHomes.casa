@@ -170,44 +170,42 @@
 
     @foreach ($Property as $Property)
     {{--  --}}
-    <section class="recently portfolio bg-black-1 rec-pro2 hmp ho-17" id="section-property">
-        <div class="single-property-4">
-            <div class="container-fluid p0">
-                <div class="row m0">
-                    <div class="col-sm-6 col-lg-6 p0">
-                        <div class="row m0">
-                            <div class="col-lg-12 p0" style="object-fit:contain !important;">
-                                <div class="popup-images">
-                                    <a class="popup-img" href="{{url('/')}}/uploads/properties/{{$Property->featured_image}}">
-                                        <img class="img-fluid w100" src="{{url('/')}}/uploads/properties/{{$Property->featured_image}}" alt="">
-                                    </a>
-                                </div>
+    <div class="single-property-4">
+        <div class="container-fluid p0">
+            <div class="row m0">
+                <div class="col-sm-6 col-lg-6 p0">
+                    <div class="row m0">
+                        <div class="col-lg-12 p0" style="object-fit:contain !important;">
+                            <div class="popup-images">
+                                <a class="popup-img" href="{{url('/')}}/uploads/properties/{{$Property->featured_image}}">
+                                    <img class="img-fluid w100" src="{{url('/')}}/uploads/properties/{{$Property->featured_image}}" alt="">
+                                </a>
                             </div>
                         </div>
                     </div>
-                        <?php
-                            $GalleryCount = DB::table('galleries')->where('property_id', $Property->id)->get();
-                            $Gallery = DB::table('galleries')->limit('4')->where('property_id', $Property->id)->get();
-                            $Count = 1
-                        ?>
-                    <div class="col-sm-6 col-lg-6 p0">
-                        <div class="row m0 portfolio-items">
-                            @foreach ($Gallery as $gallery)
-                            <div class="col-sm-6 col-lg-6 p0 landscapes sale" data-aos="zoom-in" data-aos-delay="150"">
-                                <div class="popup-images p0 landscapes listing-item compact thehp-1">
-                                    <a  class="popup-img" href="{{url('/')}}/images/{{$gallery->filename}}">
-                                        <img class="img-fluid w100 img-center" src="{{url('/')}}/images/{{$gallery->filename}}" alt="">
-                                    </a>
-                                </div>
+                </div>
+                    <?php
+                        $GalleryCount = DB::table('galleries')->where('property_id', $Property->id)->get();
+                        $Gallery = DB::table('galleries')->limit('4')->where('property_id', $Property->id)->get();
+                        $Count = 1
+                    ?>
+                <div class="col-sm-6 col-lg-6 p0">
+                    <div class="row m0 portfolio-items">
+                        @foreach ($Gallery as $gallery)
+                        <div class="col-sm-6 col-lg-6 p0 landscapes sale" data-aos="zoom-in" data-aos-delay="150"">
+                            <div class="popup-images p0 landscapes listing-item compact thehp-1">
+                                <a  class="popup-img" href="{{url('/')}}/images/{{$gallery->filename}}">
+                                    <img class="img-fluid w100 img-center" src="{{url('/')}}/images/{{$gallery->filename}}" alt="">
+                                </a>
                             </div>
-                            @endforeach
                         </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
         </div>
-        <!-- END SECTION HEADINGS -->
-    </section>
+    </div>
+    <!-- END SECTION HEADINGS -->
     {{--  --}}
 {{-- BTN --}}
 <?php $GalleryImages =  count($GalleryCount); ?>
