@@ -169,6 +169,45 @@
     <!-- END SECTION HEADINGS -->
 
     @foreach ($Property as $Property)
+    {{--  --}}
+    <div class="single-property-4">
+        <div class="container-fluid p0">
+            <div class="row m0">
+                <div class="col-sm-6 col-lg-6 p0">
+                    <div class="row m0">
+                        <div class="col-lg-12 p0" style="object-fit:contain !important;">
+                            <div class="popup-images">
+                                <a class="popup-img" href="{{url('/')}}/uploads/properties/{{$Property->featured_image}}">
+                                    <img class="img-fluid w100" src="{{url('/')}}/uploads/properties/{{$Property->featured_image}}" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <?php
+                        $Gallery = DB::table('galleries')->limit('4')->where('property_id', $Property->id)->get();
+                        $Count = 1
+                    ?>
+                <div class="col-sm-6 col-lg-6 p0">
+                    <div class="row m0">
+                        @foreach ($Gallery as $gallery)
+                        <div class="col-sm-6 col-lg-6 p0">
+                            <div class="popup-images p0">
+                                <a  class="popup-img" href="{{url('/')}}/images/{{$gallery->filename}}">
+                                    <img class="img-fluid w100" src="{{url('/')}}/images/{{$gallery->filename}}" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END SECTION HEADINGS -->
+    {{--  --}}
+
+
     <!-- START SECTION PROPERTIES LISTING -->
     <section class="single-proper blog details int_dark_bg">
         <div class="container">
@@ -182,7 +221,7 @@
                                         <div class="listing-title-bar">
                                             <h3>{{$Property->property_name}}<span class="mrg-l-5 category-tag">For {{$Property->status}}</span></h3>
                                             <div class="mt-0">
-                                                <a href="https://goo.gl/maps/CNmkJmheKMGWS83X6" class="listing-address">
+                                                <a href="#" class="listing-address">
                                                     <i class="fa fa-map-marker pr-2 ti-location-pin mrg-r-5"></i>{{$Property->address}}
                                                 </a>
                                             </div>
@@ -203,8 +242,8 @@
                                 </div>
                             </section>
                             <!-- main slider carousel items -->
-                            <div id="listingDetailsSlider" class="carousel listing-details-sliders slide mb-30">
-                                {{-- <h5 class="mb-4">Gallery</h5> --}}
+                            {{-- <div id="listingDetailsSlider" class="carousel listing-details-sliders slide mb-30">
+
                                 <div class="carousel-inner">
                                     <div class="active item carousel-item" data-slide-number="0">
                                         <img src="{{url('/')}}/uploads/properties/{{$Property->featured_image}}" class="img-fluid" alt="slider-listing">
@@ -244,14 +283,12 @@
                                     @endforeach
                                 </ul>
                                 <!-- main slider carousel items -->
-                            </div>
+                            </div> --}}
                             <div class="blog-info details mb-30">
                                 <h5 class="mb-4">Description</h5>
                                 <p class="mb-3">
                                     {!! nl2br($Property->property_description) !!}
                                 </p>
-                                {{-- <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum rerum beatae consequatur, totam fugit, alias fuga aliquam quod tempora a nisi esse magnam nulla quas! Error praesentium, vero dolorum laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum rerum beatae consequatur, totam fugit.</p>
-                                <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum rerum beatae consequatur, totam fugit, alias fuga aliquam quod tempora a nisi esse magnam nulla quas! Error praesentium, vero dolorum laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum rerum beatae consequatur, totam fugit.</p> --}}
                             </div>
                         </div>
                     </div>
