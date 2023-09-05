@@ -526,7 +526,9 @@
                     </div>
                     @endif
 
+                    @if($Property->video == "https://www.youtube.com/@premiumhomescasa")
 
+                    @else
                     <div>
                         <div class="property wprt-image-video w50 pro" style="position: relative">
                             <h5>Property Video</h5>
@@ -543,6 +545,7 @@
                             </div>
                         </div>
                     </div>
+                    @endif
 
                     @if($Property->iframe == null)
 
@@ -668,7 +671,7 @@
                                     <div class="widget-boxed-body">
                                         <div class="recent-post">
                                             <?php
-                                                $RecentProperties = DB::table('properties')->orderBy('id','ASC')->limit('10')->get();
+                                                $RecentProperties = DB::table('properties')->orderBy('id','DESC')->limit('5')->get();
                                             ?>
                                             @foreach ($RecentProperties as $Recent)
                                             <div class="recent-main my-4">
