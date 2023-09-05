@@ -190,10 +190,10 @@
                         $Count = 1
                     ?>
                 <div class="col-sm-6 col-lg-6 p0">
-                    <div class="row m0">
+                    <div class="row m0 portfolio-items">
                         @foreach ($Gallery as $gallery)
                         <div class="col-sm-6 col-lg-6 p0">
-                            <div class="popup-images p0">
+                            <div class="popup-images p0 landscapes listing-item compact thehp-1">
                                 <a  class="popup-img" href="{{url('/')}}/images/{{$gallery->filename}}">
                                     <img class="img-fluid w100 img-center" src="{{url('/')}}/images/{{$gallery->filename}}" alt="">
                                 </a>
