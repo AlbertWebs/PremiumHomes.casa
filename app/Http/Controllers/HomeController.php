@@ -134,6 +134,41 @@ class HomeController extends Controller
     }
 
 
+    public function property_gallery($slung){
+        $Property = Property::where('slung',$slung)->get();
+        foreach($Property as $prop){
+            $title = $prop->property_name;
+            $description = "$prop->property_name located at  $prop->address listed for $prop->status";
+        }
+        // Count Views
+        $PostID = $prop->id;
+        $PostSlung = $slung;
+        $url = "https://premiumhomes.casa/properties/$slung";
+        $session_id = 0;
+        if(Auth::User()){
+            $user_id = Auth::User()->id;
+        }else{
+            $user_id = $session_id;
+        }
+        $ip = request()->ip();
+        $user_agent = request()->userAgent();
+
+        $PostView = new PostView;
+        $PostView->post_id = $PostID;
+        $PostView->titleslug = $PostSlung;
+        $PostView->url = $url;
+        $PostView->session_id = $session_id;
+        $PostView->user_id = $prop->user_id;
+        $PostView->ip = $ip;
+        $PostView->agent = $user_agent;
+        $PostView->save();
+        // dd($user_agent);
+        return view('front.property_gallery', compact('Property','title','description','PostID'));
+    }
+
+
+
+
 
     public function schedule_post(Request $request){
         $numberOfPeople = $request->quant[1];

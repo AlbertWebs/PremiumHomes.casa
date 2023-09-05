@@ -25,6 +25,8 @@ Route::get('/land-for-sale', [App\Http\Controllers\HomeController::class, 'land_
 Route::get('/properties-agent/{id}', [App\Http\Controllers\HomeController::class, 'properties_agent'])->name('properties-agent');
 Route::get('/listed-properties/{id}', [App\Http\Controllers\HomeController::class, 'properties'])->name('properties-home');
 Route::get('/properties/{slung}', [App\Http\Controllers\HomeController::class, 'property'])->name('property-single');
+Route::get('/properties/gallery/{slung}', [App\Http\Controllers\HomeController::class, 'property_gallery'])->name('property-single-gallery');
+
 Route::get('/plots-for-sale/{id}', [App\Http\Controllers\HomeController::class, 'plots'])->name('plots-home');
 Route::get('/privacy-policy', [App\Http\Controllers\HomeController::class, 'privacy'])->name('privacy');
 Route::get('/terms-and-conditions', [App\Http\Controllers\HomeController::class, 'terms'])->name('terms');

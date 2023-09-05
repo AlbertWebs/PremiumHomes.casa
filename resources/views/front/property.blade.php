@@ -185,6 +185,7 @@
                     </div>
                 </div>
                     <?php
+                        $GalleryCount = DB::table('galleries')->where('property_id', $Property->id)->get();
                         $Gallery = DB::table('galleries')->limit('4')->where('property_id', $Property->id)->get();
                         $Count = 1
                     ?>
@@ -206,7 +207,28 @@
     </div>
     <!-- END SECTION HEADINGS -->
     {{--  --}}
+{{-- BTN --}}
+<?php $GalleryImages =  count($GalleryCount); ?>
 
+@if($GalleryImages < 5)
+
+@else
+<section class="single-proper" style="padding: 0px;">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-12 col-md-12 blog-pots">
+            <center> <br><br>
+                <a href="{{url('/')}}/properties/gallery/{{$Property->slung}}" class="btn reservation btn-radius full-width mrg-top-10" style="background-color: #bf9d34 !important; color:#ffffff; font-weight:600">
+                    <span class="fa fa-image"></span> Open Gallery (<?php echo count($Gallery); ?> Images)
+                </a>
+            </center>
+            </div>
+        </div>
+    </div>
+</section>
+@endif
+{{-- BTN --}}
 
     <!-- START SECTION PROPERTIES LISTING -->
     <section class="single-proper blog details int_dark_bg">
