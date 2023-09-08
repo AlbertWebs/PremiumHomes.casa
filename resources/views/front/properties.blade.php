@@ -282,7 +282,10 @@
                     </div>
                     @endforeach
                 </div>
-
+                {{-- Pagination --}}
+                <?php
+                    echo $Property;
+                ?>
             </div>
         </section>
         <!-- END SECTION PROPERTIES LISTING -->

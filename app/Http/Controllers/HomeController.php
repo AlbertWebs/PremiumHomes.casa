@@ -37,7 +37,7 @@ class HomeController extends Controller
     }
 
     public function properties($id){
-        $Property = Property::where('Status',$id)->where('active','Approved')->where('type', '!=' , "Plot")->orderBy('id','DESC')->get();
+        $Property = Property::where('Status',$id)->where('active','Approved')->where('type', '!=' , "Plot")->orderBy('id','DESC')->paginate(12);
         return view('front.properties',compact('id','Property'));
     }
 
