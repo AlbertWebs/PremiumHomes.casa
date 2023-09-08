@@ -132,7 +132,7 @@
                             @else
                                 <div class="house-details thehp-1">
                                     <i class="fa fa-bed mr-1" aria-hidden="true"></i> {{$prop->bedroom}} Br <span class="mr-1">|</span>
-                                    <i class="fa fa-bath mr-1" aria-hidden="true"></i> {{$prop->Bath}} Ba <span class="mr-1">|</span>
+                                    <i class="fa fa-suitcase mr-1" aria-hidden="true"></i> {{$prop->type}}  <span class="mr-1">|</span>
                                     <i class="fa fa-car mr-1" aria-hidden="true"></i> {{$prop->garages}} Gr <span class="mr-1">|</span>
                                     <i class="fa fa-object-group mr-1" aria-hidden="true"></i> {{$prop->sqft}}</div>
                                 </div>
@@ -307,7 +307,7 @@
                             @else
                                 <div class="house-details thehp-1">
                                     <i class="fa fa-bed mr-1" aria-hidden="true"></i> {{$prop->bedroom}} Br <span class="mr-1">|</span>
-                                    <i class="fa fa-bath mr-1" aria-hidden="true"></i> {{$prop->Bath}} Ba <span class="mr-1">|</span>
+                                    <i class="fa fa-suitcase mr-1" aria-hidden="true"></i> {{$prop->type}}  <span class="mr-1">|</span>
                                     <i class="fa fa-car mr-1" aria-hidden="true"></i> {{$prop->garages}} Gr <span class="mr-1">|</span>
                                     <i class="fa fa-object-group mr-1" aria-hidden="true"></i> {{$prop->sqft}}</div>
                                 </div>
