@@ -37,7 +37,7 @@ class HomeController extends Controller
     }
 
     public function properties($id){
-        $Property = Property::where('Status',$id)->where('active','Approved')->get();
+        $Property = Property::where('Status',$id)->where('active','Approved')->where('type', '!=' , "Plot")->get();
         return view('front.properties',compact('id','Property'));
     }
 
