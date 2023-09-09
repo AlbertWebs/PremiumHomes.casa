@@ -45,7 +45,7 @@ class HomeController extends Controller
         $Users = DB::table('users')->where('slung',$slung)->get();
         foreach($Users as $user){
             $id = $user->id;
-            $Property = Property::where('user_id',$user->id)->where('active','Approved')->get();
+            $Property = Property::where('user_id',$user->id)->where('active','Approved')->paginate('12');
             return view('front.properties_agent',compact('id','Property'));
         }
     }

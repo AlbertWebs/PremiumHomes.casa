@@ -203,7 +203,7 @@
 
                 <div class="row portfolio-items">
                     @foreach ($Property as $prop)
-                    <div class="item col-lg-6 col-md-6 col-xs-12 landscapes sale">
+                    <div class="item col-lg-4 col-md-6 col-xs-12 landscapes sale">
                         <div class="project-single mb-0" data-aos="fade-up">
                             <a href="{{route('property-single',[$prop->slung])}}" class="recent-16">
                                 <div class="recent-img16 img-center" style="background-image: url('{{asset('uploads/properties/')}}/{{$prop->featured_image}}');"></div>
@@ -211,7 +211,12 @@
                                 <div class="recent-details">
                                     <div class="recent-title">{{$prop->property_name}}</div>
                                 <div class="recent-price mb-3">kes {{$prop->price}}</div>
-                                <div class="house-details thehp-1"><i class="fa fa-bed mr-1" aria-hidden="true"></i> {{$prop->bedrooms}} Bed <span>|</span><i class="fa fa-bath mr-1" aria-hidden="true"></i> {{$prop->Bath}} Bath <span>|</span><i class="fa fa-object-group mr-1" aria-hidden="true"></i> {{$prop->sqft}} sq ft</div>
+                                <div class="house-details thehp-1">
+                                    <i class="fa fa-bed mr-1" aria-hidden="true"></i> {{$prop->bedroom}} Br <span class="mr-1">|</span>
+                                    <i class="fa fa-suitcase mr-1" aria-hidden="true"></i> {{$prop->type}}  <span class="mr-1">|</span>
+                                    <i class="fa fa-car mr-1" aria-hidden="true"></i> {{$prop->garages}}1 Gr <span class="mr-1">|</span>
+                                    <i class="fa fa-object-group mr-1" aria-hidden="true"></i> {{$prop->sqft}}
+                                </div>
                                 </div>
                                 <div class="view-proper">View Details</div>
                             </a>
@@ -221,7 +226,10 @@
 
 
                 </div>
-
+                {{-- Pagination --}}
+                <?php
+                echo $Property;
+                ?>
             </div>
         </section>
         <!-- END SECTION PROPERTIES LISTING -->
