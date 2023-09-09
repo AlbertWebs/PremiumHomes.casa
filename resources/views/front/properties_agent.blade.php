@@ -49,6 +49,8 @@
         <meta name="twitter:image" content="https://premiumhomes.casa/uploads/properties/{{$prop->featured_image}}">
         <meta name="twitter:creator" content="@premiumhomescasa" />
     @endforeach
+     <!-- FAVICON -->
+     <link rel="shortcut icon" type="image/x-icon" href="{{asset('theme/images/preloader.png')}}">
 
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="{{asset('theme/font/flaticon.css')}}">
@@ -196,14 +198,14 @@
 
          <!-- START SECTION PROPERTIES LISTING -->
          <section class="properties-list featured portfolio blog ho-17">
-            <div class="container">
+            <div class="container-fluid">
 
 
 
 
                 <div class="row portfolio-items">
                     @foreach ($Property as $prop)
-                    <div class="item col-lg-4 col-md-6 col-xs-12 landscapes sale">
+                    <div class="item col-lg-3 col-md-6 col-xs-12 landscapes sale">
                         <div class="project-single mb-0" data-aos="fade-up">
                             <a href="{{route('property-single',[$prop->slung])}}" class="recent-16">
                                 <div class="recent-img16 img-center" style="background-image: url('{{asset('uploads/properties/')}}/{{$prop->featured_image}}');"></div>
