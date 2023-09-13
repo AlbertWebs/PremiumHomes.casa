@@ -24947,5 +24947,9 @@ section.ui-element {
       transform: translateY(20px);
     }
   }
+
+  .recent-detail{
+    background-color:#000 !important;
+  }
   /* mouse scroll icon close */
 
