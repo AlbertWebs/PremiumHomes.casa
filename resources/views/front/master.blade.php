@@ -53,7 +53,7 @@
 <body class="int_dark_bg">
     <!-- Wrapper -->
     <div id="wrapper" class="int_main_wraapper">
-        <div class="int_infosidebar">
+        {{-- <div class="int_infosidebar">
             <div class="siderbar_social">
                 <ul class="p-0">
                     <br><br>
@@ -90,7 +90,7 @@
                     </svg>
                     info@premiumhomes.casa</a>
             </div>
-        </div>
+        </div> --}}
         <!-- START SECTION HEADINGS -->
         <!-- Header Container
         ================================================== -->
