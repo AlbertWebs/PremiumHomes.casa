@@ -12167,6 +12167,7 @@ section.visited-cities {
   border-bottom-right-radius: .3rem;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
+  background-color: rgba(0,0,0,0.5);
 }
 
 .recent-title {
@@ -24949,7 +24950,7 @@ section.ui-element {
   }
 
   .recent-detail{
-    background-color:#000 !important;
+    background-color: rgba(0,0,0,0.6)
   }
   /* mouse scroll icon close */
 
