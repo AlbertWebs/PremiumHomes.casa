@@ -3,45 +3,10 @@
  <div class="top-footer bg-black-2">
      <div class="container-fluid">
          <div class="row">
-             <div class="col-lg-3 col-md-6">
-                 <div class="netabout">
-                     <a href="{{url('/')}}" class="logo">
-                         <img src="{{asset('theme/images/logo-kubwa.png')}}" alt="Premium Homes">
-                     </a>
-                     {{-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum incidunt architecto soluta laboriosam, perspiciatis, aspernatur officiis esse.</p> --}}
-                 </div>
-                 <div class="contactus">
-                     <ul>
-                         <li>
-                             <div class="info">
-                                 <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                 <p class="in-p">Nelson's Court, Ring Road, Westlands, Nairobi</p>
-                             </div>
-                         </li>
-                         <li>
-                             <div class="info">
-                                 <i class="fa fa-phone" aria-hidden="true"></i>
-                                 <p class="in-p"><a style="color:#EFE165" href="tel:+254 727 111 222">+254 727 111 222 </a></p>
-                             </div>
-                         </li>
-                         <li>
-                            <div class="info">
-                                <i class="fa fa-comment" aria-hidden="true"></i>
-                                <p class="in-p"><a style="color:#EFE165" href="sms://+254 727 111 222">+254 727 111 222 </a></p>
-                            </div>
-                        </li>
-                         <li>
-                             <div class="info">
-                                 <i class="fa fa-envelope" aria-hidden="true"></i>
-                                 <p class="in-p ti">info@premiumhomes.casa</p>
-                             </div>
-                         </li>
-                     </ul>
-                 </div>
-             </div>
+
              <div class="col-lg-3 col-md-6">
                  <div class="navigation">
-                     <h3>Navigation</h3>
+                     <h3>Quick Links</h3>
                      <div class="nav-footer">
                          <ul>
                              <li><a href="{{url('/')}}/about-us">About Us</a></li>
@@ -58,7 +23,7 @@
                      </div>
                  </div>
              </div>
-             <div class="col-lg-3 col-md-6">
+             <div class="col-lg-4 col-md-6">
                  <div class="widget">
                      <h3>Twitter Feeds</h3>
                      <div class="twitter-widget contuct">
@@ -85,7 +50,7 @@
                      </div>
                  </div>
              </div>
-             <div class="col-lg-3 col-md-6">
+             <div class="col-lg-4 col-md-6">
                  <div class="newsletters">
                      <h3>Newsletters</h3>
                      <p>Sign Up for Our Newsletter to get Latest Updates and Offers.  Subscribe to receive news in your inbox.</p>

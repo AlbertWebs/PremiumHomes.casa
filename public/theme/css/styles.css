@@ -4587,7 +4587,7 @@ section.counterup {
   color: #fff;
 }
 
-.first-footer .netsocials a .fa-facebook:hover {
+.first-footer .netsocials a .fa-facebook {
   background: #3b5998;
   color: #fff;
 }
@@ -4597,7 +4597,7 @@ section.counterup {
   color: #fff;
 }
 
-.first-footer .netsocials a .fa-twitter:hover {
+.first-footer .netsocials a .fa-twitter {
   background: #1da1f2;
   color: #fff;
 }
@@ -4607,10 +4607,15 @@ section.counterup {
   color: #fff;
 }
 
-.first-footer .netsocials a .fa-instagram:hover {
+.first-footer .netsocials a .fa-instagram {
   background: #E1306C;
   color: #fff;
 }
+
+.first-footer .netsocials a .fa-linkedin {
+    background: #0077b5;
+    color: #fff;
+  }
 
 .first-footer .netsocials a .fa-youtube {
   background: transparent;
@@ -4618,7 +4623,7 @@ section.counterup {
   margin-right: 0px;
 }
 
-.first-footer .netsocials a .fa-youtube:hover {
+.first-footer .netsocials a .fa-youtube {
   background: #cd201f;
   color: #fff;
 }
