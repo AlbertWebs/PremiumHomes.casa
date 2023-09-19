@@ -30,6 +30,10 @@
     <link rel="stylesheet" href="{{asset('theme/css/fontawesome-all.min.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/fontawesome-5-all.min.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/font-awesome.min.css')}}">
+
+    <link rel="stylesheet" href="{{asset('theme/revolution/css/settings.css')}}">
+    <link rel="stylesheet" href="{{asset('theme/revolution/css/layers.css')}}">
+    <link rel="stylesheet" href="{{asset('theme/revolution/css/navigation.css')}}">
     <!-- ARCHIVES CSS -->
     <link rel="stylesheet" href="{{asset('theme/css/search.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/animate.css')}}">
@@ -99,7 +103,7 @@
             <div id="header" class="int_content_wraapper hd">
                 <div class="container container-header">
                     <!-- Left Side Content -->
-                    <div class="left-side">
+                    <div class="left-sides">
                         <!-- Logo -->
                         <div id="logo">
                             <a href="{{url('/')}}"><img src="{{asset('theme/images/preloader.png')}}" data-sticky-logo="{{asset('theme/images/preloader.png')}}" alt="Premium Homes"></a>
@@ -119,17 +123,17 @@
                     <!-- Left Side Content / End -->
 
                     <!-- Right Side Content / End -->
-                    <div class="right-side d-none d-none d-lg-none d-xl-flex">
+                    {{-- <div class="right-side d-none d-none d-lg-none d-xl-flex">
                         <!-- Header Widget -->
                         <div class="header-widget">
                             <a href="{{url('/')}}/login" class="button border">Add Listing<i class="fas fa-laptop-house ml-2"></i></a>
                         </div>
                         <!-- Header Widget / End -->
-                    </div>
+                    </div> --}}
                     <!-- Right Side Content / End -->
 
                     <!-- Right Side Content / End -->
-                    @if(Auth::User())
+                    {{-- @if(Auth::User())
                     <div class="header-user-menu user-menu add">
                         <div class="header-user-name">
                             <span>
@@ -156,10 +160,10 @@
                     <!-- Right Side Content / End -->
                     @else
 
-                    @endif
+                    @endif --}}
 
 
-
+{{--
                     @if(Auth::User())
 
                     @else
@@ -171,7 +175,7 @@
 
                     </div>
                     <!-- Right Side Content / End -->
-                    @endif
+                    @endif --}}
 
 
                     <!-- lang-wrap-->
@@ -310,6 +314,23 @@
         <script src="{{asset('theme/revolution/js/jquery.themepunch.tools.min.js')}}"></script>
         <script src="{{asset('theme/revolution/js/jquery.themepunch.revolution.min.js')}}"></script>
 
+        {{--  --}}
+
+    <!-- Slider Revolution scripts -->
+    <script src="{{asset('theme/revolution/js/jquery.themepunch.tools.min.js')}}"></script>
+    <script src="{{asset('theme/revolution/js/jquery.themepunch.revolution.min.js')}}"></script>
+    <script src="{{asset('theme/revolution/js/extensions/revolution.extension.actions.min.js')}}"></script>
+    <script src="{{asset('theme/revolution/js/extensions/revolution.extension.carousel.min.js')}}"></script>
+    <script src="{{asset('theme/revolution/js/extensions/revolution.extension.kenburn.min.js')}}"></script>
+    <script src="{{asset('theme/revolution/js/extensions/revolution.extension.layeranimation.min.js')}}"></script>
+    <script src="{{asset('theme/revolution/js/extensions/revolution.extension.migration.min.js')}}"></script>
+    <script src="{{asset('theme/revolution/js/extensions/revolution.extension.navigation.min.js')}}"></script>
+    <script src="{{asset('theme/revolution/js/extensions/revolution.extension.parallax.min.js')}}"></script>
+    <script src="{{asset('theme/revolution/js/extensions/revolution.extension.slideanims.min.js')}}"></script>
+    <script src="{{asset('theme/revolution/js/extensions/revolution.extension.video.min.js')}}"></script>
+
+        {{--  --}}
+
         <script>
             $('.style1').owlCarousel({
                 loop: true,
@@ -384,6 +405,7 @@
             });
 
         </script>
+
 
     </div>
     <!-- Wrapper / End -->
