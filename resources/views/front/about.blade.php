@@ -92,12 +92,18 @@
 </section>
 <!-- END SECTION WHY CHOOSE US -->
 
-
+{{--
 <section class="about-us how-it-works fh">
     <div class="container">
         <div class="row">
 
-            <div class="col-lg-12 col-md-12 who-1">
+            <div class="col-lg-6 col-md-12 col-xs-12">
+                <div class="wprt-image-videoa w50">
+                    <img alt="image" src="{{asset('uploads/team/dr-nelson-sechere.jpg')}}">
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-12">
                 <div>
                     <h2 class="text-left mb-4">Our Story <span></span></h2>
                 </div>
@@ -118,8 +124,105 @@
             </div>
         </div>
     </div>
+</section> --}}
+<section class="about-us how-it-works fh">
+    <div class="container">
+        <div class="row">
+
+
+
+            <div class="col-lg-6 col-md-12">
+                <div>
+                    <h2 class="text-left mb-4">Our Story <span></span></h2>
+                    <h3>Chairman</h3>
+                </div>
+                <div class="pftext">
+                    <p>
+                        Premium Homes was founded on the principles of passion, integrity, and expertise. Our journey began when Dr Nelson Sechere, a visionary with an unwavering appreciation of luxury living embarked on a remarkable journey to transform the world of real estate.
+                        <br><br>
+
+                        Dr. Nelson recognized the need for a real estate company that not only offered exceptional properties but also provided clients with deeply personalized and extraordinary experiences. This realization marked the inception of Premium Homes.
+                        <br><br>
+
+                        Driven by a passion for luxury real estate, Dr. Nelson assembled a team of like-minded individuals who shared this vision. Together they set out to redefine luxury living.
+                        <br><br>
+
+                        Premium Homes has exceeded our client's expectations, setting new standards in the Luxury real estate industry. We are here to guide you on your journey to finding the perfect property that suits you.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-xs-12">
+                <div class="wprt-image-videoa w50">
+                    <img alt="image" src="{{asset('uploads/team/dr-nelson-sechere.jpg')}}">
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
+<section class="about-us how-it-works fh bg-white-2">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-6 col-md-12 col-xs-12">
+                <div class="wprt-image-videoa w50">
+                    <img alt="image" src="{{asset('uploads/team/martin-mathege.jpg')}}">
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-12">
+                <div>
+                    <h2 class="text-left mb-4"> Martin Mathenge <span></span></h2>
+                    <h3>Director Business Development</h3>
+                </div>
+                <div class="pftext">
+                    <p>
+                        Martin Mathenge is an accomplished marketing executive and versatile professional renowned for his strong leadership acumen, specializing in brand management and key account development. <br><br> Martin boasts an impressive track record of consistently driving profitability while adeptly managing expenses, providing essential administrative support, nurturing emerging talent through training initiatives, and orchestrating impactful company events. <br><br> His effective leadership is marked by exceptional communication skills and a remarkable talent for precise time management.<br><br>
+
+                        With over 15 years of hands-on experience, Martin is widely acknowledged as an innovative marketing expert who excels in enhancing administrative efficiency and offering invaluable support for business development initiatives. <br><br>His expertise empowers organizations to make well-informed decisions that propel them toward unprecedented success.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<section class="about-us how-it-works fh">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+                <div>
+                    <h2 class="text-left mb-4">Brian Luvanda <span></span></h2>
+                    <h3>Business Development Manager</h3>
+                </div>
+                <div class="pftext">
+                    <p>
+                        Premium Homes was founded on the principles of passion, integrity, and expertise. Our journey began when Dr Nelson Sechere, a visionary with an unwavering appreciation of luxury living embarked on a remarkable journey to transform the world of real estate.
+                        <br><br>
+
+                        Dr. Nelson recognized the need for a real estate company that not only offered exceptional properties but also provided clients with deeply personalized and extraordinary experiences. This realization marked the inception of Premium Homes.
+                        <br><br>
+
+                        Driven by a passion for luxury real estate, Dr. Nelson assembled a team of like-minded individuals who shared this vision. Together they set out to redefine luxury living.
+                        <br><br>
+
+                        Premium Homes has exceeded our client's expectations, setting new standards in the Luxury real estate industry. We are here to guide you on your journey to finding the perfect property that suits you.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-xs-12">
+                <div class="wprt-image-videoa w50">
+                    <img alt="image" src="{{asset('uploads/team/dr-nelson-sechere.jpg')}}">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 <!-- START SECTION AGENTS -->
