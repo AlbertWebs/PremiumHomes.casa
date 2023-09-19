@@ -29,7 +29,7 @@
 
                 </div>
                 <div class="box bg-2">
-                    <a href="{{url('/')}}/properties" class="text-center button  button--size-l">Browse Properties</a>
+                    <a href="{{url('/')}}/all-properties" class="text-center button  button--size-l">Browse Properties</a>
                     {{-- <img src="{{asset('theme/images/signature.png')}}" class="ml-5" alt=""> --}}
                 </div>
             </div>
@@ -202,16 +202,28 @@
                 </div>
                 <div class="pftext">
                     <p>
-                        Premium Homes was founded on the principles of passion, integrity, and expertise. Our journey began when Dr Nelson Sechere, a visionary with an unwavering appreciation of luxury living embarked on a remarkable journey to transform the world of real estate.
+                        Brian Luvanda, is a seasoned professional with over 8 years of invaluable experience
+                        in the real estate industry, now leading the charge as Business Development
+                        Manager.
+                        <br><br>
+                        Luvanda's journey in real estate has sharpened his excellent market insights and
+                        finely tuned his strategic acumen, making him a driving force in the growth and
+                        expansion of organizations he has been associated with.
+                        His extensive experience has nurtured not only exceptional leadership and
+                        communication skills but also an ability to discern market trends and form strategic
+                        alliances.
+                        <br><br>
+                        He has consistently displayed an exemplary track record of leading diverse teams,
+                        fostering a culture of collaboration and excellence, always keeping the client's needs
+                        at the forefront.
+                        <br><br>
+                        Luvanda envisions to establish the businesses under his control as unchallenged
+                        market leaders, propelled by innovation, cutting-edge technology, and a steadfast
+                        dedication to excellence and quality. Through his guidance, businesses are set up for
+                        a future of unparalleled growth and success, with a consistent focus on providing
+                        exceptional experiences to prestigious clients.
                         <br><br>
 
-                        Dr. Nelson recognized the need for a real estate company that not only offered exceptional properties but also provided clients with deeply personalized and extraordinary experiences. This realization marked the inception of Premium Homes.
-                        <br><br>
-
-                        Driven by a passion for luxury real estate, Dr. Nelson assembled a team of like-minded individuals who shared this vision. Together they set out to redefine luxury living.
-                        <br><br>
-
-                        Premium Homes has exceeded our client's expectations, setting new standards in the Luxury real estate industry. We are here to guide you on your journey to finding the perfect property that suits you.
                     </p>
                 </div>
             </div>
@@ -226,7 +238,7 @@
 
 
 <!-- START SECTION AGENTS -->
-<section class="team bg-white rec-pro bg-black-2">
+<section class="team bg-white rec-pro bg-black-2" id="team">
     <div class="container-fluid">
         <div class="section-title col-md-5">
             <h3>Meet Our</h3>

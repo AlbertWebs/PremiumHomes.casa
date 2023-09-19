@@ -75,6 +75,15 @@ class HomeController extends Controller
         return view('front.properties',compact('id','Property','title'));
     }
 
+    public function all_properties(){
+        $title = "sale";
+        $Property = Property::where('active','Approved')->orderBy('id','DESC')->paginate(12);
+        return view('front.all-properties',compact('Property','title'));
+    }
+
+
+
+
     public function properties_agent($slung){
         $Users = DB::table('users')->where('slung',$slung)->get();
         foreach($Users as $user){

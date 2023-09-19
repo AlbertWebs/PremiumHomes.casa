@@ -23,6 +23,7 @@ Route::get('/about-us', [App\Http\Controllers\HomeController::class, 'about'])->
 Route::get('/contact-us', [App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
 Route::get('/search-home', [App\Http\Controllers\HomeController::class, 'search'])->name('search-home');
 Route::get('/land-for-sale', [App\Http\Controllers\HomeController::class, 'land_for_sale'])->name('land-for-sale');
+Route::get('/all-properties', [App\Http\Controllers\HomeController::class, 'all_properties'])->name('all_properties-home');
 Route::get('/properties-agent/{id}', [App\Http\Controllers\HomeController::class, 'properties_agent'])->name('properties-agent');
 Route::get('/listed-properties/{id}', [App\Http\Controllers\HomeController::class, 'properties'])->name('properties-home');
 Route::get('/properties/{slung}', [App\Http\Controllers\HomeController::class, 'property'])->name('property-single');
