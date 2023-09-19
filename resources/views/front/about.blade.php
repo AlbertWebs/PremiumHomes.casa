@@ -217,7 +217,7 @@
             </div>
             <div class="col-lg-6 col-md-12 col-xs-12">
                 <div class="wprt-image-videoa w50">
-                    <img alt="image" src="{{asset('uploads/team/dr-nelson-sechere.jpg')}}">
+                    <img alt="image" src="{{asset('uploads/team/brian-luvanda.jpg')}}">
                 </div>
             </div>
         </div>
@@ -247,9 +247,13 @@
                         <div class="team-info">
                             <h3>{{$agent->name}}</h3>
                             @if($agent->agent == 1)
-                            <p>Marketing Coordinator</p>
+                            <p>
+                                {{$agent->position}}
+                            </p>
                             @else
-                            <p>Real Estate Agent</p>
+                            <p>
+                                {{$agent->position}}
+                            </p>
                             @endif
                             <div class="team-socials">
                                 {{-- <ul>
@@ -260,7 +264,7 @@
                                     </li>
                                 </ul> --}}
                             </div>
-                            <span><a href="{{url('/')}}/properties-agent/{{$agent->slung}}">View Properties</a></span>
+                            {{-- <span><a href="{{url('/')}}/properties-agent/{{$agent->slung}}">View Properties</a></span> --}}
                         </div>
                     </div>
                 </div>
