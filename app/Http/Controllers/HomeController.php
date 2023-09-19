@@ -48,6 +48,15 @@ class HomeController extends Controller
     }
 
 
+    public function team($slung){
+        $title = "About";
+        $Users = DB::table('users')->where('slung',$slung)->get();
+        foreach($Users as $user){
+            $id = $user->id;
+            $Property = Property::where('user_id',$user->id)->where('active','Approved')->paginate('12');
+            return view('front.team',compact('id','Property','Users','title'));
+        }
+    }
 
     public function invoice()
     {

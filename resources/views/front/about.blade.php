@@ -264,7 +264,7 @@
                                     </li>
                                 </ul> --}}
                             </div>
-                            {{-- <span><a href="{{url('/')}}/properties-agent/{{$agent->slung}}">View Properties</a></span> --}}
+                            <span><a href="{{url('/')}}/team/{{$agent->slung}}">View Bio</a></span>
                         </div>
                     </div>
                 </div>
