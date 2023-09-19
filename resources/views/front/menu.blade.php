@@ -4,7 +4,7 @@
         <li @if($title == "About") class="active" @endif>
             <a   href="{{url('/about-us')}}">About Us</a>
             <ul>
-                <li><a href="#team">Our Team</a>
+                <li><a href="{{url('/')}}/about-us#team">Our Team</a>
                 </li>
             </ul>
         </li>

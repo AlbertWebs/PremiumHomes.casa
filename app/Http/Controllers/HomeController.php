@@ -113,8 +113,9 @@ class HomeController extends Controller
     }
 
     public function buying(){
+        $title = "Sale";
         $Buying = DB::table('abouts')->get();
-        return view('front.buying',compact('Buying'));
+        return view('front.buying',compact('Buying','title'));
     }
 
     public function approved(){
@@ -126,8 +127,9 @@ class HomeController extends Controller
 
 
     public function renting(){
+        $title = "Sale";
         $Renting = DB::table('abouts')->get();
-        return view('front.renting',compact('Renting'));
+        return view('front.renting',compact('Renting','title'));
     }
 
 
