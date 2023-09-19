@@ -19,7 +19,7 @@ use App\Http\Controllers\PaymentsController;
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('soon');
 Route::get('/homepage', [App\Http\Controllers\HomeController::class, 'index'])->name('homepage');
-Route::get('/home', [App\Http\Controllers\VendorController::class, 'index'])->name('home');
+Route::get('/about-us', [App\Http\Controllers\HomeController::class, 'about'])->name('about');
 Route::get('/search-home', [App\Http\Controllers\HomeController::class, 'search'])->name('search-home');
 Route::get('/land-for-sale', [App\Http\Controllers\HomeController::class, 'land_for_sale'])->name('land-for-sale');
 Route::get('/properties-agent/{id}', [App\Http\Controllers\HomeController::class, 'properties_agent'])->name('properties-agent');

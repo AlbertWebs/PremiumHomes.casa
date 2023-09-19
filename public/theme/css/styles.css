@@ -24959,3 +24959,8 @@ section.ui-element {
   }
   /* mouse scroll icon close */
 
+  .inner-pages .blog-section .action-list {
+    display: flex;
+    font-size: .8rem;
+    color: #444;
+}

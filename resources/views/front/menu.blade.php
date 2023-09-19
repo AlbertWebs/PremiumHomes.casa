@@ -1,7 +1,7 @@
 <nav id="navigation" class="style-1 black">
     <ul id="responsive">
-        <li class="active"><a   href="{{url('/')}}">Home</a> </li>
-        <li>
+        <li @if($title == "Home") class="active" @endif><a   href="{{url('/')}}">Home</a> </li>
+        <li @if($title == "About") class="active" @endif>
             <a   href="{{url('/about-us')}}">About Us</a>
             <ul>
                 <li><a href="#">Our Team</a>
