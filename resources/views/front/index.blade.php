@@ -70,7 +70,7 @@
                                         Welcome to Premium Homes
                                         </h5>
                                         <h5 style="color:#ffffff; text-decoration:italic; font-size:25px">
-                                           <i> Elevating Dreams. Redifining Luxury</>
+                                           <i> Elevating Dreams. Redifining Luxury</i>
                                         </h5>
                                     </div>
 
@@ -418,50 +418,7 @@
 <!-- END SECTION PROPERTIES FOR RENT -->
 
 <!-- START SECTION AGENTS -->
-<section class="team bg-white rec-pro bg-black-2">
-    <div class="container-fluid">
-        <div class="section-title col-md-5">
-            <h3>Meet Our</h3>
-            <h2>Representatives</h2>
-        </div>
-        <div class="row team-all">
-            <?php
-               $Agents = DB::table('users')->where('agent','1')->orWhere('agent','2')->get();
-               $delay = 5;
-            ?>
-            @foreach ($Agents as $agent)
-            <div class="team-block col-sm-6 col-md-4 col-lg-4 col-xl-2 team-pro" data-aos="fade-up" data-aos-delay="1{{$delay}}0">
-                <div class="team-wrap">
-                    <div class="team-img">
-                        <img src="{{url('/')}}/uploads/users/{{$agent->image}}" alt="" />
-                    </div>
-                    <div class="team-content">
-                        <div class="team-info">
-                            <h3>{{$agent->name}}</h3>
-                            @if($agent->agent == 1)
-                            <p>Marketing Coordinator</p>
-                            @else
-                            <p>Real Estate Agent</p>
-                            @endif
-                            <div class="team-socials">
-                                {{-- <ul>
-                                    <li>
-                                        <a href="#" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                        <a href="#" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                        <a href="#" title="instagran"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                    </li>
-                                </ul> --}}
-                            </div>
-                            <span><a href="{{url('/')}}/properties-agent/{{$agent->slung}}">View Properties</a></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <?php $delay = $delay+1; ?>
-            @endforeach
-        </div>
-    </div>
-</section>
+
 <!-- END SECTION AGENTS -->
 
 <!-- START SECTION BLOG -->

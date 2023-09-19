@@ -18,11 +18,15 @@
                     <h2 class="text-left mb-4">www.premiumhomes.casa <span></span></h2>
                 </div>
                 <div class="pftext">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum odio id voluptatibus incidunt cum? Atque quasi eum debitis optio ab. Esse itaque officiis tempora possimus odio rerum aperiam ratione, sunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit sunt.</p>
+                    <p>
+                        Welcome to Premium Homes - the premier destination for luxury real estate services! We specialize in curating exclusive living experiences in some of the most desirable locations in Kenya. With decades of excellence and a dedication to providing you with only the utmost in luxury, Premium Homes is your go-to partner in the world of upscale real estate. Whether you're looking for homes, rentals or property in Kenya we've got you covered.
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum odio id voluptatibus incidunt cum? Atque quasi eum debitis optio ab. Esse itaque officiis tempora possimus odio rerum aperiam ratione, sunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit sunt.</p>
+                    </p>
+                    <strong>Vision:</strong>
+                    <p>A one-stop shop for elegance and luxury homes</p>
+                    <strong>Mission:</strong>
+                    <p></p>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum odio id voluptatibus incidunt cum? Atque quasi eum debitis optio ab. Esse itaque officiis tempora possimus odio rerum aperiam ratione, sunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit sunt.</p>
                 </div>
                 <div class="box bg-2">
                     <a href="{{url('/')}}/properties" class="text-center button  button--size-l">Browse Properties</a>
@@ -44,15 +48,17 @@
 <section class="how-it-works bg-white-2">
     <div class="container">
         <div class="sec-title">
-            <h2><span>Why </span>Choose Us</h2>
-            <p>We provide full service at every step.</p>
+            <h2><span>Core </span>Values</h2>
+            <p>
+              &nbsp;
+            </p>
         </div>
         <div class="row service-1">
             <article class="col-lg-4 col-md-6 col-xs-12 serv" data-aos="fade-up">
                 <div class="serv-flex">
                     <div class="art-1 img-13">
-                        <img src="{{asset('theme/images/icons/icon-4.svg')}}" alt="">
-                        <h3>Wide Renge Of Properties</h3>
+                        <span class="fa fa-handshake-o"></span>
+                        <h3>Integrity</h3>
                     </div>
                     <div class="service-text-p">
                         <p class="text-center">lorem ipsum dolor sit amet, consectetur pro adipisici consectetur debits adipisicing lacus consectetur Business Directory.</p>
@@ -62,8 +68,8 @@
             <article class="col-lg-4 col-md-6 col-xs-12 serv" data-aos="fade-up">
                 <div class="serv-flex">
                     <div class="art-1 img-14">
-                        <img src="{{asset('theme/images/icons/icon-5.svg')}}" alt="">
-                        <h3>Trusted by thousands</h3>
+                        <span class="fa fa-check-square-o"></span>
+                        <h3>Expertise</h3>
                     </div>
                     <div class="service-text-p">
                         <p class="text-center">lorem ipsum dolor sit amet, consectetur pro adipisici consectetur debits adipisicing lacus consectetur Business Directory.</p>
@@ -73,8 +79,8 @@
             <article class="col-lg-4 col-md-6 col-xs-12 serv mb-0 pt" data-aos="fade-up">
                 <div class="serv-flex arrow">
                     <div class="art-1 img-15">
-                        <img src="{{asset('theme/images/icons/icon-6.svg')}}" alt="">
-                        <h3>Financing made easy</h3>
+                        <span class="fa fa-wrench"></span>
+                        <h3>Discreet Client Service</h3>
                     </div>
                     <div class="service-text-p">
                         <p class="text-center">lorem ipsum dolor sit amet, consectetur pro adipisici consectetur debits adipisicing lacus consectetur Business Directory.</p>
@@ -85,6 +91,34 @@
     </div>
 </section>
 <!-- END SECTION WHY CHOOSE US -->
+
+
+<section class="about-us how-it-works fh">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-12 col-md-12 who-1">
+                <div>
+                    <h2 class="text-left mb-4">Our Story <span></span></h2>
+                </div>
+                <div class="pftext">
+                    <p>
+                        Premium Homes was founded on the principles of passion, integrity, and expertise. Our journey began when Dr Nelson Sechere, a visionary with an unwavering appreciation of luxury living embarked on a remarkable journey to transform the world of real estate.
+                        <br><br>
+
+                        Dr. Nelson recognized the need for a real estate company that not only offered exceptional properties but also provided clients with deeply personalized and extraordinary experiences. This realization marked the inception of Premium Homes.
+                        <br><br>
+
+                        Driven by a passion for luxury real estate, Dr. Nelson assembled a team of like-minded individuals who shared this vision. Together they set out to redefine luxury living.
+                        <br><br>
+
+                        Premium Homes has exceeded our client's expectations, setting new standards in the Luxury real estate industry. We are here to guide you on your journey to finding the perfect property that suits you.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 

@@ -82,7 +82,7 @@
             <div id="header" class="int_content_wraapper hd">
                 <div class="container container-header">
                     <!-- Left Side Content -->
-                    <div class="left-side">
+                    <div class="left-sides">
                         <!-- Logo -->
                         <div id="logo">
                             <a href="{{url('/')}}"><img src="{{asset('theme/images/preloader.png')}}" data-sticky-logo="{{asset('theme/images/preloader.png')}}" alt="Premium Homes"></a>
@@ -101,57 +101,6 @@
                     </div>
                     <!-- Left Side Content / End -->
 
-                    <!-- Right Side Content / End -->
-                    <div class="right-side d-none d-none d-lg-none d-xl-flex">
-                        <!-- Header Widget -->
-                        <div class="header-widget">
-                            <a href="{{url('/')}}/login" class="button border">Add Listing<i class="fas fa-laptop-house ml-2"></i></a>
-                        </div>
-                        <!-- Header Widget / End -->
-                    </div>
-                    <!-- Right Side Content / End -->
-
-                    <!-- Right Side Content / End -->
-                    @if(Auth::User())
-                    <div class="header-user-menu user-menu add">
-                        <div class="header-user-name">
-                            <span>
-                                <img src="{{asset('theme/images/testimonials/199259143_4389625377747506_3043984032264076715_n.jpg')}}" alt="">
-                            </span>
-                            Hi, {{Auth::User()->name}}
-                        </div>
-                        <ul>
-                            <li><a href="user-profile#"> Edit profile</a></li>
-                            <li><a href="add-property#"> Add Property</a></li>
-                            <li><a href="payment-method#">  Payments</a></li>
-                            <li><a href="change-password#"> Change Password</a></li>
-                            <li><a onclick="event.preventDefault(); document.getElementById('logout-form').submit();" href="{{ route('logout') }}">{{ __('Logout') }}</a></li>
-                        </ul>
-                    </div>
-
-
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        @csrf
-                    </form>
-                    <!-- Right Side Content / End -->
-                    @else
-
-                    @endif
-
-
-
-                    @if(Auth::User())
-
-                    @else
-                    <div class="right-side d-none d-none d-lg-none d-xl-flex sign ml-0">
-
-                        <div class="header-widget sign-in">
-                            <div class="show-reg-form modal-open"><a class="button border" href="#"><i class="fa fa-user-plus"></i> Sign In </a></div>
-                        </div>
-
-                    </div>
-                    <!-- Right Side Content / End -->
-                    @endif
 
 
                 </div>
@@ -194,12 +143,11 @@
                                         <span class="typed border-bottom"></span>
                                         For Sale
                                     </h1>
-                                        <p class="mt-4">
-                                            At Premium Homes, we redefine luxury living by curating a portfolio of high-end properties that reflect the epitome of elegance, opulence, and sophistication. With a commitment to excellence, we bring you a world of extraordinary real estate opportunities.
+                                        <p class="mt-4" style="text-transform: none">
+                                            At premium homes, we redefine luxury living by curating a portfolio of high-end properties that reflect the epitome of elegance, opulence, and sophistication with a commitment to excellence. We bring you a world of extraordinary real estate opportunities. Our passion lies in connecting discerning buyers with the most exquisite homes and investment properties.
+                                            <br>
+                                            Whether you're seeking a luxurious residence, a prestigious commercial space, or a prime piece of land, premium homes are your trusted partner in securing the finest real estate. We invite you to explore our collection of premium properties and embark on a journey towards a life of unmatched prestige and comfort. Discover your dream property with Premium Homes, Where Luxury Knows No Bounds.
 
-                                            Our passion lies in connecting discerning buyers with the most exquisite homes and investment properties. Whether you're seeking a luxurious residence, a prestigious commercial space, or a prime piece of land, Premium Homes is your trusted partner in securing the finest in real estate.
-
-                                            With an unwavering dedication to quality, professionalism, and client satisfaction, we invite you to explore our collection of premium properties and embark on a journey towards a life of unmatched prestige and comfort. Discover your dream property with Premium Homes, where luxury knows no bounds.
                                         </p>
                                     </div>
                                 @elseif($id=="rent")
@@ -209,10 +157,8 @@
                                         <span class="typed border-bottom"></span>
                                         For Rent
                                     </h1>
-                                        <p class="mt-4">
-                                            Our commitment to excellence is reflected in every detail of the homes we offer. From stunning city apartments to breathtaking suburban estates, Premium Homes is your gateway to an elevated lifestyle.
-
-                                            Experience the pinnacle of sophistication, personalized service, and a curated selection of properties that cater to your unique tastes. Whether you seek the perfect urban retreat, a serene suburban oasis, or a prestigious corporate residence, we have the ideal rental property waiting for you.
+                                        <p class="mt-4" style="text-transform: none">
+                                            Our commitment to excellence is reflected in every detail of the homes we offer. From stunning city apartments to breathtaking suburban estates, premium homes are your gateway to an elevated lifestyle. Experience the pinnacle of sophistication, personalized service, and a curated selection of properties that cater to your unique tastes.
                                         </p>
                                     </div>
                                 @endif

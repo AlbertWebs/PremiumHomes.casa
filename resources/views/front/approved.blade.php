@@ -82,7 +82,7 @@
             <div id="header" class="int_content_wraapper hd">
                 <div class="container container-header">
                     <!-- Left Side Content -->
-                    <div class="left-side">
+                    <div class="left-sides">
                         <!-- Logo -->
                         <div id="logo">
                             <a href="{{url('/')}}"><img src="{{asset('theme/images/preloader.png')}}" data-sticky-logo="{{asset('theme/images/preloader.png')}}" alt="Premium Homes"></a>
@@ -96,80 +96,10 @@
                             </button>
                         </div>
                         <!-- Main Navigation -->
-                        <nav id="navigation" class="style-1 black">
-                            <ul id="responsive">
-                                <li><a  href="{{route('properties-home',['rent'])}}">For Rent</a> </li>
-                                <li><a  href="{{route('properties-home',['sale'])}}">For Sale</a> </li>
-                                <li><a  href="{{route('land-for-sale')}}">Plots</a> </li>
-                                <li><a  href="{{route('un-approved')}}">UN Approved Properties</a> </li>
-                                {{-- <li><a href="{{route('search-home')}}"><i class="fa fa-search"></i> Search</a> </li> --}}
-
-                                <li><a onclick="alert('work in progress')" href="#">Locations</a> </li>
-
-                                <li class="d-none d-xl-none d-block d-lg-block"><a href="login#">Login</a></li>
-                                <li class="d-none d-xl-none d-block d-lg-block"><a href="register#">Register</a></li>
-                                <li class="d-none d-xl-none d-block d-lg-block mt-5 pb-4 ml-5 border-bottom-0">
-                                    <a href="{{url('/')}}/login" class="button border btn-lg btn-block text-center">Add Listing<i class="fas fa-laptop-house ml-2"></i></a>
-                                </li>
-                            </ul>
-                        </nav>
+                        @include('front.menu')
                         <!-- Main Navigation / End -->
                     </div>
                     <!-- Left Side Content / End -->
-
-                    <!-- Right Side Content / End -->
-                    <div class="right-side d-none d-none d-lg-none d-xl-flex">
-                        <!-- Header Widget -->
-                        <div class="header-widget">
-                            <a href="{{url('/')}}/login" class="button border">Add Listing<i class="fas fa-laptop-house ml-2"></i></a>
-                        </div>
-                        <!-- Header Widget / End -->
-                    </div>
-                    <!-- Right Side Content / End -->
-
-                    <!-- Right Side Content / End -->
-                    @if(Auth::User())
-                    <div class="header-user-menu user-menu add">
-                        <div class="header-user-name">
-                            <span>
-                                <img src="{{asset('theme/images/testimonials/199259143_4389625377747506_3043984032264076715_n.jpg')}}" alt="">
-                            </span>
-                            Hi, {{Auth::User()->name}}
-                        </div>
-                        <ul>
-                            <li><a href="user-profile#"> Edit profile</a></li>
-                            <li><a href="add-property#"> Add Property</a></li>
-                            <li><a href="payment-method#">  Payments</a></li>
-                            <li><a href="change-password#"> Change Password</a></li>
-                            <li><a onclick="event.preventDefault(); document.getElementById('logout-form').submit();" href="{{ route('logout') }}">{{ __('Logout') }}</a></li>
-                        </ul>
-                    </div>
-
-
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        @csrf
-                    </form>
-                    <!-- Right Side Content / End -->
-                    @else
-
-                    @endif
-
-
-
-                    @if(Auth::User())
-
-                    @else
-                    <div class="right-side d-none d-none d-lg-none d-xl-flex sign ml-0">
-
-                        <div class="header-widget sign-in">
-                            <div class="show-reg-form modal-open"><a class="button border" href="#"><i class="fa fa-user-plus"></i> Sign In </a></div>
-                        </div>
-
-                    </div>
-                    <!-- Right Side Content / End -->
-                    @endif
-
-
                 </div>
             </div>
             <!-- Header / End -->
@@ -208,8 +138,8 @@
                                     <br class="d-md-none">
                                     <span class="typed border-bottom"></span>
                                 </h1>
-                                    <p class="mt-4">
-                                        At Premium Homes, we redefine luxury living by offering a distinctive selection of UN Approved Houses in some of the most sought-after locations. We understand that your lifestyle demands excellence, security, and the assurance of living in a community that meets international standards. That's why we specialize in providing homes that are meticulously crafted to adhere to the strict security guidelines set by the United Nations, catering to the needs of diplomats, expatriates, and discerning individuals.
+                                    <p class="mt-4" style="text-transform: none">
+                                        At Premium Homes, we redefine luxury living by offering a distinctive selection of UN approved houses in some of the most sought-after locations. We understand that your lifestyle demands excellence, security, and the assurance of living in a community that meets international standards. That's why we specialize in providing homes that adhere to the strict security guidelines set by the united nations, catering to the needs of Diplomats, Expatriates, and Discerning individuals.
                                     </p>
                                 </div>
                                 <!--/ End Welcome Text -->

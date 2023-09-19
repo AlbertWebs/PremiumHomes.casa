@@ -37,6 +37,17 @@ class HomeController extends Controller
         return view('front.about', compact('Property','PropertyRent','Blog','PropertyPlots','title'));
     }
 
+    public function contact()
+    {
+        $title = "About";
+        $Blog = Blog::limit('2')->get();
+        $Property = Property::where('Status','Sale')->where('home','1')->where('active','Approved')->where('type', '!=' , "Plot")->orderBy('id','ASC')->limit('6')->get();
+        $PropertyRent = Property::where('Status','Rent')->where('home','1')->where('active','Approved')->where('type', '!=' , "Plot")->orderBy('id','ASC')->limit('6')->get();
+        $PropertyPlots = Property::where('type','Plot')->where('active','Approved')->get();
+        return view('front.contact-us', compact('Property','PropertyRent','Blog','PropertyPlots','title'));
+    }
+
+
 
     public function invoice()
     {
@@ -51,7 +62,8 @@ class HomeController extends Controller
 
     public function properties($id){
         $Property = Property::where('Status',$id)->where('active','Approved')->where('type', '!=' , "Plot")->orderBy('id','DESC')->paginate(12);
-        return view('front.properties',compact('id','Property'));
+        $title = $id;
+        return view('front.properties',compact('id','Property','title'));
     }
 
     public function properties_agent($slung){
@@ -78,7 +90,8 @@ class HomeController extends Controller
         $id = "Plots";
         $description = "Discover exclusive premium plots for sale in prime locations around Nairobi. Explore your dream investment with spacious, well-located plots offering unmatched potential. Don't miss out on this opportunity to secure your piece of Nairobi's thriving real estate market.";
         $Property = Property::where('type','Plot')->where('active','Approved')->orderBy('id','DESC')->get();
-        return view('front.land_for_sale', compact('Property','id','description'));
+        $title = "Plots";
+        return view('front.land_for_sale', compact('Property','id','description','title'));
     }
 
     public function buying(){
@@ -87,8 +100,9 @@ class HomeController extends Controller
     }
 
     public function approved(){
+        $title = "UN";
         $Property = Property::where('un','1')->where('active','Approved')->get();
-        return view('front.approved',compact('Property'));
+        return view('front.approved',compact('Property','title'));
     }
 
 

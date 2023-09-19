@@ -13609,7 +13609,7 @@ form label.error {
 }
 
 .header-image .left .btn-white {
-  background: #f55d2c;
+  background: #bf9d34;
   display: inline-block;
   padding: 12px 35px;
   border-radius: 40px;
@@ -13652,7 +13652,7 @@ a.btn-white {
 
 @media (max-width: 768px) {
   .th-18 .google-maps .filter form {
-    background: #f55d2c;
+    background: #bf9d34;
   }
 
   .th-18 .ui-widget-header,
@@ -13733,8 +13733,8 @@ a.btn-white {
   }
 
   .google-maps.home-18 .filter form {
-    background: #f55d2c;
-    border-top: 1px solid #f55d2c;
+    background: #bf9d34;
+    border-top: 1px solid #bf9d34;
   }
 
   .home18 .sec-title h2 {
@@ -13755,7 +13755,7 @@ section.how-it-works {
 
 .how-it-works .serv-flex {
   background: #fff;
-  color: #f55d2c;
+  color: #bf9d34;
   text-align: center;
   padding: 1.5rem;
   border-radius: 5px;
@@ -13943,7 +13943,7 @@ section.h18.testimonials {
 }
 
 .h18.testimonials .client-comment {
-  background-color: #f55d2c;
+  background-color: #bf9d34;
   padding: 20px 20px 20px 20px;
   position: relative;
   font-style: italic;
@@ -13958,7 +13958,7 @@ section.h18.testimonials {
 .h18.testimonials .client-comment::after {
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
-  border-top: 16px solid #f55d2c;
+  border-top: 16px solid #bf9d34;
   content: "";
   height: 0;
   left: 12px;
@@ -14018,7 +14018,7 @@ section.h18.testimonials {
 }
 
 .h18.testimonials .owl-dot.active {
-  background: #f55d2c;
+  background: #bf9d34;
 }
 
 .h18.testimonials .sec-title {
@@ -14028,7 +14028,7 @@ section.h18.testimonials {
 
 .h18.testimonials .sec-title h2 {
   font-size: 28px;
-  color: #f55d2c;
+  color: #bf9d34;
 }
 
 .h18.testimonials .sec-title h2 span {
@@ -14040,7 +14040,7 @@ section.h18.testimonials {
   position: absolute;
   width: 50px;
   height: 1px;
-  background: #f55d2c;
+  background: #bf9d34;
   top: 18px;
   content: "";
   left: -60px;
@@ -14064,7 +14064,7 @@ section.h18.testimonials {
 
 .home18 .sec-title h2 {
   font-size: 28px;
-  color: #f55d2c;
+  color: #bf9d34;
 }
 
 .home18 .sec-title h2 span {
@@ -14076,7 +14076,7 @@ section.h18.testimonials {
   position: absolute;
   width: 50px;
   height: 1px;
-  background: #f55d2c;
+  background: #bf9d34;
   top: 18px;
   content: "";
   left: -60px;
