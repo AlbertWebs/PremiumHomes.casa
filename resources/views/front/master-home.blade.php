@@ -27,29 +27,28 @@
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i%7CMontserrat:600,800" rel="stylesheet">
     <!-- FONT AWESOME -->
+
+    <link rel="stylesheet" href="{{asset('theme/font/flaticon.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/fontawesome-all.min.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/fontawesome-5-all.min.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/font-awesome.min.css')}}">
-
+    <!-- Slider Revolution CSS Files -->
     <link rel="stylesheet" href="{{asset('theme/revolution/css/settings.css')}}">
     <link rel="stylesheet" href="{{asset('theme/revolution/css/layers.css')}}">
     <link rel="stylesheet" href="{{asset('theme/revolution/css/navigation.css')}}">
     <!-- ARCHIVES CSS -->
     <link rel="stylesheet" href="{{asset('theme/css/search.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/animate.css')}}">
-    <link rel="stylesheet" href="{{asset('theme/css/aos.css')}}">
-    <link rel="stylesheet" href="{{asset('theme/css/aos2.css')}}">
-    <link rel="stylesheet" href="{{asset('theme/css/swiper.min.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/magnific-popup.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/lightcase.css')}}">
-    <link rel="stylesheet" href="{{asset('theme/css/owl-carousel.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/menu.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/slick.css')}}">
+    <link rel="stylesheet" href="{{asset('theme/css/slider-search2.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/styles.css')}}">
-    <link rel="stylesheet" href="{{asset('theme/css/styles.scss')}}">
-    <link rel="stylesheet" id="color" href="{{asset('theme/css/default.css')}}">
+    <link rel="stylesheet" href="{{asset('theme/css/maps.css')}}">
+    <link rel="stylesheet" id="color" href="{{asset('theme/css/colors/darkblue.css')}}">
     @include('tawkto')
 
 

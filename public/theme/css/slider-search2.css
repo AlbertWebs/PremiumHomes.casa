@@ -1,6 +1,6 @@
 /*---------------------------------------*/
 /*--------- 17. PARALLAX IMAGE ----------*/
-/*---------------------------------------*/ 
+/*---------------------------------------*/
 /* Search Form */
 .search-2 .trip-search {
 	background: rgba(255, 255, 255, 0.48);
@@ -89,7 +89,7 @@
     border: none;
     border-radius: 5px;
     width: 100%;
-    height: 50px;	
+    height: 50px;
     padding-left: 20px;
 }
 .search-2 .form-group.location {
@@ -132,7 +132,7 @@
 		margin-right: 20px;
 	}
 }
-@media only screen and (max-width: 991px) {	
+@media only screen and (max-width: 991px) {
 	.search-2 .hero-inner {
         margin-right: 120px
 	}
@@ -159,7 +159,7 @@
 	.search-2 .trip-search .form-group {
         margin-top: 10px;
         width: 100%;
-	}    
+	}
 }
 @media only screen and (max-width: 576px) {
     .dark-overlay h1 {
@@ -181,7 +181,7 @@
         width: 100%;
 	}
 	.search-2 .trip-search {
-        margin-top: 30px;        
+        margin-top: 30px;
 	}
     #map-container.fullwidth-home-map .main-search-inner.vid {
         position: relative;
@@ -225,7 +225,7 @@
 .property-box-meta-content .property-status {
     position: absolute;
     top: -17px;
-    background: #e54242;
+    background: #bf9d34;
     color: #fff;
     font-size: 13px;
     text-transform: uppercase;

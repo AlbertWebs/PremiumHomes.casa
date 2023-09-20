@@ -68,7 +68,7 @@
             <!-- Video -->
             <div class="video-container">
                 <video poster="{{asset('theme/images/bg/video-image.png')}}" loop autoplay muted>
-                    <source src="{{asset('theme/video/7.mp4')}}" type="video/mp4">
+                    <source src="{{asset('theme/video/pexels-african-creator-15556055.mp4')}}" type="video/mp4">
                 </video>
             </div>
             <div id="hero-area" class="main-search-inner search-2 vid">
@@ -109,20 +109,46 @@
                                                         <div class="rld-single-select ml-22">
                                                             <select class="select single-select">
                                                                 <option value="1">Property Type</option>
-                                                                <option value="2">Family House</option>
-                                                                <option value="3">Apartment</option>
-                                                                <option value="3">Condo</option>
+                                                                <option value="Duplex">Duplex</option>
+                                                                <option value="Condominium">Condominium</option>
+                                                                <option value="Villa">Villa</option>
+                                                                <option value="Mansion">Mansion</option>
+                                                                <option value="Townhouse">Townhouse</option>
+                                                                <option value="Cottages">Cottages</option>
+                                                                <option value="Bungalow">Bungalow</option>
+                                                                <option value="Apartment">Apartment</option>
+                                                                <option value="Mansion">Mansion</option>
+                                                                <option value="Resorts">Resorts</option>
+                                                                <option value="Plot">Plot</option>
+                                                                <option value="Penthouse">Penthouse</option>
                                                             </select>
                                                         </div>
                                                         <div class="rld-single-select">
                                                             <select class="select single-select mr-0">
                                                                 <option value="1">Location</option>
-                                                                <option value="2">Los Angeles</option>
-                                                                <option value="3">Chicago</option>
-                                                                <option value="3">Philadelphia</option>
-                                                                <option value="3">San Francisco</option>
-                                                                <option value="3">Miami</option>
-                                                                <option value="3">Houston</option>
+                                                                <option value="Westlands">Westlands</option>
+                                                                <option value="Dagoretti North">Dagoretti North</option>
+                                                                <option value="Dagoretti South">Dagoretti South</option>
+                                                                <option value="Langata">Langata</option>
+                                                                <option value="Kibra">Kibra</option>
+                                                                <option value="Roysambu">Roysambu</option>
+                                                                <option value="Kasarani">Kasarani</option>
+                                                                <option value="Ruaraka">Ruaraka</option>
+
+                                                                <option value="Embakasi South">Embakasi South</option>
+                                                                <option value="Embakasi North">Embakasi North</option>
+                                                                <option value="Embakasi Central">Embakasi Central</option>
+
+                                                                <option value="Embakasi East">Embakasi East</option>
+                                                                <option value="Embakasi West">Embakasi West</option>
+                                                                <option value="Makadara">Makadara</option>
+
+
+                                                                <option value="Kamukunji">Kamukunji</option>
+                                                                <option value="Starehe">Starehe</option>
+                                                                <option value="Mathare">Mathare</option>
+
+
                                                             </select>
                                                         </div>
                                                         <div class="dropdown-filter d-none d-none d-lg-none d-xl-block"><span>Advanced Search</span></div>
