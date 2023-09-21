@@ -32,6 +32,10 @@
                         {!!html_entity_decode($user->content)!!}
                     </p>
                 </div>
+                <div class="box bg-2">
+                    <a href="{{url('/')}}/properties-agent/{{$user->slung}}" class="text-center button  button--size-l">Browse Properties</a>
+                    {{-- <img src="{{asset('theme/images/signature.png')}}" class="ml-5" alt=""> --}}
+                </div>
             </div>
             <div class="col-lg-6 col-md-12 col-xs-12">
                 <div class="wprt-image-videoa w50">
