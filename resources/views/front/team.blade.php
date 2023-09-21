@@ -35,7 +35,7 @@
             </div>
             <div class="col-lg-6 col-md-12 col-xs-12">
                 <div class="wprt-image-videoa w50">
-                    <img alt="image" src="{{url('/')}}/uploads/team/{{$user->image}}">
+                    <img alt="image" src="{{url('/')}}/uploads/users/{{$user->image}}">
                 </div>
             </div>
         </div>
