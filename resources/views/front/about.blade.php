@@ -15,7 +15,7 @@
         <div class="row">
             <div class="col-lg-6 col-md-12 who-1">
                 <div>
-                    <h2 class="text-left mb-4">www.premiumhomes.casa <span></span></h2>
+                    {{-- <h2 class="text-left mb-4">www.premiumhomes.casa <span></span></h2> --}}
                 </div>
                 <div class="pftext">
                     <p>
@@ -61,7 +61,7 @@
                         <h3>Integrity</h3>
                     </div>
                     <div class="service-text-p">
-                        <p class="text-center">lorem ipsum dolor sit amet, consectetur pro adipisici consectetur debits adipisicing lacus consectetur Business Directory.</p>
+                        <p class="text-center">At Premium Homes, integrity forms the very foundation of our operations. We are unwavering in our commitment to honesty, transparency, and ethical conduct. We believe in doing what's right, and this dedication extends to how we interact with our clients, partners, and the communities we serve.</p>
                     </div>
                 </div>
             </article>
@@ -72,7 +72,7 @@
                         <h3>Expertise</h3>
                     </div>
                     <div class="service-text-p">
-                        <p class="text-center">lorem ipsum dolor sit amet, consectetur pro adipisici consectetur debits adipisicing lacus consectetur Business Directory.</p>
+                        <p class="text-center">Expertise is the driving force behind our success in the real estate industry. We take pride in our deep and continually evolving knowledge of the market, property trends, and the intricacies of buying and selling real estate. Our team is dedicated to ongoing education and skill enhancement, ensuring that we remain at the forefront of industry developments. </p>
                     </div>
                 </div>
             </article>
@@ -83,7 +83,7 @@
                         <h3>Discreet Client Service</h3>
                     </div>
                     <div class="service-text-p">
-                        <p class="text-center">lorem ipsum dolor sit amet, consectetur pro adipisici consectetur debits adipisicing lacus consectetur Business Directory.</p>
+                        <p class="text-center">Our commitment to discreet client service is a testament to our respect for your privacy and confidentiality. We understand that real estate transactions often involve sensitive information, and we take the utmost care in safeguarding your data and personal details.  </p>
                     </div>
                 </div>
             </article>
