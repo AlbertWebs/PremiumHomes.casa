@@ -334,7 +334,7 @@
                         jsFileLocation: "plugins/revolution/js/",
                         sliderLayout: "fullwidth",
                         dottedOverlay: "yes",
-                        delay: 4000,
+                        delay: 3000,
                         navigation: {
                             keyboardNavigation: "off",
                             keyboard_direction: "horizontal",
@@ -383,7 +383,7 @@
                             levels: [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 46, 47, 48, 49, 50, 55]
                         },
                         shadow: 0,
-                        spinner: "off",
+                        spinner: "on",
                         stopLoop: "on",
                         stopAfterLoops: 0,
                         stopAtSlide: 0,
