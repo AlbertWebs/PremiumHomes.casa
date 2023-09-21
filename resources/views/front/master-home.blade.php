@@ -279,18 +279,17 @@
         </div>
         <!-- END PRELOADER -->
 
-        <!-- ARCHIVES JS -->
+
+
+
         <script src="{{asset('theme/js/jquery-3.5.1.min.js')}}"></script>
         <script src="{{asset('theme/js/jquery-ui.js')}}"></script>
         <script src="{{asset('theme/js/tether.min.js')}}"></script>
+        <script src="{{asset('theme/js/popper.min.js')}}"></script>
         <script src="{{asset('theme/js/moment.js')}}"></script>
         <script src="{{asset('theme/js/bootstrap.min.js')}}"></script>
         <script src="{{asset('theme/js/mmenu.min.js')}}"></script>
         <script src="{{asset('theme/js/mmenu.js')}}"></script>
-        <script src="{{asset('theme/js/aos.js')}}"></script>
-        <script src="{{asset('theme/js/aos2.js')}}"></script>
-        <script src="{{asset('theme/js/swiper.min.js')}}"></script>
-        <script src="{{asset('theme/js/swiper.js')}}"></script>
         <script src="{{asset('theme/js/slick.min.js')}}"></script>
         <script src="{{asset('theme/js/fitvids.js')}}"></script>
         <script src="{{asset('theme/js/jquery.waypoints.min.js')}}"></script>
@@ -313,189 +312,104 @@
         <!-- Slider Revolution scripts -->
         <script src="{{asset('theme/revolution/js/jquery.themepunch.tools.min.js')}}"></script>
         <script src="{{asset('theme/revolution/js/jquery.themepunch.revolution.min.js')}}"></script>
-
-        {{--  --}}
-
-    <!-- Slider Revolution scripts -->
-    <script src="{{asset('theme/revolution/js/jquery.themepunch.tools.min.js')}}"></script>
-    <script src="{{asset('theme/revolution/js/jquery.themepunch.revolution.min.js')}}"></script>
-    <script src="{{asset('theme/revolution/js/extensions/revolution.extension.actions.min.js')}}"></script>
-    <script src="{{asset('theme/revolution/js/extensions/revolution.extension.carousel.min.js')}}"></script>
-    <script src="{{asset('theme/revolution/js/extensions/revolution.extension.kenburn.min.js')}}"></script>
-    <script src="{{asset('theme/revolution/js/extensions/revolution.extension.layeranimation.min.js')}}"></script>
-    <script src="{{asset('theme/revolution/js/extensions/revolution.extension.migration.min.js')}}"></script>
-    <script src="{{asset('theme/revolution/js/extensions/revolution.extension.navigation.min.js')}}"></script>
-    <script src="{{asset('theme/revolution/js/extensions/revolution.extension.parallax.min.js')}}"></script>
-    <script src="{{asset('theme/revolution/js/extensions/revolution.extension.slideanims.min.js')}}"></script>
-    <script src="{{asset('theme/revolution/js/extensions/revolution.extension.video.min.js')}}"></script>
-
-    {{-- Sliders Scripts --}}
-    <script>
-        var tpj = jQuery;
-        var revapi486;
-        tpj(document).ready(function() {
-            if (tpj("#rev_slider_one").revolution == undefined) {
-                revslider_showDoubleJqueryError("#rev_slider_one");
-            } else {
-                revapi486 = tpj("#rev_slider_one").show().revolution({
-                    sliderType: "standard",
-                    jsFileLocation: "plugins/revolution/js/",
-                    sliderLayout: "fullwidth",
-                    dottedOverlay: "yes",
-                    delay: 100000000,
-                    navigation: {
-                        keyboardNavigation: "off",
-                        keyboard_direction: "horizontal",
-                        mouseScrollNavigation: "off",
-                        mouseScrollReverse: "default",
-                        onHoverStop: "off",
-                        touch: {
-                            touchenabled: "on",
-                            touchOnDesktop: "off",
-                            swipe_threshold: 75,
-                            swipe_min_touches: 1,
-                            swipe_direction: "horizontal",
-                            drag_block_vertical: false
-                        },
-                        arrows: {
-                            style: "metis",
-                            enable: true,
-                            hide_onmobile: true,
-                            hide_under: 600,
-                            hide_onleave: false,
-                            tmp: '',
-                            left: {
-                                h_align: "left",
-                                v_align: "center",
-                                h_offset: 0,
-                                v_offset: 0
-                            },
-                            right: {
-                                h_align: "right",
-                                v_align: "center",
-                                h_offset: 0,
-                                v_offset: 0
-                            }
-                        }
-
-                    },
-                    responsiveLevels: [1200, 1040, 778, 480],
-                    visibilityLevels: [1200, 1040, 778, 480],
-                    gridwidth: [1170, 1040, 778, 600],
-                    gridheight: [850, 850, 850, 950],
-                    lazyType: "none",
-                    parallax: {
-                        type: "scroll",
-                        origo: "enterpoint",
-                        speed: 400,
-                        levels: [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 46, 47, 48, 49, 50, 55]
-                    },
-                    shadow: 0,
-                    spinner: "off",
-                    stopLoop: "on",
-                    stopAfterLoops: 0,
-                    stopAtSlide: 0,
-                    disableProgressBar: "on",
-                    shuffle: "off",
-                    autoHeight: "off",
-                    hideThumbsOnMobile: "off",
-                    hideSliderAtLimit: 0,
-                    hideCaptionAtLimit: 0,
-                    hideAllCaptionAtLilmit: 0,
-                    debugMode: false,
-                    fallbacks: {
-                        simplifyAll: "off",
-                        nextSlideOnWindowFocus: "off",
-                        disableFocusListener: false,
-                    }
-                });
-            }
-        }); /*ready*/
-
-    </script>
-
-    <script>
-        $('.slick-lancers2').slick({
-            infinite: false,
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            dots: true,
-            arrows: true,
-            adaptiveHeight: true,
-            responsive: [{
-                breakpoint: 1292,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    dots: true,
-                    arrows: false
-                }
-            }, {
-                breakpoint: 993,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    dots: true,
-                    arrows: false
-                }
-            }, {
-                breakpoint: 769,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    dots: true,
-                    arrows: false
-                }
-            }]
-        });
-
-    </script>
-    {{--  --}}
-
-        {{--  --}}
+        <script src="{{asset('theme/revolution/js/extensions/revolution.extension.actions.min.js')}}"></script>
+        <script src="{{asset('theme/revolution/js/extensions/revolution.extension.carousel.min.js')}}"></script>
+        <script src="{{asset('theme/revolution/js/extensions/revolution.extension.kenburn.min.js')}}"></script>
+        <script src="{{asset('theme/revolution/js/extensions/revolution.extension.layeranimation.min.js')}}"></script>
+        <script src="{{asset('theme/revolution/js/extensions/revolution.extension.migration.min.js')}}"></script>
+        <script src="{{asset('theme/revolution/js/extensions/revolution.extension.navigation.min.js')}}"></script>
+        <script src="{{asset('theme/revolution/js/extensions/revolution.extension.parallax.min.js')}}"></script>
+        <script src="{{asset('theme/revolution/js/extensions/revolution.extension.slideanims.min.js')}}"></script>
+        <script src="{{asset('theme/revolution/js/extensions/revolution.extension.video.min.js')}}"></script>
 
         <script>
-            $('.style1').owlCarousel({
-                loop: true,
-                margin: 10,
-                autoplay: true,
-                autoplayTimeout: 5000,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    400: {
-                        items: 1,
-                        margin: 20
-                    },
-                    500: {
-                        items: 1,
-                        margin: 20
-                    },
-                    768: {
-                        items: 2,
-                        margin: 20
-                    },
-                    991: {
-                        items: 2,
-                        margin: 20
-                    },
-                    1025: {
-                        items: 4,
-                        margin: 20
-                    }
+            var tpj = jQuery;
+            var revapi486;
+            tpj(document).ready(function() {
+                if (tpj("#rev_slider_one").revolution == undefined) {
+                    revslider_showDoubleJqueryError("#rev_slider_one");
+                } else {
+                    revapi486 = tpj("#rev_slider_one").show().revolution({
+                        sliderType: "standard",
+                        jsFileLocation: "plugins/revolution/js/",
+                        sliderLayout: "fullwidth",
+                        dottedOverlay: "yes",
+                        delay: 100000000,
+                        navigation: {
+                            keyboardNavigation: "off",
+                            keyboard_direction: "horizontal",
+                            mouseScrollNavigation: "off",
+                            mouseScrollReverse: "default",
+                            onHoverStop: "off",
+                            touch: {
+                                touchenabled: "on",
+                                touchOnDesktop: "off",
+                                swipe_threshold: 75,
+                                swipe_min_touches: 1,
+                                swipe_direction: "horizontal",
+                                drag_block_vertical: false
+                            },
+                            arrows: {
+                                style: "metis",
+                                enable: true,
+                                hide_onmobile: true,
+                                hide_under: 600,
+                                hide_onleave: false,
+                                tmp: '',
+                                left: {
+                                    h_align: "left",
+                                    v_align: "center",
+                                    h_offset: 0,
+                                    v_offset: 0
+                                },
+                                right: {
+                                    h_align: "right",
+                                    v_align: "center",
+                                    h_offset: 0,
+                                    v_offset: 0
+                                }
+                            }
+
+                        },
+                        responsiveLevels: [1200, 1040, 778, 480],
+                        visibilityLevels: [1200, 1040, 778, 480],
+                        gridwidth: [1170, 1040, 778, 600],
+                        gridheight: [850, 850, 850, 950],
+                        lazyType: "none",
+                        parallax: {
+                            type: "scroll",
+                            origo: "enterpoint",
+                            speed: 400,
+                            levels: [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 46, 47, 48, 49, 50, 55]
+                        },
+                        shadow: 0,
+                        spinner: "off",
+                        stopLoop: "on",
+                        stopAfterLoops: 0,
+                        stopAtSlide: 0,
+                        disableProgressBar: "on",
+                        shuffle: "off",
+                        autoHeight: "off",
+                        hideThumbsOnMobile: "off",
+                        hideSliderAtLimit: 0,
+                        hideCaptionAtLimit: 0,
+                        hideAllCaptionAtLilmit: 0,
+                        debugMode: false,
+                        fallbacks: {
+                            simplifyAll: "off",
+                            nextSlideOnWindowFocus: "off",
+                            disableFocusListener: false,
+                        }
+                    });
                 }
-            });
+            }); /*ready*/
 
         </script>
 
-        <!-- MAIN JS -->
-        <script src="{{asset('theme/js/script.js')}}"></script>
-
         <script>
-            $('.slick-lancers').slick({
+            $('.slick-lancers2').slick({
                 infinite: false,
-                slidesToShow: 5,
+                slidesToShow: 4,
                 slidesToScroll: 1,
                 dots: true,
                 arrows: true,
@@ -528,6 +442,9 @@
             });
 
         </script>
+
+        <!-- MAIN JS -->
+        <script src="{{asset('theme/js/script.js')}}"></script>
 
 
     </div>

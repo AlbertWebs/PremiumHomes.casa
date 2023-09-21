@@ -110,7 +110,7 @@
     </div>
 </section>
 
-@include('front.search')
+{{-- @include('front.search') --}}
 
 
 
