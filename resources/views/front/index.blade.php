@@ -7,7 +7,7 @@
         <div class="rev_slider fullwidthabanner" id="rev_slider_one" data-version="5.4.1">
             <ul>
                 <!-- Slide 1 -->
-                <li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1689" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="{{asset('uploads/banners/1671089906.jpg')}}" data-title="Slide Title" data-transition="parallaxvertical">
+                {{-- <li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1689" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="{{asset('uploads/banners/1671089906.jpg')}}" data-title="Slide Title" data-transition="parallaxvertical">
 
                     <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center right" data-bgrepeat="no-repeat" data-kenburns="off" data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" src="{{asset('uploads/banners/slider-main.png')}}">
 
@@ -31,39 +31,7 @@
                           <div class="section section-bg-1 pt-17 pb-17">
                             <div class="row">
                               <div class="col-lg-12 col-md-12">
-                                {{-- <div class="property-box-meta">
-                                  <div class="property-box-meta-content">
-                                    <span class="property-status">For Sale</span>
-                                    <div class="item-head">
-                                      <h1 class="item-title">
-                                        <a href="property-detail.html" title="Store Space Greenville"> House Luxury Villa </a>
-                                      </h1>
-                                      <span class="location">Est St, 77 - Central Park South, NYC </span>
-                                    </div>
-                                    <div class="info">
-                                      <span class="primary-file-4 the-icons">
-                                        <i class="flaticon-bed mr-2" aria-hidden="true"></i>
-                                        <span>6 Bedrooms</span>
-                                      </span>
-                                      <span class="primary-file-2 the-icons">
-                                        <i class="flaticon-bathtub mr-2" aria-hidden="true"></i>
-                                        <span>3 Bathrooms</span>
-                                      </span>
-                                      <span class="primary-file-1 the-icons">
-                                        <i class="flaticon-car mr-2" aria-hidden="true"></i>
-                                        <span>2 Garages</span>
-                                      </span>
-                                      <span class="primary-file-3 the-icons">
-                                        <i class="flaticon-square mr-2" aria-hidden="true"></i>
-                                        <span>720 sq ft</span>
-                                      </span>
-                                    </div>
-                                    <div class="price">
-                                      <span class="before-price"></span>
-                                      <span class="amount">$1.230,000</span>
-                                    </div>
-                                  </div>
-                                </div> --}}
+
 
                                     <div style="color:#ffffff; text-align:center; font-family:HeleneHess-Regular !important;">
                                         <h5 style="font-size:70px; color:#ffffff; ">
@@ -82,7 +50,7 @@
                           </div>
                         </div>
                       </div>
-                </li>
+                </li> --}}
                 {{--  --}}
                 <?php
                     $Slider = DB::table('properties')->where('un','1')->limit('2')->inRandomOrder()->get();
@@ -99,10 +67,10 @@
                             <div class="row">
                             <div class="col-lg-12 col-md-12">
                                 <div class="property-box-meta">
-                                <div class="property-box-meta-content">
+                                <div class="property-box-meta-content min-width-300">
                                     <span class="property-status">For  {{$slider->status}}</span>
                                     <div class="item-head">
-                                    <h1 class="item-title" style="text-transform:none">
+                                    <h1 class="item-title" style="white-space:normal; line-height:0cm">
                                         <a href="{{route('property-single',[$slider->slung])}}" title="{{$slider->property_name}}"> {{$slider->property_name}}</a>
                                     </h1>
                                     <span class="location">{{$slider->address}} </span>
@@ -141,102 +109,8 @@
         </div>
     </div>
 </section>
-{{-- <div class="int_content_wraapper int_content_left">
-    <!--===Start Revolution Slider===-->
-    <?php
-       $Slider = DB::table('properties')->where('un','1')->limit('2')->inRandomOrder()->get();
-    ?>
-    <div class="int_banner_slider">
-        <div class="banner_box_wrapper">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-xl-4 col-lg-4 col-md-5 col-sm-12 align-self-center">
-                        <div class="main_contentblock">
-                            <div class="swiper-container" data-aos="fade-right">
-                                <div class="swiper-wrapper">
-                                    @foreach ($Slider as $slider)
-                                    <div class="swiper-slide">
-                                        <div class="swiper_imgbox imgbox1">
-                                            <div class="swipper_img">
-                                                <h4>{{$slider->status}} <span>Estate</span></h4>
-                                                <h2 class="Property-heading">{{$slider->property_name}}</h2>
-                                                <h3>kes {{$slider->price}}<span class="banner_span1"></span></h3>
-                                                <p><i class="fa fa-map-marker mr-3"></i>{{$slider->address}}</p>
-                                                <!-- homes List -->
-                                                <ul class="homes-list clearfix">
-                                                    <li>
-                                                        <i class="fa fa-bed" aria-hidden="true"></i>
-                                                        <span>{{$slider->bedroom}} Bedrooms</span>
-                                                    </li>
-                                                    <li>
-                                                        <i class="fa fa-bath" aria-hidden="true"></i>
-                                                        <span>{{$slider->Bath}} Bathrooms</span>
-                                                    </li>
-                                                    <li>
-                                                        <i class="fa fa-object-group" aria-hidden="true"></i>
-                                                        <span>{{$slider->sqft}} </span>
-                                                    </li>
-                                                    <li>
-                                                        <i class="fas fa-warehouse" aria-hidden="true"></i>
-                                                        <span>1 Garages</span>
-                                                    </li>
-                                                </ul>
-                                                <a href="{{route('property-single',[$slider->slung])}}" class="int_btn">View Property <span class="btn_caret"><i class="fas fa-caret-right"></i></span></a>
-                                                <h1>Real</h1>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    @endforeach
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-
-
-                    <div class="col-xl-8 col-lg-8 col-md-7 align-self-center pr-0">
-                        <!--=== Swiper ===-->
-                        <div class="main_imgblock">
-                            <div class="swiper-container" data-aos="fade-left">
-                                <div class="swiper-wrapper">
-                                    @foreach ($Slider as $slider)
-                                    <div class="swiper-slide">
-                                        <div class="swiper_contbox">
-                                            <div class="swipper_conntent">
-                                                <img style="max-height:698px" src="{{url('/')}}/uploads/properties/{{$slider->featured_image}}" class="img-fluid " alt="images" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    @endforeach
-                                    <?php
-                                        $Gallery = DB::table('galleries')->where('property_id', $slider->id)->limit('5')->get();
-                                        $Count = 1
-                                    ?>
-                                    @foreach ($Gallery as $gallery)
-                                    <div class="swiper-slide">
-                                        <div class="swiper_contbox">
-                                            <div class="swipper_conntent">
-                                                <img style="max-height:698px" src="{{url('/')}}/images/{{$gallery->filename}}" class="img-fluid " alt="images" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    @endforeach
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--=== Add Arrows ===-->
-                <div class="banner_navi">
-                    <div class="swiper-button-next">Next</div>
-                    <div class="swiper-button-prev">Prev</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--===End Revolution Slider===-->
-</div> --}}
-{{-- @include('front.search') --}}
+@include('front.search')
 
 
 
@@ -276,7 +150,7 @@
                                 <div class="house-details thehp-1">
                                     <i class="fa fa-bed mr-1" aria-hidden="true"></i> {{$prop->bedroom}} Br <span class="mr-1">|</span>
                                     <i class="fa fa-suitcase mr-1" aria-hidden="true"></i> {{$prop->type}}  <span class="mr-1">|</span>
-                                    <i class="fa fa-car mr-1" aria-hidden="true"></i> {{$prop->garages}} Gr <span class="mr-1">|</span>
+                                    {{-- <i class="fa fa-car mr-1" aria-hidden="true"></i> {{$prop->garages}} Gr <span class="mr-1">|</span> --}}
                                     <i class="fa fa-object-group mr-1" aria-hidden="true"></i> {{$prop->sqft}}</div>
                                 </div>
                             @endif
