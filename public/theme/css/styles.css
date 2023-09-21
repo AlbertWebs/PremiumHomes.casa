@@ -25002,4 +25002,7 @@ section.ui-element {
      }
 }
 
+.recent-title{
+    text-transform: capitalize;
+}
 

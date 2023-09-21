@@ -190,7 +190,7 @@
                 <div class="row">
                     <div class="section-title col-md-5 pl-44">
                         <h3>Properties</h3>
-                        <h2 style="text-transform: capitalize">For {{$id}}</h2>
+                        <h2 style="text-transform: capitalize">All Properties</h2>
                     </div>
                 </div>
                 <div class="row portfolio-items">

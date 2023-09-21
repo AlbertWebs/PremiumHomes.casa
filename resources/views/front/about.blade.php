@@ -25,7 +25,9 @@
                     <strong>Vision:</strong>
                     <p>A one-stop shop for elegance and luxury homes</p>
                     <strong>Mission:</strong>
-                    <p></p>
+                    <p>
+                        We are on a mission to redefine luxury and elevate experiences at every turn. Premium Homes is committed to helping our clients discover their ideal high-end properties, each one meticulously chosen to reflect their unique tastes and aspirations. Our mission is to create unforgettable journeys through the world of premium real estate.
+                    </p>
 
                 </div>
                 <div class="box bg-2">
