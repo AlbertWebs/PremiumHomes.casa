@@ -34,10 +34,10 @@
 
 
                                     <div style="color:#ffffff; text-align:center; font-family:HeleneHess-Regular !important;">
-                                        <h5 style="font-size:70px; color:#ffffff; ">
+                                        <h5 class="hero-title">
                                         Welcome to Premium Homes
                                         </h5>
-                                        <h5 style="color:#ffffff; text-decoration:italic; font-size:25px">
+                                        <h5 class="hero-text">
                                            <i> Elevating Dreams. Redifining Luxury</i>
                                         </h5>
                                     </div>

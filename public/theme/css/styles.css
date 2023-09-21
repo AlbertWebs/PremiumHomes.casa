@@ -24971,11 +24971,35 @@ section.ui-element {
     min-width:400px;
 }
 
+.hero-title{
+    font-size:70px;
+    color:#ffffff;
+ }
+
+ .hero-text{
+    color:#ffffff;
+    text-decoration:italic;
+    font-size:25px"
+ }
+
 @media screen and (max-width: 768px) {
     .min-width-300{
         min-width:100%;
     }
+
+    .hero-title{
+        /* min-height: 150px; */
+        font-size:35px;
+        max-width:90% !important;
+        white-space:normal;
+        text-align: center;
+    }
+
+    .hero-text{
+        color:#ffffff;
+        text-decoration:italic;
+        font-size:15px"
+     }
 }
-.recent-title{
-    /* min-height: 150px; */
-}
+
+
