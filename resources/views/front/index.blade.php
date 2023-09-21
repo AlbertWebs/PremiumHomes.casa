@@ -53,7 +53,7 @@
                 </li>
                 {{--  --}}
                 <?php
-                    $Slider = DB::table('properties')->where('un','1')->limit('2')->inRandomOrder()->get();
+                    $Slider = DB::table('properties')->where('subscription','1')->limit('2')->inRandomOrder()->get();
 
                     $rs = 1689;
                 ?>
