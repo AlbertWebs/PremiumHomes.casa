@@ -57,7 +57,7 @@
 ?>
 
 <!-- START SECTION COUNTER UP -->
-<section class="counterup">
+{{-- <section class="counterup">
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-6 col-xs-12">
@@ -98,7 +98,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 <!-- END SECTION COUNTER UP -->
 
 <!-- START SECTION TESTIMONIALS -->
