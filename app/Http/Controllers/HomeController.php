@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\PostView;
 use App\Models\Blog;
 use App\Models\SendMail;
+use Spatie\Sitemap\SitemapGenerator;
 use DB;
 use Session;
 
@@ -254,4 +255,8 @@ class HomeController extends Controller
         return Redirect::back();
     }
 
+    public function sitemaps(){
+        $path = url('/');
+        SitemapGenerator::create('https://premiumhomes.casa/')->writeToFile($path);
+    }
 }
