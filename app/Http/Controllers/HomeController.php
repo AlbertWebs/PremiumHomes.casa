@@ -66,7 +66,8 @@ class HomeController extends Controller
     }
 
     public function search(){
-        return view('front.search');
+        $title = "Search";
+        return view('front.search', compact('title'));
     }
 
     public function properties($id){
@@ -85,11 +86,12 @@ class HomeController extends Controller
 
 
     public function properties_agent($slung){
+        $title = "Home";
         $Users = DB::table('users')->where('slung',$slung)->get();
         foreach($Users as $user){
             $id = $user->id;
             $Property = Property::where('user_id',$user->id)->where('active','Approved')->paginate('12');
-            return view('front.properties_agent',compact('id','Property'));
+            return view('front.properties_agent',compact('id','Property','title'));
         }
     }
 
@@ -213,8 +215,28 @@ class HomeController extends Controller
         return view('front.property_gallery', compact('Property','title','description','PostID'));
     }
 
+    public function search_property(Request $request){
+        // dd($request->all());
+        $keyword = $request->keyword;
+        $location = $request->location;
+        $type = $request->type;
+        $status = $request->status;
 
+        $title = "Search";
 
+        $Results = DB::table('properties')->where('type',$type)->where('status',$status)->where('property_name','LIKE','%'.$keyword.'%')->where('address','LIKE','%'.$location.'%')->paginate(100);
+        if($Results->isEmpty()){
+            // Set Variables
+            Session::flash('message', "Your Search Combination has no results, Feel free to contact us for more infomation");
+            return view('front.search', compact('title'));
+        }
+
+        else{
+            $SearchResults=$Results;
+            return view('front.search_property', compact('SearchResults','title'));
+        }
+
+    }
 
 
     public function schedule_post(Request $request){

@@ -12,7 +12,7 @@
         <li><a  @if($title == "sale") class="active" @endif href="{{route('properties-home',['sale'])}}">For Sale</a> </li>
         <li><a  @if($title == "Plots") class="active" @endif  href="{{route('land-for-sale')}}">Plots</a> </li>
         <li><a  @if($title == "UN") class="active" @endif  href="{{route('un-approved')}}">UN Approved Properties</a> </li>
-        <li><a  href="{{route('search-home')}}">Search Propertes</a> </li>
+        <li><a  @if($title == "Search") class="active" @endif href="{{route('search-home')}}">Search Propertes</a> </li>
         <li><a  href="{{url('/')}}/contact-us">Contact Us</a> </li>
     </ul>
 </nav>

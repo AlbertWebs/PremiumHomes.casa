@@ -15,36 +15,41 @@
 
 
     <?php
-    $PropertySEO = App\Models\Property::where('user_id',$id)->limit(1)->where('active','Approved')->get();
-    $description = "Discover exquisite premium properties available for sale and rent in and around Nairobi. Explore luxurious homes, apartments, and estates in prime locations, curated to meet your discerning taste. Your dream property awaits in Nairobi's most sought-after neighborhoods.";
-    $User = App\Models\User::find($id);
+
+        $description = "Discover exquisite premium properties available for sale and rent in and around Nairobi. Explore luxurious homes, apartments, and estates in prime locations, curated to meet your discerning taste. Your dream property awaits in Nairobi's most sought-after neighborhoods.";
+
     ?>
-    @foreach($PropertySEO as $prop)
-        <title>{{$User->name}} -Marketing Coordinator - Premium Homes Limited</title>
+    @if($SearchResults->isEmpty())
+        <?php $SearchResults = 0 ?>
+    @else
+
+    @endif
+    @foreach($SearchResults as $prop)
+        <title>Search Premium Properties - Premium Homes Limited</title>
         <meta name="description" content="{{$description}}">
         <meta name="robots" content="index,follow">
         <meta name="googlebot" content="index,follow"><!-- Google Specific -->
-        <meta name="subject" content="Premium Plots in Kenya - Premium Homes Limited">
+        <meta name="subject" content="Search Premium Properties - Premium Homes Limited">
         <meta name="rating" content="General">
         <meta name="referrer" content="no-referrer">
         <meta name="theme-color" content="#EFE165">
 
-        <link rel="canonical" href="https://premiumhomes.casa/properties/land-for-sale"/>
+        <link rel="canonical" href="https://premiumhomes.casa/search-property"/>
         <meta name="author" content="Designekta Studios">
         <meta property="og:description" content="{{$description}}">
         <meta property="og:image" content="https://premiumhomes.casa/uploads/properties/{{$prop->featured_image}}" />
         <meta property="fb:app_id" content="431980657174772" />
-        <meta property="og:title" content="Premium Plots in Kenya - Premium Homes Limited" />
+        <meta property="og:title" content="Search Premium Properties - Premium Homes Limited" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://premiumhomes.casa/land-for-sale" />
+        <meta property="og:url" content="https://premiumhomes.casa/search-property" />
         <meta property="og:site_name" content="Premium Homes Limited">
         <meta property="og:locale" content="en_US">
 
-        <meta name="twitter:title" content="Premium Plots in Kenya - Premium Homes Limited" />
+        <meta name="twitter:title" content="Search Premium Properties - Premium Homes Limited" />
         <meta name="twitter:site" content="@premiumhomescasa" />
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@premiumhomescasa">
-        <meta name="twitter:url" content="https://premiumhomes.casa/land-for-sale">
+        <meta name="twitter:url" content="https://premiumhomes.casa/search-property">
         <meta name="twitter:description" content="{{$description}}">
         <meta name="twitter:image" content="https://premiumhomes.casa/uploads/properties/{{$prop->featured_image}}">
         <meta name="twitter:creator" content="@premiumhomescasa" />
@@ -99,10 +104,14 @@
                             </button>
                         </div>
                         <!-- Main Navigation -->
-                        @include('front.menu')
+                      @include('front.menu')
                         <!-- Main Navigation / End -->
                     </div>
                     <!-- Left Side Content / End -->
+
+
+
+
 
                 </div>
             </div>
@@ -135,7 +144,7 @@
 
 
                 <div class="row portfolio-items">
-                    @foreach ($Property as $prop)
+                    @foreach ($SearchResults as $prop)
                     <div class="item col-lg-3 col-md-6 col-xs-12 landscapes sale">
                         <div class="project-single mb-0" data-aos="fade-up">
                             <a href="{{route('property-single',[$prop->slung])}}" class="recent-16">
@@ -161,7 +170,7 @@
                 </div>
                 {{-- Pagination --}}
                 <?php
-                echo $Property;
+                echo $SearchResults;
                 ?>
             </div>
         </section>
@@ -174,68 +183,7 @@
         <a data-scroll href="#wrapper" class="go-up"><i class="fa fa-angle-double-up" aria-hidden="true"></i></a>
         <!-- END FOOTER -->
 
-        <!--register form -->
-        <div class="login-and-register-form modal">
-            <div class="main-overlay"></div>
-            <div class="main-register-holder">
-                <div class="main-register fl-wrap">
-                    <div class="close-reg"><i class="fa fa-times"></i></div>
-                    <h3>Welcome to <span>Premium<strong>Homes</strong></span></h3>
-                    <div class="soc-log fl-wrap">
-                        <p>Login With</p>
-                        <a href="{{route('facebook-login')}}" class="facebook-log"><i class="fa fa-facebook-official"></i>Log in with Facebook</a>
-                        <a href="{{route('google-login')}}" class="twitter-log"><i class="fa fa-google"></i> Log in with Gmail</a>
-                        <a href="{{route('linkedin-login')}}" class="linkedin-log"><i class="fa fa-linkedin"></i> Log in with Linked-In</a>
-                    </div>
-                    <div class="log-separator fl-wrap"><span>Or</span></div>
-                    <div id="tabs-container">
-                        <center>
-                            <a class="button border text-center" href="{{ route('login') }}"><i class="fa fa-lock"></i>  Login</a>
-                            <a class="button border text-center" href="{{ route('register') }}"><i class="fa fa-user-plus"></i>  Register</a>
-                        </center>
-                        {{-- <div class="tab">
-                            <div id="tab-1" class="tab-contents">
-                                <div class="custom-form">
-                                    <form method="post" name="registerform">
-                                        <label>Username or Email Address * </label>
-                                        <input name="email" type="text" onClick="this.select()" value="">
-                                        <label>Password * </label>
-                                        <input name="password" type="password" onClick="this.select()" value="">
-                                        <button type="submit" class="log-submit-btn"><span>Log In</span></button>
-                                        <div class="clearfix"></div>
-                                        <div class="filter-tags">
-                                            <input id="check-a" type="checkbox" name="check">
-                                            <label for="check-a">Remember me</label>
-                                        </div>
-                                    </form>
-                                    <div class="lost_password">
-                                        <a href="#">Lost Your Password?</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab">
-                                <div id="tab-2" class="tab-contents">
-                                    <div class="custom-form">
-                                        <form method="post" name="registerform" class="main-register-form" id="main-register-form2">
-                                            <label>First Name * </label>
-                                            <input name="name" type="text" onClick="this.select()" value="">
-                                            <label>Second Name *</label>
-                                            <input name="name2" type="text" onClick="this.select()" value="">
-                                            <label>Email Address *</label>
-                                            <input name="email" type="text" onClick="this.select()" value="">
-                                            <label>Password *</label>
-                                            <input name="password" type="password" onClick="this.select()" value="">
-                                            <button type="submit" class="log-submit-btn"><span>Register</span></button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> --}}
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--register form end -->
+
 
         <!-- START PRELOADER -->
         <div id="preloader">
