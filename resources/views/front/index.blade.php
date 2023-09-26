@@ -141,7 +141,7 @@
                             <div class="recent-title">{{$prop->property_name}}</div>
                             <div class="price-details">
                             <div class="recent-price mb-3">KES {{$prop->price}}</div>
-                            <div class="recent-price mb-3" style="font-weight:200; color:#bf9d34">
+                            <div class="recent-price mb-3" style="font-weight:900; color:#bf9d34">
                                 <i class="fa fa-map-marker"></i> {{$prop->address}}
                             </div>
                             @if($prop->type == "Plot")
