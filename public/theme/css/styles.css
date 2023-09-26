@@ -25006,15 +25006,22 @@ section.ui-element {
     text-transform: capitalize;
 }
 
-.main-images{
+/* .main-images{
     width:932px;
     height:848px;
-}
+} */
 
 .main-images{
     max-width:932px !important;
     max-height:658px !important;
 }
+
+.main-images img{
+    object-fit:cover !important;
+    width:100% !important;
+    height: 100% !important;
+}
+
 
 .other-images{
     width:466px !important;
