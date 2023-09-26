@@ -136,7 +136,7 @@
                                 </a>
                             </div>
                         </div> --}}
-                        <div class="col-sm-6 col-lg-6 p0 landscapes sale" data-aos="zoom-in" data-aos-delay="150">
+                        <div class="col-sm-4 col-lg-4 p0 landscapes sale" data-aos="zoom-in" data-aos-delay="150">
                             <div class="popup-images p0 landscapes listing-item compact thehp-1 other-images">
                                 <a  class="popup-img" href="{{url('/')}}/uploads/properties/{{$Property->featured_image}}">
                                     <img class="img-fluid w100 img-center" src="{{url('/')}}/uploads/properties/{{$Property->featured_image}}" alt="">
@@ -144,7 +144,7 @@
                             </div>
                         </div>
                         @foreach ($Gallery as $gallery)
-                        <div class="col-sm-6 col-lg-6 p0 landscapes sale" data-aos="zoom-in" data-aos-delay="150">
+                        <div class="col-sm-4 col-lg-4 p0 landscapes sale" data-aos="zoom-in" data-aos-delay="150">
                             <div class="popup-images p0 landscapes listing-item compact thehp-1 other-images">
                                 <a  class="popup-img" href="{{url('/')}}/images/{{$gallery->filename}}">
                                     <img class="img-fluid w100 img-center" src="{{url('/')}}/images/{{$gallery->filename}}" alt="">
