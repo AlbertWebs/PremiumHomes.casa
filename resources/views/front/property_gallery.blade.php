@@ -118,6 +118,8 @@
     <!-- END SECTION HEADINGS -->
 
     @foreach ($Property as $Property)
+
+    <h1 class="text-center"> {{$Property->property_name}} </h1>
     {{--  --}}
     <div class="single-property-4">
         <div class="container p0">
@@ -156,25 +158,17 @@
                 </div>
             </div>
         </div>
+        <center> <br><br>
+            <a href="{{url('/')}}/properties/{{$Property->slung}}" class="btn reservation btn-radius full-width mrg-top-10" style="background-color: #bf9d34 !important; color:#ffffff; font-weight:600">
+                <span class="fa fa-arrow-left"></span> Back To {{$Property->property_name}})
+            </a>
+        </center><br><br><br>
     </div>
     <!-- END SECTION HEADINGS -->
     {{--  --}}
 
-    <section class="single-proper" style="padding: 0px;">
-        <div class="container">
-            <div class="row">
 
-                <div class="col-lg-12 col-md-12 blog-pots">
-                <center> <br><br>
-                    <a href="{{url('/')}}/properties/{{$Property->slung}}" class="btn reservation btn-radius full-width mrg-top-10" style="background-color: #bf9d34 !important; color:#ffffff; font-weight:600">
-                        <span class="fa fa-arrow-left"></span> Back To {{$Property->property_name}})
-                    </a>
-                </center><br><br><br>
-                </div>
-            </div>
-        </div>
-    </section>
-
+<hr>
 
     @endforeach
 
