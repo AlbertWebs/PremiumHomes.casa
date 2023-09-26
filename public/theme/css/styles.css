@@ -25006,14 +25006,11 @@ section.ui-element {
     text-transform: capitalize;
 }
 
-/* .main-images{
-    width:932px;
-    height:848px;
-} */
 
 .main-images{
     /* max-width:932px !important; */
     max-height:658px !important;
+    object-fit: contain;
 }
 
 
@@ -25022,8 +25019,6 @@ section.ui-element {
     width:466px !important;
     height:329px  !important;
     border:0px solid #bf9d34;
-    /* display: flex; */
-
 }
 
 .other-images img{
