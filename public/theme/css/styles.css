@@ -25022,7 +25022,7 @@ section.ui-element {
     width:466px !important;
     height:329px  !important;
     border:0px solid #bf9d34;
-    display: flex;
+    /* display: flex; */
 
 }
 
@@ -25030,5 +25030,5 @@ section.ui-element {
 
     width:100% !important;
     height: 100% !important;
-    object-fit:cover !important;
+    object-fit:contain !important;
 }
