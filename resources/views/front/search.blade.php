@@ -158,7 +158,7 @@
                                                             <div class="rld-main-search">
                                                                 <div class="row">
                                                                     <div class="rld-single-input">
-                                                                        <input required name="keyword" type="text" placeholder="Enter Property name or Location...">
+                                                                        <input name="keyword" type="text" placeholder="Enter Keyword">
                                                                     </div>
                                                                     <div class="rld-single-select ml-22">
                                                                         <select required name="type" class="select single-select">
@@ -174,6 +174,7 @@
                                                                             <option value="Resorts">Resorts</option>
                                                                             <option value="Plot">Plot</option>
                                                                             <option value="Penthouse">Penthouse</option>
+                                                                            <option value="Commercial Properies">Commercial Properies</option>
                                                                         </select>
                                                                     </div>
                                                                     <div class="rld-single-select ml-22">
