@@ -25018,8 +25018,8 @@ section.ui-element {
 
 .main-images img{
     object-fit:cover !important;
-    width:100% !important;
-    height: 100% !important;
+    /* width:100% !important;
+    height: 100% !important; */
 }
 
 
