@@ -120,7 +120,7 @@
     @foreach ($Property as $Property)
     {{--  --}}
     <div class="single-property-4">
-        <div class="container-fluid p0">
+        <div class="container p0">
             <div class="row m0">
 
                     <?php
