@@ -137,10 +137,10 @@
                             </div>
                         </div>
                         @foreach ($Gallery as $gallery)
-                        <div class="col-sm-4 col-lg-4 p0">
-                            <div class="popup-images p0 landscapes listing-item compact thehp-1">
+                        <div class="col-sm-6 col-lg-6 p0 landscapes sale" data-aos="zoom-in" data-aos-delay="150">
+                            <div class="popup-images p0 landscapes listing-item compact thehp-1 other-images">
                                 <a  class="popup-img" href="{{url('/')}}/images/{{$gallery->filename}}">
-                                    <img class="img-fluid w100 img-fluid w100 img-center" src="{{url('/')}}/images/{{$gallery->filename}}" alt="">
+                                    <img class="img-fluid w100 img-center" src="{{url('/')}}/images/{{$gallery->filename}}" alt="">
                                 </a>
                             </div>
                         </div>
