@@ -25025,7 +25025,7 @@ section.ui-element {
 }
 
 .other-images img{
-    object-fit:fill;
+    object-fit:cover;
     width:100% !important;
     height: 100% !important;
 }
