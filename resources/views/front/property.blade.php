@@ -127,9 +127,9 @@
                 <div class="col-sm-6 col-lg-6 p0">
                     <div class="row m0">
                         <div class="col-lg-12 p0" style="object-fit:contain !important;">
-                            <div class="popup-images main-images">
+                            <div class="popup-images">
                                 <a class="popup-img" href="{{url('/')}}/uploads/properties/{{$Property->featured_image}}">
-                                    <img class="img-fluid w100" src="{{url('/')}}/uploads/properties/{{$Property->featured_image}}" alt="">
+                                    <img class="img-fluid w100 main-images" src="{{url('/')}}/uploads/properties/{{$Property->featured_image}}" alt="">
                                 </a>
                             </div>
                         </div>
