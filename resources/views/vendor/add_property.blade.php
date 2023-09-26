@@ -139,7 +139,7 @@
                                                         <option value="Resorts">Resorts</option>
                                                         <option value="Plot">Plot</option>
                                                         <option value="Penthouse">Penthouse</option>
-
+                                                        <option value="commercial properies">commercial properies</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -156,11 +156,11 @@
                                                 </div>
                                             </div>
                                             {{--  --}}
-                                            <div class="col-lg-2 col-md-12 dropdown faq-drop">
+                                            {{-- <div class="col-lg-2 col-md-12 dropdown faq-drop">
                                                 <div class="form-group categories">
                                                     <label for="price">Rooms</label>
                                                     <select name="rooms" class="nice-select form-control wide" required>
-                                                        {{-- <option selected="" value="Default">Rooms</option> --}}
+                                                        <option selected="" value="Default">Rooms</option>
                                                         <option value="1">1</option>
                                                         <option value="2">2</option>
                                                         <option value="3">3</option>
@@ -178,9 +178,9 @@
                                                         <option value="15">15</option>
                                                     </select>
                                                 </div>
-                                            </div>
+                                            </div> --}}
 
-                                            <div class="col-lg-2 col-md-12 dropdown faq-drop">
+                                            <div class="col-lg-4 col-md-12 dropdown faq-drop">
                                                 <div class="form-group categories">
                                                     <label for="bedrooms">Bedrooms</label>
                                                     <select name="bedrooms" class="nice-select form-control wide" required>
@@ -346,7 +346,7 @@
                                         <div class="col-lg-6 col-md-12">
                                             <p class="no-mb">
                                                 <label for="price">Year of Make</label>
-                                                <input type="text" name="yom" placeholder="{{date('Y')}}" id="price" required>
+                                                <input type="text" name="yom" placeholder="{{date('Y')}}" id="price" value="n/a" required>
                                             </p>
                                         </div>
                                         <div class="col-lg-6 col-md-12">

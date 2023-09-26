@@ -25006,3 +25006,26 @@ section.ui-element {
     text-transform: capitalize;
 }
 
+.main-images{
+    width:932px;
+    height:848px;
+}
+
+.main-images{
+    min-width:932px !important;
+    min-height:658px !important;
+}
+
+.other-images{
+    width:466px !important;
+    height:329px  !important;
+    border:0px solid #bf9d34;
+    display: flex;
+
+}
+
+.other-images img{
+    object-fit:fill;
+    width:100% !important;
+    height: 100% !important;
+}
