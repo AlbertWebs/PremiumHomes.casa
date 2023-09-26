@@ -25012,15 +25012,10 @@ section.ui-element {
 } */
 
 .main-images{
-    max-width:932px !important;
+    /* max-width:932px !important; */
     max-height:658px !important;
 }
 
-.main-images img{
-    /* object-fit:cover !important; */
-    /* width:100% !important;
-    height: 100% !important; */
-}
 
 
 .other-images{
