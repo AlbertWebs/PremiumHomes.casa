@@ -1391,7 +1391,7 @@ transform: rotate(-90deg);
         float: left;
     }
     #header {
-        padding-top: 20px;
+        /* padding-top: 20px; */
     }
     #logo {
         position: absolute;
@@ -1554,4 +1554,12 @@ transform: rotate(-90deg);
 .active{
     background-color: #bf9d34;
     color: #bf9d34;
+}
+
+@media only screen and (max-width: 575px) {
+    #header {
+        position: relative;
+        z-index: 999;
+        padding: 5px 0 5px 0;
+    }
 }
