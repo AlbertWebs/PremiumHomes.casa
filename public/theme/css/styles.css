@@ -25012,8 +25012,8 @@ section.ui-element {
 }
 
 .main-images{
-    min-width:932px !important;
-    min-height:658px !important;
+    max-width:932px !important;
+    max-height:658px !important;
 }
 
 .other-images{
