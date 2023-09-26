@@ -25009,7 +25009,7 @@ section.ui-element {
 
 .main-images{
     /* max-width:932px !important; */
-    max-height:658px !important;
+    height:658px !important;
     object-fit: cover !important;
 }
 
