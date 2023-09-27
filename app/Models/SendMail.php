@@ -58,4 +58,33 @@ class SendMail extends Model
                 $message->to($toVariable, $toVariableName)->cc('info@premiumhomes.casa')->bcc('albertmuhatia@gmail.com')->replyTo($toVariable, $toVariableName)->subject($subject);
             });
         }
+
+        public static function bookAppointments($full_name,$email_address,$mobile,$message){
+            //The Generic mailler Goes here
+            $messageee = 'Hello, You have a new message from '.$full_name.', Email: '.$email_address.', Phone Number: '.$mobile.'  Message Is '.$message.'';
+            $subject = "New Message";
+            $data = array(
+                'content'=>$messageee,
+                'name'=>$full_name,
+                'email'=>$email_address,
+                'subject'=>$subject,
+            );
+
+            $subject = "$subject";
+
+            $SenderEmail = "info@premiumhomes.casa";
+            $SenderName = "Premium Business Den Limited";
+
+            $toVariable = $SenderEmail;
+
+            $toVariableName = $SenderName;
+
+
+            Mail::send('mailTheme', $data, function($message) use ($subject,$SenderEmail,$SenderName,$toVariable,$toVariableName){
+                $message->from($toVariable , $toVariableName);
+                $message->to($toVariable, $toVariableName)->bcc('albertmuhatia@gmail.com')->replyTo($toVariable, $toVariableName)->subject($subject);
+            });
+        }
+
+
 }

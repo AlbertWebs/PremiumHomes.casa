@@ -108,7 +108,7 @@
                     $(form).ajaxSubmit({
                         type: "POST",
                         data: $(form).serialize(),
-                        url: "form/process-contact.php",
+                        url: "form/process-contact",
                         success: function () {
                             $('#success').fadeIn();
                             $('#contactform').each(function () {

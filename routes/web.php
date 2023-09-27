@@ -40,6 +40,10 @@ Route::get('/renting', [App\Http\Controllers\HomeController::class, 'renting'])-
 Route::get('/un-approved-properties', [App\Http\Controllers\HomeController::class, 'approved'])->name('un-approved');
 Route::post('/search-property', [App\Http\Controllers\HomeController::class, 'search_property'])->name('search-property');
 
+Route::post('/form/process-contact', [App\Http\Controllers\HomeController::class, 'process_contact'])->name('process-contact');
+
+
+
 Route::get('/generate-sitemaps', [App\Http\Controllers\HomeController::class, 'sitemaps'])->name('sitemaps');
 
 

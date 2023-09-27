@@ -24,6 +24,7 @@
                 <div class="col-lg-8 col-md-12">
                     <h3 class="mb-4">Contact Us</h3>
                     <form id="contactform" class="contact-form" name="contactform" method="post" novalidate>
+                        @csrf
                         <div id="success" class="successform">
                             <p class="alert alert-success font-weight-bold" role="alert">Your message was sent successfully!</p>
                         </div>
@@ -45,6 +46,11 @@
                         <div class="form-group">
                             <textarea required class="form-control textarea-custom input-full" id="ccomment" name="message" required rows="8" placeholder="Message"></textarea>
                         </div>
+                        <div class="col-lg-12 col-md-12" id="TheCapcha">
+                            <div class="g-recaptcha" data-sitekey="6LeObFooAAAAAP3zafjIk5R1CoLugX2SO_LhD0XC" data-callback="correctCaptcha"></div>
+                            <script type="text/javascript" src="https://www.google.com/recaptcha/api.js?hl=en"></script>
+                        </div>
+                        <br>
                         <button style="background-color:#bf9d34" type="submit" id="submit-contact" class="btn btn-primary btn-lg button border">Submit</button>
                     </form>
                 </div>
@@ -55,7 +61,7 @@
                         <ul style="list-style: none">
                             <li>
                                 <div class="info">
-                                    <p class="in-p"> <i class="fa fa-map-marker" aria-hidden="true"></i> Nelson's Court, Ring Road, Westlands, Nairobi</p>
+                                    <p class="in-p"> <i class="fa fa-map-marker" aria-hidden="true"></i> Mirage Towers, 1st Floor, Suite 9, Westlands, Nairobi, Kenya</p>
                                 </div>
                             </li>
                             <li>
@@ -65,7 +71,7 @@
                             </li>
                             <li>
                                 <div class="info">
-                                    <p class="in-p ti"><i class="fa fa-envelope" aria-hidden="true"></i> support@premiumhomes.casa</p>
+                                    <p class="in-p ti"><i class="fa fa-envelope" aria-hidden="true"></i> info@premiumhomes.casa</p>
                                 </div>
                             </li>
                             <li>
@@ -81,5 +87,6 @@
     </section>
     <!-- END SECTION CONTACT US -->
 </section>
+
 
 @endsection

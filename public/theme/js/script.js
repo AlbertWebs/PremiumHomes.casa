@@ -1,6 +1,6 @@
 /*
 Author       : Code-Theme
-Template Name: Find Houses - HTML5 Template
+Template Name: Find Houses - Premium Casa - HTML5 Template
 Version      : 1.0
 */
 

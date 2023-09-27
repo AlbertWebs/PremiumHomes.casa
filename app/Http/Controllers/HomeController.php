@@ -240,6 +240,19 @@ class HomeController extends Controller
     }
 
 
+    public function process_contact(Request $request){
+        $full_name = "$request->name $request->lastname";
+        $email_address = $request->email;
+        $mobile = $request->mobile;
+        $message = $request->message;
+        // Send Email
+        SendMail::bookAppointments($full_name,$email_address,$mobile,$message);
+        Session::flash('message', "Message Submited Successfully");
+        return Redirect::back();
+    }
+
+
+
     public function schedule_post(Request $request){
         $numberOfPeople = $request->quant[1];
         $full_name = $request->full_name;
