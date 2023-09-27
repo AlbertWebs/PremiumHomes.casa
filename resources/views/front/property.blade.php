@@ -594,7 +594,7 @@
                                             <p class="author__meta">Coordinator</p>
                                         </div>
                                         <ul class="author__contact">
-                                            <li><span class="la la-map-marker"><i class="fa fa-map-marker"></i></span>Nelson's Court, Ring Road, Westlands, Nairobi</li>
+                                            <li><span class="la la-map-marker"><i class="fa fa-map-marker"></i></span>Mirage Towers, 1st Floor, Suite 9, Westlands, Nairobi, Kenya</li>
                                             <li><span class="la la-phone"><i class="fa fa-phone" aria-hidden="true"></i></span><a href="tel:+254 727 111 222">+254 727 111 222 </a></li>
                                             <li><span class="la la-phone"><i class="fa fa-comment" aria-hidden="true"></i></span><a href="sms://+254 727 111 222">+254 727 111 222 </a></li>
 
