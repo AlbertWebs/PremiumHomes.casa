@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\PostView;
 use App\Models\Blog;
 use App\Models\SendMail;
+use App\Models\Newsletter;
 use Spatie\Sitemap\SitemapGenerator;
 use DB;
 use Session;
@@ -268,8 +269,18 @@ class HomeController extends Controller
         return Redirect::back();
     }
 
-    public function sitemaps(){
-        $path = url('/');
-        SitemapGenerator::create('https://premiumhomes.casa/')->writeToFile($path);
+    // public function sitemaps(){
+    //     $path = url('/');
+    //     SitemapGenerator::create('https://premiumhomes.casa/')->writeToFile($path);
+    // }
+
+    public function news_letters(Request $request)
+    {
+            if ( ! Newsletter::isSubscribed($request->user_email) ) {
+                Newsletter::subscribe($request->user_email);
+            }
+
+
+
     }
 }

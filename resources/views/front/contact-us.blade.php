@@ -17,7 +17,7 @@
                 <h3>Our Location</h3>
                 <div class="divider-fade"></div>
                 <div id="map-contacts" class="contact-maps" style="min-height:450px">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15955.42976313841!2d36.8064823!3d-1.2574892!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1751675bc759%3A0x12ae75ea89237c46!2sNelson&#39;S%20Court%20Serviced%20Apartments!5e0!3m2!1sen!2ske!4v1695123822265!5m2!1sen!2ske" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15955.3525214141!2d36.8071875!3d-1.2700625!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f17a6a9e05969%3A0x3ff956c8001fb6e6!2sPremium%20Homes!5e0!3m2!1sen!2ske!4v1695917335887!5m2!1sen!2ske" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
             <div class="row">
