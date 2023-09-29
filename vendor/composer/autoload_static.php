@@ -166,6 +166,7 @@ class ComposerStaticInitc4197389d2da37cafcedd5c03b5d9663
         ),
         'D' => 
         array (
+            'DrewM\\MailChimp\\' => 16,
             'Dotenv\\' => 7,
             'Doctrine\\Instantiator\\' => 22,
             'Doctrine\\Inflector\\' => 19,
@@ -533,6 +534,10 @@ class ComposerStaticInitc4197389d2da37cafcedd5c03b5d9663
         'Egulias\\EmailValidator\\' => 
         array (
             0 => __DIR__ . '/..' . '/egulias/email-validator/src',
+        ),
+        'DrewM\\MailChimp\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/drewm/mailchimp-api/src',
         ),
         'Dotenv\\' => 
         array (
@@ -910,6 +915,9 @@ class ComposerStaticInitc4197389d2da37cafcedd5c03b5d9663
         'Dotenv\\Util\\Regex' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Util/Regex.php',
         'Dotenv\\Util\\Str' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Util/Str.php',
         'Dotenv\\Validator' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Validator.php',
+        'DrewM\\MailChimp\\Batch' => __DIR__ . '/..' . '/drewm/mailchimp-api/src/Batch.php',
+        'DrewM\\MailChimp\\MailChimp' => __DIR__ . '/..' . '/drewm/mailchimp-api/src/MailChimp.php',
+        'DrewM\\MailChimp\\Webhook' => __DIR__ . '/..' . '/drewm/mailchimp-api/src/Webhook.php',
         'Egulias\\EmailValidator\\EmailLexer' => __DIR__ . '/..' . '/egulias/email-validator/src/EmailLexer.php',
         'Egulias\\EmailValidator\\EmailParser' => __DIR__ . '/..' . '/egulias/email-validator/src/EmailParser.php',
         'Egulias\\EmailValidator\\EmailValidator' => __DIR__ . '/..' . '/egulias/email-validator/src/EmailValidator.php',
