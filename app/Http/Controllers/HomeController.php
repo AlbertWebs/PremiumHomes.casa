@@ -98,9 +98,18 @@ class HomeController extends Controller
     }
 
     public function blogs($id){
+        $title = "Media";
         $Blog = Blog::where('slung',$id)->get();
-        return view('front.blog',compact('id','Blog'));
+        return view('front.blog',compact('id','Blog','title'));
     }
+
+    public function blog_single(){
+        $title = "Media";
+        $Blogs = DB::table('blogs')->paginate('12');
+        return view('front.blogs',compact('title','Blogs'));
+    }
+
+
 
     public function plots($id){
         $Property = Property::where('slung',$id)->get();

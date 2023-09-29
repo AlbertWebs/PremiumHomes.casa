@@ -195,7 +195,7 @@
                 </div>
             </li>
 
-            <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-rss" aria-hidden="true"></i> Blog & Articals</a>
+            <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-rss" aria-hidden="true"></i> Blog & Articles</a>
                 <div class="collapsible-body left-sub-menu">
                     <ul>
                         <li><a href="{{url('/')}}/admin/blog">All Blogs</a>

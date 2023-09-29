@@ -13,13 +13,13 @@
                 <div class="row">
                     <div class="col-md-12 col-xs-12">
                         <div class="news-item details no-mb2">
-                            <a href="blog-details.html" class="news-img-link">
+                            <a href="#" class="news-img-link">
                                 <div class="news-item-img">
                                     <img class="img-responsive" src="{{url('/')}}/uploads/blogs/{{$blog->image_one}}" alt="blog image">
                                 </div>
                             </a>
                             <div class="news-item-text details pb-0">
-                                <a href="blog-details.html"><h3>{{$blog->title}}</h3></a>
+                                <a href="#"><h3>{{$blog->title}}</h3></a>
                                 <div class="dates">
                                     <span class="date">{{date('M', strtotime($blog->created_at))}} {{date('d', strtotime($blog->created_at))}}, {{date('Y', strtotime($blog->created_at))}} </span>
                                 </div>
@@ -27,8 +27,6 @@
                                     <p class="mb-3" style="color:#ffffff">
                                         {!!html_entity_decode($blog->content)!!}
                                     </p>
-
-
                                 </div>
                             </div>
                         </div>

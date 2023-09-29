@@ -13,6 +13,17 @@
         <li><a  @if($title == "Plots") class="active" @endif  href="{{route('land-for-sale')}}">Plots</a> </li>
         <li><a  @if($title == "UN") class="active" @endif  href="{{route('un-approved')}}">UN Approved Properties</a> </li>
         <li><a  @if($title == "Search") class="active" @endif href="{{route('search-home')}}">Search Propertes</a> </li>
+        <li @if($title == "Media") class="active" @endif>
+            <a   href="#">Media</a>
+            <ul>
+                <li><a href="{{url('/')}}/property-talks">Property Talks</a>
+                </li>
+                <li><a href="{{url('/')}}/blogs">Blogs</a>
+                </li>
+                <li><a href="#">Gallery</a>
+                </li>
+            </ul>
+        </li>
         <li><a  href="{{url('/')}}/contact-us">Contact Us</a> </li>
     </ul>
 </nav>
