@@ -24,7 +24,7 @@
                     <div class="news-item news-item-sm">
                         <a href="{{url('/')}}/blogs/{{$Blog->slung}}" class="news-img-link">
                             <div class="news-item-img">
-                                <img style="min-height:350px !important" class="resp-img" src="{{url('/')}}/uploads/blogs/{{$Blog->image_one}}" alt="blog image">
+                                <img class="resp-img" src="{{url('/')}}/uploads/blogs/{{$Blog->image_one}}" alt="blog image">
                             </div>
                         </a>
                         <div class="news-item-text">
