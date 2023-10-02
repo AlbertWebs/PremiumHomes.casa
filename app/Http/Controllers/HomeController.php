@@ -109,6 +109,11 @@ class HomeController extends Controller
         return view('front.blogs',compact('title','Blogs'));
     }
 
+    public function property_talks(){
+        $title = "Media";
+        $Blogs = DB::table('blogs')->paginate('12');
+        return view('front.talks',compact('title','Blogs'));
+    }
 
 
     public function plots($id){

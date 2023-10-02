@@ -39,6 +39,8 @@ Route::get('/blogs/{slung}', [App\Http\Controllers\HomeController::class, 'blogs
 Route::get('/buying', [App\Http\Controllers\HomeController::class, 'buying'])->name('buying');
 Route::get('/renting', [App\Http\Controllers\HomeController::class, 'renting'])->name('renting');
 Route::get('/un-approved-properties', [App\Http\Controllers\HomeController::class, 'approved'])->name('un-approved');
+Route::get('/property-talks', [App\Http\Controllers\HomeController::class, 'property_talks'])->name('property-talks');
+
 Route::post('/search-property', [App\Http\Controllers\HomeController::class, 'search_property'])->name('search-property');
 Route::post('/form/process-contact', [App\Http\Controllers\HomeController::class, 'process_contact'])->name('process-contact');
 Route::post('subscribe',['as'=>'subscribe','uses'=>'MailChimpController@subscribe']);
