@@ -61,7 +61,7 @@
                         <ul style="list-style: none">
                             <li>
                                 <div class="info">
-                                    <p class="in-p"> <i class="fa fa-map-marker" aria-hidden="true"></i> Mirage Towers, 1st Floor, Suite 9, Westlands, Nairobi, Kenya</p>
+                                    <p class="in-p"> <i class="fa fa-map-marker" aria-hidden="true"></i> Mirage Towers, Tower 2, 1st Floor, Suite 9, Westlands, Nairobi, Kenya</p>
                                 </div>
                             </li>
                             <li>
