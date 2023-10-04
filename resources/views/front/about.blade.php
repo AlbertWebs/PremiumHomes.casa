@@ -299,7 +299,7 @@
 <section class="counterup">
     <div class="container">
         <div class="row">
-            <div class="col-lg-3 col-md-6 col-xs-12">
+            <div class="col-lg-2 col-md-6 col-xs-12">
                 <div class="countr">
                     <i class="fa fa-map-marker" aria-hidden="true"></i>
                     <div class="count-me">
@@ -326,12 +326,21 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-xs-12">
+            <div class="col-lg-2 col-md-6 col-xs-12">
+                <div class="countr mb-0 last">
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                    <div class="count-me">
+                        <p class="counter text-left">5</p>
+                        <h3>Sold</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-xs-12">
                 <div class="countr mb-0 last">
                     <i class="fa fa-trophy" aria-hidden="true"></i>
                     <div class="count-me">
-                        <p class="counter text-left">4</p>
-                        <h3>Sold</h3>
+                        <p class="counter text-left">18</p>
+                        <h3>Rented</h3>
                     </div>
                 </div>
             </div>
