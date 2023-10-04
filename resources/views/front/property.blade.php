@@ -259,8 +259,8 @@
                             </div> --}}
                             <div class="blog-info details mb-30">
                                 <h5 class="mb-4">Description</h5>
-                                <p class="mb-3">
-                                    {!! nl2br($Property->property_description) !!}
+                                <p class="mb-3" style="display:inline">
+                                    {!! $Property->property_description !!}
                                 </p>
                             </div>
                         </div>
