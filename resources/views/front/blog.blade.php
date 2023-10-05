@@ -14,7 +14,7 @@
                     <div class="col-md-12 col-xs-12">
                         <div class="news-item details no-mb2">
                             <a href="#" class="news-img-link">
-                                <div style="width:100%; max-height:400px" class="news-item-img">
+                                <div style="width:100%; max-height:300px" class="news-item-img">
                                     <img style="width:100%; height:auto; object-fit:contain" class="img-responsive" src="{{url('/')}}/uploads/blogs/{{$blog->image_one}}" alt="blog image">
                                 </div>
                             </a>
