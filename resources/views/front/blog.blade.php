@@ -4,7 +4,14 @@
 @foreach($Blog as $blog)
 
 <!-- END SECTION HEADINGS -->
-
+<section class="headings" style="background: -webkit-gradient(linear, left top, left bottom, from(rgba(18, 27, 34, 0.6)), to(rgba(18, 27, 34, 0.6))), url('{{url('/')}}/uploads/blogs/{{$blog->image_one}}') no-repeat center center;">
+    <div class="text-heading text-center">
+        <div class="container">
+            <h1>{{$blog->title}}</h1>
+            <h2><a href="{{url('/')}}">Home </a> &nbsp;/&nbsp; {{$blog->title}}</h2>
+        </div>
+    </div>
+</section>
 <!-- START SECTION BLOG -->
 <section class="blog blog-section bg-white">
     <div class="container-fluid">
@@ -13,13 +20,13 @@
                 <div class="row">
                     <div class="col-md-12 col-xs-12">
                         <div class="news-item details no-mb2">
-                            <a href="#" class="news-img-link">
+                            {{-- <a href="#" class="news-img-link">
                                 <div style="width:100%; max-height:300px" class="news-item-img">
                                     <img style="width:100%; height:auto; object-fit:contain" class="img-responsive" src="{{url('/')}}/uploads/blogs/{{$blog->image_one}}" alt="blog image">
                                 </div>
-                            </a>
+                            </a> --}}
                             <div class="news-item-text details pb-0">
-                                <a href="#"><h3>{{$blog->title}}</h3></a>
+                                {{-- <a href="#"><h3>{{$blog->title}}</h3></a> --}}
                                 <div class="dates">
                                     <span class="date">{{date('M', strtotime($blog->created_at))}} {{date('d', strtotime($blog->created_at))}}, {{date('Y', strtotime($blog->created_at))}} </span>
                                 </div>
