@@ -4,7 +4,7 @@
 @foreach($Blog as $blog)
 
 <!-- END SECTION HEADINGS -->
-<section class="headings" style="background: -webkit-gradient(linear, left top, left bottom, from(rgba(18, 27, 34, 0.6)), to(rgba(18, 27, 34, 0.6))), url('{{url('/')}}/uploads/blogs/{{$blog->image_one}}') no-repeat center center; background-size:cover;">
+<section class="headings" style="background: -webkit-gradient(linear, left top, left bottom, from(rgba(18, 27, 34, 0.6)), to(rgba(18, 27, 34, 0.6))), url('{{url('/')}}/uploads/blogs/{{$blog->image_one}}') no-repeat center center;  -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
     <div class="text-heading text-center" style="min-height:200px;">
         {{-- <div class="container">
             <h1>{{$blog->title}}</h1>
@@ -14,7 +14,7 @@
 </section>
 <!-- START SECTION BLOG -->
 <section class="blog blog-section bg-white">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12 blog-pots">
                 <div class="row">
