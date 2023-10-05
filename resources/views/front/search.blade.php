@@ -161,7 +161,9 @@
                                                                         <input name="keyword" type="text" placeholder="Enter Keyword">
                                                                     </div>
                                                                     <div class="rld-single-select ml-22">
-                                                                        <select required name="type" class="select single-select">
+                                                                        <select required="Select Type" name="type" class="select single-select">
+                                                                            <option value="" selected disabled hidden>Choose Type...</option>
+                                                                            {{-- <option selected value="" disabled>Type</option> --}}
                                                                             <option value="Duplex">Duplex</option>
                                                                             <option value="Condominium">Condominium</option>
                                                                             <option value="Villa">Villa</option>
