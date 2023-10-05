@@ -5,7 +5,7 @@
 
 <!-- END SECTION HEADINGS -->
 <section class="headings" style="background: -webkit-gradient(linear, left top, left bottom, from(rgba(18, 27, 34, 0.6)), to(rgba(18, 27, 34, 0.6))), url('{{url('/')}}/uploads/blogs/{{$blog->image_one}}') no-repeat center center;">
-    <div class="text-heading text-center">
+    <div class="text-heading text-center" style="min-height:140px;">
         {{-- <div class="container">
             <h1>{{$blog->title}}</h1>
             <h2><a href="{{url('/')}}">Home </a> &nbsp;/&nbsp; {{$blog->title}}</h2>
