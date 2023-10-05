@@ -16,7 +16,7 @@
 <section class="blog blog-section bg-white">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 col-md-12 blog-pots">
+            <div class="col-lg-10 col-md-12 blog-pots" style="margin:0 auto;">
                 <div class="row">
                     <div class="col-md-12 col-xs-12">
                         <div class="news-item details no-mb2">
