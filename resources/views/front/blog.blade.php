@@ -15,7 +15,7 @@
                         <div class="news-item details no-mb2">
                             <a href="#" class="news-img-link">
                                 <div class="news-item-img">
-                                    <img class="img-responsive" src="{{url('/')}}/uploads/blogs/{{$blog->image_one}}" alt="blog image">
+                                    <img style="width:100%; max-height:300px" class="img-responsive" src="{{url('/')}}/uploads/blogs/{{$blog->image_one}}" alt="blog image">
                                 </div>
                             </a>
                             <div class="news-item-text details pb-0">
