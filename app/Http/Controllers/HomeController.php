@@ -100,7 +100,8 @@ class HomeController extends Controller
     public function blogs($id){
         $title = "Media";
         $Blog = Blog::where('slung',$id)->get();
-        return view('front.blog',compact('id','Blog','title'));
+        $Blogs = Blog::where('slung',$id)->get();
+        return view('front.blog',compact('id','Blog','title','Blogs'));
     }
 
     public function blog_single(){
