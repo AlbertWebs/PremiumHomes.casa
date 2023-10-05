@@ -6,10 +6,10 @@
 <!-- END SECTION HEADINGS -->
 <section class="headings" style="background: -webkit-gradient(linear, left top, left bottom, from(rgba(18, 27, 34, 0.6)), to(rgba(18, 27, 34, 0.6))), url('{{url('/')}}/uploads/blogs/{{$blog->image_one}}') no-repeat center center;">
     <div class="text-heading text-center">
-        <div class="container">
+        {{-- <div class="container">
             <h1>{{$blog->title}}</h1>
             <h2><a href="{{url('/')}}">Home </a> &nbsp;/&nbsp; {{$blog->title}}</h2>
-        </div>
+        </div> --}}
     </div>
 </section>
 <!-- START SECTION BLOG -->
@@ -26,7 +26,7 @@
                                 </div>
                             </a> --}}
                             <div class="news-item-text details pb-0">
-                                {{-- <a href="#"><h3>{{$blog->title}}</h3></a> --}}
+                                <a href="#"><h3>{{$blog->title}}</h3></a>
                                 <div class="dates">
                                     <span class="date">{{date('M', strtotime($blog->created_at))}} {{date('d', strtotime($blog->created_at))}}, {{date('Y', strtotime($blog->created_at))}} </span>
                                 </div>
