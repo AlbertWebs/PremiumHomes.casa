@@ -185,6 +185,7 @@ return [
         Knox\Pesapal\PesapalServiceProvider::class,
 
 
+
         /*
          * Package Service Providers...
          */
@@ -216,6 +217,7 @@ return [
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
         'Pesapal' => Knox\Pesapal\Facades\Pesapal::class,
         'Input' => Illuminate\Support\Facades\Request::class,
+        'Twitter' => 'Thujohn\Twitter\Facades\Twitter',
     ])->toArray(),
 
 ];

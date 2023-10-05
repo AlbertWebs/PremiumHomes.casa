@@ -49,7 +49,8 @@ Route::post('subscribe',['as'=>'subscribe','uses'=>'MailChimpController@subscrib
 Route::get('/generate-sitemaps', [App\Http\Controllers\HomeController::class, 'sitemaps'])->name('sitemaps');
 
 
-
+Route::get('twitterUserTimeLine', [App\Http\Controllers\TwitterController::class, 'twitterUserTimeLine']);
+Route::post('tweet', ['as'=>'post.tweet','uses'=>'TwitterController@tweet']);
 
 
 
