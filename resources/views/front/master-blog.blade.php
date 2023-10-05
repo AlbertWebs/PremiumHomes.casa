@@ -59,7 +59,7 @@
 
 </head>
 
-<body class="int_dark_bg">
+<body class="int_dark_b">
     <!-- Wrapper -->
     <div id="wrapper" class="int_main_wraapper">
         {{-- <div class="int_infosidebar">
@@ -103,7 +103,7 @@
         <!-- START SECTION HEADINGS -->
         <!-- Header Container
         ================================================== -->
-        <header id="header-container">
+        <header id="header-container" class="bg-black-1">
             <!-- Header -->
             <div id="header" class="int_content_wraapper hd">
                 <div class="container container-header">
