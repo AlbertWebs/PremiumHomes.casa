@@ -7,7 +7,7 @@
 
 <!-- START SECTION BLOG -->
 <section class="blog blog-section bg-white">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 col-md-12 blog-pots">
                 <div class="row">
