@@ -10,10 +10,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>{{$blogs->title}} - Premium Homes</title>
-    <meta name="description" content="Apartments, Houses, Homes, Condos, Studios, High Rise, High End Living in Africa">
+    <meta name="description" content="Premium Homes is your go-to partner in the world of upscale real estate. Whether you're looking for homes, rentals or property in Kenya we've got you covered.">
     <link rel="canonical" href="https://premiumhomes.casa/blogs/{{$blogs->slung}}"/>
     <meta name="author" content="Designekta Studios">
-    <meta property="og:description" content="Apartments, Houses, Homes, Condos, Studios, High Rise, High End Living in Africa">
+    <meta property="og:description" content="Premium Homes is your go-to partner in the world of upscale real estate. Whether you're looking for homes, rentals or property in Kenya we've got you covered.">
     <meta property="og:image" content="{{url('/')}}/uploads/blogs/{{$blogs->image_one}}" />
     <meta property="fb:app_id" content="431980657174772" />
     <meta property="og:title" content="{{$blogs->title}} - Premium Homes " />
