@@ -116,6 +116,11 @@ class HomeController extends Controller
         return view('front.talks',compact('title','Blogs'));
     }
 
+    public function sitemap(){
+
+        return view('front.sitemap');
+    }
+
 
     public function plots($id){
         $Property = Property::where('slung',$id)->get();

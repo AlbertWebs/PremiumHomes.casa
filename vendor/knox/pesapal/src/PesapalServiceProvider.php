@@ -15,8 +15,11 @@ class PesapalServiceProvider extends ServiceProvider
     {
         // Publish config
         $configPath = __DIR__ . '/config/pesapal.php';
-        //$this->publishes([$configPath => config_path('pesapal.php')], 'config');
-        $this->publishes([$configPath => config_path('pesapal.php')]);
+        $this->publishes([$configPath => config_path('pesapal.php')], 'config');
+        /*
+         * replace the register include with the below
+         */
+        //$this->loadRoutesFrom(__DIR__.'/routes.php');
     }
 
     /**
@@ -26,11 +29,10 @@ class PesapalServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        include __DIR__.'/routes.php';
-        $this->app->make('Knox\Pesapal\PesapalAPIController');
-        $this->app->bind('pesapal', function()
-        {
-            return new \Knox\Pesapal\Pesapal;
+        include __DIR__ . '/routes.php';
+
+        $this->app->singleton('pesapal',function () {
+            return new Pesapal;
         });
     }
 }

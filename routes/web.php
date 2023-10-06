@@ -19,6 +19,7 @@ use App\Http\Controllers\PaymentsController;
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('soon');
 Route::get('/homepage', [App\Http\Controllers\HomeController::class, 'index'])->name('homepage');
+Route::get('/sitemap', [App\Http\Controllers\HomeController::class, 'sitemap'])->name('sitemap');
 Route::get('/about-us', [App\Http\Controllers\HomeController::class, 'about'])->name('about');
 Route::get('/contact-us', [App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
 Route::get('/search-home', [App\Http\Controllers\HomeController::class, 'search'])->name('search-home');
@@ -51,6 +52,11 @@ Route::get('/generate-sitemaps', [App\Http\Controllers\HomeController::class, 's
 
 Route::get('twitterUserTimeLine', [App\Http\Controllers\TwitterController::class, 'twitterUserTimeLine']);
 Route::post('tweet', ['as'=>'post.tweet','uses'=>'TwitterController@tweet']);
+
+Route::get('/userTimeline', function()
+{
+	return Twitter::getUserTimeline(['screen_name' => 'thujohn', 'count' => 20, 'response_format' => 'json']);
+});
 
 
 

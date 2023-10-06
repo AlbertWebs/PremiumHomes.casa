@@ -183,7 +183,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
         Knox\Pesapal\PesapalServiceProvider::class,
-
+        // Thujohn\Twitter\TwitterServiceProvider::class,
 
 
         /*

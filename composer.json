@@ -15,7 +15,9 @@
         "laravel/tinker": "^2.7",
         "laravel/ui": "^4.0",
         "spatie/laravel-activitylog": "^4.7",
-        "spatie/laravel-sitemap": "^6.3"
+        "spatie/laravel-sitemap": "^6.3",
+        "spatie/laravel-twitter-streaming-api": "^2.1",
+        "thujohn/twitter": "*"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
