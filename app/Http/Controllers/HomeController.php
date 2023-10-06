@@ -118,7 +118,8 @@ class HomeController extends Controller
 
     public function sitemap(){
 
-        return view('front.sitemap');
+        return response()->view('front.sitemap')->header('Content-Type', 'text/xml');
+
     }
 
 
