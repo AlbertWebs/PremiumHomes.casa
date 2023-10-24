@@ -28,7 +28,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i%7CMontserrat:600,800" rel="stylesheet">
     <!-- FONT AWESOME -->
 
-    <link rel="stylesheet" href="{{asset('theme/font/flaticon.css')}}">
+    {{-- <link rel="stylesheet" href="{{asset('theme/font/flaticon.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/fontawesome-all.min.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/fontawesome-5-all.min.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/font-awesome.min.css')}}">
@@ -48,13 +48,33 @@
     <link rel="stylesheet" href="{{asset('theme/css/slider-search2.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/styles.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/maps.css')}}">
-    <link rel="stylesheet" id="color" href="{{asset('theme/css/colors/darkblue.css')}}">
+    <link rel="stylesheet" id="color" href="{{asset('theme/css/colors/darkblue.css')}}"> --}}
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="{{asset('theme/font/flaticon.css')}}">
+    <link rel="stylesheet" href="{{asset('theme/css/fontawesome-all.min.css')}}">
+    <link rel="stylesheet" href="{{asset('theme/css/fontawesome-5-all.min.css')}}">
+    <link rel="stylesheet" href="{{asset('theme/css/font-awesome.min.css')}}">
+    <!-- ARCHIVES CSS -->
+    <link rel="stylesheet" href="{{asset('theme/css/search.css')}}">
+    <link rel="stylesheet" href="{{asset('theme/css/animate.css')}}">
+    <link rel="stylesheet" href="{{asset('theme/css/aos.css')}}">
+    <link rel="stylesheet" href="{{asset('theme/css/aos2.css')}}">
+    <link rel="stylesheet" href="{{asset('theme/css/magnific-popup.css')}}">
+    <link rel="stylesheet" href="{{asset('theme/css/lightcase.css')}}">
+    <link rel="stylesheet" href="{{asset('theme/css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('theme/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('theme/css/menu.css')}}">
+    <link rel="stylesheet" href="{{asset('theme/css/slick.css')}}">
+    <link rel="stylesheet" href="{{asset('theme/css/styles.css')}}">
+    <link rel="stylesheet" href="{{asset('theme/css/video.css')}}">
+    <link rel="stylesheet" id="color" href="{{asset('theme/css/colors/pink.css')}}">
     @include('tawkto')
 
 
 </head>
 
-<body class="int_dark_bg">
+<body class="int_dark_bg homepage-9 hp-6 hd-white hmp7 mh">
     <!-- Wrapper -->
     <div id="wrapper" class="int_main_wraapper">
         {{-- <div class="int_infosidebar">
@@ -280,171 +300,145 @@
         <!-- END PRELOADER -->
 
 
+ <!-- ARCHIVES JS -->
+ <script src="{{asset('theme/js/jquery-3.5.1.min.js')}}"></script>
+ <script src="{{asset('theme/js/rangeSlider.js')}}"></script>
+ <script src="{{asset('theme/js/tether.min.js')}}"></script>
+ <script src="{{asset('theme/js/popper.min.js')}}"></script>
+ <script src="{{asset('theme/js/moment.js')}}"></script>
+ <script src="{{asset('theme/js/bootstrap.min.js')}}"></script>
+ <script src="{{asset('theme/js/mmenu.min.js')}}"></script>
+ <script src="{{asset('theme/js/mmenu.js')}}"></script>
+ <script src="{{asset('theme/js/animate.js')}}"></script>
+ <script src="{{asset('theme/js/aos.js')}}"></script>
+ <script src="{{asset('theme/js/aos2.js')}}"></script>
+ <script src="{{asset('theme/js/slick.min.js')}}"></script>
+ <script src="{{asset('theme/js/fitvids.js')}}"></script>
+ <script src="{{asset('theme/js/jquery.waypoints.min.js')}}"></script>
+ <script src="{{asset('theme/js/typed.min.js')}}"></script>
+ <script src="{{asset('theme/js/jquery.counterup.min.js')}}"></script>
+ <script src="{{asset('theme/js/imagesloaded.pkgd.min.js')}}"></script>
+ <script src="{{asset('theme/js/isotope.pkgd.min.js')}}"></script>
+ <script src="{{asset('theme/js/smooth-scroll.min.js')}}"></script>
+ <script src="{{asset('theme/js/lightcase.js')}}"></script>
+ <script src="{{asset('theme/js/search.js')}}"></script>
+ <script src="{{asset('theme/js/owl.carousel.js')}}"></script>
+ <script src="{{asset('theme/js/jquery.magnific-popup.min.js')}}"></script>
+ <script src="{{asset('theme/js/ajaxchimp.min.js')}}"></script>
+ <script src="{{asset('theme/js/newsletter.js')}}"></script>
+ <script src="{{asset('theme/js/jquery.form.js')}}"></script>
+ <script src="{{asset('theme/js/jquery.validate.min.js')}}"></script>
+ <script src="{{asset('theme/js/searched.js')}}"></script>
+ <script src="{{asset('theme/js/forms-2.js')}}"></script>
+ <script src="{{asset('theme/js/leaflet.js')}}"></script>
+ <script src="{{asset('theme/js/leaflet-gesture-handling.min.js')}}"></script>
+ <script src="{{asset('theme/js/leaflet-providers.js')}}"></script>
+ <script src="{{asset('theme/js/leaflet.markercluster.js')}}"></script>
+ <script src="{{asset('theme/js/map-style2.js')}}"></script>
+ <script src="{{asset('theme/js/range.js')}}"></script>
+ <script src="{{asset('theme/js/color-switcher.js')}}"></script>
 
+ <!-- Slider Revolution scripts -->
+ <script src="{{asset('theme/revolution/js/jquery.themepunch.tools.min.js')}}"></script>
+ <script src="{{asset('theme/revolution/js/jquery.themepunch.revolution.min.js')}}"></script>
 
-        <script src="{{asset('theme/js/jquery-3.5.1.min.js')}}"></script>
-        <script src="{{asset('theme/js/jquery-ui.js')}}"></script>
-        <script src="{{asset('theme/js/tether.min.js')}}"></script>
-        <script src="{{asset('theme/js/popper.min.js')}}"></script>
-        <script src="{{asset('theme/js/moment.js')}}"></script>
-        <script src="{{asset('theme/js/bootstrap.min.js')}}"></script>
-        <script src="{{asset('theme/js/mmenu.min.js')}}"></script>
-        <script src="{{asset('theme/js/mmenu.js')}}"></script>
-        <script src="{{asset('theme/js/slick.min.js')}}"></script>
-        <script src="{{asset('theme/js/fitvids.js')}}"></script>
-        <script src="{{asset('theme/js/jquery.waypoints.min.js')}}"></script>
-        <script src="{{asset('theme/js/jquery.counterup.min.js')}}"></script>
-        <script src="{{asset('theme/js/imagesloaded.pkgd.min.js')}}"></script>
-        <script src="{{asset('theme/js/isotope.pkgd.min.js')}}"></script>
-        <script src="{{asset('theme/js/smooth-scroll.min.js')}}"></script>
-        <script src="{{asset('theme/js/lightcase.js')}}"></script>
-        <script src="{{asset('theme/js/search.js')}}"></script>
-        <script src="{{asset('theme/js/owl.carousel.js')}}"></script>
-        <script src="{{asset('theme/js/jquery.magnific-popup.min.js')}}"></script>
-        <script src="{{asset('theme/js/ajaxchimp.min.js')}}"></script>
-        <script src="{{asset('theme/js/newsletter.js')}}"></script>
-        <script src="{{asset('theme/js/jquery.form.js')}}"></script>
-        <script src="{{asset('theme/js/jquery.validate.min.js')}}"></script>
-        <script src="{{asset('theme/js/searched.js')}}"></script>
-        <script src="{{asset('theme/js/forms-2.js')}}"></script>
-        <script src="{{asset('theme/js/color-switcher.js')}}"></script>
+ <script>
+     var typed = new Typed('.typed', {
+         strings: ["House ^2000", "Apartment ^2000", "Plaza ^4000"],
+         smartBackspace: false,
+         loop: true,
+         showCursor: true,
+         cursorChar: "|",
+         typeSpeed: 50,
+         backSpeed: 30,
+         startDelay: 800
+     });
 
-        <!-- Slider Revolution scripts -->
-        <script src="{{asset('theme/revolution/js/jquery.themepunch.tools.min.js')}}"></script>
-        <script src="{{asset('theme/revolution/js/jquery.themepunch.revolution.min.js')}}"></script>
-        <script src="{{asset('theme/revolution/js/extensions/revolution.extension.actions.min.js')}}"></script>
-        <script src="{{asset('theme/revolution/js/extensions/revolution.extension.carousel.min.js')}}"></script>
-        <script src="{{asset('theme/revolution/js/extensions/revolution.extension.kenburn.min.js')}}"></script>
-        <script src="{{asset('theme/revolution/js/extensions/revolution.extension.layeranimation.min.js')}}"></script>
-        <script src="{{asset('theme/revolution/js/extensions/revolution.extension.migration.min.js')}}"></script>
-        <script src="{{asset('theme/revolution/js/extensions/revolution.extension.navigation.min.js')}}"></script>
-        <script src="{{asset('theme/revolution/js/extensions/revolution.extension.parallax.min.js')}}"></script>
-        <script src="{{asset('theme/revolution/js/extensions/revolution.extension.slideanims.min.js')}}"></script>
-        <script src="{{asset('theme/revolution/js/extensions/revolution.extension.video.min.js')}}"></script>
+ </script>
+ <script>
+     $('.slick-lancers2').slick({
+         infinite: false,
+         slidesToShow: 4,
+         slidesToScroll: 1,
+         dots: true,
+         arrows: false,
+         adaptiveHeight: true,
+         responsive: [{
+             breakpoint: 1292,
+             settings: {
+                 slidesToShow: 2,
+                 slidesToScroll: 2,
+                 dots: true,
+                 arrows: false
+             }
+         }, {
+             breakpoint: 993,
+             settings: {
+                 slidesToShow: 2,
+                 slidesToScroll: 2,
+                 dots: true,
+                 arrows: false
+             }
+         }, {
+             breakpoint: 769,
+             settings: {
+                 slidesToShow: 1,
+                 slidesToScroll: 1,
+                 dots: true,
+                 arrows: false
+             }
+         }]
+     });
 
-        <script>
-            var tpj = jQuery;
-            var revapi486;
-            tpj(document).ready(function() {
-                if (tpj("#rev_slider_one").revolution == undefined) {
-                    revslider_showDoubleJqueryError("#rev_slider_one");
-                } else {
-                    revapi486 = tpj("#rev_slider_one").show().revolution({
-                        sliderType: "standard",
-                        jsFileLocation: "plugins/revolution/js/",
-                        sliderLayout: "fullwidth",
-                        dottedOverlay: "yes",
-                        delay: 3000,
-                        navigation: {
-                            keyboardNavigation: "off",
-                            keyboard_direction: "horizontal",
-                            mouseScrollNavigation: "off",
-                            mouseScrollReverse: "default",
-                            onHoverStop: "off",
-                            touch: {
-                                touchenabled: "on",
-                                touchOnDesktop: "off",
-                                swipe_threshold: 75,
-                                swipe_min_touches: 1,
-                                swipe_direction: "horizontal",
-                                drag_block_vertical: false
-                            },
-                            arrows: {
-                                style: "metis",
-                                enable: true,
-                                hide_onmobile: true,
-                                hide_under: 600,
-                                hide_onleave: false,
-                                tmp: '',
-                                left: {
-                                    h_align: "left",
-                                    v_align: "center",
-                                    h_offset: 0,
-                                    v_offset: 0
-                                },
-                                right: {
-                                    h_align: "right",
-                                    v_align: "center",
-                                    h_offset: 0,
-                                    v_offset: 0
-                                }
-                            }
+ </script>
+ <script>
+     $('.slick-lancers').slick({
+         infinite: false,
+         slidesToShow: 4,
+         slidesToScroll: 1,
+         dots: true,
+         arrows: false,
+         adaptiveHeight: true,
+         responsive: [{
+             breakpoint: 1292,
+             settings: {
+                 slidesToShow: 2,
+                 slidesToScroll: 2,
+                 dots: true,
+                 arrows: false
+             }
+         }, {
+             breakpoint: 993,
+             settings: {
+                 slidesToShow: 2,
+                 slidesToScroll: 2,
+                 dots: true,
+                 arrows: false
+             }
+         }, {
+             breakpoint: 769,
+             settings: {
+                 slidesToShow: 1,
+                 slidesToScroll: 1,
+                 dots: true,
+                 arrows: false
+             }
+         }]
+     });
 
-                        },
-                        responsiveLevels: [1200, 1040, 778, 480],
-                        visibilityLevels: [1200, 1040, 778, 480],
-                        gridwidth: [1170, 1040, 778, 600],
-                        gridheight: [850, 850, 850, 950],
-                        lazyType: "none",
-                        parallax: {
-                            type: "scroll",
-                            origo: "enterpoint",
-                            speed: 400,
-                            levels: [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 46, 47, 48, 49, 50, 55]
-                        },
-                        shadow: 0,
-                        spinner: "on",
-                        stopLoop: "on",
-                        stopAfterLoops: 0,
-                        stopAtSlide: 0,
-                        disableProgressBar: "on",
-                        shuffle: "off",
-                        autoHeight: "off",
-                        hideThumbsOnMobile: "off",
-                        hideSliderAtLimit: 0,
-                        hideCaptionAtLimit: 0,
-                        hideAllCaptionAtLilmit: 0,
-                        debugMode: false,
-                        fallbacks: {
-                            simplifyAll: "off",
-                            nextSlideOnWindowFocus: "off",
-                            disableFocusListener: false,
-                        }
-                    });
-                }
-            }); /*ready*/
+ </script>
 
-        </script>
+ <script>
+     $(".dropdown-filter").on('click', function() {
 
-        <script>
-            $('.slick-lancers2').slick({
-                infinite: false,
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                dots: true,
-                arrows: true,
-                adaptiveHeight: true,
-                responsive: [{
-                    breakpoint: 1292,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-                        dots: true,
-                        arrows: false
-                    }
-                }, {
-                    breakpoint: 993,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-                        dots: true,
-                        arrows: false
-                    }
-                }, {
-                    breakpoint: 769,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        dots: true,
-                        arrows: false
-                    }
-                }]
-            });
+         $(".explore__form-checkbox-list").toggleClass("filter-block");
 
-        </script>
+     });
 
-        <!-- MAIN JS -->
-        <script src="{{asset('theme/js/script.js')}}"></script>
+ </script>
+
+ <!-- MAIN JS -->
+ <script src="{{asset('theme/js/script.js')}}"></script>
 
 
     </div>

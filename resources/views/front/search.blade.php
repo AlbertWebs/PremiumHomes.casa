@@ -150,7 +150,7 @@
                                            @endif
                                         </center>
 
-                                            <div class="tab-content">
+                                            <div class="tab-content search-widget">
                                                 <form method="POST" action="{{url('/search-property')}}">
 
                                                     @csrf

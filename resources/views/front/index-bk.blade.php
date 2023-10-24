@@ -2,103 +2,115 @@
 
 @section('content')
 
-    <!-- STAR HEADER SEARCH -->
-    <div id="map-container" class="fullwidth-home-map dark-overlay">
-        <!-- Video -->
-        <div class="video-container">
-            <video style="object-fit:cover !important" poster="{{asset('theme/images/bg/video-image.png')}}" loop autoplay muted>
-                <source src="{{asset('theme/video/pexels-african-creator-15556055.mp4')}}" type="video/mp4">
-            </video>
-        </div>
-        <div id="hero-area" class="main-search-inner search-2 vid">
-            <div class="container vid" data-aos="zoom-in">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="hero-inner2">
-                            <!-- Welcome Text -->
-                            <div class="welcome-text">
-                                <h1 class="h1">Find Your Dream
-                                <br class="d-md-none">
-                                <span class="typed border-bottom"></span>
-                            </h1>
-                                <p class="mt-4">We Have Over Hundred Properties For You.</p>
+<section class="main-slider">
+    <div class="rev_slider_wrapper fullwidthbanner-container" id="rev_slider_one_wrapper" data-source="gallery">
+        <div class="rev_slider fullwidthabanner" id="rev_slider_one" data-version="5.4.1">
+            <ul>
+                <!-- Slide 1 -->
+                <li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1688" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="{{asset('uploads/banners/1671089906.jpg')}}" data-title="Slide Title" data-transition="parallaxvertical">
+
+                    <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center right" data-bgrepeat="no-repeat" data-kenburns="off" data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" src="{{asset('uploads/banners/slider-main.png')}}">
+
+                    <div class="tp-caption"
+                           data-paddingbottom="[0,0,0,0]"
+                           data-paddingleft="[0,0,0,0]"
+                           data-paddingright="[0,0,0,0]"
+                           data-paddingtop="[0,0,0,0]"
+                           data-responsive_offset="on"
+                           data-type="text"
+                           data-height="none"
+                           data-whitespace="nowrap"
+                           data-width="auto"
+                           data-text-align="center"
+                           data-hoffset="['10','50','0','0']"
+                           data-voffset="['-20','-20','-20','-20']"
+                           data-x="['center','center','center','center']"
+                           data-y="['middle','middle','middle','middle']"
+                           data-frames='[{"delay":1500,"speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"x:50px;opacity:0;","ease":"Power3.easeInOut"}]'>
+                        <div class="container">
+                          <div class="section section-bg-1 pt-17 pb-17">
+                            <div class="row">
+                              <div class="col-lg-12 col-md-12">
+
+
+                                    <div style="color:#ffffff; text-align:center; font-family:HeleneHess-Regular !important;">
+                                        <h5 class="hero-title">
+                                        Welcome to Premium Homes
+                                        </h5>
+                                        <h5 class="hero-text">
+                                           <i> Elevating Dreams. Redifining Luxury</i>
+                                        </h5>
+                                    </div>
+
+                              </div>
+                              <div class="col-lg-4 col-md-12">
+                                <div class="col-lg-4 col-md-12"></div>
+                              </div>
                             </div>
-                            <!--/ End Welcome Text -->
-                            <!-- Search Form -->
-                            <div class="col-12">
-                                <div class="banner-search-wrap">
-                                    <center>
-                                        @if(Session::has('message'))
-                                                      <h3 class="alert alert-info">{{ Session::get('message') }}</h3>
-                                       @endif
+                          </div>
+                        </div>
+                      </div>
+                </li>
+                {{--  --}}
+                <?php
+                    $Slider = DB::table('properties')->where('subscription','1')->limit('3')->inRandomOrder()->get();
+                    $rs = 1689;
+                ?>
+                @foreach ($Slider as $slider)
+                <!-- Slide 2 -->
+                <li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-{{$rs}}" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="{{url('/')}}/uploads/properties/{{$slider->featured_image}}" data-title="Slide Title" data-transition="parallaxvertical">
 
-                                       @if(Session::has('messageError'))
-                                                      <div class="alert alert-danger">{{ Session::get('messageError') }}</div>
-                                       @endif
-                                    </center>
+                    <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-kenburns="off" data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" src="{{url('/')}}/uploads/properties/{{$slider->featured_image}}">
 
-                                        <div class="tab-content search-widget">
-                                            <form method="POST" action="{{url('/search-property')}}">
+                    <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-whitespace="nowrap" data-width="auto" data-text-align="center" data-hoffset="['10','50','0','0']" data-voffset="['-20','-20','-20','-20']" data-x="['right','right','center','center']" data-y="['middle','middle','middle','middle']" data-frames='[{"delay":1500,"speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"x:50px;opacity:0;","ease":"Power3.easeInOut"}]'>
+                        <div class="container">
+                        <div class="section section-bg-1 pt-17 pb-17">
+                            <div class="row">
+                            <div class="col-lg-12 col-md-12">
+                                <div class="property-box-meta">
+                                <div class="property-box-meta-content min-width-300">
+                                    <span class="property-status">For  {{$slider->status}}</span>
+                                    <div class="item-head">
+                                    <h1 class="item-title" style="white-space:normal; line-height:0cm">
+                                        <a href="{{route('property-single',[$slider->slung])}}" title="{{$slider->property_name}}"> {{$slider->property_name}}</a>
+                                    </h1>
+                                    <span class="location">{{$slider->address}} </span>
+                                    </div>
+                                    <div class="info">
+                                    <span class="primary-file-4 the-icons">
+                                        <i class="flaticon-bed mr-2" aria-hidden="true"></i>
+                                        <span>{{$slider->bedroom}} Bedrooms</span>
+                                    </span>
 
-                                                @csrf
-                                                    <div class="tab-pane fade show active" id="tabs_1">
-                                                        <div class="rld-main-search">
-                                                            <div class="row">
-                                                                <div class="rld-single-input">
-                                                                    <input name="keyword" type="text" placeholder="Enter Keyword">
-                                                                </div>
-                                                                <div class="rld-single-select ml-22">
-                                                                    <select required="Select Type" name="type" class="select single-select">
-                                                                        <option value="" selected disabled hidden>Choose Type...</option>
-                                                                        {{-- <option selected value="" disabled>Type</option> --}}
-                                                                        <option value="Duplex">Duplex</option>
-                                                                        <option value="Condominium">Condominium</option>
-                                                                        <option value="Villa">Villa</option>
-                                                                        <option value="Mansion">Mansion</option>
-                                                                        <option value="Townhouse">Townhouse</option>
-                                                                        <option value="Cottages">Cottages</option>
-                                                                        <option value="Bungalow">Bungalow</option>
-                                                                        <option value="Apartment">Apartment</option>
-                                                                        <option value="Mansion">Mansion</option>
-                                                                        <option value="Resorts">Resorts</option>
-                                                                        <option value="Plot">Plot</option>
-                                                                        <option value="Penthouse">Penthouse</option>
-                                                                        <option value="Commercial Properies">Commercial Properies</option>
-                                                                    </select>
-                                                                </div>
-                                                                <div class="rld-single-select ml-22">
-                                                                    <select required name="status" class="select single-select">
-                                                                         <option selected value="" disabled>Sale/Rent</option>
-                                                                        <option value="Rent">Rent</option>
-                                                                        <option value="Sale">Sale</option>
-
-                                                                    </select>
-                                                                </div>
-                                                                <div class="rld-single-input">
-                                                                    <input name="location" type="text" placeholder="Location e.g Karen">
-                                                                </div>
-                                                                {{-- <div class="dropdown-filter d-none d-none d-lg-none d-xl-block"><span>Advanced Search</span></div> --}}
-                                                                <div class="col-xl-1 col-lg-1 col-md-4 pl-0">
-                                                                    <button type="submit" class="btn btn-yellow">GO</button>
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                            </form>
-
-                                        </div>
-
+                                    <span class="primary-file-3 the-icons">
+                                        <i class="flaticon-square mr-2" aria-hidden="true"></i>
+                                        <span>{{$slider->sqft}}</span>
+                                    </span>
+                                    </div>
+                                    <div class="price">
+                                    <span class="before-price"></span>
+                                    <span class="amount">KES {{$slider->price}}</span>
+                                    </div>
+                                </div>
                                 </div>
                             </div>
-                            <!--/ End Search Form -->
+                            <div class="col-lg-4 col-md-12">
+                                <div class="col-lg-4 col-md-12"></div>
+                            </div>
+                            </div>
+                        </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                </li>
+                <?php $rs = $rs+1; ?>
+                @endforeach
+
+
+
+            </ul>
         </div>
     </div>
-    <!-- END HEADER SEARCH -->
+</section>
 
 {{-- @include('front.search') --}}
 

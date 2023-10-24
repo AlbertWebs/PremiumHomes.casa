@@ -25027,3 +25027,18 @@ section.ui-element {
     height: 100% !important;
     /* object-fit:contain cover !important; */
 }
+
+
+@media screen and (max-width: 768px) {
+    .rld-single-input input{
+        min-width:280px;
+        margin: 0px auto;
+    }
+    /* .banner-search-wrap{
+        min-height: 300px;
+    } */
+
+    .hp-6 .rld-main-search {
+        height: 412px;
+      }
+}
