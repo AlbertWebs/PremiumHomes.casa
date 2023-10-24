@@ -247,7 +247,12 @@ class HomeController extends Controller
 
         $title = "Search";
 
-        $Results = DB::table('properties')->where('type',$type)->where('status',$status)->where('property_name','LIKE','%'.$keyword.'%')->where('address','LIKE','%'.$location.'%')->paginate(100);
+        $Results = DB::table('properties')
+        ->where('property_name','LIKE','%'.$keyword.'%')
+        ->where('type',$type)
+        ->where('status',$status)
+        ->where('address','LIKE','%'.$location.'%')
+        ->paginate(100);
         if($Results->isEmpty()){
             // Set Variables
             Session::flash('message', "Your Search Combination has no results, Feel free to contact us for more infomation");

@@ -181,6 +181,7 @@
                                                                     </div>
                                                                     <div class="rld-single-select ml-22">
                                                                         <select required name="status" class="select single-select">
+                                                                             <option selected value="" disabled>Sale/Rent</option>
                                                                             <option value="Rent">Rent</option>
                                                                             <option value="Sale">Sale</option>
 

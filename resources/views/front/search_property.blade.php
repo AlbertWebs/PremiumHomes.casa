@@ -153,6 +153,9 @@
                                 <div class="recent-details">
                                     <div class="recent-title">{{$prop->property_name}}</div>
                                 <div class="recent-price mb-3">kes {{$prop->price}}</div>
+                                <div class="recent-price mb-3" style="font-weight:900; color:#bf9d34">
+                                    <i class="fa fa-map-marker"></i> {{$prop->address}}
+                                </div>
                                 <div class="house-details thehp-1">
                                     <i class="fa fa-bed mr-1" aria-hidden="true"></i> {{$prop->bedroom}} Br <span class="mr-1">|</span>
                                     <i class="fa fa-suitcase mr-1" aria-hidden="true"></i> {{$prop->type}}  <span class="mr-1">|</span>
