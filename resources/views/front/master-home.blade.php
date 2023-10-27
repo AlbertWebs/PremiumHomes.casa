@@ -21,6 +21,7 @@
     <meta name="twitter:site" content="@premiumhomescasa" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:creator" content="@premiumhomescasa" />
+
     <!-- FAVICON -->
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('theme/images/preloader.png')}}">
     <link rel="stylesheet" href="{{asset('theme/css/jquery-ui.css')}}">
@@ -69,12 +70,15 @@
     <link rel="stylesheet" href="{{asset('theme/css/styles.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/video.css')}}">
     <link rel="stylesheet" id="color" href="{{asset('theme/css/colors/pink.css')}}">
-    @include('tawkto')
+    {{-- @include('tawkto') --}}
 
-
+    <!--Floating WhatsApp css-->
+    <link rel="stylesheet" href="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.css">
 </head>
 
 <body class="int_dark_bg homepage-9 hp-6 hd-white hmp7 mh">
+    <!--Div where the WhatsApp will be rendered-->
+<div style="z-index:100000" id="WAButton"></div>
     <!-- Wrapper -->
     <div id="wrapper" class="int_main_wraapper">
         {{-- <div class="int_infosidebar">
@@ -439,7 +443,25 @@
 
  <!-- MAIN JS -->
  <script src="{{asset('theme/js/script.js')}}"></script>
+   <!--Floating WhatsApp javascript-->
+   <script type="text/javascript" src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.js"></script>
 
+   <script type="text/javascript">
+       $(function () {
+           $('#WAButton').floatingWhatsApp({
+               phone: '+254727111222', //WhatsApp Business phone number
+               headerTitle: 'Chat with us on WhatsApp!', //Popup Title
+               popupMessage: 'Hello, how can we help you?', //Popup Message
+               message: 'I have just visited *https://premiumhomes.casa*',
+               showPopup: true, //Enables popup display
+               buttonImage: '<img src="https://amanivehiclesounds.co.ke/uploads/icon/whatsapp.svg" />', //Button Image
+               //headerColor: 'crimson', //Custom header color
+               //backgroundColor: 'crimson', //Custom background button color
+               position: "left" //Position: left | right
+
+           });
+       });
+   </script>
 
     </div>
     <!-- Wrapper / End -->

@@ -6,8 +6,8 @@
     <div id="map-container" class="fullwidth-home-map dark-overlay">
         <!-- Video -->
         <div class="video-container">
-            <video style="object-fit:cover !important" poster="{{asset('theme/images/bg/video-image.png')}}" loop autoplay muted>
-                <source src="{{asset('theme/video/pexels-african-creator-15556055.mp4')}}" type="video/mp4">
+            <video style="object-fit:cover !important" poster="{{asset('uploads/banners/slider-main.png')}}" loop autoplay muted>
+                {{-- <source src="{{asset('theme/video/pexels-african-creator-15556055.mp4')}}" type="video/mp4"> --}}
             </video>
         </div>
         <div id="hero-area" class="main-search-inner search-2 vid">
@@ -50,7 +50,7 @@
                                                                 <div class="rld-single-select ml-22">
                                                                     <select required="Select Type" name="type" class="select single-select">
                                                                         <option value="" selected disabled hidden>Choose Type...</option>
-                                                                        {{-- <option selected value="" disabled>Type</option> --}}
+                                                                        <option value="any" >Any</option>
                                                                         <option value="Duplex">Duplex</option>
                                                                         <option value="Condominium">Condominium</option>
                                                                         <option value="Villa">Villa</option>
