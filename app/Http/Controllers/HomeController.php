@@ -267,8 +267,8 @@ class HomeController extends Controller
         $Search->location = $location;
         $Search->type = $type;
         $Search->status = $status;
-        $res = json_encode($Results);
-        $Search->results = $res;
+        // $res = json_encode($Results);
+        // $Search->results = $res;
         $Search->save();
 
 
