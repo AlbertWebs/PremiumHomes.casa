@@ -330,7 +330,7 @@
                 <div class="countr mb-0 last">
                     <i class="fa fa-key" aria-hidden="true"></i>
                     <div class="count-me">
-                        <p class="counter text-left">5</p>
+                        <p class="counter text-left">6</p>
                         <h3>Sold</h3>
                     </div>
                 </div>
@@ -339,7 +339,7 @@
                 <div class="countr mb-0 last">
                     <i class="fa fa-trophy" aria-hidden="true"></i>
                     <div class="count-me">
-                        <p class="counter text-left">18</p>
+                        <p class="counter text-left">44</p>
                         <h3>Rented</h3>
                     </div>
                 </div>

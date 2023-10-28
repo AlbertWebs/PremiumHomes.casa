@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\PostView;
 use App\Models\Blog;
 use App\Models\SendMail;
+use App\Models\Search;
 use App\Models\Newsletter;
 use Spatie\Sitemap\SitemapGenerator;
 use DB;
@@ -260,6 +261,15 @@ class HomeController extends Controller
             ->where('address','LIKE','%'.$location.'%')
             ->paginate(100);
         }
+        // Log Search Combination
+        $Search = new Search;
+        $Search->keywords = $keyword;
+        $Search->location = $location;
+        $Search->type = $type;
+        $Search->status = $status;
+        $res = json_encode($Results);
+        $Search->results = $res;
+        $Search->save();
 
 
         if($Results->isEmpty()){
