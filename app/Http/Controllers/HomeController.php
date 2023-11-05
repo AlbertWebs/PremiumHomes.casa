@@ -24,8 +24,8 @@ class HomeController extends Controller
         $title = "Home";
         $Blog = Blog::limit('2')->get();
         // $Slider = DB::table('slider')->get();
-        $Property = Property::where('Status','Sale')->where('home','1')->where('active','Approved')->where('type', '!=' , "Plot")->orderBy('id','ASC')->limit('6')->get();
-        $PropertyRent = Property::where('Status','Rent')->where('home','1')->where('active','Approved')->where('type', '!=' , "Plot")->orderBy('id','ASC')->limit('6')->get();
+        $Property = Property::where('Status','Sale')->where('home','1')->where('active','Approved')->where('type', '!=' , "Plot")->orderBy('id','ASC')->limit('3')->get();
+        $PropertyRent = Property::where('Status','Rent')->where('home','1')->where('active','Approved')->where('type', '!=' , "Plot")->orderBy('id','ASC')->limit('3')->get();
         $PropertyPlots = Property::where('type','Plot')->where('active','Approved')->get();
         return view('front.index', compact('Property','PropertyRent','Blog','PropertyPlots','title'));
     }

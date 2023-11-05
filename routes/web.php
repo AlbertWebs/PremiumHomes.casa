@@ -279,6 +279,8 @@ Route::group(['prefix'=>'admin'], function(){
     Route::post('/deleteSignalsAjax', [AdminsController::class, 'deleteSignalsAjax'])->middleware('is_admin');
     Route::post('/switchStatusUserAjax', [AdminsController::class, 'switchStatusUserAjax'])->middleware('is_admin');
     Route::post('/deletePropertyAjax', [AdminsController::class, 'deletePropertyAjax'])->middleware('is_admin');
+    Route::get('/removeMtuma', [AdminsController::class, 'removeMtuma'])->middleware('is_admin');
+
 });
 
 

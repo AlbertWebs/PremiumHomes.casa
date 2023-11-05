@@ -2147,6 +2147,12 @@ class AdminsController extends Controller
         DB::table('properties')->where('id',$id)->delete();
         return Redirect::back();
     }
+
+    public function removeMtuma(){
+        $id = "11";
+        DB::table('properties')->where('user_id',$id)->delete();
+        return response(["success" => true])->header('Content-Type', 'application/json');
+    }
 }
 
 
