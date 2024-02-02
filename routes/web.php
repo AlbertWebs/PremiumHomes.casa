@@ -59,6 +59,13 @@ Route::get('/userTimeline', function()
 });
 
 
+// Call php artisan down
+Route::get('/make-me-sleep', function() {
+    $exitCode = Artisan::call('down');
+    echo "Done";
+});
+
+
 
 Route::get('/invoices', [App\Http\Controllers\HomeController::class, 'invoice'])->name('invoice');
 
