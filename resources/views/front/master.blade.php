@@ -51,6 +51,7 @@
     <link rel="stylesheet" href="{{asset('theme/css/styles.scss')}}">
     <link rel="stylesheet" id="color" href="{{asset('theme/css/default.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/about-page.css')}}">
+    @include('front.partials.theme-css')
     @include('tawkto')
 
 

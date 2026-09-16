@@ -192,41 +192,19 @@
                         <h2 style="text-transform: capitalize">For {{$id}}</h2>
                     </div>
                 </div>
-                <div class="row portfolio-items">
-                    @foreach ($Property as $prop)
-                    <div class="item col-lg-4 col-md-6 col-xs-12 landscapes sale" data-aos="zoom-in" data-aos-delay="150">
-                        <div class="project-single landscapes listing-item compact thehp-1">
-                            <a href="{{route('property-single',[$prop->slung])}}" class="recent-16 hmp" data-aos="fade-up">
-                                <div class="recent-img16 img-fluid img-center" style="background-image: url('{{asset('uploads/properties/')}}/{{$prop->featured_image}}');"></div>
-                                <div class="recent-content"></div>
-                                <div class="listing-badges">
-                                    <span>For {{$prop->status}}</span>
-                                </div>
-                                <div class="recent-details">
-                                    <div class="recent-title">{{$prop->property_name}}</div>
-                                    <div class="price-details">
-                                    <div class="recent-price mb-3">KES {{$prop->price}}</div>
-                                    <div class="recent-price mb-3" style="font-weight:900; color:#bf9d34">
-                                        <i class="fa fa-map-marker"></i> {{$prop->address}}
-                                    </div>
-                                    @if($prop->type == "Plot")
-                                        <div class="house-details thehp-1">
-                                            <i class="fa fa-object-group mr-1" aria-hidden="true"></i> {{$prop->sqft}}</div>
-                                        </div>
-                                    @else
-                                        <div class="house-details thehp-1">
-                                            <i class="fa fa-bed mr-1" aria-hidden="true"></i> {{$prop->bedroom}} Br <span class="mr-1">|</span>
-                                            <i class="fa fa-suitcase mr-1" aria-hidden="true"></i> {{$prop->type}}  <span class="mr-1">|</span>
-                                            {{-- <i class="fa fa-car mr-1" aria-hidden="true"></i> {{$prop->garages}}1 Gr <span class="mr-1">|</span> --}}
-                                            <i class="fa fa-object-group mr-1" aria-hidden="true"></i> {{$prop->sqft}}</div>
-                                        </div>
-                                    @endif
-                                </div>
-                                <div class="view-proper">View Details</div>
-                            </a>
+                <div class="row ph-card-grid">
+                    @forelse ($Property as $prop)
+                    <div class="col-lg-4 col-md-6 col-xs-12" data-aos="fade-up">
+                        @include('front.partials.property-card')
+                    </div>
+                    @empty
+                    <div class="col-12">
+                        <div class="ph-empty">
+                            <strong>Listings coming soon</strong>
+                            <p>New homes are being prepared for this collection.</p>
                         </div>
                     </div>
-                    @endforeach
+                    @endforelse
                 </div>
                 {{-- Pagination --}}
                 <?php

@@ -165,38 +165,19 @@
                         <h2 style="text-transform: capitalize">United Nations Approved Properties</h2>
                     </div>
                 </div>
-                <div class="row portfolio-items">
-                    @foreach ($Property as $prop)
-                    <div class="item col-lg-3 col-md-6 col-xs-12 landscapes sale" data-aos="zoom-in" data-aos-delay="150">
-                        <div class="project-single landscapes listing-item compact thehp-1">
-                            <a href="{{route('property-single',[$prop->slung])}}" class="recent-16 hmp" data-aos="fade-up">
-                                <div class="recent-img16 img-fluid img-center" style="background-image: url('{{asset('uploads/properties/')}}/{{$prop->featured_image}}');"></div>
-                                <div class="recent-content"></div>
-                                <div class="listing-badges">
-                                    <span>For {{$prop->status}}</span>
-                                </div>
-                                <div class="recent-details">
-                                    <div class="recent-title">{{$prop->property_name}}</div>
-                                    <div class="price-details">
-                                    <div class="recent-price mb-3">KES {{$prop->price}}</div>
-                                    @if($prop->type == "Plot")
-                                        <div class="house-details thehp-1">
-                                            <i class="fa fa-object-group mr-1" aria-hidden="true"></i> {{$prop->sqft}}</div>
-                                        </div>
-                                    @else
-                                        <div class="house-details thehp-1">
-                                            <i class="fa fa-bed mr-1" aria-hidden="true"></i> {{$prop->bedroom}} Br <span class="mr-1">|</span>
-                                            <i class="fa fa-bath mr-1" aria-hidden="true"></i> {{$prop->Bath}} Ba <span class="mr-1">|</span>
-                                            <i class="fa fa-car mr-1" aria-hidden="true"></i> {{$prop->garages}} Gr <span class="mr-1">|</span>
-                                            <i class="fa fa-object-group mr-1" aria-hidden="true"></i> {{$prop->sqft}}</div>
-                                        </div>
-                                    @endif
-                                </div>
-                                <div class="view-proper">View Details</div>
-                            </a>
+                <div class="row ph-card-grid">
+                    @forelse ($Property as $prop)
+                    <div class="col-lg-4 col-md-6 col-xs-12" data-aos="fade-up">
+                        @include('front.partials.property-card')
+                    </div>
+                    @empty
+                    <div class="col-12">
+                        <div class="ph-empty">
+                            <strong>UN approved homes coming soon</strong>
+                            <p>This collection will list residences approved for United Nations personnel.</p>
                         </div>
                     </div>
-                    @endforeach
+                    @endforelse
                 </div>
 
             </div>

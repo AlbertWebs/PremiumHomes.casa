@@ -283,8 +283,8 @@ a.contact-detail-item:hover {
     justify-content: center;
     gap: 0.55rem;
     margin-top: auto;
-    background: #25d366;
-    color: #fff !important;
+    background: #bf9d34;
+    color: #121b22 !important;
     border-radius: 10px;
     padding: 0.9rem 1rem;
     font-weight: 700;
@@ -292,8 +292,8 @@ a.contact-detail-item:hover {
 }
 
 .contact-whatsapp-btn:hover {
-    background: #1ebe57;
-    color: #fff !important;
+    background: #d4b45a;
+    color: #121b22 !important;
 }
 
 .contact-whatsapp-btn img {

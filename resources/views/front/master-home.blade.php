@@ -71,6 +71,7 @@
     <link rel="stylesheet" href="{{asset('theme/css/video.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/hero-search.css')}}">
     <link rel="stylesheet" id="color" href="{{asset('theme/css/colors/pink.css')}}">
+    @include('front.partials.theme-css')
     {{-- @include('tawkto') --}}
 
     <!--Floating WhatsApp css-->
