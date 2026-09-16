@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Pagination\Paginator;
 
@@ -24,8 +25,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
         Paginator::defaultView('vendor.pagination.bootstrap-4');
+
+        $root = rtrim((string) config('app.url'), '/');
+        if ($root !== '') {
+            URL::forceRootUrl($root);
+        }
     }
 }
 

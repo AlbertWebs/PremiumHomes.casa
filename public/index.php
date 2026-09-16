@@ -7,6 +7,27 @@ use Illuminate\Http\Request;
 
 define('LARAVEL_START', microtime(true));
 
+$requestPath = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
+if (preg_match('#^/public(/.*)?$#', $requestPath, $publicMatch)) {
+    $target = $publicMatch[1] ?? '/';
+    if ($target === '') {
+        $target = '/';
+    }
+    $query = $_SERVER['QUERY_STRING'] ?? '';
+    if ($query !== '') {
+        $target .= '?' . $query;
+    }
+    header('Location: '.$target, true, 301);
+    exit;
+}
+
+if (!empty($_SERVER['SCRIPT_NAME']) && strpos($_SERVER['SCRIPT_NAME'], '/public/') !== false) {
+    $_SERVER['SCRIPT_NAME'] = str_replace('/public/', '/', $_SERVER['SCRIPT_NAME']);
+}
+if (!empty($_SERVER['PHP_SELF']) && strpos($_SERVER['PHP_SELF'], '/public/') !== false) {
+    $_SERVER['PHP_SELF'] = str_replace('/public/', '/', $_SERVER['PHP_SELF']);
+}
+
 /*
 |--------------------------------------------------------------------------
 | Check If The Application Is Under Maintenance
