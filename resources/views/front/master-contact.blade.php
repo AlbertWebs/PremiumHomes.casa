@@ -48,6 +48,7 @@
     <link rel="stylesheet" href="{{asset('theme/css/menu.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/styles.css')}}">
     <link rel="stylesheet" id="color" href="{{asset('theme/css/default.css')}}">
+    <link rel="stylesheet" href="{{asset('theme/css/contact-page.css')}}">
 
 </head>
 
@@ -305,13 +306,9 @@
     <!-- Wrapper / End -->
     {{--  --}}
 <script>
-    $("form").each(function() {
-        $(this).find(':input[type="submit"]').prop('disabled', true);
-    });
+    $('#submit-contact').prop('disabled', true);
     function correctCaptcha() {
-        $("form").each(function() {
-            $(this).find(':input[type="submit"]').prop('disabled', false);
-        });
+        $('#submit-contact').prop('disabled', false);
     }
 </script>
 {{--  --}}

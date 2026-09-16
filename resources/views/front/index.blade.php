@@ -21,36 +21,34 @@
                                 <br class="d-md-none">
                                 <span class="typed border-bottom"></span>
                             </h1>
-                                <p class="mt-4">We Have Over Hundred Properties For You.</p>
+                                <p class="mt-4">We have over a hundred properties for you.</p>
                             </div>
                             <!--/ End Welcome Text -->
                             <!-- Search Form -->
                             <div class="col-12">
                                 <div class="banner-search-wrap">
-                                    <center>
-                                        @if(Session::has('message'))
-                                                      <h3 class="alert alert-info">{{ Session::get('message') }}</h3>
-                                       @endif
-
-                                       @if(Session::has('messageError'))
-                                                      <div class="alert alert-danger">{{ Session::get('messageError') }}</div>
-                                       @endif
-                                    </center>
+                                    @if(Session::has('message'))
+                                        <div class="alert alert-info text-center">{{ Session::get('message') }}</div>
+                                    @endif
+                                    @if(Session::has('messageError'))
+                                        <div class="alert alert-danger text-center">{{ Session::get('messageError') }}</div>
+                                    @endif
 
                                         <div class="tab-content search-widget">
-                                            <form method="POST" action="{{url('/search-property')}}">
-
+                                            <form class="hero-search-form" method="POST" action="{{url('/search-property')}}">
                                                 @csrf
                                                     <div class="tab-pane fade show active" id="tabs_1">
-                                                        <div class="rld-main-search">
-                                                            <div class="row">
-                                                                <div class="rld-single-input">
-                                                                    <input name="keyword" type="text" placeholder="Enter Keyword">
+                                                        <div class="rld-main-search hero-search-bar">
+                                                            <div class="hero-search-fields">
+                                                                <div class="rld-single-input hero-field-keyword">
+                                                                    <label class="sr-only" for="hero-keyword">Keyword</label>
+                                                                    <input id="hero-keyword" name="keyword" type="text" placeholder="Enter Keyword" autocomplete="off">
                                                                 </div>
-                                                                <div class="rld-single-select ml-22">
-                                                                    <select required="Select Type" name="type" class="select single-select">
-                                                                        <option value="" selected disabled hidden>Choose Type...</option>
-                                                                        <option value="any" >Any</option>
+                                                                <div class="rld-single-select hero-field-type">
+                                                                    <label class="sr-only" for="hero-type">Property type</label>
+                                                                    <select id="hero-type" required name="type" class="select single-select">
+                                                                        <option value="" selected disabled>Property type</option>
+                                                                        <option value="any">Any</option>
                                                                         <option value="Duplex">Duplex</option>
                                                                         <option value="Condominium">Condominium</option>
                                                                         <option value="Villa">Villa</option>
@@ -59,36 +57,30 @@
                                                                         <option value="Cottages">Cottages</option>
                                                                         <option value="Bungalow">Bungalow</option>
                                                                         <option value="Apartment">Apartment</option>
-                                                                        <option value="Mansion">Mansion</option>
                                                                         <option value="Resorts">Resorts</option>
                                                                         <option value="Plot">Plot</option>
                                                                         <option value="Penthouse">Penthouse</option>
-                                                                        <option value="Commercial Properies">Commercial Properies</option>
+                                                                        <option value="Commercial Properties">Commercial Properties</option>
                                                                     </select>
                                                                 </div>
-                                                                <div class="rld-single-select ml-22">
-                                                                    <select required name="status" class="select single-select">
-                                                                         <option selected value="" disabled>Sale/Rent</option>
+                                                                <div class="rld-single-select hero-field-status">
+                                                                    <label class="sr-only" for="hero-status">Sale or rent</label>
+                                                                    <select id="hero-status" required name="status" class="select single-select">
+                                                                        <option selected value="" disabled>Sale / Rent</option>
                                                                         <option value="Rent">Rent</option>
                                                                         <option value="Sale">Sale</option>
-
                                                                     </select>
                                                                 </div>
-                                                                <div class="rld-single-input">
-                                                                    <input name="location" type="text" placeholder="Location e.g Karen">
+                                                                <div class="rld-single-input hero-field-location">
+                                                                    <label class="sr-only" for="hero-location">Location</label>
+                                                                    <input id="hero-location" name="location" type="text" placeholder="Location e.g Karen" autocomplete="address-level2">
                                                                 </div>
-                                                                {{-- <div class="dropdown-filter d-none d-none d-lg-none d-xl-block"><span>Advanced Search</span></div> --}}
-                                                                <div class="col-xl-1 col-lg-1 col-md-4 pl-0">
-                                                                    <button type="submit" class="btn btn-yellow">GO</button>
-                                                                </div>
-
+                                                                <button type="submit" class="btn btn-yellow hero-search-go">GO</button>
                                                             </div>
                                                         </div>
                                                     </div>
                                             </form>
-
                                         </div>
-
                                 </div>
                             </div>
                             <!--/ End Search Form -->

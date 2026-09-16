@@ -1,0 +1,197 @@
+/* About page — keep section order and backgrounds, tighten type and cards */
+.about-page .headings {
+    background-size: cover;
+    background-position: center;
+}
+
+.about-page .about-eyebrow {
+    display: inline-block;
+    color: #bf9d34;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-bottom: 0.55rem;
+}
+
+.about-page .about-us h2,
+.about-page .how-it-works .sec-title h2 {
+    text-transform: none !important;
+    letter-spacing: 0;
+    color: #121b22;
+}
+
+.about-page .about-us h2::after {
+    content: "";
+    display: block;
+    width: 56px;
+    height: 2px;
+    background: #bf9d34;
+    margin: 0.7rem 0 1.15rem;
+}
+
+.about-page .about-role {
+    color: #bf9d34;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: -0.4rem 0 1.1rem;
+    letter-spacing: 0.04em;
+}
+
+.about-page .pftext p {
+    color: #4b5563;
+    line-height: 1.75;
+    margin-bottom: 1rem;
+}
+
+.about-page .about-facts {
+    margin: 1.35rem 0 1.5rem;
+}
+
+.about-page .about-fact {
+    margin-bottom: 1rem;
+}
+
+.about-page .about-fact span {
+    display: block;
+    color: #bf9d34;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+}
+
+.about-page .about-fact p {
+    margin: 0;
+    color: #374151;
+}
+
+.about-page .about-cta.button {
+    background: #bf9d34;
+    color: #fff;
+    border: 0;
+    border-radius: 8px;
+    padding: 0.85rem 1.5rem;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.about-page .about-cta.button:hover {
+    background: #a8882b;
+    color: #fff;
+}
+
+.about-page .about-photo img,
+.about-page .wprt-image-video img,
+.about-page .wprt-image-videoa img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 12px;
+    box-shadow: 0 16px 36px rgba(18, 27, 34, 0.12);
+}
+
+.about-page .how-it-works.bg-white-2 .sec-title h2 span {
+    color: #bf9d34;
+}
+
+.about-page .how-it-works .serv-flex {
+    height: 100%;
+    border-radius: 12px;
+    border: 1px solid #ececec;
+    border-top: 3px solid #bf9d34;
+    box-shadow: 0 10px 28px rgba(18, 27, 34, 0.06) !important;
+    padding: 1.75rem 1.4rem 1.5rem;
+}
+
+.about-page .how-it-works article .fa {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: rgba(191, 157, 52, 0.12);
+    color: #bf9d34;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    padding: 0;
+    margin-bottom: 0.85rem;
+}
+
+.about-page .how-it-works article h3 {
+    color: #121b22;
+    font-size: 1.15rem;
+    margin-bottom: 0.7rem;
+}
+
+.about-page .how-it-works article p {
+    color: #6b7280;
+    line-height: 1.65;
+}
+
+.about-page .service-1 .serv {
+    margin-bottom: 1.25rem;
+}
+
+.about-page section.team .section-title h3 {
+    color: #fff;
+}
+
+.about-page section.team .section-title h2 {
+    color: #bf9d34;
+}
+
+.about-page .team-wrap {
+    background: #121b22;
+    border-radius: 12px;
+    overflow: hidden;
+    padding-bottom: 0;
+}
+
+.about-page .team-img img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.about-page .team-content,
+.about-page .team-info {
+    background: #121b22;
+    border: 0;
+}
+
+.about-page .team-content h3 {
+    color: #fff;
+}
+
+.about-page .team-content p {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.about-page .team-content span a {
+    color: #bf9d34;
+}
+
+.about-page .team-wrap:hover .team-content {
+    height: 150px;
+}
+
+.about-page section.counterup .countr p {
+    color: #bf9d34;
+}
+
+.about-page section.counterup .count-me h3 {
+    color: #121b22;
+}
+
+@media (max-width: 991px) {
+    .about-page .about-photo img,
+    .about-page .wprt-image-video img,
+    .about-page .wprt-image-videoa img {
+        height: 320px;
+        margin-bottom: 1.5rem;
+    }
+}

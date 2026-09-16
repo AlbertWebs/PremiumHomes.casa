@@ -1,6 +1,7 @@
 @extends('front.master')
 
 @section('content')
+<div class="about-page">
 <section class="headings" style="min-height:200px; clear:both; background-image: url('{{asset('/uploads/banners/info-banner.jpg')}}')">
     <div class="text-heading text-center">
         <div class="container"><br><br><br>
@@ -12,34 +13,32 @@
 
 <section class="about-us how-it-works fh">
     <div class="container">
-        <div class="row">
+        <div class="row align-items-center">
             <div class="col-lg-6 col-md-12 who-1">
-                <div>
-                    {{-- <h2 class="text-left mb-4">www.premiumhomes.casa <span></span></h2> --}}
-                </div>
+                <span class="about-eyebrow">About us</span>
+                <h2 class="text-left mb-4">Who we are</h2>
                 <div class="pftext">
                     <p>
-                        Welcome to Premium Homes - the premier destination for luxury real estate services! We specialize in curating exclusive living experiences in some of the most desirable locations in Kenya. With decades of excellence and a dedication to providing you with only the utmost in luxury, Premium Homes is your go-to partner in the world of upscale real estate. Whether you're looking for homes, rentals or property in Kenya we've got you covered.
-
+                        Welcome to Premium Homes — the premier destination for luxury real estate services. We specialize in curating exclusive living experiences in some of the most desirable locations in Kenya. With decades of excellence and a dedication to providing you with only the utmost in luxury, Premium Homes is your go-to partner in the world of upscale real estate. Whether you're looking for homes, rentals, or property in Kenya, we've got you covered.
                     </p>
-                    <strong>Vision:</strong>
-                    <p>A one-stop shop for elegance and luxury homes</p>
-                    <strong>Mission:</strong>
-                    <p>
-                        We are on a mission to redefine luxury and elevate experiences at every turn. Premium Homes is committed to helping our clients discover their ideal high-end properties, each one meticulously chosen to reflect their unique tastes and aspirations. Our mission is to create unforgettable journeys through the world of premium real estate.
-                    </p>
-
+                    <div class="about-facts">
+                        <div class="about-fact">
+                            <span>Vision</span>
+                            <p>A one-stop shop for elegance and luxury homes.</p>
+                        </div>
+                        <div class="about-fact">
+                            <span>Mission</span>
+                            <p>We are on a mission to redefine luxury and elevate experiences at every turn. Premium Homes is committed to helping our clients discover their ideal high-end properties, each one meticulously chosen to reflect their unique tastes and aspirations.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="box bg-2">
-                    <a href="{{url('/')}}/all-properties" class="text-center button  button--size-l">Browse Properties</a>
-                    {{-- <img src="{{asset('theme/images/signature.png')}}" class="ml-5" alt=""> --}}
+                    <a href="{{url('/')}}/all-properties" class="text-center button button--size-l about-cta">Browse Properties</a>
                 </div>
             </div>
             <div class="col-lg-6 col-md-12 col-xs-12">
-                <div class="wprt-image-video w50">
-                    <img alt="image" src="{{asset('images/b-4.jpg')}}">
-                  <span style="padding: 0; margin: 0; margin-left: 5px;"><a href=""></a></span>
-
+                <div class="wprt-image-video w50 about-photo">
+                    <img alt="Luxury living with Premium Homes" src="{{asset('images/b-4.jpg')}}">
                 </div>
             </div>
         </div>
@@ -51,9 +50,6 @@
     <div class="container">
         <div class="sec-title">
             <h2><span>Core </span>Values</h2>
-            <p>
-              &nbsp;
-            </p>
         </div>
         <div class="row service-1">
             <article class="col-lg-4 col-md-6 col-xs-12 serv" data-aos="fade-up">
@@ -129,33 +125,26 @@
 </section> --}}
 <section class="about-us how-it-works fh">
     <div class="container">
-        <div class="row">
-
-
-
+        <div class="row align-items-center">
             <div class="col-lg-6 col-md-12">
-                <div>
-                    <h2 class="text-left mb-4">Our Story <span></span></h2>
-                    <h3>Chairman</h3>
-                </div>
+                <span class="about-eyebrow">Our story</span>
+                <h2 class="text-left mb-4">Dr Nelson Sechere</h2>
+                <p class="about-role">Chairman</p>
                 <div class="pftext">
                     <p>
-                        Premium Homes was founded on the principles of passion, integrity, and expertise. Our journey began when Dr Nelson Sechere, a visionary with an unwavering appreciation of luxury living embarked on a remarkable journey to transform the world of real estate.
+                        Premium Homes was founded on the principles of passion, integrity, and expertise. Our journey began when Dr Nelson Sechere, a visionary with an unwavering appreciation of luxury living, embarked on a remarkable journey to transform the world of real estate.
                         <br><br>
-
                         Dr. Nelson recognized the need for a real estate company that not only offered exceptional properties but also provided clients with deeply personalized and extraordinary experiences. This realization marked the inception of Premium Homes.
                         <br><br>
-
                         Driven by a passion for luxury real estate, Dr. Nelson assembled a team of like-minded individuals who shared this vision. Together they set out to redefine luxury living.
                         <br><br>
-
-                        Premium Homes has exceeded our client's expectations, setting new standards in the Luxury real estate industry. We are here to guide you on your journey to finding the perfect property that suits you.
+                        Premium Homes has exceeded our clients' expectations, setting new standards in the luxury real estate industry. We are here to guide you on your journey to finding the perfect property that suits you.
                     </p>
                 </div>
             </div>
             <div class="col-lg-6 col-md-12 col-xs-12">
-                <div class="wprt-image-videoa w50">
-                    <img alt="image" src="{{asset('uploads/team/dr-nelson-sechere.jpg')}}">
+                <div class="wprt-image-videoa w50 about-photo">
+                    <img alt="Dr Nelson Sechere, Chairman of Premium Homes" src="{{asset('uploads/team/dr-nelson-sechere.jpg')}}">
                 </div>
             </div>
         </div>
@@ -164,74 +153,50 @@
 
 <section class="about-us how-it-works fh bg-white-2">
     <div class="container">
-        <div class="row">
-
+        <div class="row align-items-center">
             <div class="col-lg-6 col-md-12 col-xs-12">
-                <div class="wprt-image-videoa w50">
-                    <img alt="image" src="{{asset('uploads/team/martin-mathege.jpg')}}">
+                <div class="wprt-image-videoa w50 about-photo">
+                    <img alt="Martin Mathenge, Director Business Development" src="{{asset('uploads/team/martin-mathege.jpg')}}">
                 </div>
             </div>
-
             <div class="col-lg-6 col-md-12">
-                <div>
-                    <h2 class="text-left mb-4"> Martin Mathenge <span></span></h2>
-                    <h3>Director Business Development</h3>
-                </div>
+                <h2 class="text-left mb-4">Martin Mathenge</h2>
+                <p class="about-role">Director, Business Development</p>
                 <div class="pftext">
                     <p>
-                        Martin Mathenge is an accomplished marketing executive and versatile professional renowned for his strong leadership acumen, specializing in brand management and key account development. <br><br> Martin boasts an impressive track record of consistently driving profitability while adeptly managing expenses, providing essential administrative support, nurturing emerging talent through training initiatives, and orchestrating impactful company events. <br><br> His effective leadership is marked by exceptional communication skills and a remarkable talent for precise time management.<br><br>
-
-                        With over 15 years of hands-on experience, Martin is widely acknowledged as an innovative marketing expert who excels in enhancing administrative efficiency and offering invaluable support for business development initiatives. <br><br>His expertise empowers organizations to make well-informed decisions that propel them toward unprecedented success.
+                        Martin Mathenge is an accomplished marketing executive and versatile professional renowned for his strong leadership acumen, specializing in brand management and key account development.
+                        <br><br>
+                        Martin boasts an impressive track record of consistently driving profitability while adeptly managing expenses, providing essential administrative support, nurturing emerging talent through training initiatives, and orchestrating impactful company events. His effective leadership is marked by exceptional communication skills and a remarkable talent for precise time management.
+                        <br><br>
+                        With over 15 years of hands-on experience, Martin is widely acknowledged as an innovative marketing expert who excels in enhancing administrative efficiency and offering invaluable support for business development initiatives. His expertise empowers organizations to make well-informed decisions that propel them toward unprecedented success.
                     </p>
                 </div>
             </div>
-
         </div>
     </div>
 </section>
 
-
-
-
-
 <section class="about-us how-it-works fh">
     <div class="container">
-        <div class="row">
+        <div class="row align-items-center">
             <div class="col-lg-6 col-md-12">
-                <div>
-                    <h2 class="text-left mb-4">Brian Luvanda <span></span></h2>
-                    <h3>Business Development Manager</h3>
-                </div>
+                <h2 class="text-left mb-4">Brian Luvanda</h2>
+                <p class="about-role">Business Development Manager</p>
                 <div class="pftext">
                     <p>
-                        Brian Luvanda, is a seasoned professional with over 8 years of invaluable experience
-                        in the real estate industry, now leading the charge as Business Development
-                        Manager.
+                        Brian Luvanda is a seasoned professional with over 8 years of invaluable experience in the real estate industry, now leading the charge as Business Development Manager.
                         <br><br>
-                        Luvanda's journey in real estate has sharpened his excellent market insights and
-                        finely tuned his strategic acumen, making him a driving force in the growth and
-                        expansion of organizations he has been associated with.
-                        His extensive experience has nurtured not only exceptional leadership and
-                        communication skills but also an ability to discern market trends and form strategic
-                        alliances.
+                        Luvanda's journey in real estate has sharpened his market insights and finely tuned his strategic acumen, making him a driving force in the growth and expansion of the organizations he has been associated with. His extensive experience has nurtured not only exceptional leadership and communication skills but also an ability to discern market trends and form strategic alliances.
                         <br><br>
-                        He has consistently displayed an exemplary track record of leading diverse teams,
-                        fostering a culture of collaboration and excellence, always keeping the client's needs
-                        at the forefront.
+                        He has consistently displayed an exemplary track record of leading diverse teams, fostering a culture of collaboration and excellence, always keeping the client's needs at the forefront.
                         <br><br>
-                        Luvanda envisions to establish the businesses under his control as unchallenged
-                        market leaders, propelled by innovation, cutting-edge technology, and a steadfast
-                        dedication to excellence and quality. Through his guidance, businesses are set up for
-                        a future of unparalleled growth and success, with a consistent focus on providing
-                        exceptional experiences to prestigious clients.
-                        <br><br>
-
+                        Luvanda envisions establishing the businesses under his guidance as unchallenged market leaders, propelled by innovation, cutting-edge technology, and a steadfast dedication to excellence and quality.
                     </p>
                 </div>
             </div>
             <div class="col-lg-6 col-md-12 col-xs-12">
-                <div class="wprt-image-videoa w50">
-                    <img alt="image" src="{{asset('uploads/team/brian-luvanda.jpg')}}">
+                <div class="wprt-image-videoa w50 about-photo">
+                    <img alt="Brian Luvanda, Business Development Manager" src="{{asset('uploads/team/brian-luvanda.jpg')}}">
                 </div>
             </div>
         </div>
@@ -255,7 +220,7 @@
             <div class="team-block col-sm-6 col-md-4 col-lg-4 col-xl-2 team-pro" data-aos="fade-up" data-aos-delay="1{{$delay}}0">
                 <div class="team-wrap">
                     <div class="team-img">
-                        <img src="{{url('/')}}/uploads/users/{{$agent->image}}" alt="" />
+                        <img src="{{url('/')}}/uploads/users/{{$agent->image}}" alt="{{$agent->name}}" />
                     </div>
                     <div class="team-content">
                         <div class="team-info">
@@ -313,7 +278,7 @@
                     <i class="fa fa-home" aria-hidden="true"></i>
                     <div class="count-me">
                         <p class="counter text-left">{{count($Sale)}}</p>
-                        <h3>House For Sale</h3>
+                        <h3>Houses for Sale</h3>
                     </div>
                 </div>
             </div>
@@ -322,7 +287,7 @@
                     <i class="fa fa-home" aria-hidden="true"></i>
                     <div class="count-me">
                         <p class="counter text-left">{{count($Rent)}}</p>
-                        <h3>House For Rent</h3>
+                        <h3>Houses for Rent</h3>
                     </div>
                 </div>
             </div>
@@ -493,4 +458,5 @@
 </div> --}}
 <!-- END SECTION PARTNERS -->
 
+</div>
 @endsection

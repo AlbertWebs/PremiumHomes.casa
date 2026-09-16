@@ -69,6 +69,7 @@
     <link rel="stylesheet" href="{{asset('theme/css/slick.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/styles.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/video.css')}}">
+    <link rel="stylesheet" href="{{asset('theme/css/hero-search.css')}}">
     <link rel="stylesheet" id="color" href="{{asset('theme/css/colors/pink.css')}}">
     {{-- @include('tawkto') --}}
 
@@ -454,7 +455,7 @@
                popupMessage: 'Hello, how can we help you?', //Popup Message
                message: 'I have just visited *https://premiumhomes.casa*',
                showPopup: true, //Enables popup display
-               buttonImage: '<img src="https://amanivehiclesounds.co.ke/uploads/icon/whatsapp.svg" />', //Button Image
+               buttonImage: '<img src="{{asset('uploads/icon/whatsapp.svg')}}" alt="WhatsApp" />', //Button Image
                //headerColor: 'crimson', //Custom header color
                //backgroundColor: 'crimson', //Custom background button color
                position: "left" //Position: left | right

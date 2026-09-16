@@ -42,7 +42,7 @@ class HomeController extends Controller
 
     public function contact()
     {
-        $title = "About";
+        $title = "Contact";
         $Blog = Blog::limit('2')->get();
         $Property = Property::where('Status','Sale')->where('home','1')->where('active','Approved')->where('type', '!=' , "Plot")->orderBy('id','ASC')->limit('6')->get();
         $PropertyRent = Property::where('Status','Rent')->where('home','1')->where('active','Approved')->where('type', '!=' , "Plot")->orderBy('id','ASC')->limit('6')->get();
@@ -290,7 +290,11 @@ class HomeController extends Controller
         $full_name = "$request->name $request->lastname";
         $email_address = $request->email;
         $mobile = $request->mobile;
+        $interest = trim((string) $request->interest);
         $message = $request->message;
+        if ($interest !== '') {
+            $message = "Interest: {$interest}\n\n{$message}";
+        }
         // Send Email
         SendMail::bookAppointments($full_name,$email_address,$mobile,$message);
         Session::flash('message', "Message Submited Successfully");

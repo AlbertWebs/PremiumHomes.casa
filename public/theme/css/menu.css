@@ -26,7 +26,7 @@ img {
 #header {
     position: relative;
     z-index: 999;
-    padding: 22px 0 80px 0;
+    padding: 10px 0;
 }
 /* Header Widget */
 .header-widget {
@@ -345,7 +345,7 @@ a.button.border, a.button {
 #navigation {
     position: relative;
     display: block;
-    margin-top: 9px;
+    margin-top: 0;
     margin-left: 40px;
 }
 #navigation ul {
@@ -1561,5 +1561,29 @@ transform: rotate(-90deg);
         position: relative;
         z-index: 999;
         padding: 5px 0 5px 0;
+    }
+}
+
+/* Align the main menu to the far right of the header */
+.left-sides {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.container-header .left-sides #logo,
+.container-header .left-sides #navigation {
+    float: none;
+}
+@media (min-width: 992px) {
+    .container-header .left-sides #navigation {
+        margin-left: auto;
+        margin-right: 0;
+    }
+}
+@media (max-width: 991px) {
+    .container-header .left-sides .mmenu-trigger {
+        margin-left: auto;
+        margin-right: 0;
+        z-index: 10;
     }
 }

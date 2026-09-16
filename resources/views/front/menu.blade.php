@@ -24,6 +24,6 @@
                 </li>
             </ul>
         </li>
-        <li><a  href="{{url('/')}}/contact-us">Contact Us</a> </li>
+        <li @if($title == "Contact") class="active" @endif><a href="{{url('/')}}/contact-us">Contact Us</a> </li>
     </ul>
 </nav>
